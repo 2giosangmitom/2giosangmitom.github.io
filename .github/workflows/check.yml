@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [latest]
 
     steps:
       - name: Checkout
@@ -21,7 +21,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: "pnpm"
 
-      - run: npm install
-      - run: npm run lint
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - run: pnpm install
+      - run: pnpm run lint
