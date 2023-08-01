@@ -7,7 +7,7 @@ const SkillContent: React.FC = () => {
       <h2 className="section-title">Skills</h2>
       <div className={[styles.skills__content, "bd-grid"].join(" ")}>
         <Skills list={["HTML, CSS", "Shell", "JavaScript", "TypeScript", "Go"]} />
-        <Skills list={["React", "Next.js", "Redux", "Tailwind CSS", "Gin-gonic"]} />
+        <Skills list={["React", "Next.js", "Redux", "Tailwind CSS", "Express.js", "Gin-gonic"]} />
         <Skills list={["PostgreSQL", "Docker", "Git"]} />
       </div>
     </section>
