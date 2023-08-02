@@ -3,7 +3,7 @@ import { Fira_Sans } from 'next/font/google';
 import './globals.css';
 
 const font = Fira_Sans({
-  weight: '400',
+  weight: ['100', '200', '300', '400', '500', '600'],
   style: 'normal',
   subsets: ['vietnamese', 'latin'],
 });
