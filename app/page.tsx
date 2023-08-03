@@ -3,7 +3,7 @@ import { HomeContent } from '@/content'
 
 export default function Page(): JSX.Element {
   return (
-    <div className="sm:px-16">
+    <div className="lg:px-16 sm:px-5 px-3">
       <NavBar />
       <HomeContent />
       <Footer />

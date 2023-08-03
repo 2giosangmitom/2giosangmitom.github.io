@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 
 export default function HomeContent(): JSX.Element {
   return (
-    <div className="sm:mt-20 sm:mx-28 tracking-wide">
+    <div className="lg:mt-20 sm:mt-10 lg:mx-28 sm:mx-20 tracking-wide">
       <motion.p
-        className="text-emerald-200 sm:mb-7"
+        className="text-emerald-200 sm:mb-7 mb-3"
         animate={{
           opacity: 1,
           x: 0,
@@ -21,7 +21,7 @@ export default function HomeContent(): JSX.Element {
         Hi, my name is
       </motion.p>
       <motion.h1
-        className="sm:text-6xl text-light-slate font-bold sm:mb-5"
+        className="lg:text-6xl text-light-slate font-bold sm:mb-5 sm:text-5xl text-4xl mb-2"
         animate={{
           opacity: 1,
           x: 0,
@@ -37,7 +37,7 @@ export default function HomeContent(): JSX.Element {
         Vo Quang Chien.
       </motion.h1>
       <motion.h1
-        className="sm:text-6xl text-slate font-bold sm:mb-7"
+        className="lg:text-6xl text-slate font-bold sm:mb-7 sm:text-5xl text-4xl mb-2"
         animate={{
           opacity: 1,
           x: 0,
