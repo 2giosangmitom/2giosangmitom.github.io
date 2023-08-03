@@ -1,4 +1,5 @@
 'use client'
+
 import { FiGithub, FiTwitter } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa6'
 import { RiFacebookFill } from 'react-icons/ri'
@@ -9,7 +10,7 @@ export default function Footer(): JSX.Element {
     <motion.div
       className="sm:absolute sm:bottom-0 sm:flex sm:flex-col items-center"
       animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: 'easeOut', duration: 0.5 }}
+      transition={{ ease: 'anticipate', duration: 0.5 }}
       initial={{ y: 500, opacity: 0 }}
     >
       <a
