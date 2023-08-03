@@ -1,13 +1,14 @@
-import { FiGithub } from 'react-icons/fi';
-import { FaLinkedinIn, FaFacebook } from 'react-icons/fa6';
+import { FiGithub, FiTwitter } from 'react-icons/fi'
+import { FaLinkedinIn } from 'react-icons/fa6'
+import { RiFacebookFill } from 'react-icons/ri'
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
   return (
-    <div className="sm:fixed sm:bottom-0 sm:flex sm:flex-col items-center">
+    <div className="sm:absolute sm:bottom-0 sm:flex sm:flex-col items-center">
       <a
         href="https://github.com/yeuxacucodon"
         target="_blank"
-        className="duration-200 sm:mb-8 text-white hover:text-emerald-500 text-xl hover:-translate-y-1"
+        className="duration-300 text-slate hover:text-emerald-500 text-xl hover:-translate-y-0.5 sm:p-5"
         title="GitHub"
       >
         <FiGithub />
@@ -16,7 +17,7 @@ export default function Footer() {
       <a
         href="https://www.linkedin.com/in/2giosangmitom/"
         target="_blank"
-        className="duration-200 sm:mb-8 text-white hover:text-emerald-500 text-xl hover:-translate-y-1"
+        className="duration-300 text-slate hover:text-emerald-500 text-xl hover:-translate-y-0.5 sm:p-5"
         title="LinkedIn"
       >
         <FaLinkedinIn />
@@ -25,13 +26,22 @@ export default function Footer() {
       <a
         href="https://www.facebook.com/langthangchokopai/"
         target="_blank"
-        className="duration-200 sm:mb-8 text-white hover:text-emerald-500 text-xl hover:-translate-y-1"
+        className="duration-300 text-slate hover:text-emerald-500 text-xl hover:-translate-y-0.5 sm:p-5"
         title="Facebook"
       >
-        <FaFacebook />
+        <RiFacebookFill />
       </a>
 
-      <div className="w-0.5 h-32 bg-white"></div>
+      <a
+        href="https://twitter.com/yeuxacucodon"
+        target="_blank"
+        className="duration-300 text-slate hover:text-emerald-500 text-xl hover:-translate-y-0.5 sm:p-5"
+        title="Twitter"
+      >
+        <FiTwitter />
+      </a>
+
+      <div className="sm:w-0.5 sm:mt-8 sm:h-40 bg-slate sm:block hidden"></div>
     </div>
-  );
+  )
 }

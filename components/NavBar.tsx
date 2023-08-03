@@ -1,9 +1,12 @@
-export default function NavBar() {
+export default function NavBar(): JSX.Element {
   return (
     <div className="flex justify-between text-emerald-200 py-6">
       <div>
-        <a className="hover:text-emerald-500 duration-200 tracking-wider sm:text-sm" href="#">
-          VO QUANG CHIEN
+        <a
+          className="hover:text-emerald-500 uppercase duration-200 tracking-wider sm:text-sm"
+          href="#"
+        >
+          vo quang chien
         </a>
       </div>
 
@@ -32,13 +35,7 @@ export default function NavBar() {
         >
           Skills
         </a>
-        <a
-          className="sm:ml-4 hover:text-emerald-500 duration-200 tracking-wider sm:text-sm"
-          href=""
-        >
-          Contact
-        </a>
       </nav>
     </div>
-  );
+  )
 }
