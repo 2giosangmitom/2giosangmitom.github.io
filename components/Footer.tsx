@@ -1,10 +1,17 @@
+'use client'
 import { FiGithub, FiTwitter } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa6'
 import { RiFacebookFill } from 'react-icons/ri'
+import { motion } from 'framer-motion'
 
 export default function Footer(): JSX.Element {
   return (
-    <div className="sm:absolute sm:bottom-0 sm:flex sm:flex-col items-center">
+    <motion.div
+      className="sm:absolute sm:bottom-0 sm:flex sm:flex-col items-center"
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ ease: 'easeOut', duration: 0.5 }}
+      initial={{ y: 500, opacity: 0 }}
+    >
       <a
         href="https://github.com/yeuxacucodon"
         target="_blank"
@@ -42,6 +49,6 @@ export default function Footer(): JSX.Element {
       </a>
 
       <div className="sm:w-0.5 sm:mt-8 sm:h-40 bg-slate sm:block hidden"></div>
-    </div>
+    </motion.div>
   )
 }

@@ -7,8 +7,8 @@ export default function HomeContent(): JSX.Element {
       <p className="text-sky-200">
         I&apos;m a fullstack developer in Viet Nam 🇻🇳
         <br />
-        I am a lover of all things open source web. Currently, I&apos;m working with React
-        (TypeScript), Tailwind and NestJS.
+        I am a lover of all things open source web. Currently, I&apos;m working with React with
+        Next.js (TypeScript), Tailwind and NestJS.
         <br />I also love to work with other programming languages like Rust, Go.
       </p>
     </div>
