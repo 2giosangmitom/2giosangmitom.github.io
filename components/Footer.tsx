@@ -8,9 +8,9 @@ import { motion } from 'framer-motion'
 export default function Footer(): JSX.Element {
   return (
     <motion.div
-      className="sm:absolute sm:bottom-0 sm:flex sm:flex-col items-center"
+      className="sm:fixed sm:bottom-0 sm:flex sm:flex-col items-center"
       animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: 'anticipate', duration: 0.5 }}
+      transition={{ ease: 'anticipate', duration: 1 }}
       initial={{ y: 500, opacity: 0 }}
     >
       <a

@@ -4,7 +4,7 @@ export default function NavBar(): JSX.Element {
       <div>
         <a
           className="hover:text-emerald-500 uppercase duration-200 tracking-wider sm:text-sm"
-          href="#"
+          href=""
         >
           vo quang chien
         </a>
