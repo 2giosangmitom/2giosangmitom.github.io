@@ -60,7 +60,7 @@ export default function HomeContent(): JSX.Element {
       >
         I&apos;m a fullstack developer in Viet Nam 🇻🇳
         <br />
-        I am a lover of all things open source about web
+        I am a lover of all things open source about web development
         <br />
         Currently, I&apos;m working with React, Next.js (TypeScript), Tailwind and NestJS
         <br />I also love to work with other programming languages like Rust, Go
