@@ -1,15 +1,16 @@
 import { CgMenuRight } from 'react-icons/cg'
+import Link from 'next/link'
 
 export default function NavBar(): JSX.Element {
   return (
     <nav className="flex justify-between text-emerald-200 py-6">
       <div>
-        <a
+        <Link
           className="hover:text-emerald-500 uppercase duration-200 tracking-wider sm:text-sm font-bold"
-          href=""
+          href="/"
         >
           vo quang chien
-        </a>
+        </Link>
       </div>
 
       <button className="text-white float-right text-2xl sm:hidden block p-1 -mt-1">
@@ -18,39 +19,30 @@ export default function NavBar(): JSX.Element {
 
       <ul className="sm:flex hidden">
         <li>
-          <a
-            className="sm:mr-4 hover:text-emerald-500 duration-200 tracking-wider sm:text-sm sm:block"
-            href=""
-          >
-            Home
-          </a>
-        </li>
-
-        <li>
-          <a
+          <Link
             className="sm:mx-4 hover:text-emerald-500 duration-200 tracking-wider sm:text-sm sm:block"
-            href=""
+            href="/profile"
           >
             Profile
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
+          <Link
             className="sm:mx-4 hover:text-emerald-500 duration-200 tracking-wider sm:text-sm sm:block"
-            href=""
+            href="/projects"
           >
-            Work
-          </a>
+            Projects
+          </Link>
         </li>
 
         <li>
-          <a
+          <Link
             className="sm:mx-4 hover:text-emerald-500 duration-200 tracking-wider sm:text-sm sm:block"
-            href=""
+            href="/skills"
           >
             Skills
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

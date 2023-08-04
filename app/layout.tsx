@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Fira_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
+import { NavBar } from '@/components'
 
 const font = Fira_Sans({
   weight: '400',
@@ -18,8 +19,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
   return (
     <html lang="en" className="dark">
       <body className={font.className}>
-        {children}
-        <Analytics />
+        <div className="lg:px-16 sm:px-5 px-3">
+          <NavBar />
+          {children}
+          <Analytics />
+        </div>
       </body>
     </html>
   )
