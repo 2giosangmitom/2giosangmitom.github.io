@@ -11,7 +11,7 @@ export default function HomeContent(): JSX.Element {
           x: 0,
         }}
         transition={{
-          duration: 1.5,
+          duration: 0.5,
         }}
         initial={{
           opacity: 0,
@@ -27,7 +27,7 @@ export default function HomeContent(): JSX.Element {
           x: 0,
         }}
         transition={{
-          duration: 3,
+          duration: 0.5,
         }}
         initial={{
           opacity: 0,
@@ -43,7 +43,7 @@ export default function HomeContent(): JSX.Element {
           x: 0,
         }}
         transition={{
-          duration: 5,
+          duration: 0.5,
         }}
         initial={{
           opacity: 0,
@@ -56,7 +56,7 @@ export default function HomeContent(): JSX.Element {
         className="text-sky-200"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 5 }}
+        transition={{ duration: 1 }}
       >
         I&apos;m a fullstack developer in Viet Nam 🇻🇳
         <br />
