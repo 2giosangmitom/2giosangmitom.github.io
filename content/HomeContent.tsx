@@ -53,7 +53,7 @@ export default function HomeContent(): JSX.Element {
         I build things for the web.
       </motion.h1>
       <motion.p
-        className="text-sky-200"
+        className="text-light-slate"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
