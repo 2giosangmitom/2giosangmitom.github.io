@@ -27,7 +27,7 @@ export default function NavBar(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false)
 
   return (
-    <nav className="flex justify-between text-emerald-200 sm:py-6 sm:static fixed bottom-0 w-full -ml-3 sm:-ml-0 sm:px-0 px-2">
+    <nav className="flex justify-between text-emerald-200 sm:py-6 sm:static fixed bottom-0 w-full -ml-3 sm:-ml-0 sm:px-0 px-2 sm:shadow-transparent bg-[#0b3e84] py-1">
       <div>
         <Link
           className="hover:text-emerald-500 uppercase duration-200 tracking-wider text-sm sm:font-bold font-semibold"
