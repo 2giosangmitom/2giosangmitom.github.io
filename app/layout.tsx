@@ -11,7 +11,7 @@ const font = Fira_Sans({
 
 export const metadata: Metadata = {
   title: 'Võ Quang Chiến',
-  description: 'A fullstack developer from Viet Nam',
+  description: 'My personal website using Next.js 13 new App Router features, server components and more',
   authors: [
     {
       name: 'Vo Quang Chien',
