@@ -11,7 +11,21 @@ const font = Fira_Sans({
 
 export const metadata: Metadata = {
   title: 'Võ Quang Chiến',
-  description: 'A fullstack developer in Viet Nam',
+  description: 'A fullstack developer from Viet Nam',
+  authors: [
+    {
+      name: 'Vo Quang Chien',
+      url: 'https://2giosangmitom.vercel.app',
+    },
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://2giosangmitom.vercel.app',
+    title: 'Vo Quang Chien',
+    description: 'A fullstack developer from Viet Nam',
+    siteName: 'Vo Quang Chien',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
