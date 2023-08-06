@@ -1,2 +1,0 @@
-format:
-	prettier --write .
