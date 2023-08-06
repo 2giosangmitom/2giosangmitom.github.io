@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://2giosangmitom.vercel.app',
     title: 'Vo Quang Chien',
-    description: 'A fullstack developer from Viet Nam',
+    description: 'A fullstack developer from Viet Nam. Focus on React, Next.js, NestJS, Golang and Rust',
     siteName: 'Vo Quang Chien',
   },
 }
