@@ -11,7 +11,7 @@ const font = Fira_Sans({
 
 export const metadata: Metadata = {
   title: 'Võ Quang Chiến',
-  description: 'My personal website',
+  description: 'A fullstack developer in Viet Nam',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
