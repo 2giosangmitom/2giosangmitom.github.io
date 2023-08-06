@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
   return (
     <html lang="en" className="dark">
       <body className={font.className}>
-        <div className="lg:px-16 sm:px-5 px-3">
+        <div className="lg:px-16 sm:px-5 px-3 overflow-hidden">
           <NavBar />
           {children}
         </div>

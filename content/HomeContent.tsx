@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function HomeContent(): JSX.Element {
   return (
-    <div className="lg:mt-20 sm:mt-10 lg:mx-28 sm:mx-20 tracking-wide">
+    <div className="lg:mt-20 mt-10 lg:mx-28 sm:mx-20 tracking-wide">
       <motion.p
         className="text-emerald-200 sm:mb-7 mb-3"
         animate={{
