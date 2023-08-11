@@ -62,7 +62,7 @@ export default function HomeContent(): JSX.Element {
         <br />
         I am a lover of all things open source about web development
         <br />
-        Currently, I&apos;m working with React, Next.js (TypeScript), Tailwind and NestJS
+        Currently, I&apos;m working with React, Next.js (TypeScript), Tailwind and Express.js
         <br />I also love to work with other programming languages like Rust, Go
       </motion.p>
     </div>
