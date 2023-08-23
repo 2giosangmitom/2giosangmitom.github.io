@@ -22,7 +22,7 @@ export default function NavBar(): JSX.Element {
   const links: links[] = [
     { name: 'Profile', link: '/profile', icon: FaUser },
     { name: 'Projects', link: '/projects', icon: AiFillProject },
-    { name: 'Skills', link: '/skills', icon: MdWork },
+    { name: 'Skills', link: '/', icon: MdWork },
   ]
   const [open, setOpen] = useState<boolean>(false)
 
