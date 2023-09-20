@@ -5,9 +5,6 @@ import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/hooks'
 
 const skillsData = [
-  'HTML',
-  'CSS',
-  'SCSS',
   'Rust',
   'Golang',
   'JavaScript',
@@ -17,9 +14,6 @@ const skillsData = [
   'React',
   'Next.js',
   'Node.js',
-  'Git',
-  'Tailwind',
-  'Redux',
   'GraphQL',
   'ExpressJS',
   'PostgreSQL',

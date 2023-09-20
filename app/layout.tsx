@@ -14,7 +14,7 @@ const font = Fira_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://2giosangmitom.vercel.app"),
+  metadataBase: new URL('https://2giosangmitom.vercel.app'),
   title: 'Võ Quang Chiến',
   description: 'My personal website using Next.js 13 new App Router features, server components and more',
   authors: [

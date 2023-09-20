@@ -1,5 +1,5 @@
 'use client'
-import React, { FormEvent } from 'react'
+import { FormEvent } from 'react'
 import SectionHeading from './section_heading'
 import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/hooks'

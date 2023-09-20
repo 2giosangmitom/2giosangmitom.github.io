@@ -11,7 +11,7 @@ import { useActiveSectionContext } from '@/context/active_section_context'
 const links: socialLink[] = [
   { url: 'https://www.linkedin.com/in/2giosangmitom/', icon: createElement(BsLinkedin) },
   { url: 'https://github.com/2giosangmitom/', icon: createElement(FaGithubSquare) },
-  { url: 'https://www.facebook.com/langthangchokopai/', icon: createElement(BsFacebook) }
+  { url: 'https://www.facebook.com/2giosangmitom/', icon: createElement(BsFacebook) }
 ]
 
 export default function Intro() {
