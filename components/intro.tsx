@@ -61,10 +61,10 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, I&apos;m <strong>Vo Quang Chien</strong>. I&apos;m a<strong> Full Stack developer</strong> from{' '}
+        Hello, I&apos;m <strong>Vo Quang Chien</strong>. I&apos;m a<strong> full-stack developer</strong> from{' '}
         <strong>Viet Nam</strong>. I enjoy building
-        <i> things that live on the internet</i>. My focus is
-        <u> React (Next.js), ASP.NET Core and Golang</u>.
+        <i> things that live on the internet.</i> My focus is{' '}
+        <u>React (Next.js), ASP.NET Core, TypeScript, C#, Rust and Golang</u>.
       </motion.h1>
 
       <motion.div
