@@ -1,3 +1,9 @@
+import Intro from "@/components/Intro";
+
 export default function Home() {
-  return <h1>Hello ae</h1>;
+  return (
+    <main className="lg:px-40 px-5">
+      <Intro />
+    </main>
+  );
 }
