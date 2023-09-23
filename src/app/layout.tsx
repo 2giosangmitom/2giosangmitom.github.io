@@ -38,13 +38,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={[
           font.className,
-          'bg-emerald-50 text-gray-950 relative dark:bg-teal-950 dark:text-gray-50 dark:text-opacity-90 overflow-x-hidden'
+          'bg-emerald-50 text-gray-950 relative dark:bg-teal-950 dark:text-gray-50 dark:text-opacity-90'
         ].join(' ')}
       >
-        <div className="-z-10 w-[25rem] h-[20rem] rounded-full absolute left-32 top-36 bg-yellow-300 blur-3xl dark:bg-yellow-600"></div>
-        <div className="-z-10 w-[20rem] h-[15rem] rounded-full absolute left-36 top-10 bg-green-400 blur-3xl dark:bg-teal-900"></div>
-        <div className="-z-10 w-[25rem] h-[20rem] rounded-full absolute right-1/3 top-0 bg-red-500 blur-3xl dark:bg-red-700"></div>
-        <div className="-z-10 w-[20rem] h-[25rem] rounded-full absolute right-20 top-20 bg-purple-300 blur-3xl dark:bg-pink-900"></div>
+        <div className="-z-10 sm:w-[25rem] w-52 h-[20rem] rounded-full absolute left-32 sm:top-36 bg-yellow-300 blur-3xl dark:bg-yellow-600"></div>
+        <div className="-z-10 sm:w-[20rem] w-52 h-[15rem] rounded-full absolute left-36 sm:top-10 bg-green-400 blur-3xl dark:bg-teal-900"></div>
+        <div className="-z-10 sm:w-[25rem] w-52 h-[20rem] rounded-full absolute right-1/3 sm:top-0 bottom-10 bg-red-500 blur-3xl dark:bg-red-700"></div>
+        <div className="-z-10 sm:w-[20rem] w-52 h-[25rem] rounded-full absolute right-20 sm:top-20 bottom-20 bg-purple-300 blur-3xl dark:bg-pink-900"></div>
         <ThemeContextProvider>
           {children}
           <ToggleTheme />

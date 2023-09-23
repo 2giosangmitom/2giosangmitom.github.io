@@ -2,7 +2,7 @@ import Intro from '@/components/Intro'
 
 export default function Home() {
   return (
-    <main className="lg:px-40 px-5">
+    <main className="lg:px-40 px-5 pb-5">
       <Intro />
     </main>
   )
