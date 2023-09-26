@@ -2,6 +2,9 @@
 import { BsMoon, BsSun } from 'react-icons/bs'
 import { useTheme } from '@/context/ThemeContext'
 
+/**
+ * @description toggle theme button component
+ */
 export default function ToggleTheme() {
   const { theme, toggleTheme } = useTheme()
 

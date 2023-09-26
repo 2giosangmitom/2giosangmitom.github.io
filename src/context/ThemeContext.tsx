@@ -1,20 +1,13 @@
 'use client'
-import { createContext, useState, useEffect, useContext } from 'react'
-
-type Theme = 'dark' | 'light'
-
-type ThemeContextProviderProps = {
-  children: React.ReactNode
-}
-
-type ThemeContextType = {
-  theme: Theme
-  toggleTheme: () => void
-}
+import { createContext, useState, useEffect, useContext, ReactNode } from 'react'
+import { ThemeContextType, Theme } from '@/types'
 
 const ThemeContext = createContext<ThemeContextType | null>(null)
 
-export default function ThemeContextProvider({ children }: ThemeContextProviderProps) {
+/**
+ * @description context provider
+ */
+export default function ThemeContextProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light')
 
   const toggleTheme = () => {

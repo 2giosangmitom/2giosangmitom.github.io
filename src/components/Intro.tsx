@@ -1,31 +1,13 @@
 'use client'
 import Image from 'next/image'
-import { createElement, ReactNode } from 'react'
-import { BsArrowRight, BsLinkedin, BsFacebook } from 'react-icons/bs'
-import { ImGithub } from 'react-icons/im'
+import { BsArrowRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
+import { socialLink } from '@/types'
 
-type socialLink = {
-  url: string
-  icon: ReactNode
-}
-
-const links: socialLink[] = [
-  {
-    url: 'https://www.linkedin.com/in/2giosangmitom/',
-    icon: createElement(BsLinkedin)
-  },
-  {
-    url: 'https://github.com/2giosangmitom/',
-    icon: createElement(ImGithub)
-  },
-  {
-    url: 'https://www.facebook.com/2giosangmitom/',
-    icon: createElement(BsFacebook)
-  }
-]
-
-export default function Intro() {
+/**
+ * @param links social links that need to be passed in
+ */
+export default function Intro({ links }: { links: socialLink[] }) {
   return (
     <section className="lg:mt-10 flex flex-col items-center mt-5">
       <motion.div
