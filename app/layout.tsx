@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={[font.className, 'bg-dark md:px-24'].join(' ')}>
+      <body className={[font.className, 'bg-dark lg:px-20 md:px-16 sm:px-12'].join(' ')}>
         <NavBar />
         {children}
         <Footer />
