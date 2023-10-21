@@ -1,5 +1,7 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import { Fira_Sans } from 'next/font/google'
+import { Footer, NavBar } from '@/components'
 import './globals.css'
 
 const font = Fira_Sans({
@@ -25,7 +27,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={[font.className, 'bg-dark'].join(' ')}>{children}</body>
+      <body className={[font.className, 'bg-dark'].join(' ')}>
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
