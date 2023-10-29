@@ -21,16 +21,16 @@ export default function About() {
             width={192}
             height={192}
             priority
-            className="rounded-full w-48 h-48"
+            className="rounded-full sm:w-48 sm:h-48 w-32 h-32"
           />
           <div className="text-center">
-            <h1 className="text-white font-semibold text-3xl mt-2">Vo Quang Chien</h1>
-            <h2 className="text-gray-300 text-base">Full-stack developer</h2>
+            <h1 className="text-white font-semibold sm:text-3xl mt-2 text-2xl">Vo Quang Chien</h1>
+            <h2 className="text-gray-300 text-lg">Full-stack developer</h2>
             <h3 className="text-gray-300">Viet Nam</h3>
           </div>
         </div>
 
-        <div className="col-span-2 text-gray-200 text-lg">
+        <div className="col-span-2 text-gray-200 sm:text-lg text-base">
           <p className="mb-2">A full-stack developer who aims to evolve, innovate, and inspire through technology.</p>
           <p className="mb-2">
             My focus is <u>React (Next.js), ASP.NET Core, TypeScript, C#, Rust and Golang.</u>
