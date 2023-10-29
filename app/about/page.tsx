@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default function About() {
-  return <h1 className="text-white">About page</h1>
+  return <h1 className="text-white font-extrabold text-6xl">About</h1>
 }

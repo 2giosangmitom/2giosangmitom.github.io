@@ -1,11 +1,11 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import { Fira_Sans } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import { Footer, NavBar } from '@/components'
 import './globals.css'
 
-const font = Fira_Sans({
-  weight: '400',
+const font = Nunito({
+  weight: '500',
   style: 'normal',
   subsets: ['latin']
 })
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={[font.className, 'bg-dark lg:px-20 md:px-16 sm:px-12'].join(' ')}>
+      <body className={[font.className, 'bg-dark lg:px-32 md:px-16 sm:px-12'].join(' ')}>
         <NavBar />
         {children}
         <Footer />
