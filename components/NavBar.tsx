@@ -1,4 +1,3 @@
-import React from 'react'
 import { navItems } from '@/lib/datas'
 import Link from 'next/link'
 
