@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
-import { Footer, NavBar } from '@/components'
+import { NavBar } from '@/components'
 import './globals.css'
 
 const font = Nunito({
@@ -29,7 +29,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={[font.className, 'bg-dark lg:px-32 md:px-16 sm:px-12 px-4'].join(' ')}>
         <NavBar />
         {children}
-        <Footer />
       </body>
     </html>
   )

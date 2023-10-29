@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { Footer } from '@/components'
 
 export default function About() {
   React.useEffect(() => {
@@ -33,20 +34,21 @@ export default function About() {
         <div className="col-span-2 text-gray-200 sm:text-lg text-base">
           <p className="mb-2">A full-stack developer who aims to evolve, innovate, and inspire through technology.</p>
           <p className="mb-2">
-            My focus is <u>React (Next.js), ASP.NET Core, TypeScript, C#, Rust and Golang.</u>
+            I&apos;m strongly focus on <u>React (Next.js), ASP.NET Core, TypeScript, C#, Rust and Golang.</u>
           </p>
           <p className="mb-2">
             I am a responsible and passionate person at work. <i>My favorite part of programming</i> is the
-            problem-solving aspect. I <u>love</u> the feeling of finally figuring out a solution to a problem. My core
-            stack is <strong>React, Next.js, ASP.NET Core and Golang</strong>. I also love to work with other
-            programming languages like <strong>Rust</strong> to make CLI application. I&apos;m always actively learning
-            new technologies myself.
+            problem-solving aspect. I <u>love</u> the feeling of finally figuring out a solution to a problem. I have
+            worked with <strong>Next.js, ASP.NET Core and Golang</strong>. I have a basic knowledge of{' '}
+            <strong>Docker, K8s, SEO, GraphQL</strong>. I&apos;m also love to work with other programming languages like{' '}
+            <strong>Rust</strong> to make CLI application. I&apos;m always actively learning new technologies myself.
           </p>
           <p className="mb-2">
             I am currently looking for a <strong>intern position</strong> as a full-stack developer.
           </p>
         </div>
       </div>
+      <Footer />
     </motion.section>
   )
 }
