@@ -2,6 +2,6 @@
 pkgs.mkShell {
   packages = with pkgs; [
     nodejs_21
-    corepack_20
+    corepack_21
   ];
 }
