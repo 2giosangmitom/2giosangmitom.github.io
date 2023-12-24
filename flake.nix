@@ -1,5 +1,5 @@
 {
-  description = "My portfolio written in Next.js";
+  description = "My portfolio";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
   };
