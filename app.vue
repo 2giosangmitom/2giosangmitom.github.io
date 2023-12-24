@@ -1,6 +1,7 @@
 <script setup lang="ts">
+const appConfig = useAppConfig()
 useSeoMeta({
-  title: 'Vo Quang Chien'
+  title: appConfig.title
 })
 </script>
 
