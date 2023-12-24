@@ -1,4 +1,6 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": {
+    "removeComments": true
+  },
   "extends": "./.nuxt/tsconfig.json"
 }
