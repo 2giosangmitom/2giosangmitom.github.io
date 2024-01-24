@@ -1,0 +1,7 @@
+pnpm-lock.yaml
+.git/
+node_modules/
+.next/
+.gitignore
+flake.nix
+flake.lock
