@@ -6,3 +6,8 @@
   box-sizing: border-box;
   font-family: var(--font-family);
 }
+
+body {
+  background-color: var(--black);
+  padding: 1.5rem 2rem;
+}
