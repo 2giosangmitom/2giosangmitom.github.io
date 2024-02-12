@@ -1,3 +1,5 @@
 <template>
-  <main>Home</main>
+  <main class="home">Home</main>
 </template>
+
+<style scoped></style>
