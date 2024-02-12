@@ -52,4 +52,20 @@ const views: { name: string; path: string }[] = [
   cursor: pointer;
   transition-duration: 300ms;
 }
+
+@media (max-width: 1024px) {
+  .header__nav {
+    font-size: 1.05rem;
+  }
+
+  .header__logo {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header__nav {
+    display: none;
+  }
+}
 </style>

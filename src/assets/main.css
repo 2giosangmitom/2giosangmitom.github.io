@@ -9,5 +9,32 @@
 
 body {
   background-color: var(--black);
+}
+
+#app {
   padding: 1.5rem 5rem;
+}
+
+@media (max-width: 1024px) {
+  #app {
+    padding: 1.5rem 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #app {
+    padding: 1.25rem 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #app {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  #app {
+    padding: 1rem 1rem;
+  }
 }
