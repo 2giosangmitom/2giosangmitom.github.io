@@ -1,5 +1,5 @@
 {
-  description = "My portfolio, made with Next.js";
+  description = "My portfolio, made with Vue.js";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
   };
@@ -9,8 +9,8 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         packages = with pkgs; [
-          nodejs_20
-          corepack_20
+          nodejs_21
+          corepack_21
         ];
       in
       {
