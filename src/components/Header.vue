@@ -33,7 +33,7 @@ const views: { name: string; path: string }[] = [
 }
 
 .header__nav {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .header__link {
