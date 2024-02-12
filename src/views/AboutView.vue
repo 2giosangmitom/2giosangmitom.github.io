@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <h1>About</h1>
-  </div>
+  <div>About phe loi</div>
 </template>
