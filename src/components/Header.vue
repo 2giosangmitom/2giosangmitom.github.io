@@ -46,9 +46,9 @@ const views: { name: string; path: string }[] = [
   user-select: none;
 }
 
-.header__logo:hover {
+.header__logo:hover,
+.header__link:hover {
   opacity: 0.9;
-  color: var(--neutral-green);
   cursor: pointer;
   transition-duration: 300ms;
 }
