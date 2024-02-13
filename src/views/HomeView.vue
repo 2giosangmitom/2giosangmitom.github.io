@@ -10,7 +10,7 @@ import gsap from "gsap";
       @enter="
         (e) => {
           gsap.from(e, {
-            duration: 1,
+            duration: 0.5,
             delay: 0.5,
             ease: 'elastic.inOut',
             y: 10,
@@ -29,7 +29,7 @@ import gsap from "gsap";
           gsap.from(e, {
             duration: 1,
             delay: 1,
-            ease: 'elastic.inOut',
+            ease: 'power3',
             opacity: 0,
             y: 10,
           });
