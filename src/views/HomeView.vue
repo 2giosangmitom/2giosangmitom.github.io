@@ -27,8 +27,8 @@ import gsap from "gsap";
       @enter="
         (e) => {
           gsap.from(e, {
-            duration: 1,
-            delay: 1,
+            duration: 0.5,
+            delay: 0.75,
             ease: 'power3',
             opacity: 0,
             y: 10,
@@ -44,10 +44,11 @@ import gsap from "gsap";
       @enter="
         (e) => {
           gsap.from(e, {
-            duration: 2,
-            ease: 'expo',
+            duration: 0.5,
+            ease: 'power3',
             opacity: 0,
-            delay: 1.5,
+            delay: 1,
+            y: 10,
           });
         }
       "
@@ -60,10 +61,11 @@ import gsap from "gsap";
       @enter="
         (e) => {
           gsap.from(e, {
-            duration: 2,
-            ease: 'expo',
+            duration: 0.5,
+            ease: 'power4',
             opacity: 0,
-            delay: 2,
+            delay: 1.25,
+            y: 10,
           });
         }
       "
