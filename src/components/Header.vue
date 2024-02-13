@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import { ref } from "vue";
+import { ref, Transition } from "vue";
+import gsap from "gsap";
 
 const views = ref([
   { name: "About", path: "/about" },
@@ -10,22 +11,36 @@ const views = ref([
 </script>
 
 <template>
-  <header class="header">
-    <RouterLink to="/" class="header__link">
-      <span class="header__logo">2giosangmitom</span>
-    </RouterLink>
-
-    <div class="header__nav">
-      <RouterLink
-        :to="path"
-        class="header__link"
-        v-for="{ name, path } in views"
-        style="margin: 0 20px"
-      >
-        <span>{{ name }}</span>
+  <Transition
+    appear
+    @enter="
+      (e) => {
+        gsap.from(e, {
+          opacity: 0,
+          duration: 1,
+          ease: 'elastic.inOut',
+          y: -100,
+        });
+      }
+    "
+  >
+    <header class="header">
+      <RouterLink to="/" class="header__link">
+        <span class="header__logo">2giosangmitom</span>
       </RouterLink>
-    </div>
-  </header>
+
+      <div class="header__nav">
+        <RouterLink
+          :to="path"
+          class="header__link"
+          v-for="{ name, path } in views"
+          style="margin: 0 20px"
+        >
+          <span>{{ name }}</span>
+        </RouterLink>
+      </div>
+    </header>
+  </Transition>
 </template>
 
 <style scoped>
