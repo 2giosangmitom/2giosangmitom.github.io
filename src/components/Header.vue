@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import { ref, Transition } from "vue";
+import { Transition } from "vue";
 import gsap from "gsap";
 
-const views = ref([
+const views = [
   { name: "About", path: "/about" },
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
-]);
+];
+if (window.innerWidth <= 640) {
+  views.splice(0, 0, { name: "Home", path: "/" });
+}
 </script>
 
 <template>
@@ -34,7 +37,6 @@ const views = ref([
           :to="path"
           class="header__link"
           v-for="{ name, path } in views"
-          style="margin: 0 20px"
         >
           <span>{{ name }}</span>
         </RouterLink>
@@ -64,6 +66,10 @@ const views = ref([
   user-select: none;
 }
 
+.header__nav > a {
+  margin: 0 1.25rem;
+}
+
 .header__logo:hover,
 .header__link:hover {
   opacity: 0.9;
@@ -82,7 +88,15 @@ const views = ref([
 }
 
 @media (max-width: 640px) {
-  .header__nav {
+  .header {
+    justify-content: center;
+  }
+
+  .header__nav > a {
+    margin: 0 0.5rem;
+  }
+
+  .header > a {
     display: none;
   }
 }
