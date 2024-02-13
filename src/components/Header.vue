@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-const views: { name: string; path: string }[] = [
+import { ref } from "vue";
+
+const views = ref([
   { name: "About", path: "/about" },
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
-];
+]);
 </script>
 
 <template>
@@ -30,10 +32,11 @@ const views: { name: string; path: string }[] = [
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__nav {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
 }
 
 .header__link {
@@ -42,7 +45,7 @@ const views: { name: string; path: string }[] = [
 }
 
 .header__logo {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   user-select: none;
 }
 
@@ -55,11 +58,11 @@ const views: { name: string; path: string }[] = [
 
 @media (max-width: 1024px) {
   .header__nav {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .header__logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
