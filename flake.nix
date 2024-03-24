@@ -1,23 +1,31 @@
 {
-  description = "My portfolio, made with Vue.js";
+  description = "My personal website";
+
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
         pkgs = nixpkgs.legacyPackages.${system};
-        packages = with pkgs; [
-          nodejs_21
-          corepack_21
-        ];
-      in
-      {
+      in {
         devShell = pkgs.mkShell {
-          buildInputs = packages;
+          buildInputs = with pkgs; [
+            nodejs_21
+            nodePackages.pnpm
+            fish
+          ];
+          shellHook = ''
+            exec fish
+          '';
         };
-        formatter = pkgs.nixpkgs-fmt;
+        formatter = pkgs.alejandra;
       }
     );
 }
