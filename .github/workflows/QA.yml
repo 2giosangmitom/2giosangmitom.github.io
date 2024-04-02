@@ -1,4 +1,4 @@
-name: CI
+name: Quality Assurance
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  QA:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,6 +29,12 @@ jobs:
 
       - name: Lint
         run: pnpm lint
+
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Spell check
         uses: crate-ci/typos@v1.20.0
