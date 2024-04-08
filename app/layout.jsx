@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 /**@type {import("next").Metadata} */
 export const metadata = {
   title:
-    "Vo Quang Chien - Web Developer, Neovim Plugin Author & Calisthenics Enthusiast",
+    "Vo Quang Chien | Web Developer - Calisthenics Enthusiast",
   description:
     "Discover the dynamic world of Vo Quang Chien, where he excels as a web developer, creates innovative Neovim plugins, and embraces the discipline of calisthenics. Explore his diverse portfolio to witness his achievements and expertise.",
   keywords: ["Web developer", "Vo Quang Chien", "Neovim"],
