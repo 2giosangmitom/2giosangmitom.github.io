@@ -1,8 +1,8 @@
 import About from "@/components/About";
-import Nav from "@/components/Nav";
-import Projects from "@/components/Projects";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
+import Projects from "@/components/Projects";
 
 export default function () {
   return (
