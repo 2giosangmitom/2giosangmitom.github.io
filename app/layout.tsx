@@ -1,9 +1,8 @@
-import { Footer, NavBar } from "@/components";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 
-const interFont = Inter({ subsets: ["latin"] });
+const font = Oswald({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Vo Quang Chien | Web Developer - Calisthenics Enthusiast",
@@ -20,11 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${interFont.className} p-5 bg-slate-900 text-slate-50`}>
-        <NavBar />
-        {children}
-        <Footer />
-      </body>
+      <body className={`${font.className} bg-slate-900 text-slate-200 xl:p-20`}>{children}</body>
     </html>
   );
 }

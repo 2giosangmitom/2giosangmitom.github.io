@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Lint
-        run: pnpm lint
+      - name: Check
+        run: pnpm check
 
   spellcheck:
     runs-on: ubuntu-latest
