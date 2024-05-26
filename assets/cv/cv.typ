@@ -47,18 +47,18 @@
 
 = Summary
 
-Aspiring full-stack developer with robust skills in HTML, CSS, JavaScript,
-TypeScript, Go, Docker, Nuxt.js, and Vue.js. Passionate about building
-comprehensive web applications and continually enhancing my skill set. Seeking
-an internship opportunity to apply my knowledge and further develop my expertise
-in both front-end and back-end development.
+Aspiring full-stack developer passionate about building comprehensive web
+applications and continually enhancing my skill set. Proficient in both
+front-end and back-end development. Seeking an internship opportunity to apply
+my knowledge and gain hands-on experience.
 
 = Technical Skills
 
 Proficient in a diverse range of programming languages, frameworks, libraries,
 tools, and platforms:
 
-- *Languages*: TypeScript, JavaScript, Go, Shell, Lua, HTML, CSS, SCSS, Nix, Typst
+- *Languages*: TypeScript, JavaScript, Go, Shell, Lua, HTML, CSS, SCSS, Nix,
+  Typst, Rust
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber,
   React, Next.js
 - *Tools and Platforms*: Docker, Nix, GitHub Actions, Git, Node.js, Bun, Deno,
