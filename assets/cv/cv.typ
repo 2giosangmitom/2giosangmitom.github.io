@@ -1,5 +1,5 @@
 #set text(font: "Crimson Pro", size: 12pt, fill: luma(30))
-#set page(paper: "us-letter", margin: (x: 1.5cm, y: 1.5cm), fill: rgb("#f8fafc"))
+#set page(paper: "us-letter", margin: (x: 1cm, y: 1.5cm), fill: rgb("#f8fafc"))
 
 #show heading.where(level: 1): it => [
   #set block(above: 1.5em, below: 1em)
