@@ -134,12 +134,6 @@ like-minded developers. Here are some of my notable contributions:
       "https://github.com/2giosangmitom/nightfall.nvim",
     )[#text(rgb("#135D66"))[2giosangmitom/nightfall.nvim]]
 
-= Certifications
-
-- *Foundational C\# with Microsoft:* #link(
-    "https://www.freecodecamp.org/certification/2giosangmitom/foundational-c-sharp-with-microsoft",
-  )[#text(rgb("#135D66"))[FreeCodeCamp Certification]]
-
 = Interests and Hobbies
 
 In addition to my passion for web development, I enjoy various activities
