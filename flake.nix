@@ -22,6 +22,7 @@
         nil
         nodejs_20
         corepack_20
+        typst
       ];
     };
     formatter.${system} = pkgs.alejandra;
