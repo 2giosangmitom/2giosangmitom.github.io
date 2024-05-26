@@ -47,17 +47,16 @@
 
 = Summary
 
-Aspiring full-stack developer with solid skills in HTML, CSS, JavaScript,
-TypeScript, Go, Docker, Nuxt.js, and Vue.js. I'm passionate about building web
-applications and always looking to learn more. I'm seeking an internship to put
-my knowledge to use and grow my expertise in both front-end and back-end
-development.
+Aspiring full-stack developer with robust skills in HTML, CSS, JavaScript,
+TypeScript, Go, Docker, Nuxt.js, and Vue.js. Passionate about building
+comprehensive web applications and continually enhancing my skill set. Seeking
+an internship opportunity to apply my knowledge and further develop my expertise
+in both front-end and back-end development.
 
 = Technical Skills
 
-As a web developer with a diverse skill set, I am proficient in various
-programming languages, frameworks, libraries, tools, and platforms. Here's a
-comprehensive list of my technical skills:
+Proficient in a diverse range of programming languages, frameworks, libraries,
+tools, and platforms:
 
 - *Languages*: TypeScript, JavaScript, Go, Shell, Lua, HTML, CSS, SCSS, Nix, Typst
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber,
@@ -73,19 +72,17 @@ comprehensive list of my technical skills:
   [#link(source)[#text(rgb("#135D66"))[GitHub Repository]] | #link(demo)[#text(rgb("#135D66"))[Live Demo]]]
 }
 
-Throughout my journey as a web developer, I've had the opportunity to work on
-various projects that showcase my skills and creativity. Here are some of my
-noteworthy projects:
+Highlighted projects demonstrating my technical skills and creativity:
 
 - *Year Progress*
-  - *Description:* A website for tracking the progress of the current year visually.
+  - *Description:* A website for visually tracking the progress of the current year.
   - *Technologies Used:* Next.js, TypeScript, Tailwind, Jest, Docker.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/year-progress", "https://2giosangmitom.is-a.dev/year-progress/",
     )
 
 - *Meme Generator*
-  - *Description:* Random Memes - Instant Laughs.
+  - *Description:* A platform for generating random memes for instant amusement.
   - *Technologies Used:* Next.js, TypeScript, Tailwind, Shadcn/ui, Vercel blob
     database.
   - *Links:* #projectLinks(
@@ -93,41 +90,36 @@ noteworthy projects:
     )
 
 - *Portfolio*
-  - *Description:* My portfolio to showcase skills and projects in an engaging way.
+  - *Description:* A personal portfolio showcasing my skills and projects.
   - *Technologies Used:* Nuxt.js, TypeScript.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/2giosangmitom.github.io", "https://2giosangmitom.is-a.dev/",
     )
 
 - *Fylo Dark Theme Landing Page*
-  - *Description:* My solution for the Fylo Dark Theme Landing Page challenge on
+  - *Description:* A solution for the Fylo Dark Theme Landing Page challenge on
     Frontend Mentor.
   - *Technologies Used:* Nuxt.js, SCSS, TypeScript.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/fylo-landing-page", "https://fylo-landing-page-ebon.vercel.app/",
     )
 
-These projects not only showcase my technical skills but also reflect my passion
-for creating meaningful and impactful web applications.
-
 = Open Source Contributions
 
-Contributing to open source projects is not only a way for me to give back to
-the community, but also an opportunity to sharpen my skills and collaborate with
-like-minded developers. Here are some of my notable contributions:
+Engaging with the open source community to give back and enhance my technical
+skills:
 
 - *Release Puller Action*
-  - *Description:* A powerful GitHub Action that automates your release process
-    based on conventional commit messages.
+  - *Description:* A GitHub Action that automates the release process based on
+    conventional commit messages.
   - *Technologies Used:* GitHub Actions, Bash.
   - *GitHub Repository:* #link(
       "https://github.com/2giosangmitom/release-puller-action",
     )[#text(rgb("#135D66"))[2giosangmitom/release-puller-action]]
 
 - *Nightfall.nvim*
-  - *Description:* A sublime colorscheme for Neovim, enveloping your coding
-    environment in the tranquil shades of twilight, enhancing focus and fostering
-    creativity.
+  - *Description:* A sublime colorscheme for Neovim, designed to enhance focus and
+    foster creativity.
   - *Technologies Used:* Lua.
   - *GitHub Repository:* #link(
       "https://github.com/2giosangmitom/nightfall.nvim",
@@ -135,20 +127,16 @@ like-minded developers. Here are some of my notable contributions:
 
 = Interests and Hobbies
 
-When I'm not coding, I like doing stuff that's good for my mind and body. Here
-are some things I'm interesting:
+Engaging in activities that promote both mental and physical well-being:
 
-- *Gym:* I hit the gym regularly to challenge myself and keep a healthy lifestyle
-  in check. It's my go-to spot for some me-time and a sweat session.
+- *Gym:* Regular workouts to maintain a healthy lifestyle and build discipline.
+- *Calisthenics:* Enthusiast of body weight training, mastering exercises like
+  push-ups, pull-ups, and dips. This enhances muscle strength, balance, and
+  agility.
+- *Playing Badminton:* More than just a sport—it is a social activity that fosters
+  joy and camaraderie. I enjoy the fast-paced nature and strategic thinking
+  required to excel on the court.
 
-- *Calisthenics:* I'm really into body weight training and learning how to control
-  and move my body with exercises like push-ups, pull-ups, and dips. Calisthenics
-  not only build muscle strength but also improve balance and agility.
-
-- *Playing Badminton:* Badminton is more than just a sport to me, It's a social
-  activity that brings joy and camaraderie. I enjoy the fast-paced nature of the
-  game and the strategic thinking required to outsmart my opponents on the court.
-
-These activities not only provide me with relaxation and enjoyment but also
-instill discipline, perseverance, and teamwork—all of which are valuable
-qualities that I bring to my professional endeavors.
+These activities not only provide relaxation and enjoyment but also instill
+qualities of discipline, perseverance, and teamwork—essential traits in my
+professional journey.
