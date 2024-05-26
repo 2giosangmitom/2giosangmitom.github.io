@@ -47,11 +47,11 @@
 
 = Summary
 
-Aspiring full-stack developer with a strong foundation in HTML, CSS, JavaScript,
-TypeScript, Go, Docker, Nuxt.js, and Vue.js. Passionate about building
-comprehensive web applications and continually expanding my skill set. Seeking
-an internship opportunity to apply my knowledge and further develop my expertise
-in both front-end and back-end development.
+Aspiring full-stack developer with solid skills in HTML, CSS, JavaScript,
+TypeScript, Go, Docker, Nuxt.js, and Vue.js. I'm passionate about building web
+applications and always looking to learn more. I'm seeking an internship to put
+my knowledge to use and grow my expertise in both front-end and back-end
+development.
 
 = Technical Skills
 
@@ -135,18 +135,15 @@ like-minded developers. Here are some of my notable contributions:
 
 = Interests and Hobbies
 
-In addition to my passion for web development, I enjoy various activities
-outside of work that contribute to my overall well-being and personal growth.
-Here are some of my interests and hobbies:
+When I'm not coding, I like doing stuff that's good for my mind and body. Here
+are some things I'm interesting:
 
-- *Gym:* Regular exercise is an essential part of my routine. I find solace in the
-  gym, where I challenge myself physically and strive to maintain a healthy
-  lifestyle.
+- *Gym:* I hit the gym regularly to challenge myself and keep a healthy lifestyle
+  in check. It's my go-to spot for some me-time and a sweat session.
 
-- *Calisthenics:* I am fascinated by bodyweight exercises and the art of
-  controlling and manipulating one's body through movements such as push-ups,
-  pull-ups, and dips. Calisthenics not only strengthens my muscles but also
-  enhances my balance and agility.
+- *Calisthenics:* I'm really into body weight training and learning how to control
+  and move my body with exercises like push-ups, pull-ups, and dips. Calisthenics
+  not only build muscle strength but also improve balance and agility.
 
 - *Playing Badminton:* Badminton is more than just a sport to me, It's a social
   activity that brings joy and camaraderie. I enjoy the fast-paced nature of the
