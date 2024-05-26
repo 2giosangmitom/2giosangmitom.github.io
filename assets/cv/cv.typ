@@ -63,8 +63,10 @@ comprehensive list of my technical skills:
   Typst, C\#
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber,
   React, Next.js
-- *Tools and Platforms*: Docker, NixOS, GitHub Actions, Git, Node.js, Bun, Deno
+- *Tools and Platforms*: Docker, Nix, GitHub Actions, Git, Node.js, Bun, Deno,
+  Firebase, Vercel
 - *Operating Systems*: NixOS
+- *Databases*: PostgreSQL, MongoDB
 
 = Projects
 
@@ -160,4 +162,3 @@ Here are some of my interests and hobbies:
 These activities not only provide me with relaxation and enjoyment but also
 instill discipline, perseverance, and teamwork—all of which are valuable
 qualities that I bring to my professional endeavors.
-
