@@ -3,11 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "pnpm build:cv && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "compile:cv": "typst compile assets/cv/cv.typ public/cv.pdf",
+    "build:cv": "typst compile assets/cv/cv.typ public/cv.pdf",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
