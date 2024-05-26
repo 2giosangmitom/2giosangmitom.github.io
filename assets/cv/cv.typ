@@ -59,8 +59,7 @@ As a web developer with a diverse skill set, I am proficient in various
 programming languages, frameworks, libraries, tools, and platforms. Here's a
 comprehensive list of my technical skills:
 
-- *Languages*: TypeScript, JavaScript, Go, Shell, Lua, HTML, CSS, SCSS, Nix,
-  Typst, C\#
+- *Languages*: TypeScript, JavaScript, Go, Shell, Lua, HTML, CSS, SCSS, Nix, Typst
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber,
   React, Next.js
 - *Tools and Platforms*: Docker, Nix, GitHub Actions, Git, Node.js, Bun, Deno,
