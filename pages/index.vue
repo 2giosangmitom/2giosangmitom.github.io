@@ -8,7 +8,10 @@ useSeoMeta({
 
 <template>
   <div>
-    <AppHero />
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
   </div>
 </template>
 
@@ -22,8 +25,5 @@ useSeoMeta({
 body {
   background-color: $background-light;
   transition: background-color 0.5s ease;
-  &.dark {
-    background-color: $background-dark;
-  }
 }
 </style>

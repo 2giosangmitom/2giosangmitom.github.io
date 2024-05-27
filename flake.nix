@@ -23,6 +23,7 @@
         nodejs_20
         corepack_20
         typst
+        nodePackages.prettier
       ];
     };
     formatter.${system} = pkgs.alejandra;
