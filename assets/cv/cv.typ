@@ -11,7 +11,7 @@
 ]
 
 #align(center)[
-  #text(35pt, rgb("#151515"))[*Võ Quang Chiến*]\
+  #text(35pt, rgb("#151515"))[*Vo Quang Chien*]\
   #text(16pt, rgb("#A91D3A"), baseline: 5pt)[_#upper("Web Developer")_]
 ]
 
@@ -54,11 +54,11 @@ my knowledge and gain hands-on experience.
 
 = Technical Skills
 
-Proficient in a diverse range of programming languages, frameworks, libraries,
-tools, and platforms:
+Proficient in a diverse range of programming languages, markup languages,
+frameworks, libraries, tools, and platforms:
 
-- *Languages*: TypeScript, JavaScript, Go, Shell, Lua, HTML, CSS, SCSS, Nix,
-  Typst, Rust
+- *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix, Typst,
+  Markdown
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber,
   React, Next.js
 - *Tools and Platforms*: Docker, Nix, GitHub Actions, Git, Node.js, Bun, Deno,
@@ -130,12 +130,11 @@ skills:
 Engaging in activities that promote both mental and physical well-being:
 
 - *Gym:* Regular workouts to maintain a healthy lifestyle and build discipline.
-- *Calisthenics:* Enthusiast of body weight training, mastering exercises like
+- *Calisthenics:* Enthusiast of bodyweight training, mastering exercises like
   push-ups, pull-ups, and dips. This enhances muscle strength, balance, and
   agility.
-- *Playing Badminton:* More than just a sport—it is a social activity that fosters
-  joy and camaraderie. I enjoy the fast-paced nature and strategic thinking
-  required to excel on the court.
+- *Jogging:* I often jog at 5 AM, enjoying the fresh air and peaceful atmosphere
+  to start my day.
 
 These activities not only provide relaxation and enjoyment but also instill
 qualities of discipline, perseverance, and teamwork—essential traits in my
