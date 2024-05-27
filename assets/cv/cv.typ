@@ -59,8 +59,7 @@ frameworks, libraries, tools, and platforms:
 
 - *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix, Typst,
   Markdown
-- *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber,
-  React, Next.js
+- *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
 - *Tools and Platforms*: Docker, Nix, GitHub Actions, Git, Node.js, Bun, Deno,
   Firebase, Vercel
 - *Operating Systems*: NixOS
