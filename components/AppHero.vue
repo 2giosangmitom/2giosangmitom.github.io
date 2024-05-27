@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio-container">
+  <div class="container">
     <h1>Hey there!</h1>
     <p>
       Welcome to my portfolio! I'm Vo Quang Chien, a self-motivated learner with
@@ -8,18 +8,15 @@
       the skills I've acquired along the way.
     </p>
     <button class="cv-button">
-      <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"
-        >Download My CV</a
-      >
+      <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">View my CV</a>
     </button>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.portfolio-container {
+.container {
   text-align: center;
   padding: 2rem;
-  background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -38,6 +35,7 @@ p {
 
 .cv-button {
   margin-top: 1.5rem;
+  border: none;
 }
 
 .cv-button a {
@@ -50,9 +48,8 @@ p {
   border-radius: 4px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-}
-
-.cv-button a:hover {
-  background-color: #0056b3;
+  &:hover {
+    background-color: #0056b3;
+  }
 }
 </style>

@@ -28,12 +28,12 @@
 
 .footer a {
   text-decoration: none;
-  color: #008080; // Replace $teal with the hex code for teal color
+  color: #008080;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: #005f5f; // A darker shade of teal for the hover state
+  color: #005f5f;
 }
 
 .nuxt {
