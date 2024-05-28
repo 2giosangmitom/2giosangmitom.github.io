@@ -54,8 +54,8 @@ my knowledge and gain hands-on experience.
 
 = Technical Skills
 
-Proficient in a diverse range of programming languages, markup languages,
-frameworks, libraries, tools, and platforms:
+As a web developer, I'm proficient in a diverse range of programming languages,
+markup languages, frameworks, libraries, tools, and platforms:
 
 - *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix, Typst,
   Markdown
@@ -75,7 +75,7 @@ Highlighted projects demonstrating my technical skills and creativity:
 
 - *Year Progress*
   - *Description:* A website for visually tracking the progress of the current year.
-  - *Technologies Used:* Next.js, TypeScript, Tailwind, Jest, Docker.
+  - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia, Docker.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/year-progress", "https://2giosangmitom.is-a.dev/year-progress/",
     )
