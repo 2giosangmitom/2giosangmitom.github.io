@@ -75,9 +75,9 @@ Highlighted projects demonstrating my technical skills and creativity:
 
 - *Year Progress*
   - *Description:* A website for visually tracking the progress of the current year.
-  - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia, Docker.
+  - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia.
   - *Links:* #projectLinks(
-      "https://github.com/2giosangmitom/year-progress", "https://2giosangmitom.is-a.dev/year-progress/",
+      "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
     )
 
 - *Meme Generator*
