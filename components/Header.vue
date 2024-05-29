@@ -1,5 +1,5 @@
 <script setup>
-const themeStore = useThemeStore()
+const themeStore = useThemeStore();
 </script>
 
 <template>
