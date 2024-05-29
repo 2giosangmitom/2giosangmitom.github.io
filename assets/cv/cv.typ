@@ -54,8 +54,8 @@ my knowledge and gain hands-on experience.
 
 = Technical Skills
 
-As a web developer, I'm proficient in a diverse range of programming languages,
-markup languages, frameworks, libraries, tools, and platforms:
+Proficient in a diverse range of programming languages, frameworks, tools, and
+platforms:
 
 - *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix, Typst,
   Markdown
@@ -78,14 +78,6 @@ Highlighted projects demonstrating my technical skills and creativity:
   - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
-    )
-
-- *Meme Generator*
-  - *Description:* A platform for generating random memes for instant amusement.
-  - *Technologies Used:* Next.js, TypeScript, Tailwind, Shadcn/ui, Vercel blob
-    database.
-  - *Links:* #projectLinks(
-      "https://github.com/2giosangmitom/meme_generator", "https://meme-generator-sigma-gilt.vercel.app/",
     )
 
 - *Portfolio*
