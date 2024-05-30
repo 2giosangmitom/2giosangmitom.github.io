@@ -25,11 +25,7 @@
   center,
 )[
   #grid(
-    columns: 4, rect[
-      #link(
-        "tel:0852008975",
-      )[#text(12pt, luma(0))[#icon("phone-solid.svg") 0852008975]]
-    ], rect[
+    columns: 3, rect[
       #link(
         "mailto:yeuxacucodon.dev@proton.me",
       )[#text(12pt, luma(0))[#icon("envelope-solid.svg") yeuxacucodon.dev\@proton.me]]
