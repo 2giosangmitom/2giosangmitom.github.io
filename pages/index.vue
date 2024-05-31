@@ -2,17 +2,17 @@
 useSeoMeta({
   title: "Vo Quang Chien | Web developer",
   description:
-    "Discover the dynamic world of Vo Quang Chien, where he excels as a web developer, creates innovative Neovim plugins, and embraces the discipline of calisthenics. Explore his diverse portfolio to witness his achievements and expertise.",
+    "Explore the dynamic world of Vo Quang Chien, an accomplished web developer. Delve into his diverse portfolio to witness his remarkable achievements and expertise.",
 });
 </script>
 
 <template>
-  <div>
+  <main>
     <Hero />
     <About />
     <Skills />
     <Projects />
-  </div>
+  </main>
 </template>
 
 <style lang="scss">
@@ -25,5 +25,9 @@ useSeoMeta({
 body {
   background-color: $background-light;
   transition: background-color 0.5s ease;
+  background-image: url("~/assets/images/overlay.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 40%;
 }
 </style>

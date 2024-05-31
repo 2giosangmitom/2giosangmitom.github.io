@@ -1,7 +1,3 @@
-<script setup>
-const themeStore = useThemeStore();
-</script>
-
 <template>
   <header>
     <span><a href="#">2giosangmitom</a></span>
