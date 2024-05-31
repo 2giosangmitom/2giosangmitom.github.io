@@ -5,7 +5,7 @@
   "scripts": {
     "build": "pnpm build:cv && nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "pnpm build:cv && nuxt generate",
     "preview": "nuxt preview",
     "build:cv": "typst compile assets/cv/cv.typ public/cv.pdf",
     "postinstall": "nuxt prepare"
