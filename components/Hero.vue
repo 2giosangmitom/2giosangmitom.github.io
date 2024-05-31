@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section id="hero">
     <h1>Hey there!</h1>
     <p>
       Welcome to my portfolio! I'm Vo Quang Chien, a passionate software engineer specializing in web development.
@@ -11,4 +11,8 @@
   </section>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#hero {
+  line-height: 1.25rem;
+}
+</style>

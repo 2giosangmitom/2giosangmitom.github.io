@@ -1,3 +1,3 @@
 <template>
-  <div>Skills</div>
+  <section id="skills">Technical skills (coming soon)</section>
 </template>

@@ -1,3 +1,3 @@
 <template>
-  <div>Projects</div>
+  <section id="projects">Projects (coming soon)</section>
 </template>

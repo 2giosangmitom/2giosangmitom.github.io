@@ -7,4 +7,10 @@
   </footer>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+</style>

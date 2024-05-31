@@ -29,5 +29,10 @@ body {
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 40%;
+  margin: 0 5rem;
+}
+
+section {
+  margin-top: 1rem;
 }
 </style>
