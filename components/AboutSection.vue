@@ -1,5 +1,6 @@
 <template>
   <section id="about">
+    <h1>About me</h1>
     <p>I began my journey as a web developer in 2021, starting with HTML, CSS, and JavaScript.</p>
     <p>
       In 2022, I expanded my skills to include various technologies, such as TypeScript, React, Next.js, Vue.js, and
