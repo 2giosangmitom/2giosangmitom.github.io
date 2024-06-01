@@ -13,17 +13,24 @@ import { Icon } from "@iconify/vue";
 <template>
   <section id="skills">
     <div class="skill-item">
-      <Icon icon="vscode-icons:file-type-html" :ssr="true" />
+      <Icon icon="vscode-icons:file-type-html" style="font-size: 2rem" />
     </div>
-    <Icon icon="vscode-icons:file-type-css" :srr="true" />
+    <div class="skill-item">
+      <Icon icon="vscode-icons:file-type-css" style="font-size: 2rem" />
+    </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
+#skills {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .skill-item {
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: grayscale($color: #000000);
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: $grey;
   display: flex;
   justify-content: center;
   align-items: center;
