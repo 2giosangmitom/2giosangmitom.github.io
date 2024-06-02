@@ -4,10 +4,9 @@ Yo, welcome to my personal portfolio site! This thing was made with Vue.js. It s
 
 ## Features ✨
 
-- **Dynamic Content:** Explore my skills, projects, and about me section dynamically rendered with Vue.js components.
-- **Responsive Design:** The portfolio is fully responsive, ensuring a seamless experience across various devices and screen sizes.
-- **SEO Optimization:** The portfolio is optimized for search engines to improve visibility and ranking in search results.
-- **Easy to Customize:** You can easily customize the portfolio by editing Vue components and stylesheets to fit your preferences and needs.
+- **Seamless Responsiveness:** Experience a smooth transition across devices and screen sizes, ensuring accessibility wherever you are.
+- **Enhanced Search Visibility:** With optimized SEO strategies, your portfolio stands out in search engine results, boosting visibility and reach.
+- **Flexible Customization:** Tailor your portfolio effortlessly to your style and requirements by tweaking Vue components and stylesheets, empowering you to make it truly yours.
 
 ## Technologies Used 🛠️
 
