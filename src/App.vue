@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheAbout from './components/TheAbout.vue'
-import TheIntro from './components/TheIntro.vue'
-import TheHobbies from './components/TheHobbies.vue'
-import TheSkills from './components/TheSkills.vue'
-import TheContact from './components/TheContact.vue'
+import TheIntro from "./components/TheIntro.vue";
+import TheAbout from "./components/TheAbout.vue";
+import TheSkills from "./components/TheSkills.vue";
+import TheHobbies from "./components/TheHobbies.vue";
+import TheContact from "./components/TheContact.vue";
 </script>
 
 <template>
@@ -18,14 +18,12 @@ import TheContact from './components/TheContact.vue'
 
 <style scoped>
 main {
-  margin: 2rem 5rem;
-  max-width: 70%;
+  margin: 2rem 3rem;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
   main {
-    margin: 0.5rem;
-    max-width: 100%;
+    margin: 2rem 1rem;
   }
 }
 </style>

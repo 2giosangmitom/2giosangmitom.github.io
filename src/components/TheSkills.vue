@@ -1,71 +1,58 @@
+<script setup>
+const skills = [
+  { name: "HTML", color: "#F75431" },
+  { name: "CSS", color: "#2965F1" },
+  { name: "JavaScript", color: "#987070" },
+  { name: "TypeScript", color: "#007ACC" },
+  { name: "Go", color: "#00ADD8" },
+  { name: "Nix", color: "#5277C3" },
+  { name: "Git", color: "#F34F29" },
+  { name: "GitHub", color: "#424769" },
+  { name: "Docker", color: "#2496ED" },
+  { name: "Vue.js", color: "#42B883" },
+  { name: "Nuxt.js", color: "#3FA796" },
+  { name: "Tailwind", color: "#38B2AC" },
+  { name: "Vitest", color: "#0F6292" },
+  { name: "Pinia", color: "#10B981" },
+  { name: "Vite", color: "#FA2FB5" },
+  { name: "NixOS", color: "#5277C3" },
+  { name: "Node.js", color: "#43853D" },
+  { name: "React.js", color: "#3ABEF9" },
+  { name: "Next.js", color: "#850F8D"}
+];
+</script>
+
 <template>
-  <section class="skills">
-    <h2>Skills</h2>
+  <section id="skills">
+    <h2 class="section-title">Technical skills</h2>
     <div class="skills-container">
-      <div class="skill-box js">JavaScript</div>
-      <div class="skill-box ts">TypeScript</div>
-      <div class="skill-box vue">Vue.js</div>
-      <div class="skill-box nuxt">Nuxt.js</div>
-      <div class="skill-box react">React</div>
-      <div class="skill-box next">Next.js</div>
-      <div class="skill-box node">Node.js</div>
-      <div class="skill-box go">Go</div>
-      <div class="skill-box docker">Docker</div>
-      <div class="skill-box git">Git</div>
-      <div class="skill-box css">CSS</div>
-      <div class="skill-box html">HTML</div>
+      <div
+        class="skill-item"
+        v-for="skill in skills"
+        :key="skill.name"
+        :style="{ backgroundColor: skill.color, color: '#F5F7F8' }"
+      >
+        {{ skill.name }}
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
+#skills {
+  max-width: 60rem;
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.skill-box {
+
+.skills-container .skill-item {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  color: #151515;
-  font-weight: bold;
-  text-align: center;
-  font-size: 0.875rem;
-}
-.js {
-  background-color: #f0db4f;
-}
-.ts {
-  background-color: #007acc;
-}
-.vue {
-  background-color: #42b883;
-}
-.nuxt {
-  background-color: #00dc82;
-}
-.react {
-  background-color: #61dafb;
-}
-.next {
-  background-color: #0070f3;
-}
-.node {
-  background-color: #3c873a;
-}
-.go {
-  background-color: #00add8;
-}
-.docker {
-  background-color: #2496ed;
-}
-.git {
-  background-color: #e84d31;
-}
-.css {
-  background-color: #2862e9;
-}
-.html {
-  background-color: #e44d26;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 </style>
