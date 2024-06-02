@@ -1,6 +1,6 @@
 # Vo Quang Chien Portfolio 🚀
 
-Welcome to my personal portfolio repository! This portfolio is a single-page application built with Vue.js, showcasing my skills and projects.
+Yo, welcome to my personal portfolio site! This thing was made with Vue.js. It shows off my skills and the stuff I've learned so far. Hope you find it interesting!
 
 ## Features ✨
 
