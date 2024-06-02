@@ -6,16 +6,16 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("@/assets/fonts/OpenSans.tff") format("truetype");
+  src: url("./assets/fonts/OpenSans.ttf") format("truetype");
 }
 
 html {
   background-color: #0c0c0c;
   color: #f9e8c9;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 section {

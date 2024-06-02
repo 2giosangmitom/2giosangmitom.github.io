@@ -42,7 +42,7 @@ onMounted(() => {
     duration: 0.25,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: "#about",
+      trigger: "#skills",
       start: "top center",
     },
   });
