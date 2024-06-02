@@ -1,9 +1,49 @@
-# Vue 3 + TypeScript + Vite
+# Vo Quang Chien Portfolio 🚀
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Welcome to my personal portfolio repository! This portfolio is a single-page application built with Vue.js, showcasing my skills and projects.
 
-## Recommended Setup
+## Features ✨
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+- **Dynamic Content:** Explore my skills, projects, and about me section dynamically rendered with Vue.js components.
+- **Responsive Design:** The portfolio is fully responsive, ensuring a seamless experience across various devices and screen sizes.
+- **SEO Optimization:** The portfolio is optimized for search engines to improve visibility and ranking in search results.
+- **Easy to Customize:** You can easily customize the portfolio by editing Vue components and stylesheets to fit your preferences and needs.
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+## Technologies Used 🛠️
+
+- **HTML:** Structure and content.
+- **CSS:** Styling and layout.
+- **Vue.js:** JavaScript framework for building user interfaces.
+- **Vite:** Fast and minimalist development setup for Vue.js.
+- **Vitest:** Testing tool for Vue.js applications.
+- **Docker:** Containerization platform for packaging applications.
+
+## Getting Started 🏁
+
+To get a local copy of the portfolio up and running on your machine, follow these steps:
+
+1. **Clone the Repository:**
+
+   ```shell
+   git clone https://github.com/2giosangmitom/2giosangmitom.github.io.git
+   ```
+
+2. **Install Dependencies:**
+
+   ```shell
+   cd 2giosangmitom.github.io
+   pnpm install
+   ```
+
+3. **Run the Development Server:**
+
+   ```shell
+   pnpm dev
+   ```
+
+4. **Open in Your Browser:**
+   Open your web browser and navigate to `http://localhost:5173` to view the portfolio.
+
+## Contributing 🤝
+
+Contributions are welcome! If you have any suggestions, bug fixes, or improvements, please feel free to open an issue or create a pull request.
