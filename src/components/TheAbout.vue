@@ -19,7 +19,7 @@
 </template>
 
 <style scoped>
-p {
+p:not(:first-child) {
   margin-top: 1rem;
 }
 </style>

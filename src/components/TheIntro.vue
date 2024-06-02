@@ -20,6 +20,10 @@
   border-radius: 50%;
 }
 
+h1 {
+  margin: 1rem 0;
+}
+
 button {
   display: inline-block;
   margin-top: 1rem;
