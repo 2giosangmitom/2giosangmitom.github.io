@@ -19,8 +19,7 @@
 </template>
 
 <style scoped>
-h2,
 p {
-  color: #cccccc;
+  margin-top: 1rem;
 }
 </style>

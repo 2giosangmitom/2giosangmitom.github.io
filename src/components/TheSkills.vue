@@ -19,9 +19,6 @@
 </template>
 
 <style scoped>
-h2 {
-  color: #ffffff;
-}
 .skills-container {
   display: flex;
   flex-wrap: wrap;

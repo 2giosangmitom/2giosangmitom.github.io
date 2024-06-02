@@ -8,9 +8,4 @@
   </section>
 </template>
 
-<style scoped>
-h2,
-p {
-  color: #cccccc;
-}
-</style>
+<style scoped></style>

@@ -19,10 +19,7 @@
 .avatar img {
   border-radius: 50%;
 }
-h1,
-p {
-  color: #ffffff;
-}
+
 button {
   display: inline-block;
   margin-top: 1rem;
@@ -39,5 +36,6 @@ button:hover {
 button a {
   color: #f8fafc;
   text-decoration: none;
+  font-size: 15px;
 }
 </style>
