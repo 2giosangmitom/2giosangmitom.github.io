@@ -24,6 +24,7 @@ const skills = [
   { name: "PostgreSQL", color: "#3ABEF9" },
   { name: "MongoDB", color: "#40A578" },
   { name: "Lua", color: "#CAF4FF" },
+  { name: "Shell", color: "#C3FF93" },
 ];
 </script>
 
