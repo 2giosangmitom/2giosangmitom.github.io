@@ -1,5 +1,4 @@
 {
-  description = "Portfolio built with Nuxt.js to showcase skills and projects in an engaging way.";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
   };
