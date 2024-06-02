@@ -10,10 +10,10 @@
     </div>
     <h1 class="section-title">Hey there!</h1>
     <p>
-      Welcome to my portfolio realm! I'm Vo Quang Chien, a dedicated software
-      engineer with expertise in web development. Dive into my portfolio to
-      uncover insights into my journey and the diverse skill set I've honed
-      along the way.
+      Welcome to my portfolio realm! I'm <strong>Vo Quang Chien</strong>, a
+      dedicated software engineer with expertise in web development. Dive into
+      my portfolio to uncover insights into my journey and the diverse skill set
+      I've honed along the way.
     </p>
     <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
   </section>
