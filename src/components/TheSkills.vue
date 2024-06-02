@@ -1,36 +1,41 @@
 <script setup lang="ts">
 const skills = [
   { name: "HTML", color: "#F75431" },
-  { name: "CSS", color: "#2965F1" },
-  { name: "JavaScript", color: "#987070" },
-  { name: "TypeScript", color: "#007ACC" },
-  { name: "Go", color: "#00ADD8" },
-  { name: "Nix", color: "#5277C3" },
+  { name: "CSS", color: "#A0DEFF" },
+  { name: "JavaScript", color: "#FFC100" },
+  { name: "TypeScript", color: "#5AB2FF" },
+  { name: "Go", color: "#68D2E8" },
+  { name: "Rust", color: "#FFBF78" },
+  { name: "Nix", color: "#E1AFD1" },
   { name: "Git", color: "#F34F29" },
-  { name: "GitHub", color: "#424769" },
-  { name: "Docker", color: "#2496ED" },
   { name: "Vue.js", color: "#42B883" },
-  { name: "Nuxt.js", color: "#3FA796" },
+  { name: "GitHub", color: "#EEF7FF" },
+  { name: "Docker", color: "#CAE6B2" },
   { name: "Tailwind", color: "#38B2AC" },
-  { name: "Vitest", color: "#0F6292" },
-  { name: "Pinia", color: "#10B981" },
+  { name: "Vitest", color: "#BFF6C3" },
+  { name: "Pinia", color: "#FFFDB5" },
   { name: "Vite", color: "#FA2FB5" },
-  { name: "NixOS", color: "#5277C3" },
-  { name: "Node.js", color: "#43853D" },
+  { name: "Nuxt.js", color: "#3FA796" },
+  { name: "Jest", color: "#E6FF94" },
+  { name: "NixOS", color: "#7E8EF1" },
+  { name: "Node.js", color: "#7ABA78" },
   { name: "React.js", color: "#3ABEF9" },
-  { name: "Next.js", color: "#850F8D"}
+  { name: "Next.js", color: "#CDE8E5" },
+  { name: "PostgreSQL", color: "#3ABEF9" },
+  { name: "MongoDB", color: "#40A578" },
+  { name: "Lua", color: "#CAF4FF" },
 ];
 </script>
 
 <template>
   <section id="skills">
-    <h2 class="section-title">Technical skills</h2>
+    <h2 class="section-title">Technical Skills</h2>
     <div class="skills-container">
       <div
-        class="skill-item"
         v-for="skill in skills"
         :key="skill.name"
-        :style="{ backgroundColor: skill.color, color: '#F5F7F8' }"
+        :style="{ backgroundColor: skill.color, color: '#151515' }"
+        class="skill-item"
       >
         {{ skill.name }}
       </div>
@@ -49,7 +54,7 @@ const skills = [
   gap: 0.5rem;
 }
 
-.skills-container .skill-item {
+.skill-item {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.9rem;
