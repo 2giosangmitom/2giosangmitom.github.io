@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { onMounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const skills = [
   { name: "HTML", color: "#F75431" },
   { name: "CSS", color: "#A0DEFF" },
@@ -27,6 +33,20 @@ const skills = [
   { name: "Shell", color: "#C3FF93" },
   { name: "Typst", color: "#3AA6B9" },
 ];
+
+onMounted(() => {
+  gsap.from("#skills .skill-item", {
+    opacity: 0,
+    y: 50,
+    stagger: 0.05,
+    duration: 0.25,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top center",
+    },
+  });
+});
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <template>
-  <section class="hobbies">
+  <section id="hobbies">
     <h2 class="section-title">Hobbies & Interests</h2>
     <p>
       When I'm not coding, I enjoy going to the gym, practicing calisthenics,
@@ -10,11 +10,11 @@
 </template>
 
 <style scoped>
-.hobbies {
+#hobbies {
   max-width: 60rem;
 }
 
-.hobbies p {
+#hobbies p {
   line-height: 24px;
 }
 </style>
