@@ -25,9 +25,6 @@ import { Icon } from '@iconify/vue'
 </template>
 
 <style scoped>
-h2 {
-  color: #ffffff;
-}
 .contact-info {
   display: flex;
   align-items: center;
