@@ -1,5 +1,5 @@
 <template>
-  <section class="intro">
+  <section id="intro">
     <div class="avatar">
       <img
         src="../assets/images/avt.png"
@@ -20,7 +20,7 @@
 </template>
 
 <style scoped>
-.intro .avatar img {
+#intro .avatar img {
   border-radius: 100%;
 }
 
@@ -28,12 +28,12 @@
   margin-top: 1rem;
 }
 
-.intro p {
+#intro p {
   max-width: 60rem;
   line-height: 24px;
 }
 
-.intro a {
+#intro a {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -48,7 +48,11 @@
   font-weight: 600;
 }
 
-.intro a:hover {
+#intro a:hover {
   background-color: #333333;
+}
+
+#intro a:active {
+  scale: 0.95;
 }
 </style>
