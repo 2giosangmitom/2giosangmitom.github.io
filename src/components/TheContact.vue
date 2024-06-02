@@ -1,9 +1,28 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import { onMounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap.from(".contact-info", {
+    opacity: 0,
+    x: -50,
+    stagger: 0.2,
+    duration: 0.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#contact",
+      start: "top 80%",
+    },
+  });
+});
 </script>
 
 <template>
-  <section class="contact">
+  <section id="contact">
     <h2 class="section-title">Contact me</h2>
     <div class="contact-info">
       <Icon icon="clarity:email-solid" />
@@ -38,7 +57,7 @@ import { Icon } from "@iconify/vue";
   margin: 0.5rem 0;
 }
 .contact-info a {
-  color: #e0e0e0;
+  color: #f9e8c9;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
