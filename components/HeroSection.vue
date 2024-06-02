@@ -19,6 +19,7 @@
   line-height: 1.25rem;
   display: flex;
   margin-top: 5rem;
+  justify-content: space-between;
 }
 
 .hero-content {
@@ -26,10 +27,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 40rem;
+  text-align: justify;
+
   h1 {
     font-size: 4rem;
     margin-bottom: 2rem;
   }
+
   button {
     margin-top: 1rem;
     padding: 0.5rem 1rem;

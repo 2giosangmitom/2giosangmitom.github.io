@@ -28,7 +28,7 @@ body {
   background-image: url("~/assets/images/overlay.svg");
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: 40%;
+  background-size: 40rem;
   margin: 0 5rem;
 }
 
