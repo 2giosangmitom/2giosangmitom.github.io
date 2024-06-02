@@ -19,13 +19,13 @@ import TheContact from './components/TheContact.vue'
 <style scoped>
 main {
   margin: 2rem 5rem;
-  width: 90%;
-  max-width: 800px;
+  max-width: 70%;
 }
 
 @media (max-width: 600px) {
   main {
-    width: 100%;
+    margin: 0.5rem;
+    max-width: 100%;
   }
 }
 </style>
