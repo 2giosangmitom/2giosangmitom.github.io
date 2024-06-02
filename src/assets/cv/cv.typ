@@ -44,7 +44,7 @@
 = Summary
 
 Aspiring full-stack developer passionate about building comprehensive web
-applications and continually enhancing my skill set. Proficient in both
+applications and continuously enhancing my skill set. Proficient in both
 front-end and back-end development. Seeking an internship opportunity to apply
 my knowledge and gain hands-on experience.
 
@@ -56,8 +56,8 @@ platforms:
 - *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix, Typst,
   Markdown
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
-- *Tools and Platforms*: Docker, Nix, GitHub Actions, Git, Node.js, Bun, Deno,
-  Firebase, Vercel
+- *Tools and Platforms*: Docker, Nix, GitHub Actions, Git, Node.js, Firebase,
+  Vercel
 - *Operating Systems*: NixOS
 - *Databases*: PostgreSQL, MongoDB
 
@@ -77,14 +77,15 @@ Highlighted projects demonstrating my technical skills and creativity:
     )
 
 - *Portfolio*
-  - *Description:* My personal portfolio.
-  - *Technologies Used:* Vue.js, Vite, TypeScript, Pinia, Docker, Vitest.
+  - *Description:* My personal portfolio showcases my skills and includes my CV
+    written in Typst.
+  - *Technologies Used:* Vue.js, Vite, TypeScript, Pinia, Docker, Vitest, Typst.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/2giosangmitom.github.io", "https://2giosangmitom.is-a.dev/",
     )
 
 - *Fylo Dark Theme Landing Page*
-  - *Description:* A solution for the Fylo Dark Theme Landing Page challenge on
+  - *Description:* A responsive landing page for the Fylo Dark Theme challenge on
     Frontend Mentor.
   - *Technologies Used:* Nuxt.js, SCSS, TypeScript.
   - *Links:* #projectLinks(
