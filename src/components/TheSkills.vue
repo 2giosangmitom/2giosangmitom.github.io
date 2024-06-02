@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const skills = [
   { name: "HTML", color: "#F75431" },
   { name: "CSS", color: "#2965F1" },
