@@ -1,30 +1,43 @@
 <template>
   <section class="intro">
     <div class="avatar">
-      <img src="../assets/avt.png" alt="avatar" width="100" height="100" />
+      <img
+        src="../assets/images/avt.png"
+        alt="avatar"
+        width="100"
+        height="100"
+      />
     </div>
-    <h1>Hey there!</h1>
+    <h1 class="section-title">Hey there!</h1>
     <p>
-      Welcome to my portfolio! I'm Vo Quang Chien, a passionate software engineer specializing in
-      web development. Explore my portfolio to discover the projects I've undertaken and the skills
-      I've acquired along the way.
+      Welcome to my portfolio realm! I'm Vo Quang Chien, a dedicated software
+      engineer with expertise in web development. Dive into my portfolio to
+      uncover insights into my journey and the diverse skill set I've honed
+      along the way.
     </p>
     <button>
-      <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+      <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"
+        >Download CV</a
+      >
     </button>
   </section>
 </template>
 
 <style scoped>
-.avatar img {
-  border-radius: 50%;
+.intro .avatar img {
+  border-radius: 100%;
 }
 
-h1 {
-  margin: 1rem 0;
+.section-title {
+  margin-top: 1rem;
 }
 
-button {
+.intro p {
+  max-width: 60rem;
+  line-height: 24px;
+}
+
+.intro button {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -34,12 +47,15 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
-button:hover {
+
+.intro button:hover {
   background-color: #333333;
 }
-button a {
-  color: #f8fafc;
+
+.intro button a {
+  color: #ffd0ec;
   text-decoration: none;
   font-size: 15px;
+  font-weight: 600;
 }
 </style>

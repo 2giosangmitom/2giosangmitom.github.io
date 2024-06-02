@@ -28,7 +28,7 @@
     columns: 3, rect[
       #link(
         "mailto:yeuxacucodon.dev@proton.me",
-      )[#text(12pt, luma(0))[#icon("envelope-solid.svg") voquangchien.dev\@proton.me]]
+      )[#text(12pt, luma(0))[#icon("email.svg") voquangchien.dev\@proton.me]]
     ], rect[
       #link(
         "https://www.linkedin.com/in/2giosangmitom/",
