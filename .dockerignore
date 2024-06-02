@@ -30,10 +30,6 @@ logs
 .env.local
 .env.*.local
 
-# Nuxt specific files
-.nuxt
-.nuxt-generate
-
 # Miscellaneous
 .DS_Store
 *.swp
@@ -55,7 +51,7 @@ docker-compose.yml
 .eslint.config.mjs
 
 # Others
-README
+README.md
 .github
 flake.nix
 flake.lock

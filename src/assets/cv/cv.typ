@@ -77,8 +77,8 @@ Highlighted projects demonstrating my technical skills and creativity:
     )
 
 - *Portfolio*
-  - *Description:* A personal portfolio showcasing my skills and projects.
-  - *Technologies Used:* Nuxt.js, TypeScript, Pinia, Docker, Vitest.
+  - *Description:* My personal portfolio.
+  - *Technologies Used:* Vue.js, Vite, TypeScript, Pinia, Docker, Vitest.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/2giosangmitom.github.io", "https://2giosangmitom.is-a.dev/",
     )
