@@ -14,7 +14,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NODE_ENV production
-RUN pnpm generate
+RUN pnpm build
 
 # Export the static files
 FROM scratch AS exporter
