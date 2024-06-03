@@ -43,15 +43,16 @@
 
 = Summary
 
-Aspiring full-stack developer passionate about building comprehensive web
-applications and continuously enhancing my skill set. Proficient in both
-front-end and back-end development. Seeking an internship opportunity to apply
-my knowledge and gain hands-on experience.
+A dedicated full-stack developer with a strong passion for creating dynamic web
+applications. Skilled in both front-end and back-end development, I'm eager to
+apply my knowledge and continuously improve my abilities. Currently, I'm seeking
+an internship opportunity to gain practical experience and contribute to
+real-world projects.
 
 = Technical Skills
 
-Proficient in a diverse range of programming languages, frameworks, tools, and
-platforms:
+As a web developer, I'm proficient in a diverse range of programming languages,
+frameworks, tools, and platforms:
 
 - *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix, Typst,
   Markdown
@@ -67,7 +68,7 @@ platforms:
   [#link(source)[#text(rgb("#135D66"))[GitHub Repository]] | #link(demo)[#text(rgb("#135D66"))[Live Demo]]]
 }
 
-Highlighted projects demonstrating my technical skills and creativity:
+Some highlighted projects demonstrating my technical skills and creativity:
 
 - *Year Progress*
   - *Description:* A website for visually tracking the progress of the current year.
@@ -94,8 +95,8 @@ Highlighted projects demonstrating my technical skills and creativity:
 
 = Open Source Contributions
 
-Engaging with the open source community to give back and enhance my technical
-skills:
+Actively engaging with the open source community to give back, enhance my
+technical skills, and collaborate with talented developers worldwide:
 
 - *Release Puller Action*
   - *Description:* A GitHub Action that automates the release process based on
@@ -115,7 +116,9 @@ skills:
 
 = Interests and Hobbies
 
-Engaging in activities that promote both mental and physical well-being:
+When I'm not coding, I enjoy going to the gym, practicing calisthenics, and
+playing sports. These activities not only provide relaxation but also contribute
+to my overall health and teamwork—essential traits in my professional journey.
 
 - *Gym:* Regular workouts to maintain a healthy lifestyle and build discipline.
 - *Calisthenics:* Enthusiast of bodyweight training, mastering exercises like
@@ -124,6 +127,3 @@ Engaging in activities that promote both mental and physical well-being:
 - *Jogging:* I often jog at 5 AM, enjoying the fresh air and peaceful atmosphere
   to start my day.
 
-These activities not only provide relaxation and enjoyment but also instill
-qualities of discipline, perseverance, and teamwork—essential traits in my
-professional journey.
