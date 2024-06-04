@@ -43,16 +43,16 @@
 
 = Summary
 
-A dedicated full-stack developer with a strong passion for creating dynamic web
-applications. Skilled in both front-end and back-end development, I'm eager to
-apply my knowledge and continuously improve my abilities. Currently, I'm seeking
-an internship opportunity to gain practical experience and contribute to
+A dedicated web developer with a strong passion for creating dynamic web
+applications. Proficient in both front-end and back-end development, I'm eager
+to leverage my knowledge and continuously improve my abilities. Currently, I'm
+seeking an internship opportunity to gain practical experience and contribute to
 real-world projects.
 
 = Technical Skills
 
-As a web developer, I'm proficient in a diverse range of programming languages,
-frameworks, tools, and platforms:
+As a web developer, I'm proficient in a variety of technologies across front-end
+and back-end development:
 
 - *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix, Typst,
   Markdown
