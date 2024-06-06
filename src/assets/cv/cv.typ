@@ -71,14 +71,14 @@ and back-end development:
 Some highlighted projects demonstrating my technical skills and creativity:
 
 - *Year Progress*
-  - *Description:* A website for visually tracking the progress of the current year.
+  - *Description:* A website for tracking the progress of the current year visually.
   - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
     )
 
 - *Portfolio*
-  - *Description:* My personal portfolio showcases my skills and includes my CV
+  - *Description:* My simple portfolio showcases my skills and includes my CV
     written in Typst.
   - *Technologies Used:* Vue.js, Vite, TypeScript, Docker, Vitest, Typst.
   - *Links:* #projectLinks(
@@ -95,20 +95,20 @@ Some highlighted projects demonstrating my technical skills and creativity:
 
 = Open Source Contributions
 
-Actively engaging with the open source community to give back, enhance my
-technical skills, and collaborate with talented developers worldwide:
+These projects are not related to web development, but they helped me improve my
+mindset and collaboration skills.
 
 - *Release Puller Action*
-  - *Description:* A GitHub Action that automates the release process based on
-    conventional commit messages.
+  - *Description:* A powerful GitHub Action designed to automate the release process
+    based on conventional commit messages.
   - *Technologies Used:* GitHub Actions, Bash.
   - *GitHub Repository:* #link(
       "https://github.com/2giosangmitom/release-puller-action",
     )[#text(rgb("#135D66"))[2giosangmitom/release-puller-action]]
 
 - *Nightfall.nvim*
-  - *Description:* A sublime colorscheme for Neovim, designed to enhance focus and
-    foster creativity.
+  - *Description:* A sublime Neovim colorscheme, immerse in twilight hues for
+    enhanced focus and creativity.
   - *Technologies Used:* Lua.
   - *GitHub Repository:* #link(
       "https://github.com/2giosangmitom/nightfall.nvim",
