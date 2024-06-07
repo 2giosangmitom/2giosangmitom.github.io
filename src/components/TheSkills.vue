@@ -24,13 +24,9 @@ const skills = [
   { name: "Jest", color: "#E6FF94" },
   { name: "NixOS", color: "#7E8EF1" },
   { name: "Node.js", color: "#7ABA78" },
-  { name: "React.js", color: "#3ABEF9" },
-  { name: "Next.js", color: "#CDE8E5" },
   { name: "PostgreSQL", color: "#3ABEF9" },
   { name: "MongoDB", color: "#40A578" },
-  { name: "Lua", color: "#CAF4FF" },
   { name: "Shell", color: "#C3FF93" },
-  { name: "Typst", color: "#3AA6B9" },
 ];
 
 onMounted(() => {
