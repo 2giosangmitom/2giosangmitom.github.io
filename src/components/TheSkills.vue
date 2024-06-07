@@ -11,7 +11,6 @@ const skills = [
   { name: "JavaScript", color: "#FFC100" },
   { name: "TypeScript", color: "#5AB2FF" },
   { name: "Go", color: "#68D2E8" },
-  { name: "Rust", color: "#FFBF78" },
   { name: "Nix", color: "#E1AFD1" },
   { name: "Git", color: "#F34F29" },
   { name: "Vue.js", color: "#42B883" },
