@@ -98,14 +98,6 @@ Some highlighted projects demonstrating my technical skills and creativity:
 These projects are not related to web development, but they helped me improve my
 mindset and collaboration skills.
 
-- *Release Puller Action*
-  - *Description:* A powerful GitHub Action designed to automate the release process
-    based on conventional commit messages.
-  - *Technologies Used:* GitHub Actions, Bash.
-  - *GitHub Repository:* #link(
-      "https://github.com/2giosangmitom/release-puller-action",
-    )[#text(rgb("#135D66"))[2giosangmitom/release-puller-action]]
-
 - *Nightfall.nvim*
   - *Description:* A sublime Neovim colorscheme, immerse in twilight hues for
     enhanced focus and creativity.
