@@ -56,7 +56,7 @@ and back-end development:
 
 - *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
-- *Tools and Platforms*: Docker, Nix, GitHub, Git, Node.js, Firebase, Vercel
+- *Tools and Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel
 - *Operating Systems*: NixOS
 - *Databases*: PostgreSQL, MongoDB
 
