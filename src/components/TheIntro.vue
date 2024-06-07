@@ -2,7 +2,7 @@
   <section id="intro">
     <div class="avatar">
       <img
-        src="../assets/images/avt.png"
+        src="../assets/images/avt.webp"
         alt="Avatar of Vo Quang Chien"
         width="100"
         height="100"
