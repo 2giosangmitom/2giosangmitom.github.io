@@ -53,6 +53,7 @@ onMounted(() => {
         :key="skill.name"
         :style="{ backgroundColor: skill.color, color: '#151515' }"
         class="skill-item"
+        translate="no"
       >
         {{ skill.name }}
       </div>
