@@ -10,8 +10,6 @@ Yo, welcome to my personal portfolio site! This thing was made with Vue.js. It s
 
 ## Technologies Used 🛠️
 
-- **HTML:** Structure and content.
-- **CSS:** Styling and layout.
 - **Vue.js:** JavaScript framework for building user interfaces.
 - **Vite:** Fast and minimalist development setup for Vue.js.
 - **Vitest:** Testing tool for Vue.js applications.
