@@ -1,4 +1,4 @@
-# Vo Quang Chien Portfolio 🚀
+# 2giosangmitom 🚀
 
 Yo, welcome to my personal portfolio site! This thing was made with Vue.js. It shows off my skills and the stuff I've learned so far. Hope you find it interesting!
 
