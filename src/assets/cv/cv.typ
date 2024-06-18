@@ -27,7 +27,7 @@
   #grid(
     columns: 3, rect[
       #link(
-        "mailto:yeuxacucodon.dev@proton.me",
+        "mailto:voquangchien.dev@proton.me",
       )[#text(12pt, luma(0))[#icon("email.svg") voquangchien.dev\@proton.me]]
     ], rect[
       #link(
