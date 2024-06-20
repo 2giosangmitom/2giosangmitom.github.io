@@ -1,30 +1,28 @@
 {
+  description = "My simple portfolio showcases my skills and includes my CV written in Typst";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = {
     nixpkgs,
+    flake-utils,
     ...
-  }: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
-      };
-    };
-  in {
-    devShells.${system}.default = pkgs.mkShell {
-      buildInputs = with pkgs; [
-        alejandra
-        nil
-        nodejs_20
-        corepack_20
-        typst
-        nodePackages.prettier
-      ];
-    };
-    formatter.${system} = pkgs.alejandra;
-  };
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
+      in {
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            alejandra
+            nil
+            nodejs_20
+            corepack_20
+            typst
+          ];
+        };
+      }
+    );
 }
