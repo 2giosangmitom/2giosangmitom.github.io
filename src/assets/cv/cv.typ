@@ -75,22 +75,6 @@ Some highlighted projects demonstrating my technical skills and creativity:
       "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
     )
 
-- *Portfolio*
-  - *Description:* My simple portfolio showcases my skills and includes my CV
-    written in Typst.
-  - *Technologies Used:* Vue.js, Vite, TypeScript, Docker, Vitest, GSAP, Typst.
-  - *Links:* #projectLinks(
-      "https://github.com/2giosangmitom/2giosangmitom.github.io", "https://2giosangmitom.is-a.dev/",
-    )
-
-- *Fylo Dark Theme Landing Page*
-  - *Description:* A responsive landing page for the Fylo Dark Theme challenge on
-    Frontend Mentor.
-  - *Technologies Used:* Nuxt.js, SCSS, TypeScript.
-  - *Links:* #projectLinks(
-      "https://github.com/2giosangmitom/fylo-landing-page", "https://fylo-landing-page-ebon.vercel.app/",
-    )
-
 = Open Source Contributions
 
 These projects are not related to web development, but they helped me improve my
