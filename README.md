@@ -1,5 +1,7 @@
 # 2giosangmitom 🚀
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/2giosangmitom/2giosangmitom.github.io?quickstart=1)
+
 Welcome to my personal portfolio site! This project showcases my skills and the knowledge I've gained so far. I hope you find it interesting and insightful!
 
 ## Features ✨
