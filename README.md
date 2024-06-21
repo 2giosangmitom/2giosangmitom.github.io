@@ -26,7 +26,7 @@ Welcome to my personal portfolio site! This project showcases my skills and the 
 - **Typst:** New markup language, a drop-in replacement for LaTeX.
 
 > [!TIP]
-> This repository includes a `flake.nix` file to set up the development environment for the Nuxt.js project. If you have Nix installed, simply run `nix develop` in the project root to avoid installing Node.js, pnpm, and Typst manually.
+> This repository includes a `flake.nix` file to set up the development environment for the Nuxt.js project. If you have Nix installed, simply run `nix develop` in the project root to avoid installing Node.js, pnpm, and Typst manually. ❄️
 
 ### Run Development Server 🖥️
 
