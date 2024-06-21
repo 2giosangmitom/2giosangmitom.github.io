@@ -21,9 +21,9 @@ Welcome to my personal portfolio site! This project showcases my skills and the 
 
 ### Prerequisites 📋
 
-- **Node.js (v20):** JavaScript runtime.
-- **pnpm (v9):** Fast package manager.
-- **Typst:** New markup language, a drop-in replacement for LaTeX.
+- **Node.js (v20):** A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **pnpm (v9):** A fast, disk space-efficient package manager.
+- **Typst compiler:** The Typst command line interface (CLI) compiles Typst documents into PDF format.
 
 > [!TIP]
 > This repository includes a `flake.nix` file to set up the development environment for the Nuxt.js project. If you have Nix installed, simply run `nix develop` in the project root to avoid installing Node.js, pnpm, and Typst manually. ❄️
