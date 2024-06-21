@@ -1,29 +1,21 @@
 {
-  "name": "2giosangmitom.github.io",
+  "name": "nuxt-app",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build:cv": "typst compile src/assets/cv/cv.typ public/cv.pdf",
-    "build": "vue-tsc && vite build",
-    "test:watch": "vitest",
-    "test": "vitest run",
-    "preview": "vite preview"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "build:cv": "typst compile assets/cv/cv.typ public/cv.pdf",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@iconify/vue": "^4.1.2",
-    "@vue/test-utils": "^2.4.6",
-    "gsap": "^3.12.5",
-    "jsdom": "^24.1.0",
-    "vitest": "^1.6.0",
-    "vue": "^3.4.29"
-  },
-  "devDependencies": {
-    "@types/node": "^20.14.6",
-    "@vitejs/plugin-vue": "^5.0.5",
-    "typescript": "^5.4.5",
-    "vite": "^5.3.1",
-    "vue-tsc": "^2.0.21"
+    "@nuxt/fonts": "^0.7.0",
+    "@nuxt/image": "^1.7.0",
+    "nuxt": "^3.12.2",
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3"
   }
 }
