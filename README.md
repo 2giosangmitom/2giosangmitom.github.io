@@ -17,6 +17,17 @@ Welcome to my personal portfolio site! This project showcases my skills and the 
 
 ## Getting Started 🏁
 
+### Prerequisites
+
+- **Node.js (v20):** JavaScript runtime.
+- **pnpm (v9):** Fast package manager.
+- **Typst:** New markup language, a drop-in replacement for LaTeX.
+
+> [!TIP]
+> This repository includes a `flake.nix` file to set up the development environment for the Nuxt.js project. If you have Nix installed, simply run `nix develop` in the project root to avoid installing Node.js, pnpm, and Typst manually.
+
+### Run Development Server
+
 Follow these steps to get a local copy of the portfolio up and running on your machine:
 
 1. **Clone the Repository:**
@@ -50,3 +61,7 @@ Follow these steps to get a local copy of the portfolio up and running on your m
 ## Contributing 🤝
 
 Contributions are welcome! If you have suggestions, bug fixes, or improvements, please feel free to open an issue or create a pull request.
+
+---
+
+Thank you for visiting my portfolio! Your feedback and contributions are greatly appreciated.
