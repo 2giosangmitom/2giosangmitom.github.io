@@ -12,5 +12,5 @@
       "extensions": ["Vue.volar"]
     }
   },
-  "postCreateCommand": "nix develop --experimental-features 'nix-command flakes'"
+  "postCreateCommand": "mkdir ~/.config/nix && echo 'experimental-features = nix-command flakes' > ~/.config/nix/nix.conf"
 }
