@@ -31,7 +31,7 @@ const contactDetails = [
       :key="index"
       class="contact-info"
     >
-      <Icon :icon="contact.icon" :aria-label="contact.label" :ssr="true" />
+      <Icon :icon="contact.icon" :aria-label="contact.label" />
       <a :href="contact.link" target="_blank" rel="noopener">{{
         contact.text
       }}</a>
