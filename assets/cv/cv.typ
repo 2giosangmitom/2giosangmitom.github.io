@@ -6,13 +6,13 @@
   #set text(size: 18pt, weight: "regular")
   #text(rgb("#151515"))[#strong[#text[#it.body.text]]]
   #box(
-    width: 1fr, line(length: 100%, stroke: luma(0) + 2pt), baseline: -1.5pt,
+    width: 1fr, line(length: 100%, stroke: luma(0) + 1pt), baseline: -1.25pt,
   )
 ]
 
 #align(center)[
   #text(35pt, rgb("#151515"))[*Vo Quang Chien*]\
-  #text(16pt, rgb("#A91D3A"), baseline: 5pt)[_#upper("Web Developer")_]
+  #text(15pt, rgb("#071952"), baseline: 5pt)[_Web Developer_]
 ]
 
 #set rect(stroke: none)
@@ -25,7 +25,7 @@
   center,
 )[
   #grid(
-    columns: 3, rect[
+    columns: 4, rect[
       #link(
         "mailto:voquangchien.dev@proton.me",
       )[#text(12pt, luma(0))[#icon("email.svg") voquangchien.dev\@proton.me]]
@@ -37,6 +37,10 @@
       #link(
         "https://github.com/2giosangmitom",
       )[#text(12pt, luma(0))[#icon("github.svg") 2giosangmitom]]
+    ], rect[
+      #link(
+        "https://2giosangmitom.is-a.dev/",
+      )[#text(12pt, luma(0))[#sym.diamond.filled 2giosangmitom.is-a.dev]]
     ],
   )
 ]
@@ -49,10 +53,29 @@ to leverage my knowledge and continuously improve my abilities. Currently, I'm
 seeking an internship opportunity to gain practical experience and contribute to
 real-world projects.
 
-= Technical Skills
+= Education
 
-As a web developer, I'm proficient in a variety of technologies across front-end
-and back-end development:
+#let daterange(start, end) = {
+  if start != none and end != none [
+    #start #sym.dash.en #end
+  ]
+  if start == none and end != none [
+    #end
+  ]
+  if start != none and end == none [
+    #start
+  ]
+}
+
+#block(
+  width: 100%, breakable: true,
+)[
+  *Hue University of Sciences* #h(1fr) *Hue #sym.dash.en Vietnam*\
+  #text(style: "italic")[Bachelor of Science in Information Technology] #h(1fr)
+  #daterange(2024, "Present")
+]
+
+= Technical Skills
 
 - *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
@@ -66,8 +89,6 @@ and back-end development:
   [#link(source)[#text(rgb("#135D66"))[GitHub Repository]] | #link(demo)[#text(rgb("#135D66"))[Live Demo]]]
 }
 
-Some highlighted projects demonstrating my technical skills and creativity:
-
 - *Year Progress*
   - *Description:* A website for tracking the progress of the current year visually.
   - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia.
@@ -77,22 +98,15 @@ Some highlighted projects demonstrating my technical skills and creativity:
 
 = Open Source Contributions
 
-These projects are not related to web development, but they helped me improve my
-mindset and collaboration skills.
-
 - *Nightfall.nvim*
   - *Description:* A sublime Neovim colorscheme, immerse in twilight hues for
     enhanced focus and creativity.
-  - *Technologies Used:* Lua.
+  - *Technologies Used:* Lua
   - *GitHub Repository:* #link(
       "https://github.com/2giosangmitom/nightfall.nvim",
     )[#text(rgb("#135D66"))[2giosangmitom/nightfall.nvim]]
 
 = Interests and Hobbies
-
-When I'm not coding, I enjoy going to the gym, practicing calisthenics, and
-playing sports. These activities not only provide relaxation but also contribute
-to my overall health and teamwork—essential traits in my professional journey.
 
 - *Gym:* Regular workouts to maintain a healthy lifestyle and build discipline.
 - *Calisthenics:* Enthusiast of bodyweight training, mastering exercises like
@@ -100,4 +114,3 @@ to my overall health and teamwork—essential traits in my professional journey.
   agility.
 - *Jogging:* I often jog at 5 AM, enjoying the fresh air and peaceful atmosphere
   to start my day.
-
