@@ -108,17 +108,6 @@ web development skills.
       "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
     )
 
-- *Portfolio Website*
-  - *Description:* My portfolio showcases my skills and includes my CV written in
-    Typst. It highlights my journey to become a web developer.
-  - *Role:* Designer and Developer
-  - *Technologies Used:* Nuxt.js, Vue.js
-  - *Challenges Overcome:* Designing a clean and professional layout, optimizing for
-    SEO, and ensuring fast load times.
-  - *Links:* #projectLinks(
-      "https://github.com/2giosangmitom/2giosangmitom.github.io", "https://2giosangmitom.is-a.dev/",
-    )
-
 - *Fylo Dark Theme Landing Page*
   - *Description:* A landing page challenge from Frontend Mentor, designed to
     showcase responsive design skills and frontend development capabilities.
