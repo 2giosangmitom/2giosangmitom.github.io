@@ -81,15 +81,11 @@ experience and contribute to real-world projects.
 
 = Technical Skills
 
-- *Languages*: TypeScript (Advanced), JavaScript (Advanced), Go (Intermediate),
-  HTML (Intermediate), CSS (Intermediate), SCSS (Intermediate), Nix
-  (Intermediate), Rust (Basic), Java (Intermediate)
-- *Frameworks and Libraries*: Vue.js (Intermediate), Nuxt.js (Intermediate), Jest,
-  Vitest, Tailwind, Go Fiber
-- *Tools and Platforms*: Docker, Nix, GitHub (Advanced), Git (Advanced), Node.js
-  (Advanced), Vercel
+- *Languages*: TypeScript, JavaScript, Go, HTML, CSS, SCSS, Nix, Rust, Java
+- *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
+- *Tools and Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel
 - *Operating Systems*: NixOS
-- *Databases*: PostgreSQL (Basic), MongoDB (Basic)
+- *Databases*: PostgreSQL, MongoDB
 
 = Projects
 
