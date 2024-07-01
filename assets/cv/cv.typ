@@ -1,24 +1,28 @@
-#set text(font: "Crimson Pro", size: 12pt, fill: luma(30))
-#set page(paper: "us-letter", margin: (x: 1cm, y: 1.5cm), fill: rgb("#f8fafc"))
+#set text(font: "Crimson Pro", size: 12pt, fill: rgb("#151515"))
+#set page(paper: "us-letter", margin: (x: 1cm, y: 1cm), fill: rgb("#EEEEEE"))
 
 #show heading.where(level: 1): it => [
-  #set block(above: 1.5em, below: 1em)
   #set text(size: 18pt, weight: "regular")
-  #text(rgb("#151515"))[#strong[#text[#it.body.text]]]
+  #text(rgb("#481E14"))[#strong[#text[#it.body.text]]]
   #box(
-    width: 1fr, line(length: 100%, stroke: luma(0) + 1pt), baseline: -1.25pt,
+    width: 1fr, line(length: 100%, stroke: rgb("#481E14")), baseline: -1.25pt,
   )
 ]
 
-#align(center)[
-  #text(35pt, rgb("#151515"))[*Vo Quang Chien*]\
-  #text(15pt, rgb("#071952"), baseline: 5pt)[_Web Developer_]
+#align(
+  center,
+)[
+  #text(35pt, rgb("#0C0C0C"))[*Vo Quang Chien*]\
+  #text(15pt, rgb("#A91D3A"), style: "italic", baseline: 4pt)[Web Developer]\
+  #text(
+    12pt, rgb("#151515"), style: "italic", baseline: 5pt,
+  )[Hue City, Phu Hoi #sym.dash.en Viet Nam]
 ]
 
 #set rect(stroke: none)
 
 #let icon(img) = {
-  [#box(height: 10pt, image(img), baseline: 1.5pt)]
+  [#box(height: 10pt, image(img), baseline: 2pt)]
 }
 
 #align(
@@ -40,18 +44,18 @@
     ], rect[
       #link(
         "https://2giosangmitom.is-a.dev/",
-      )[#text(12pt, luma(0))[#sym.diamond.filled 2giosangmitom.is-a.dev]]
+      )[#text(12pt, luma(0))[#icon("link.svg") 2giosangmitom.is-a.dev]]
     ],
   )
 ]
 
 = Summary
 
-A dedicated web developer with a strong passion for creating dynamic web
-applications. Proficient in both front-end and back-end development, I'm eager
-to leverage my knowledge and continuously improve my abilities. Currently, I'm
-seeking an internship opportunity to gain practical experience and contribute to
-real-world projects.
+A dedicated web developer with a passion for creating dynamic web applications
+and building high-performance systems. Proficient in both front-end and back-end
+development, eager to leverage my knowledge and continuously improve my
+abilities. Currently seeking an internship opportunity to gain practical
+experience and contribute to real-world projects.
 
 = Education
 
@@ -77,40 +81,88 @@ real-world projects.
 
 = Technical Skills
 
-- *Languages*: TypeScript, JavaScript, Go, Shell, HTML, CSS, SCSS, Nix
-- *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
-- *Tools and Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel
+- *Languages*: TypeScript (Advanced), JavaScript (Advanced), Go (Intermediate),
+  HTML (Intermediate), CSS (Intermediate), SCSS (Intermediate), Nix
+  (Intermediate), Rust (Basic), Java (Intermediate)
+- *Frameworks and Libraries*: Vue.js (Intermediate), Nuxt.js (Intermediate), Jest,
+  Vitest, Tailwind, Go Fiber
+- *Tools and Platforms*: Docker, Nix, GitHub (Advanced), Git (Advanced), Node.js
+  (Advanced), Vercel
 - *Operating Systems*: NixOS
-- *Databases*: PostgreSQL, MongoDB
+- *Databases*: PostgreSQL (Basic), MongoDB (Basic)
 
 = Projects
 
+Here are some projects I have developed to learn new technologies and enhance my
+web development skills.
+
 #let projectLinks(source, demo) = {
-  [#link(source)[#text(rgb("#135D66"))[GitHub Repository]] | #link(demo)[#text(rgb("#135D66"))[Live Demo]]]
+  [#link(source)[#text(rgb("#910A67"))[GitHub Repository]] | #link(demo)[#text(rgb("#910A67"))[Live Demo]]]
 }
 
 - *Year Progress*
-  - *Description:* A website for tracking the progress of the current year visually.
-  - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia.
+  - *Description:* A website for visually tracking the progress of the current year.
+    It provides a visual representation of how much of the year has passed, helping
+    users stay motivated and mindful of their time.
+  - *Role:* Sole Developer
+  - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia
+  - *Challenges Overcome:* Implementing responsive design, optimizing performance,
+    and ensuring accurate date calculations.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
     )
 
-= Open Source Contributions
+- *Portfolio Website*
+  - *Description:* My portfolio showcases my skills and includes my CV written in
+    Typst. It highlights my journey to become a web developer.
+  - *Role:* Designer and Developer
+  - *Technologies Used:* Nuxt.js, Vue.js
+  - *Challenges Overcome:* Designing a clean and professional layout, optimizing for
+    SEO, and ensuring fast load times.
+  - *Links:* #projectLinks(
+      "https://github.com/2giosangmitom/2giosangmitom.github.io", "https://2giosangmitom.is-a.dev/",
+    )
+
+- *Fylo Dark Theme Landing Page*
+  - *Description:* A landing page challenge from Frontend Mentor, designed to
+    showcase responsive design skills and frontend development capabilities.
+  - *Role:* Sole Developer
+  - *Technologies Used:* Nuxt.js, Vue.js, SCSS
+  - *Challenges Overcome:* Implementing responsive layouts and ensuring
+    cross-browser compatibility.
+  - *Links:* #projectLinks(
+      "https://github.com/2giosangmitom/fylo-landing-page", "https://fylo-landing-page-ebon.vercel.app/",
+    )
+
+= Open-source Contributions
+
+Although these projects are not directly related to web development, they have
+helped me improve my collaboration skills. I am passionate about contributing to
+open-source software initiatives.
 
 - *Nightfall.nvim*
-  - *Description:* A sublime Neovim colorscheme, immerse in twilight hues for
+  - *Description:* A sublime Neovim colorscheme immersed in twilight hues for
     enhanced focus and creativity.
+  - *Role:* Maintainer
   - *Technologies Used:* Lua
+  - *Challenges Overcome:* Ensuring compatibility with various Neovim plugins,
+    maintaining consistent color schemes across different syntax elements, and
+    gathering user feedback for improvements.
   - *GitHub Repository:* #link(
       "https://github.com/2giosangmitom/nightfall.nvim",
-    )[#text(rgb("#135D66"))[2giosangmitom/nightfall.nvim]]
+    )[#text(rgb("#910A67"))[2giosangmitom/nightfall.nvim]]
+
+= Languages
+
+- *English*: Intermediate
+- *Vietnamese*: Native
 
 = Interests and Hobbies
 
-- *Gym:* Regular workouts to maintain a healthy lifestyle and build discipline.
-- *Calisthenics:* Enthusiast of bodyweight training, mastering exercises like
+- *Calisthenics:* Enthusiast of body-weight training, mastering exercises like
   push-ups, pull-ups, and dips. This enhances muscle strength, balance, and
   agility.
 - *Jogging:* I often jog at 5 AM, enjoying the fresh air and peaceful atmosphere
   to start my day.
+- *Reading Programming Books:* Constantly enhancing my skills by reading books on
+  various programming topics.
