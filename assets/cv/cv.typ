@@ -81,7 +81,7 @@ experience and contribute to real-world projects.
 
 = Technical Skills
 
-- *Languages*: TypeScript, JavaScript, Go, HTML, CSS, SCSS, Nix, Rust, Java
+- *Languages*: TypeScript, JavaScript, Go, HTML, CSS, SCSS, Nix, Java
 - *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
 - *Tools and Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel
 - *Operating Systems*: NixOS
