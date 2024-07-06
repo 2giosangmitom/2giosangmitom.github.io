@@ -18,53 +18,17 @@ useSeoMeta({
   twitterImage: ogImage,
   twitterTitle: title,
 });
-useHeadSafe({
-  link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
-});
 </script>
 
 <template>
-  <main>
-    <TheIntro />
-    <TheAbout />
-    <TheSkills />
-    <TheHobbies />
-    <TheContact />
-  </main>
+  <main>Home page</main>
 </template>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-main {
-  margin: 2rem 3rem;
-}
-
-html {
-  background-color: #0c0c0c;
-  color: #f9e8c9;
-  font-family: Roboto, sans-serif;
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-section {
-  margin-top: 2rem;
-}
-
-.section-title {
-  margin-bottom: 1rem;
-  color: #ffd0ec;
-  letter-spacing: 1px;
-}
-
-@media screen and (max-width: 768px) {
-  main {
-    margin: 2rem 1rem;
-  }
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 </style>
