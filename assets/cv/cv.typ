@@ -3,16 +3,16 @@
 
 #show heading.where(level: 1): it => [
   #set text(size: 18pt, weight: "regular")
-  #text(rgb("#481E14"))[#strong[#text[#it.body.text]]]
+  #text(rgb("#151515"))[#strong[#text[#it.body.text]]]
   #box(
-    width: 1fr, line(length: 100%, stroke: rgb("#481E14")), baseline: -1.25pt,
+    width: 1fr, line(length: 100%, stroke: rgb("#1A2130")), baseline: -1.25pt,
   )
 ]
 
 #align(
   center,
 )[
-  #text(35pt, rgb("#0C0C0C"))[*Vo Quang Chien*]\
+  #text(35pt)[*Vo Quang Chien*]\
   #text(15pt, rgb("#A91D3A"), style: "italic", baseline: 4pt)[Web Developer]\
   #text(
     12pt, rgb("#151515"), style: "italic", baseline: 5pt,
@@ -93,7 +93,7 @@ Here are some projects I have developed to learn new technologies and enhance my
 web development skills.
 
 #let projectLinks(source, demo) = {
-  [#link(source)[#text(rgb("#910A67"))[GitHub Repository]] | #link(demo)[#text(rgb("#910A67"))[Live Demo]]]
+  [#link(source)[#text(rgb("#A91D3A"))[GitHub Repository]] | #link(demo)[#text(rgb("#A91D3A"))[Live Demo]]]
 }
 
 - *Year Progress*
@@ -121,6 +121,10 @@ web development skills.
 
 = Open-source Contributions
 
+#let openSourceProject(source, projectName) = {
+  [#link(source)[#text(rgb("#A91D3A"))[#projectName]]]
+}
+
 Although these projects are not directly related to web development, they have
 helped me improve my collaboration skills. I am passionate about contributing to
 open-source software initiatives.
@@ -133,9 +137,9 @@ open-source software initiatives.
   - *Challenges Overcome:* Ensuring compatibility with various Neovim plugins,
     maintaining consistent color schemes across different syntax elements, and
     gathering user feedback for improvements.
-  - *GitHub Repository:* #link(
-      "https://github.com/2giosangmitom/nightfall.nvim",
-    )[#text(rgb("#910A67"))[2giosangmitom/nightfall.nvim]]
+  - *GitHub Repository:* #openSourceProject(
+      "https://github.com/2giosangmitom/nightfall.nvim", "2giosangmitom/nightfall.nvim",
+    )
 
 = Languages
 
