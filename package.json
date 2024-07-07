@@ -5,19 +5,17 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "build:cv": "typst compile assets/cv/cv.typ public/cv.pdf",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@iconify/vue": "^4.1.2",
     "@nuxt/fonts": "^0.7.1",
     "@nuxt/image": "^1.7.0",
-    "@vueuse/core": "^10.11.0",
-    "@vueuse/nuxt": "^10.11.0",
     "nuxt": "^3.12.3",
-    "vue": "^3.4.31",
-    "vue-router": "^4.4.0"
+    "vue": "^3.4.31"
+  },
+  "devDependencies": {
+    "iconify-icon": "^2.1.0"
   }
 }
