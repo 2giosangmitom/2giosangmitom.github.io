@@ -1,0 +1,168 @@
+<script setup lang="ts">
+import "iconify-icon";
+
+const links = [
+  { name: "home", path: "/" },
+  { name: "resume", path: "/resume" },
+  { name: "contact", path: "/contact" },
+];
+const isOpen = ref(false);
+</script>
+
+<template>
+  <header>
+    <ClientOnly>
+      <div class="header-container">
+        <NuxtLink to="/">
+          <h1 class="logo">2giosangmitom<span class="accent-dot">.</span></h1>
+        </NuxtLink>
+        <nav class="desktop-navigation">
+          <NuxtLink
+            v-for="item in links"
+            :key="item.path"
+            :to="item.path"
+            :class="{ 'active-link': item.path === $route.path }"
+          >
+            {{ item.name }}
+          </NuxtLink>
+        </nav>
+        <nav class="mobile-navigation">
+          <button
+            class="nav-trigger"
+            @click="isOpen = !isOpen"
+            aria-label="Toggle Navigation"
+          >
+            <iconify-icon
+              icon="line-md:menu-to-close-alt-transition"
+              style="font-size: 1.75rem"
+              v-show="isOpen"
+            />
+            <iconify-icon
+              icon="line-md:close-to-menu-alt-transition"
+              style="font-size: 1.75rem"
+              v-show="!isOpen"
+            />
+          </button>
+          <div class="nav-content" :class="{ 'nav-content-open': isOpen }">
+            <NuxtLink to="/" @click="isOpen = false">
+              <h1 class="logo">
+                2giosangmitom<span class="accent-dot">.</span>
+              </h1>
+            </NuxtLink>
+            <NuxtLink
+              v-for="item in links"
+              :key="item.path"
+              :to="item.path"
+              :class="{ 'active-link': item.path === $route.path }"
+              @click="isOpen = false"
+            >
+              {{ item.name }}
+            </NuxtLink>
+          </div>
+        </nav>
+      </div>
+    </ClientOnly>
+  </header>
+</template>
+
+<style lang="css" scoped>
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container h1 {
+  font-size: 1.5rem;
+}
+
+.header-container a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.accent-dot {
+  color: var(--accent);
+}
+
+.desktop-navigation {
+  display: none;
+}
+
+.mobile-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.nav-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  background: none;
+  border: none;
+}
+
+.nav-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  z-index: 10;
+  overflow-y: auto;
+  background-color: var(--background-overlay);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-content-open {
+  transform: translateX(0);
+  box-shadow: 0 0 18px 0 #2c272e;
+}
+
+.nav-content a {
+  margin-top: 4rem;
+}
+
+.mobile-navigation .active-link {
+  color: var(--accent);
+  text-decoration: underline solid 2px;
+  text-underline-offset: 0.2em;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 640px) {
+  .desktop-navigation {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .desktop-navigation a {
+    transition: all 0.2s ease-in;
+  }
+
+  .desktop-navigation .active-link {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+    font-weight: bold;
+  }
+
+  .desktop-navigation a:hover {
+    color: var(--accent);
+  }
+
+  .mobile-navigation {
+    display: none;
+  }
+}
+</style>
