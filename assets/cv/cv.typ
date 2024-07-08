@@ -35,7 +35,7 @@
       )[#text(12pt, luma(0))[#icon("email.svg") voquangchien.dev\@proton.me]]
     ], rect[
       #link(
-        "https://www.linkedin.com/in/2giosangmitom/",
+        "https://www.linkedin.com/in/2giosangmitom",
       )[#text(12pt, luma(0))[#icon("linkedin.svg") 2giosangmitom]]
     ], rect[
       #link(
@@ -43,7 +43,7 @@
       )[#text(12pt, luma(0))[#icon("github.svg") 2giosangmitom]]
     ], rect[
       #link(
-        "https://2giosangmitom.is-a.dev/",
+        "https://2giosangmitom.is-a.dev",
       )[#text(12pt, luma(0))[#icon("link.svg") 2giosangmitom.is-a.dev]]
     ],
   )
@@ -63,12 +63,6 @@ experience and contribute to real-world projects.
   if start != none and end != none [
     #start #sym.dash.en #end
   ]
-  if start == none and end != none [
-    #end
-  ]
-  if start != none and end == none [
-    #start
-  ]
 }
 
 #block(
@@ -79,13 +73,26 @@ experience and contribute to real-world projects.
   #daterange(2024, "Present")
 ]
 
-= Technical Skills
+= Skills, Interests, Languages
 
-- *Languages*: TypeScript, JavaScript, Go, HTML, CSS, SCSS, Nix
-- *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
-- *Tools and Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel
+- *Programming*: TypeScript, JavaScript, Go, CSS, SCSS, Nix, HTML
+- *Frameworks & Libraries*: Jest, Vitest
+- *Web Development*: Vue.js, Nuxt.js, Go Fiber, Tailwind CSS
+- *Tools & Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel, Neovim, Visual
+  Studio Code, Microsoft Office
 - *Operating Systems*: NixOS
 - *Databases*: PostgreSQL, MongoDB
+- *Languages*: Vietnamese (Native), English (Fluent)
+- *Interests*: Jogging, Calisthenics, Reading
+
+= Work Experience
+
+- *Freelance Web Developer*
+  - *Duration*: #daterange("February 2024", "March 2024")
+  - *Responsibilities*:
+    - Developed a portfolio website tailored to specific user requirements and
+      preferences.
+    - Ensured seamless cross-browser compatibility and mobile responsiveness.
 
 = Projects
 
@@ -152,17 +159,33 @@ open-source software initiatives.
       "https://github.com/2giosangmitom/nightfall.nvim", "2giosangmitom/nightfall.nvim",
     )
 
-= Languages
+// AI recommendation :)))
+// = Awards and Honors
 
-- *English*: Intermediate
-- *Vietnamese*: Native
+// - *Best Final Year Project* - Hue University of Sciences, 2024
+// - *Top 10 in National Coding Competition* - Vietnam, 2022
 
-= Interests and Hobbies
+// = Volunteer Experience
 
-- *Calisthenics:* Enthusiast of body-weight training, mastering exercises like
-  push-ups, pull-ups, and dips. This enhances muscle strength, balance, and
-  agility.
-- *Jogging:* I often jog at 5 AM, enjoying the fresh air and peaceful atmosphere
-  to start my day.
-- *Reading Programming Books:* Constantly enhancing my skills by reading books on
-  various programming topics.
+// - *Web Developer* - Nonprofit Organization XYZ
+//   - *Duration*: January 2023 - Present
+//   - *Responsibilities*:
+//     - Developed and maintained the organization's website.
+//     - Implemented features to improve user experience and accessibility.
+//     - Provided technical support and training to staff members.
+
+// - *Event Organizer* - Tech Community ABC
+//   - *Duration*: June 2021 - December 2022
+//   - *Responsibilities*:
+//     - Organized and managed tech meetups and workshops.
+//     - Coordinated with speakers and participants.
+//     - Promoted events through social media and community outreach.
+
+// = Professional Memberships
+
+// - *Member*, International Web Developers Association
+// - *Member*, JavaScript Developers Network
+
+// = References
+
+// Available upon request.
