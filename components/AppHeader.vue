@@ -4,6 +4,7 @@ import "iconify-icon";
 const links = [
   { name: "home", path: "/" },
   { name: "resume", path: "/resume" },
+  { name: "work", path: "/work" },
   { name: "contact", path: "/contact" },
 ];
 const isOpen = ref(false);
@@ -33,13 +34,13 @@ const isOpen = ref(false);
             aria-label="Toggle Navigation"
           >
             <iconify-icon
-              icon="line-md:menu-to-close-alt-transition"
-              style="font-size: 1.75rem"
+              icon="line-md:close"
+              style="font-size: 1.75rem; color: var(--accent)"
               v-show="isOpen"
             />
             <iconify-icon
-              icon="line-md:close-to-menu-alt-transition"
-              style="font-size: 1.75rem"
+              icon="line-md:menu"
+              style="font-size: 1.75rem; color: var(--accent)"
               v-show="!isOpen"
             />
           </button>
@@ -129,6 +130,11 @@ const isOpen = ref(false);
 }
 
 .nav-content a {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.nav-content a:first-child {
   margin-top: 4rem;
 }
 
