@@ -40,6 +40,7 @@ onUnmounted(() => {
     >
       {{ item.name }}
     </NuxtLink>
+    <ToggleTheme />
   </nav>
   <nav class="mobile-navigation" id="sidebar">
     <button
@@ -66,6 +67,7 @@ onUnmounted(() => {
       >
         {{ item.name }}
       </NuxtLink>
+      <ToggleTheme />
     </div>
   </nav>
 </template>
@@ -78,6 +80,10 @@ onUnmounted(() => {
 a {
   text-decoration: none;
   text-transform: capitalize;
+}
+
+h1 {
+  font-size: 1.5rem;
 }
 
 .desktop-navigation {
@@ -99,13 +105,14 @@ a {
   z-index: 20;
   background: none;
   border: none;
+  padding: 5px;
 }
 
 .nav-content {
   position: fixed;
   top: 0;
   right: 0;
-  width: 75%;
+  width: 80%;
   max-width: 300px;
   display: flex;
   flex-direction: column;
@@ -118,10 +125,18 @@ a {
   transition: transform 0.3s ease;
 }
 
+.nav-content button {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 20px;
+  right: 0;
+  margin-right: 20px;
+  padding: 10px;
+}
+
 .nav-content-open {
   transform: translateX(0);
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 0.1);
 }
 
 .nav-content a {

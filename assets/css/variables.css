@@ -3,4 +3,11 @@
   --background: #f5f7f8;
   --foreground: #0f0e0e;
   --background-overlay: #eeeeee;
+  --foreground-dark: #ebecf1;
+}
+
+.dark {
+  --background: #191919;
+  --foreground: #ebecf1;
+  --background-overlay: #1b1c25;
 }
