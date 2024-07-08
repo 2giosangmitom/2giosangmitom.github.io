@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "2giosangmitom",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "build:cv": "typst compile assets/cv/cv.typ public/cv.pdf"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.7.1",
