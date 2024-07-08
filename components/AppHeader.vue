@@ -8,6 +8,20 @@ const links = [
   { name: "contact", path: "/contact" },
 ];
 const isOpen = ref(false);
+
+function handleClickOutside(event: MouseEvent) {
+  const sidebar = document.getElementById("sidebar");
+  if (sidebar && !sidebar.contains(event.target as Node)) {
+    isOpen.value = false;
+  }
+}
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+onUnmounted(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
 </script>
 
 <template>
@@ -27,11 +41,12 @@ const isOpen = ref(false);
             {{ item.name }}
           </NuxtLink>
         </nav>
-        <nav class="mobile-navigation">
+        <nav class="mobile-navigation" id="sidebar">
           <button
             class="nav-trigger"
             @click="isOpen = !isOpen"
             aria-label="Toggle Navigation"
+            id="navTrigger"
           >
             <iconify-icon
               icon="line-md:close"
