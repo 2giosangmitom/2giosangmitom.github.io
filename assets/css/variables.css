@@ -1,9 +1,9 @@
 :root {
-  --background: #f5f7f8;
+  --background: #faf1e6;
   --foreground: #0f0e0e;
   --background-overlay: #eeeeee;
   --foreground-dark: #ebecf1;
-  --accent: #41b06e;
+  --accent: #064420;
 }
 
 .dark {

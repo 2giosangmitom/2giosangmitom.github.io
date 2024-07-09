@@ -40,13 +40,11 @@ useSeoMeta({
   <main class="section">
     <div class="container">
       <div class="developer-info">
-        <span>Web Developer</span>
-        <h1>
-          Hello I'm<br />
-          <span class="developer-name">Vo Quang Chien</span>
-        </h1>
+        <span class="intro"> Welcome to my portfolio realm! </span>
+        <h1>Hello! I'm <span class="developer-name">Chien</span></h1>
         <p class="developer-description">
-          A dedicated software engineer with expertise in web development.
+          I'm passionate about web development, specializing in creating
+          high-quality web experiences and high-performance systems.
         </p>
         <div class="actions">
           <a class="download-cv" href="/voquangchien.pdf">
@@ -64,6 +62,9 @@ useSeoMeta({
             </a>
           </div>
         </div>
+      </div>
+      <div class="developer-photo">
+        <NuxtImg src="hero.webp" class="hero-image" alt="hero image" />
       </div>
     </div>
   </main>
@@ -83,6 +84,10 @@ useSeoMeta({
   text-align: center;
 }
 
+.developer-info > span {
+  font-family: "JetBrainsMono", monospace;
+}
+
 .developer-info h1 {
   font-size: 48px;
   font-family: "Source Serif 4", Georgia, serif;
@@ -100,6 +105,8 @@ useSeoMeta({
 
 .actions {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-top: 2rem;
 }
@@ -118,24 +125,27 @@ useSeoMeta({
   transition: all 0.2s ease-in;
   text-decoration: none;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .download-cv iconify-icon {
   color: var(--accent);
+  transition: all 0.2s ease-in;
 }
 
 .download-cv:hover {
   background-color: var(--accent);
-  color: #1b1c25;
+  color: var(--background);
 }
 
 .download-cv:hover iconify-icon {
-  color: #1b1c25;
+  color: var(--background);
 }
 
 .social-icons {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .social-icon {
@@ -144,7 +154,6 @@ useSeoMeta({
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  margin-left: 1rem;
   padding: 8px;
   border: 1px solid var(--accent);
   border-radius: 50%;
@@ -159,11 +168,18 @@ useSeoMeta({
 
 .social-icon:hover {
   background-color: var(--accent);
-  color: #1b1c25;
+  color: var(--background);
 }
 
 .social-icon:hover iconify-icon {
-  color: #1b1c25;
+  color: var(--background);
+}
+
+.hero-image {
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 640px) {
@@ -174,6 +190,25 @@ useSeoMeta({
 
   .developer-info {
     text-align: left;
+  }
+
+  .actions {
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .download-cv {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+
+  .hero-image {
+    width: 400px;
+    height: 400px;
+  }
+
+  .developer-photo {
+    margin-right: 5rem;
   }
 }
 </style>
