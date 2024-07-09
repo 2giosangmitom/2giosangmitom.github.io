@@ -11,28 +11,30 @@ const socials = [
   {
     name: "GitHub",
     url: "https://github.com/2giosangmitom/",
-    icon: "line-md:github-loop",
+    icon: "mdi:github",
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/2giosangmitom/",
-    icon: "line-md:linkedin",
+    icon: "mdi:linkedin",
   },
-  { name: "X", url: "https://x.com/2giosangmitom/", icon: "line-md:twitter-x" },
+  { name: "X", url: "https://x.com/2giosangmitom/", icon: "ri:twitter-x-fill" },
 ];
 
+const { title, description, ogImage, url } = meta;
+
 useSeoMeta({
-  title: meta.title,
-  description: meta.description,
-  ogDescription: meta.description,
-  ogUrl: meta.url,
+  title,
+  description,
+  ogDescription: description,
+  ogUrl: url,
   ogType: "website",
-  ogTitle: meta.title,
-  ogImage: meta.ogImage,
+  ogTitle: title,
+  ogImage,
   twitterCard: "summary_large_image",
-  twitterDescription: meta.description,
-  twitterImage: meta.ogImage,
-  twitterTitle: meta.title,
+  twitterDescription: description,
+  twitterImage: ogImage,
+  twitterTitle: title,
 });
 </script>
 
@@ -40,16 +42,20 @@ useSeoMeta({
   <main class="section">
     <div class="container">
       <div class="developer-info">
-        <span class="intro"> Welcome to my portfolio realm! </span>
+        <span class="intro">Welcome to my portfolio realm!</span>
         <h1>Hello! I'm <span class="developer-name">Chien</span></h1>
         <p class="developer-description">
           I'm passionate about web development, specializing in creating
           high-quality web experiences and high-performance systems.
         </p>
         <div class="actions">
-          <a class="download-cv" href="/voquangchien.pdf">
+          <a
+            class="download-cv"
+            href="/voquangchien.pdf"
+            aria-label="Download CV"
+          >
             Download CV
-            <iconify-icon icon="line-md:download-outline" />
+            <iconify-icon icon="prime:download" />
           </a>
           <div class="social-icons">
             <a
@@ -57,6 +63,9 @@ useSeoMeta({
               :key="item.name"
               :href="item.url"
               class="social-icon"
+              target="_blank"
+              rel="noopener"
+              :aria-label="item.name"
             >
               <iconify-icon :icon="item.icon" :title="item.name" />
             </a>
@@ -64,7 +73,7 @@ useSeoMeta({
         </div>
       </div>
       <div class="developer-photo">
-        <NuxtImg src="hero.webp" class="hero-image" alt="hero image" />
+        <NuxtImg src="hero.webp" class="hero-image" alt="Hero image of Chien" />
       </div>
     </div>
   </main>
@@ -131,6 +140,7 @@ useSeoMeta({
 .download-cv iconify-icon {
   color: var(--accent);
   transition: all 0.2s ease-in;
+  margin-left: 5px;
 }
 
 .download-cv:hover {

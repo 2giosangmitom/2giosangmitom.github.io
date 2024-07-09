@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const isDark = useDark();
+const isDark = useDark({
+  selector: "body",
+  disableTransition: false,
+});
 const toggleDark = useToggle(isDark);
 const themeIcon = computed(() => {
   return (
