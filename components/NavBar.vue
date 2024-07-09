@@ -15,13 +15,14 @@ function handleClickOutside(event: MouseEvent) {
   }
 }
 
-const toggleSidebarIcon = computed(
-  () => (isOpen.value && "line-md:close") || "line-md:menu"
+const toggleSidebarIcon = computed(() =>
+  isOpen.value ? "line-md:close" : "line-md:menu"
 );
 
 onMounted(() => {
   document.addEventListener("click", handleClickOutside);
 });
+
 onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
 });
@@ -47,7 +48,6 @@ onUnmounted(() => {
       class="nav-trigger"
       @click="isOpen = !isOpen"
       aria-label="Toggle Navigation"
-      id="navTrigger"
     >
       <iconify-icon
         :icon="toggleSidebarIcon"
@@ -161,7 +161,7 @@ h1 {
   font-weight: bold;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 840px) {
   .desktop-navigation {
     display: flex;
     align-items: center;

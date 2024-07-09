@@ -18,7 +18,11 @@ const socials = [
     url: "https://www.linkedin.com/in/2giosangmitom/",
     icon: "mdi:linkedin",
   },
-  { name: "X", url: "https://x.com/2giosangmitom/", icon: "ri:twitter-x-fill" },
+  {
+    name: "X",
+    url: "https://x.com/2giosangmitom/",
+    icon: "ri:twitter-x-fill",
+  },
 ];
 
 const { title, description, ogImage, url } = meta;
@@ -93,13 +97,14 @@ useSeoMeta({
   text-align: center;
 }
 
-.developer-info > span {
-  font-family: "JetBrainsMono", monospace;
+.intro {
+  font-family: "Roboto", serif;
+  font-size: 16px;
 }
 
 .developer-info h1 {
-  font-size: 48px;
-  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 40px;
+  font-family: "Source Serif 4", serif;
   font-weight: 600;
 }
 
@@ -125,22 +130,26 @@ useSeoMeta({
   align-items: center;
   justify-content: center;
   padding: 10px 0;
-  width: 12rem;
+  width: 10em;
   border: 1px solid var(--accent);
   color: var(--accent);
   background: none;
   border-radius: 2rem;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: bold;
   transition: all 0.2s ease-in;
   text-decoration: none;
   cursor: pointer;
   margin-bottom: 1rem;
+  font-family: "JetBrainsMono", monospace;
+  text-transform: uppercase;
 }
 
 .download-cv iconify-icon {
   color: var(--accent);
   transition: all 0.2s ease-in;
   margin-left: 5px;
+  font-size: 18px;
 }
 
 .download-cv:hover {
@@ -186,20 +195,32 @@ useSeoMeta({
 }
 
 .hero-image {
-  border-radius: 100%;
+  border-radius: 50%;
   width: 300px;
   height: 300px;
-  margin-top: 1rem;
+  margin-top: 3.5rem;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 620px) {
+  .hero-image {
+    width: 310px;
+    height: 310px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .developer-photo {
+    margin-right: 1rem;
+  }
+
+  .hero-image {
+    width: 320px;
+    height: 320px;
+  }
+
   .container {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .developer-info {
-    text-align: left;
   }
 
   .actions {
@@ -212,6 +233,31 @@ useSeoMeta({
     margin-right: 1rem;
   }
 
+  .developer-info h1 {
+    font-size: 48px;
+  }
+
+  .developer-info {
+    text-align: left;
+  }
+
+  .developer-description {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .developer-description {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .hero-image {
     width: 400px;
     height: 400px;
