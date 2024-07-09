@@ -15,7 +15,7 @@ import "iconify-icon";
   padding-top: 1rem;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 840px) {
   .container {
     margin: 0 4rem;
     padding-top: 2rem;

@@ -25,6 +25,53 @@ const socials = [
   },
 ];
 
+const typeValue = ref("");
+const typeStatus = ref(false);
+const displayTextArray = [
+  "Programmer",
+  "Web Developer",
+  "Calisthenics Enthusiast",
+];
+const typingSpeed = 100;
+const erasingSpeed = 100;
+const newTextDelay = 2000;
+let displayTextArrayIndex = 0;
+let charIndex = 0;
+
+const typeText = () => {
+  if (charIndex < displayTextArray[displayTextArrayIndex].length) {
+    if (!typeStatus.value) typeStatus.value = true;
+    typeValue.value +=
+      displayTextArray[displayTextArrayIndex].charAt(charIndex);
+    charIndex += 1;
+    setTimeout(typeText, typingSpeed);
+  } else {
+    typeStatus.value = false;
+    setTimeout(eraseText, newTextDelay);
+  }
+};
+
+const eraseText = () => {
+  if (charIndex > 0) {
+    if (!typeStatus.value) typeStatus.value = true;
+    typeValue.value = displayTextArray[displayTextArrayIndex].substring(
+      0,
+      charIndex - 1
+    );
+    charIndex -= 1;
+    setTimeout(eraseText, erasingSpeed);
+  } else {
+    typeStatus.value = false;
+    displayTextArrayIndex =
+      (displayTextArrayIndex + 1) % displayTextArray.length;
+    setTimeout(typeText, typingSpeed + 1000);
+  }
+};
+
+onMounted(() => {
+  setTimeout(typeText, newTextDelay + 200);
+});
+
 const { title, description, ogImage, url } = meta;
 
 useSeoMeta({
@@ -48,6 +95,12 @@ useSeoMeta({
       <div class="developer-info">
         <span class="intro">Welcome to my portfolio realm!</span>
         <h1>Hello! I'm <span class="developer-name">Chien</span></h1>
+        <h1>
+          A
+          <span class="typed-text">{{ typeValue }}</span>
+          <span class="blinking-cursor">|</span>
+          <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+        </h1>
         <p class="developer-description">
           I'm passionate about web development, specializing in creating
           high-quality web experiences and high-performance systems.
@@ -84,6 +137,10 @@ useSeoMeta({
 </template>
 
 <style scoped>
+.typed-text {
+  color: var(--accent);
+}
+
 .container {
   height: 100%;
   margin: 0 auto;
@@ -205,6 +262,10 @@ useSeoMeta({
   .hero-image {
     width: 310px;
     height: 310px;
+  }
+
+  .developer-info h1 {
+    font-size: 44px;
   }
 }
 
