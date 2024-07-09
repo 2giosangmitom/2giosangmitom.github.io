@@ -1,13 +1,14 @@
 :root {
-  --accent: #1dbd1a;
   --background: #f5f7f8;
   --foreground: #0f0e0e;
   --background-overlay: #eeeeee;
   --foreground-dark: #ebecf1;
+  --accent: #41b06e;
 }
 
 .dark {
-  --background: #191919;
+  --background: #1c1b22;
   --foreground: #ebecf1;
   --background-overlay: #1b1c25;
+  --accent: #01fe9d;
 }

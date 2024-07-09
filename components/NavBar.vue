@@ -73,6 +73,12 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+* {
+  font-family: "JetBrainsMono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .accent-dot {
   color: var(--accent);
 }

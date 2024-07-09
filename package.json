@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "build:cv": "typst compile assets/cv/cv.typ public/cv.pdf"
+    "build:cv": "typst compile assets/cv/cv.typ public/voquangchien.pdf"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.7.1",

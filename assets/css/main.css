@@ -7,7 +7,7 @@
 
 html {
   background-color: var(--background);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -21,4 +21,8 @@ html {
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
+}
+
+.section {
+  padding-top: 2rem;
 }
