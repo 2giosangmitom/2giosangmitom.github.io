@@ -21,6 +21,7 @@
   "devDependencies": {
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
-    "iconify-icon": "^2.1.0"
+    "iconify-icon": "^2.1.0",
+    "sass": "^1.77.7"
   }
 }

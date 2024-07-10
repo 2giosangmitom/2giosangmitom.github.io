@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const links = [
   { name: "home", path: "/" },
-  { name: "resume", path: "/resume" },
+  { name: "about", path: "/about" },
+  { name: "services", path: "/services" },
   { name: "work", path: "/work" },
-  { name: "contact", path: "/contact" },
 ];
 
 const isOpen = ref(false);
