@@ -8,42 +8,41 @@ const links = [
 
 const isOpen = ref(false);
 
-function handleClickOutside(event: MouseEvent) {
+const handleClickOutside = (event: MouseEvent) => {
   const sidebar = document.getElementById("sidebar");
   if (sidebar && !sidebar.contains(event.target as Node)) {
     isOpen.value = false;
   }
-}
+};
 
 const toggleSidebarIcon = computed(() =>
   isOpen.value ? "line-md:close" : "line-md:menu"
 );
 
-onMounted(() => {
-  document.addEventListener("click", handleClickOutside);
-});
-
-onUnmounted(() => {
-  document.removeEventListener("click", handleClickOutside);
-});
+useEventListener(document, "click", handleClickOutside);
 </script>
 
 <template>
-  <NuxtLink to="/">
-    <h1 class="logo">2giosangmitom<span class="accent-dot">.</span></h1>
-  </NuxtLink>
   <nav class="desktop-navigation">
-    <NuxtLink
-      v-for="item in links"
-      :key="item.path"
-      :to="item.path"
-      :class="{ 'active-link': item.path === $route.path }"
-    >
-      {{ item.name }}
+    <NuxtLink to="/" class="brand">
+      <h1 class="logo">2giosangmitom<span class="accent-dot">.</span></h1>
     </NuxtLink>
-    <ToggleTheme />
+    <div class="desktop-navigator">
+      <NuxtLink
+        v-for="item in links"
+        :key="item.path"
+        :to="item.path"
+        :class="{ 'active-link': item.path === $route.path }"
+      >
+        {{ item.name }}
+      </NuxtLink>
+      <ToggleTheme />
+    </div>
   </nav>
   <nav class="mobile-navigation" id="sidebar">
+    <NuxtLink to="/" class="brand">
+      <h1 class="logo">2giosangmitom<span class="accent-dot">.</span></h1>
+    </NuxtLink>
     <button
       class="nav-trigger"
       @click="isOpen = !isOpen"
@@ -98,9 +97,9 @@ h1 {
 
 .mobile-navigation {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav-trigger {
@@ -163,6 +162,13 @@ h1 {
 
 @media screen and (min-width: 840px) {
   .desktop-navigation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .desktop-navigator {
     display: flex;
     align-items: center;
     gap: 1rem;

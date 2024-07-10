@@ -256,6 +256,9 @@ useSeoMeta({
   width: 300px;
   height: 300px;
   margin-top: 3.5rem;
+  object-fit: fill;
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
 }
 
 @media screen and (min-width: 620px) {
