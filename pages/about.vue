@@ -1,3 +1,3 @@
 <template>
-  <div>Resume</div>
+  <div>About me</div>
 </template>
