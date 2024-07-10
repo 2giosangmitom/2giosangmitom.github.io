@@ -1,3 +1,3 @@
 <template>
-  <div>Header</div>
+  <div>Blog page</div>
 </template>
