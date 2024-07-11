@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Icon } from "@iconify/vue";
 const isOpen = ref(false);
 
 const links = [
@@ -27,7 +28,7 @@ const triggerIcon = computed(() => {
   <nav class="mobile-nav" id="sidebar">
     <span class="logo">2giosangmitom<span class="logo-dot">.</span></span>
     <button class="nav-trigger" @click="isOpen = !isOpen">
-      <Icon :name="triggerIcon" />
+      <Icon :icon="triggerIcon" :ssr="true" />
     </button>
     <div class="nav-content" :class="{ 'nav-content-open': isOpen }">
       <span class="logo">2giosangmitom<span class="logo-dot">.</span></span>

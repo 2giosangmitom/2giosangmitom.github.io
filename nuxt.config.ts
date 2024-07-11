@@ -12,12 +12,10 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    "@nuxt/icon",
     "@pinia/nuxt",
     "@vueuse/nuxt",
     "@nuxt/image",
     "@nuxt/fonts",
-    "@nuxt/content",
     "@nuxt/test-utils/module",
   ],
 });
