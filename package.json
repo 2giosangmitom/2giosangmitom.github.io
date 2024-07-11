@@ -22,6 +22,8 @@
   },
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
   "devDependencies": {
+    "@iconify-json/gg": "^1.1.9",
+    "@iconify-json/material-symbols": "^1.1.83",
     "@nuxt/test-utils": "^3.13.1",
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^14.12.3",

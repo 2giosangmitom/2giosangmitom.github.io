@@ -1,7 +1,9 @@
 <template>
-  <header>
-    <NavBar />
-  </header>
+  <ClientOnly>
+    <header>
+      <NavBar />
+    </header>
+  </ClientOnly>
 </template>
 
 <style lang="scss" scoped>
