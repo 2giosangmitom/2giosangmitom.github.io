@@ -1,3 +1,3 @@
 <template>
-  <div>Toggle theme button</div>
+  <button>Toggle theme button</button>
 </template>

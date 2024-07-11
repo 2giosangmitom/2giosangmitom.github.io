@@ -25,10 +25,10 @@ const triggerIcon = computed(() => {
 
 <template>
   <nav class="mobile-nav" id="sidebar">
-    <NuxtLink class="logo">
+    <span class="logo">
       2giosangmitom
       <span class="logo-dot">.</span>
-    </NuxtLink>
+    </span>
     <button class="nav-trigger" @click="isOpen = !isOpen">
       <iconify-icon :icon="triggerIcon" class="iconify" />
     </button>
@@ -45,13 +45,26 @@ const triggerIcon = computed(() => {
       >
     </div>
   </nav>
-  <nav class="desktop-nav">Desktop nav</nav>
+  <nav class="desktop-nav">
+    <NuxtLink class="logo" to="/">
+      2giosangmitom
+      <span class="logo-dot">.</span>
+    </NuxtLink>
+    <div>
+      <NuxtLink
+        v-for="item in links"
+        :to="item.path"
+        :class="{ 'active-route': $route.path === item.path }"
+        @click="isOpen = !isOpen"
+        >{{ item.name }}</NuxtLink
+      >
+    </div>
+  </nav>
 </template>
 
 <style lang="scss" scoped>
 .logo {
   font-size: 1.25rem;
-  cursor: pointer;
   color: $foreground;
 }
 
@@ -88,6 +101,7 @@ const triggerIcon = computed(() => {
   border: 1px solid $accent;
   border-radius: 2px;
   cursor: pointer;
+  transition: all 0.2s ease-in;
   &:hover {
     background-color: $accent;
     .iconify {
@@ -97,6 +111,7 @@ const triggerIcon = computed(() => {
   .iconify {
     font-size: 1.25rem;
     color: $foreground;
+    transition: all 0.2s ease-in;
   }
 }
 
@@ -118,13 +133,18 @@ const triggerIcon = computed(() => {
   a {
     color: $foreground;
     text-decoration: none;
-    translate: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    &:not(:first-child) {
+      margin-top: 0.2rem;
+      font-size: 1.25rem;
+    }
     &:hover:not(:first-child) {
       color: $accent;
     }
   }
   .logo {
-    margin-top: 2rem;
+    margin-top: 5rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -140,6 +160,23 @@ const triggerIcon = computed(() => {
 
   .desktop-nav {
     display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      gap: 0.5rem;
+      a {
+        color: $foreground;
+        text-decoration: none;
+        transition: all 0.2s ease-in;
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  .logo {
+    text-decoration: none;
   }
 }
 </style>

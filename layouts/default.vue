@@ -11,6 +11,12 @@ import "iconify-icon";
 
 <style lang="scss" scoped>
 .container {
-  padding: 0 5px;
+  margin: 0 10px;
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    margin: 0 35px;
+  }
 }
 </style>
