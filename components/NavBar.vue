@@ -161,6 +161,7 @@ const triggerIcon = computed(() => {
   .desktop-nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     div {
       display: flex;
       gap: 0.5rem;

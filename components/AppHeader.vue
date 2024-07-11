@@ -22,4 +22,10 @@ header {
     padding: 10px 20px;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 10px 50px;
+  }
+}
 </style>
