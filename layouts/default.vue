@@ -1,3 +1,7 @@
+<script>
+import "iconify-icon";
+</script>
+
 <template>
   <div class="container">
     <AppHeader />

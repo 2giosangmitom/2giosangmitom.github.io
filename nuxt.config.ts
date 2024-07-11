@@ -18,4 +18,9 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/test-utils/module",
   ],
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag === "iconify-icon",
+    },
+  },
 });

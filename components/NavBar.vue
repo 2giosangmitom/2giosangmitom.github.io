@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
 const isOpen = ref(false);
 
 const links = [
@@ -20,18 +19,23 @@ const handleClickOutside = (event: MouseEvent) => {
 useEventListener(document, "click", handleClickOutside);
 
 const triggerIcon = computed(() => {
-  return isOpen.value ? "material-symbols:close" : "gg:menu-right-alt";
+  return isOpen.value ? "line-md:close-small" : "line-md:menu";
 });
 </script>
 
 <template>
   <nav class="mobile-nav" id="sidebar">
-    <span class="logo">2giosangmitom<span class="logo-dot">.</span></span>
+    <NuxtLink class="logo">
+      2giosangmitom
+      <span class="logo-dot">.</span>
+    </NuxtLink>
     <button class="nav-trigger" @click="isOpen = !isOpen">
-      <Icon :icon="triggerIcon" :ssr="true" />
+      <iconify-icon :icon="triggerIcon" class="iconify" />
     </button>
     <div class="nav-content" :class="{ 'nav-content-open': isOpen }">
-      <span class="logo">2giosangmitom<span class="logo-dot">.</span></span>
+      <NuxtLink class="logo" to="/" @click="isOpen = !isOpen"
+        >2giosangmitom<span class="logo-dot">.</span></NuxtLink
+      >
       <NuxtLink
         v-for="item in links"
         :to="item.path"
@@ -47,6 +51,8 @@ const triggerIcon = computed(() => {
 <style lang="scss" scoped>
 .logo {
   font-size: 1.25rem;
+  cursor: pointer;
+  color: $foreground;
 }
 
 .logo-dot {
@@ -113,7 +119,7 @@ const triggerIcon = computed(() => {
     color: $foreground;
     text-decoration: none;
     translate: all 0.2s ease-in;
-    &:hover {
+    &:hover:not(:first-child) {
       color: $accent;
     }
   }
