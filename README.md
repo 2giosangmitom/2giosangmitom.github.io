@@ -1,75 +1,86 @@
-# Nuxt 3 Minimal Starter
+# 2giosangmitom 🚀
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/2giosangmitom/2giosangmitom.github.io?quickstart=1)
 
-## Setup
+Welcome to my personal portfolio site! This project showcases my skills and the knowledge I've gained so far. I hope you find it interesting and insightful! 🌟
 
-Make sure to install the dependencies:
+## Features ✨
+
+- **Seamless Responsiveness 📱:** Enjoy a smooth experience across various devices and screen sizes, ensuring accessibility everywhere.
+- **Enhanced Search Visibility 🔍:** Optimized SEO strategies to ensure the portfolio stands out in search engine results, increasing visibility and reach.
+- **Flexible Customization 🎨:** Easily tailor your portfolio to match your style and requirements by tweaking Nuxt.js components and stylesheets, making it truly your own.
+- **Integrated CV 📄:** Includes a professional CV written in Typst, a modern markup language, ensuring your credentials are presented cleanly and effectively.
+
+## Technologies Used 🛠️
+
+- **Nuxt.js:** A modern Vue.js framework for building server-side rendered applications, static sites, and more.
+- **Vue.js:** A progressive JavaScript framework for building user interfaces.
+- **Typst:** A new markup language, serving as a drop-in replacement for LaTeX, used for writing the CV.
+
+## Getting Started 🚀
+
+### Prerequisites 📋
+
+- **Node.js (v20):** A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **pnpm (v9):** A fast, disk space-efficient package manager.
+- **Typst compiler:** The Typst command line interface (CLI) compiles Typst documents into PDF format.
+
+> [!TIP]
+> This repository includes a `flake.nix` file to set up the development environment for the Nuxt.js project. If you have Nix installed, simply run `nix develop` in the project root to avoid installing Node.js, pnpm, and Typst manually. ❄️
+
+### Run Development Server 🖥️
+
+Follow these steps to get a local copy of the portfolio up and running on your machine:
+
+1. **Clone the Repository:**
+
+   ```shell
+   git clone https://github.com/2giosangmitom/2giosangmitom.github.io.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```shell
+   cd 2giosangmitom.github.io
+   ```
+
+3. **Install Dependencies:**
+
+   ```shell
+   pnpm install
+   ```
+
+4. **Run the Development Server:**
+
+   ```shell
+   pnpm dev
+   ```
+
+5. **Open in Your Browser:**
+
+   Open your web browser and navigate to `http://localhost:3000` to view the portfolio.
+
+### Building for Production 🏗️
+
+To build the application for production, run:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
 pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+The application will be available at `http://localhost:3000`.
+
+### Deployment 🚢
+
+You can deploy the built application to any static hosting service, such as Vercel, Netlify, or GitHub Pages. Follow the specific deployment instructions provided by the hosting service.
+
+- Official documentation: [https://nuxt.com/deploy](https://nuxt.com/deploy)
+
+## Contributing 🤝
+
+Contributions are welcome! If you have suggestions, bug fixes, or improvements, please feel free to open an issue or create a pull request.
+
+---
+
+Thank you for visiting my portfolio! Your feedback and contributions are greatly appreciated. 😊
