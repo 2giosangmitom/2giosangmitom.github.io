@@ -18,46 +18,49 @@ const handleClickOutside = (event: MouseEvent) => {
 
 useEventListener(document, "click", handleClickOutside);
 
-const triggerIcon = computed(() => {
-  return isOpen.value ? "line-md:close-small" : "line-md:menu";
-});
+const triggerIcon = computed(() =>
+  isOpen.value ? "line-md:close-small" : "line-md:menu",
+);
 </script>
 
 <template>
   <nav class="mobile-nav" id="sidebar">
-    <span class="logo">
-      2giosangmitom
-      <span class="logo-dot">.</span>
-    </span>
+    <span class="logo">2giosangmitom<span class="logo-dot">.</span></span>
     <button class="nav-trigger" @click="isOpen = !isOpen">
       <iconify-icon :icon="triggerIcon" class="iconify" />
     </button>
     <div class="nav-content" :class="{ 'nav-content-open': isOpen }">
-      <NuxtLink class="logo" to="/" @click="isOpen = !isOpen"
-        >2giosangmitom<span class="logo-dot">.</span></NuxtLink
-      >
+      <NuxtLink class="logo" to="/" @click="isOpen = !isOpen">
+        2giosangmitom<span class="logo-dot">.</span>
+      </NuxtLink>
       <NuxtLink
         v-for="item in links"
+        :key="item.path"
         :to="item.path"
         :class="{ 'active-route': $route.path === item.path }"
         @click="isOpen = !isOpen"
-        >{{ item.name }}</NuxtLink
       >
+        {{ item.name }}
+      </NuxtLink>
+      <ToggleTheme />
     </div>
   </nav>
+
   <nav class="desktop-nav">
     <NuxtLink class="logo" to="/">
-      2giosangmitom
-      <span class="logo-dot">.</span>
+      2giosangmitom<span class="logo-dot">.</span>
     </NuxtLink>
     <div>
       <NuxtLink
         v-for="item in links"
+        :key="item.path"
         :to="item.path"
         :class="{ 'active-route': $route.path === item.path }"
         @click="isOpen = !isOpen"
-        >{{ item.name }}</NuxtLink
       >
+        {{ item.name }}
+      </NuxtLink>
+      <ToggleTheme />
     </div>
   </nav>
 </template>
@@ -81,6 +84,7 @@ const triggerIcon = computed(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   .active-route {
     color: $accent;
     text-decoration: underline solid 2px;
@@ -96,18 +100,20 @@ const triggerIcon = computed(() => {
   justify-content: center;
   padding: 0.1rem;
   margin-right: -0.1rem;
-  background-color: none;
-  outline: none;
+  background: none;
   border: 1px solid $accent;
   border-radius: 2px;
   cursor: pointer;
   transition: all 0.2s ease-in;
+
   &:hover {
     background-color: $accent;
+
     .iconify {
       color: $background-overlay;
     }
   }
+
   .iconify {
     font-size: 1.25rem;
     color: $foreground;
@@ -130,18 +136,22 @@ const triggerIcon = computed(() => {
   overflow-y: auto;
   transition: transform 0.3s ease;
   background-color: $background-overlay;
+
   a {
     color: $foreground;
     text-decoration: none;
     transition: all 0.2s ease-in;
+
     &:not(:first-child) {
       margin-top: 0.2rem;
       font-size: 1.25rem;
     }
+
     &:hover:not(:first-child) {
       color: $accent;
     }
   }
+
   .logo {
     margin-top: 5rem;
     font-size: 1.5rem;
@@ -150,7 +160,7 @@ const triggerIcon = computed(() => {
 
 .nav-content-open {
   transform: translateX(0);
-  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 0.1);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 720px) {
@@ -162,17 +172,27 @@ const triggerIcon = computed(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     div {
       display: flex;
       gap: 0.5rem;
+
       a {
         color: $foreground;
         text-decoration: none;
         transition: all 0.2s ease-in;
+
         &:hover {
           color: $accent;
         }
       }
+    }
+
+    .active-route {
+      color: $accent;
+      text-decoration: underline solid 2px;
+      text-underline-offset: 0.2em;
+      font-weight: bold;
     }
   }
 
