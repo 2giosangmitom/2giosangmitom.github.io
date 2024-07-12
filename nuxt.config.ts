@@ -23,4 +23,7 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => tag === "iconify-icon",
     },
   },
+  image: {
+    dir: "assets/images",
+  },
 });

@@ -42,7 +42,7 @@ const triggerIcon = computed(() =>
       >
         {{ item.name }}
       </NuxtLink>
-      <ToggleTheme class="iconify" />
+      <ToggleTheme />
     </div>
   </nav>
 
@@ -60,7 +60,7 @@ const triggerIcon = computed(() =>
       >
         {{ item.name }}
       </NuxtLink>
-      <ToggleTheme class="iconify" />
+      <ToggleTheme />
     </div>
   </nav>
 </template>
@@ -76,12 +76,16 @@ const triggerIcon = computed(() =>
   color: var(--accent);
 }
 
-.iconify {
-  color: var(--foreground);
-}
-
 .desktop-nav {
   display: none;
+}
+
+.toggle-theme {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 .mobile-nav {
@@ -171,6 +175,11 @@ const triggerIcon = computed(() =>
 @media screen and (min-width: 720px) {
   .mobile-nav {
     display: none;
+  }
+
+  .toggle-theme {
+    margin: 0;
+    position: unset;
   }
 
   .desktop-nav {
