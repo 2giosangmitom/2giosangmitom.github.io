@@ -9,8 +9,8 @@ body {
   font-weight: 500;
   font-style: normal;
   font-optical-sizing: auto;
-  color: $foreground;
-  background-color: $background;
+  color: var(--foreground);
+  background-color: var(--background);
 }
 
 iconify-icon {

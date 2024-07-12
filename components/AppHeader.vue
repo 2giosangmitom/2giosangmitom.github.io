@@ -8,7 +8,7 @@
 
 <style lang="scss" scoped>
 header {
-  background-color: $background-overlay;
+  background-color: var(--background-overlay);
   box-shadow: 0 5px 5px 0 rgb(0 0 0 / 0.1);
   position: fixed;
   top: 0;

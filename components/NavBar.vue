@@ -42,7 +42,7 @@ const triggerIcon = computed(() =>
       >
         {{ item.name }}
       </NuxtLink>
-      <ToggleTheme />
+      <ToggleTheme class="iconify" />
     </div>
   </nav>
 
@@ -60,7 +60,7 @@ const triggerIcon = computed(() =>
       >
         {{ item.name }}
       </NuxtLink>
-      <ToggleTheme />
+      <ToggleTheme class="iconify" />
     </div>
   </nav>
 </template>
@@ -68,12 +68,16 @@ const triggerIcon = computed(() =>
 <style lang="scss" scoped>
 .logo {
   font-size: 1.25rem;
-  color: $foreground;
+  color: var(--foreground);
 }
 
 .logo-dot {
   font-size: 1.2rem;
-  color: $accent;
+  color: var(--accent);
+}
+
+.iconify {
+  color: var(--foreground);
 }
 
 .desktop-nav {
@@ -86,7 +90,7 @@ const triggerIcon = computed(() =>
   justify-content: space-between;
 
   .active-route {
-    color: $accent;
+    color: var(--accent);
     text-decoration: underline solid 2px;
     text-underline-offset: 0.2em;
     font-weight: bold;
@@ -101,22 +105,23 @@ const triggerIcon = computed(() =>
   padding: 0.1rem;
   margin-right: -0.1rem;
   background: none;
-  border: 1px solid $accent;
+  border: 1px solid var(--accent);
   border-radius: 2px;
   cursor: pointer;
   transition: all 0.2s ease-in;
+  outline: none;
 
   &:hover {
-    background-color: $accent;
+    background-color: var(--accent);
 
     .iconify {
-      color: $background-overlay;
+      color: var(--background-overlay);
     }
   }
 
   .iconify {
     font-size: 1.25rem;
-    color: $foreground;
+    color: var(--foreground);
     transition: all 0.2s ease-in;
   }
 }
@@ -135,10 +140,10 @@ const triggerIcon = computed(() =>
   z-index: 10;
   overflow-y: auto;
   transition: transform 0.3s ease;
-  background-color: $background-overlay;
+  background-color: var(--background-overlay);
 
   a {
-    color: $foreground;
+    color: var(--foreground);
     text-decoration: none;
     transition: all 0.2s ease-in;
 
@@ -148,7 +153,7 @@ const triggerIcon = computed(() =>
     }
 
     &:hover:not(:first-child) {
-      color: $accent;
+      color: var(--accent);
     }
   }
 
@@ -175,21 +180,22 @@ const triggerIcon = computed(() =>
 
     div {
       display: flex;
+      align-items: center;
       gap: 0.5rem;
 
       a {
-        color: $foreground;
+        color: var(--foreground);
         text-decoration: none;
         transition: all 0.2s ease-in;
 
         &:hover {
-          color: $accent;
+          color: var(--accent);
         }
       }
     }
 
     .active-route {
-      color: $accent;
+      color: var(--accent);
       text-decoration: underline solid 2px;
       text-underline-offset: 0.2em;
       font-weight: bold;
