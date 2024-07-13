@@ -110,8 +110,8 @@ web development skills.
     )
 
 - *Portfolio Website*
-  - *Description:* My portfolio showcases my skills and includes my CV written in
-    Typst. It highlights my journey to become a web developer.
+  - *Description:* My portfolio showcases my skills, features my CV written in
+    Typst, highlights my projects, and includes my blog.
   - *Technologies Used:* Nuxt.js, Vue.js, VueUse, Sass
   - *Challenges Overcome:* Designing a clean and professional layout, optimizing for
     SEO, and ensuring fast load times.
