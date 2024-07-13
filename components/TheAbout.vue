@@ -1,6 +1,6 @@
 <template>
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
+  <div id="about">
+    <h3 class="section-title">About Me</h3>
     <p>
       I began my journey as a web developer in <strong>2021</strong>, starting
       with <strong>HTML, CSS,</strong> and <strong>JavaScript</strong>.
@@ -25,16 +25,5 @@
       <strong>CLI tools</strong>. I love motivating people to build cool stuff
       and encourage people to never stop learning.
     </p>
-  </section>
+  </div>
 </template>
-
-<style scoped>
-#about p {
-  line-height: 24px;
-  max-width: 60rem;
-}
-
-#about p:not(:first-child) {
-  margin-top: 0.5rem;
-}
-</style>

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
-
 const contactDetails = [
   {
     icon: "clarity:email-solid",
@@ -24,36 +22,34 @@ const contactDetails = [
 </script>
 
 <template>
-  <section id="contact">
-    <h2 class="section-title">Contact me</h2>
+  <div id="contact">
+    <h3 class="section-title">Contact me</h3>
     <div
       v-for="(contact, index) in contactDetails"
       :key="index"
       class="contact-info"
     >
-      <Icon :icon="contact.icon" :aria-label="contact.label" />
+      <iconify-icon :icon="contact.icon" :aria-label="contact.label" />
       <a :href="contact.link" target="_blank" rel="noopener">{{
         contact.text
       }}</a>
     </div>
-  </section>
+  </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .contact-info {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0.5rem 0;
-}
 
-.contact-info a {
-  color: #f9e8c9;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-.contact-info a:hover {
-  color: #ffa3fd;
+  a {
+    color: var(--foreground);
+    text-decoration: none;
+    transition: color 0.2s ease-in;
+    &:hover {
+      color: var(--accent);
+    }
+  }
 }
 </style>

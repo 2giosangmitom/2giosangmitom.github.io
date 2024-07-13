@@ -35,7 +35,7 @@
       )[#text(12pt, luma(0))[#icon("email.svg") voquangchien.dev\@proton.me]]
     ], rect[
       #link(
-        "https://www.linkedin.com/in/2giosangmitom/",
+        "https://www.linkedin.com/in/2giosangmitom",
       )[#text(12pt, luma(0))[#icon("linkedin.svg") 2giosangmitom]]
     ], rect[
       #link(
@@ -43,7 +43,7 @@
       )[#text(12pt, luma(0))[#icon("github.svg") 2giosangmitom]]
     ], rect[
       #link(
-        "https://2giosangmitom.is-a.dev/",
+        "https://2giosangmitom.is-a.dev",
       )[#text(12pt, luma(0))[#icon("link.svg") 2giosangmitom.is-a.dev]]
     ],
   )
@@ -52,22 +52,16 @@
 = Summary
 
 A dedicated web developer with a passion for creating dynamic web applications
-and building high-performance systems. Proficient in both front-end and back-end
-development, eager to leverage my knowledge and continuously improve my
-abilities. Currently seeking an internship opportunity to gain practical
-experience and contribute to real-world projects.
+and building high-performance systems. Eager to leverage my knowledge in a
+professional setting, continuously improve my abilities, and contribute to
+real-world projects. Currently seeking an internship opportunity to gain
+practical experience.
 
 = Education
 
 #let daterange(start, end) = {
   if start != none and end != none [
     #start #sym.dash.en #end
-  ]
-  if start == none and end != none [
-    #end
-  ]
-  if start != none and end == none [
-    #start
   ]
 }
 
@@ -79,13 +73,19 @@ experience and contribute to real-world projects.
   #daterange(2024, "Present")
 ]
 
-= Technical Skills
+= Skills, Interests, Languages
 
-- *Languages*: TypeScript, JavaScript, Go, HTML, CSS, SCSS, Nix
-- *Frameworks and Libraries*: Vue.js, Nuxt.js, Jest, Vitest, Tailwind, Go Fiber
-- *Tools and Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel
+- *Programming*: TypeScript, JavaScript, Go, CSS, SCSS, Nix, HTML
+- *Frameworks & Libraries*: Jest, Vitest
+- *Web Development*: Vue.js, Nuxt.js, Go Fiber, Tailwind CSS
+- *Tools & Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel, Neovim, Visual
+  Studio Code
 - *Operating Systems*: NixOS
 - *Databases*: PostgreSQL, MongoDB
+- *Languages*: Vietnamese (Native), English (Fluent)
+- *Interests*: Jogging, Calisthenics, Reading
+
+// = Work Experience
 
 = Projects
 
@@ -100,58 +100,75 @@ web development skills.
   - *Description:* A website for visually tracking the progress of the current year.
     It provides a visual representation of how much of the year has passed, helping
     users stay motivated and mindful of their time.
-  - *Role:* Sole Developer
   - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia
   - *Challenges Overcome:* Implementing responsive design, optimizing performance,
     and ensuring accurate date calculations.
+  - *Impact:* Increased user engagement and time-awareness.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
+    )
+
+- *Portfolio Website*
+  - *Description:* My portfolio showcases my skills and includes my CV written in
+    Typst. It highlights my journey to become a web developer.
+  - *Technologies Used:* Nuxt.js, Vue.js, VueUse
+  - *Challenges Overcome:* Designing a clean and professional layout, optimizing for
+    SEO, and ensuring fast load times.
+  - *Impact:* Enhanced personal branding and online presence.
+  - *Links:* #projectLinks(
+      "https://github.com/2giosangmitom/2giosangmitom.github.io", "https://2giosangmitom.is-a.dev/",
     )
 
 - *Fylo Dark Theme Landing Page*
   - *Description:* A landing page challenge from Frontend Mentor, designed to
     showcase responsive design skills and frontend development capabilities.
-  - *Role:* Sole Developer
   - *Technologies Used:* Nuxt.js, Vue.js, SCSS
   - *Challenges Overcome:* Implementing responsive layouts and ensuring
     cross-browser compatibility.
+  - *Impact:* Demonstrated ability to meet design requirements and deliver polished
+    projects.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/fylo-landing-page", "https://fylo-landing-page-ebon.vercel.app/",
     )
 
 = Open-source Contributions
 
-#let openSourceProject(source, projectName) = {
-  [#link(source)[#text(rgb("#A91D3A"))[#projectName]]]
-}
-
 Although these projects are not directly related to web development, they have
 helped me improve my collaboration skills. I am passionate about contributing to
 open-source software initiatives.
 
-- *Nightfall.nvim*
-  - *Description:* A sublime Neovim colorscheme immersed in twilight hues for
-    enhanced focus and creativity.
-  - *Role:* Maintainer
-  - *Technologies Used:* Lua
-  - *Challenges Overcome:* Ensuring compatibility with various Neovim plugins,
-    maintaining consistent color schemes across different syntax elements, and
-    gathering user feedback for improvements.
-  - *GitHub Repository:* #openSourceProject(
-      "https://github.com/2giosangmitom/nightfall.nvim", "2giosangmitom/nightfall.nvim",
-    )
+*Personal Projects*
+- #link("https://github.com/2giosangmitom/nightfall.nvim")[*nightfall.nvim*]: A
+  sublime Neovim colorscheme, immerse in twilight hues for enhanced focus and
+  creativity.
 
-= Languages
+// AI recommendation :)))
+// = Awards and Honors
 
-- *English*: Intermediate
-- *Vietnamese*: Native
+// - *Best Final Year Project* - Hue University of Sciences, 2024
+// - *Top 10 in National Coding Competition* - Vietnam, 2022
 
-= Interests and Hobbies
+// = Volunteer Experience
 
-- *Calisthenics:* Enthusiast of body-weight training, mastering exercises like
-  push-ups, pull-ups, and dips. This enhances muscle strength, balance, and
-  agility.
-- *Jogging:* I often jog at 5 AM, enjoying the fresh air and peaceful atmosphere
-  to start my day.
-- *Reading Programming Books:* Constantly enhancing my skills by reading books on
-  various programming topics.
+// - *Web Developer* - Nonprofit Organization XYZ
+//   - *Duration*: January 2023 - Present
+//   - *Responsibilities*:
+//     - Developed and maintained the organization's website.
+//     - Implemented features to improve user experience and accessibility.
+//     - Provided technical support and training to staff members.
+
+// - *Event Organizer* - Tech Community ABC
+//   - *Duration*: June 2021 - December 2022
+//   - *Responsibilities*:
+//     - Organized and managed tech meetups and workshops.
+//     - Coordinated with speakers and participants.
+//     - Promoted events through social media and community outreach.
+
+// = Professional Memberships
+
+// - *Member*, International Web Developers Association
+// - *Member*, JavaScript Developers Network
+
+// = References
+
+// Available upon request.

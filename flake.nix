@@ -1,5 +1,5 @@
 {
-  description = "My simple portfolio showcases my skills and includes my CV written in Typst";
+  description = "NodeJS project flake template";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -20,7 +20,6 @@
             nil
             nodejs_20
             pnpm
-            typst
           ];
         };
       }

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+iconify-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: var(--foreground);
+}
+
+section {
+  margin-top: 4rem;
+}
+
+p {
+  font-size: 15px;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.section-title {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.1s ease-in;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+@media screen and (min-width: 720px) {
+  section {
+    margin-top: 5rem;
+  }
+}

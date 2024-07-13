@@ -25,8 +25,8 @@ const skills = [
 </script>
 
 <template>
-  <section id="skills">
-    <h2 class="section-title">Technical Skills</h2>
+  <div id="skills">
+    <h3 class="section-title">Technical Skills</h3>
     <div class="skills-container">
       <div
         v-for="skill in skills"
@@ -38,14 +38,10 @@ const skills = [
         {{ skill.name }}
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
-<style scoped>
-#skills {
-  max-width: 60rem;
-}
-
+<style lang="scss" scoped>
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -56,6 +52,5 @@ const skills = [
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.9rem;
-  font-weight: 500;
 }
 </style>
