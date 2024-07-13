@@ -86,6 +86,7 @@ practical experience.
 - *Interests*: Jogging, Calisthenics, Reading
 
 // = Work Experience
+// TODO: add work experience
 
 = Projects
 
@@ -111,7 +112,7 @@ web development skills.
 - *Portfolio Website*
   - *Description:* My portfolio showcases my skills and includes my CV written in
     Typst. It highlights my journey to become a web developer.
-  - *Technologies Used:* Nuxt.js, Vue.js, VueUse
+  - *Technologies Used:* Nuxt.js, Vue.js, VueUse, Sass
   - *Challenges Overcome:* Designing a clean and professional layout, optimizing for
     SEO, and ensuring fast load times.
   - *Impact:* Enhanced personal branding and online presence.
