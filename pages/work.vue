@@ -1,3 +1,3 @@
 <template>
-  <div>Work page</div>
+  <section>Work page (coming soon)</section>
 </template>

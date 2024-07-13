@@ -1,3 +1,3 @@
 <template>
-  <div>Blog page</div>
+  <section>Blog page (coming soon)</section>
 </template>
