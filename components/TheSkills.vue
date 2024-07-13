@@ -57,7 +57,7 @@ const skills: Skill[] = [
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
 }
 

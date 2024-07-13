@@ -10,6 +10,10 @@
     </div>
     <h3 class="section-title">About Me</h3>
     <p>
+      I'm <strong>Vo Quang Chien</strong>, a dedicated software engineer with
+      expertise in web development.
+    </p>
+    <p>
       I began my journey as a web developer in 2021, starting with HTML, CSS,
       and JavaScript.
     </p>
@@ -35,5 +39,9 @@
 <style scoped>
 .about__avatar img {
   border-radius: 50%;
+}
+
+p:not(:first-child) {
+  margin-top: 0.25rem;
 }
 </style>
