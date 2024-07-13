@@ -20,6 +20,7 @@
             nil
             nodejs_20
             pnpm
+            typst
           ];
         };
       }
