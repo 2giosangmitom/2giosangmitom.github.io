@@ -11,6 +11,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   modules: [
     "@pinia/nuxt",
     "@vueuse/nuxt",
@@ -25,5 +28,20 @@ export default defineNuxtConfig({
   },
   image: {
     dir: "assets/images",
+  },
+  fonts: {
+    defaults: {
+      weights: [400, 500, 600],
+      styles: ["normal", "italic"],
+      subsets: [
+        "cyrillic-ext",
+        "cyrillic",
+        "greek-ext",
+        "greek",
+        "vietnamese",
+        "latin-ext",
+        "latin",
+      ],
+    },
   },
 });

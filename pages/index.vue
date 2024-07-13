@@ -93,10 +93,9 @@ useSeoMeta({
   <main class="main">
     <div class="container">
       <div class="info">
-        <span class="info__intro">Welcome to my portfolio realm!</span>
+        <span class="info__intro">Software Engineer</span>
         <h1>Hello! I'm <span class="info__name">Chien</span></h1>
         <h1>
-          A
           <span class="info__typed-text">{{ typeValue }}</span>
           <span class="info__cursor">|</span>
           <span
@@ -175,6 +174,7 @@ useSeoMeta({
 
 .main {
   margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 
 .container {

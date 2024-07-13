@@ -16,7 +16,13 @@ import "iconify-icon";
 
 @media screen and (min-width: 720px) {
   .container {
-    margin: 0 35px;
+    margin: 0 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    margin: 0 50px;
   }
 }
 </style>

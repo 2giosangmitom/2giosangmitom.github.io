@@ -95,9 +95,7 @@ const triggerIcon = computed(() =>
 
   .active-route {
     color: var(--accent);
-    text-decoration: underline solid 2px;
-    text-underline-offset: 0.2em;
-    font-weight: bold;
+    font-weight: 500;
   }
 }
 
@@ -190,7 +188,7 @@ const triggerIcon = computed(() =>
     div {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
 
       a {
         color: var(--foreground);
@@ -205,9 +203,7 @@ const triggerIcon = computed(() =>
 
     .active-route {
       color: var(--accent);
-      text-decoration: underline solid 2px;
-      text-underline-offset: 0.2em;
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 
