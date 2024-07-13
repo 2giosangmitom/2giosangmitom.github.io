@@ -1,5 +1,12 @@
 <script setup lang="ts">
-const contactDetails = [
+type ContactDetail = {
+  icon: string;
+  label: string;
+  link: string;
+  text: string;
+};
+
+const contactDetails: ContactDetail[] = [
   {
     icon: "clarity:email-solid",
     label: "Email",
@@ -23,11 +30,11 @@ const contactDetails = [
 
 <template>
   <div id="contact">
-    <h3 class="section-title">Contact me</h3>
+    <h3 class="section-title">Contact Me</h3>
     <div
       v-for="(contact, index) in contactDetails"
       :key="index"
-      class="contact-info"
+      class="contact__info"
     >
       <iconify-icon :icon="contact.icon" :aria-label="contact.label" />
       <a :href="contact.link" target="_blank" rel="noopener">{{
@@ -38,18 +45,23 @@ const contactDetails = [
 </template>
 
 <style lang="scss" scoped>
-.contact-info {
+.contact__info {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
 
   a {
     color: var(--foreground);
     text-decoration: none;
     transition: color 0.2s ease-in;
+
     &:hover {
       color: var(--accent);
     }
   }
+}
+
+#contact {
+  margin-top: 1rem;
 }
 </style>

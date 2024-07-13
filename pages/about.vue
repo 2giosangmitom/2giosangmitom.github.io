@@ -1,6 +1,5 @@
 <template>
   <section>
-    <TheIntro />
     <TheAbout />
     <TheSkills />
     <TheContact />

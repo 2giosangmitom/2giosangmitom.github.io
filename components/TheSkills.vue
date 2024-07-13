@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const skills = [
+type Skill = {
+  name: string;
+  color: string;
+};
+
+const skills: Skill[] = [
   { name: "HTML", color: "#F75431" },
   { name: "CSS", color: "#A0DEFF" },
   { name: "JavaScript", color: "#FFC100" },
@@ -27,12 +32,12 @@ const skills = [
 <template>
   <div id="skills">
     <h3 class="section-title">Technical Skills</h3>
-    <div class="skills-container">
+    <div class="skills__container">
       <div
         v-for="skill in skills"
         :key="skill.name"
         :style="{ backgroundColor: skill.color, color: '#151515' }"
-        class="skill-item"
+        class="skills__item"
         translate="no"
       >
         {{ skill.name }}
@@ -42,15 +47,21 @@ const skills = [
 </template>
 
 <style lang="scss" scoped>
-.skills-container {
+.skills__container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.skill-item {
+.skills__item {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#skills {
+  margin-top: 1rem;
 }
 </style>
