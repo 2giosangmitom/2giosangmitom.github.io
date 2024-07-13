@@ -15,6 +15,7 @@ Welcome to my personal portfolio site! This project showcases my skills and the 
 
 - **Nuxt.js:** A modern Vue.js framework for building server-side rendered applications, static sites, and more.
 - **Vue.js:** A progressive JavaScript framework for building user interfaces.
+- **Sass:** Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 - **Typst:** A new markup language, serving as a drop-in replacement for LaTeX, used for writing the CV.
 
 ## Getting Started 🚀
