@@ -21,6 +21,7 @@
             nodejs_20
             pnpm
             typst
+            typstyle
           ];
         };
       }

@@ -5,17 +5,20 @@
   #set text(size: 18pt, weight: "regular")
   #text(rgb("#151515"))[#strong[#text[#it.body.text]]]
   #box(
-    width: 1fr, line(length: 100%, stroke: rgb("#1A2130")), baseline: -1.25pt,
+    width: 1fr,
+    line(length: 100%, stroke: rgb("#1A2130")),
+    baseline: -1.25pt,
   )
 ]
 
-#align(
-  center,
-)[
+#align(center)[
   #text(35pt)[*Vo Quang Chien*]\
   #text(15pt, rgb("#A91D3A"), style: "italic", baseline: 4pt)[Web Developer]\
   #text(
-    12pt, rgb("#151515"), style: "italic", baseline: 5pt,
+    12pt,
+    rgb("#151515"),
+    style: "italic",
+    baseline: 5pt,
   )[Hue City, Phu Hoi #sym.dash.en Viet Nam]
 ]
 
@@ -25,26 +28,32 @@
   [#box(height: 10pt, image(img), baseline: 2pt)]
 }
 
-#align(
-  center,
-)[
+#align(center)[
   #grid(
-    columns: 4, rect[
-      #link(
-        "mailto:voquangchien.dev@proton.me",
-      )[#text(12pt, luma(0))[#icon("email.svg") voquangchien.dev\@proton.me]]
-    ], rect[
-      #link(
-        "https://www.linkedin.com/in/2giosangmitom",
-      )[#text(12pt, luma(0))[#icon("linkedin.svg") 2giosangmitom]]
-    ], rect[
-      #link(
-        "https://github.com/2giosangmitom",
-      )[#text(12pt, luma(0))[#icon("github.svg") 2giosangmitom]]
-    ], rect[
-      #link(
-        "https://2giosangmitom.is-a.dev",
-      )[#text(12pt, luma(0))[#icon("link.svg") 2giosangmitom.is-a.dev]]
+    columns: 4,
+    rect[
+      #link("mailto:voquangchien.dev@proton.me")[#text(
+          12pt,
+          luma(0),
+        )[#icon("email.svg") voquangchien.dev\@proton.me]]
+    ],
+    rect[
+      #link("https://www.linkedin.com/in/2giosangmitom")[#text(
+          12pt,
+          luma(0),
+        )[#icon("linkedin.svg") 2giosangmitom]]
+    ],
+    rect[
+      #link("https://github.com/2giosangmitom")[#text(
+          12pt,
+          luma(0),
+        )[#icon("github.svg") 2giosangmitom]]
+    ],
+    rect[
+      #link("https://2giosangmitom.is-a.dev")[#text(
+          12pt,
+          luma(0),
+        )[#icon("link.svg") 2giosangmitom.is-a.dev]]
     ],
   )
 ]
@@ -66,7 +75,8 @@ practical experience.
 }
 
 #block(
-  width: 100%, breakable: true,
+  width: 100%,
+  breakable: true,
 )[
   *Hue University of Sciences* #h(1fr) *Hue #sym.dash.en Vietnam*\
   #text(style: "italic")[Bachelor of Science in Information Technology] #h(1fr)
