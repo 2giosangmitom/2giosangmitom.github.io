@@ -41,30 +41,23 @@
       #link("https://www.linkedin.com/in/2giosangmitom")[#text(
           12pt,
           luma(0),
-        )[#icon("linkedin.svg") 2giosangmitom]]
-    ],
+        )[#icon("linkedin.svg") 2giosangmitom]]],
     rect[
       #link("https://github.com/2giosangmitom")[#text(
           12pt,
           luma(0),
-        )[#icon("github.svg") 2giosangmitom]]
-    ],
+        )[#icon("github.svg") 2giosangmitom]]],
     rect[
-      #link("https://2giosangmitom.is-a.dev")[#text(
+      #link("tel:0852008975")[#text(
           12pt,
           luma(0),
-        )[#icon("link.svg") 2giosangmitom.is-a.dev]]
-    ],
+        )[#icon("phone.svg") 0852008975]]],
   )
 ]
 
 = Summary
 
-A dedicated web developer with a passion for creating dynamic web applications
-and building high-performance systems. Eager to leverage my knowledge in a
-professional setting, continuously improve my abilities, and contribute to
-real-world projects. Currently seeking an internship opportunity to gain
-practical experience.
+A passionate and dedicated web developer specializing in creating dynamic web applications and building high-performance systems. Eager to leverage my knowledge in a professional setting, I'm driven by a commitment to continuous learning and professional growth. Currently seeking an internship to gain hands-on experience and contribute to impactful projects in a real-world setting.
 
 = Education
 
@@ -88,98 +81,76 @@ practical experience.
 - *Programming*: TypeScript, JavaScript, Go, CSS, SCSS, Nix, HTML
 - *Frameworks & Libraries*: Jest, Vitest
 - *Web Development*: Vue.js, Nuxt.js, Go Fiber, Tailwind CSS
-- *Tools & Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel, Neovim, Visual
-  Studio Code
+- *Tools & Platforms*: Docker, Nix, GitHub, Git, Node.js, Vercel, Neovim
 - *Operating Systems*: NixOS
 - *Databases*: PostgreSQL, MongoDB
+- *Development Practices*: Test-Driven Development (TDD)
+- *Professional Skills*: Independent work, Team collaboration
 - *Languages*: Vietnamese (Native), English (Fluent)
 - *Interests*: Jogging, Calisthenics, Reading
 
-// = Work Experience
-// TODO: add work experience
-
 = Projects
 
-Here are some projects I have developed to learn new technologies and enhance my
-web development skills.
+Here are some projects I have developed to learn new technologies and enhance my web development skills.
 
 #let projectLinks(source, demo) = {
   [#link(source)[#text(rgb("#A91D3A"))[GitHub Repository]] | #link(demo)[#text(rgb("#A91D3A"))[Live Demo]]]
 }
 
-- *Year Progress*
-  - *Description:* A website for visually tracking the progress of the current year.
-    It provides a visual representation of how much of the year has passed, helping
-    users stay motivated and mindful of their time.
-  - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia
-  - *Challenges Overcome:* Implementing responsive design, optimizing performance,
-    and ensuring accurate date calculations.
-  - *Impact:* Increased user engagement and time-awareness.
-  - *Links:* #projectLinks(
-      "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
-    )
-
 - *Portfolio Website*
-  - *Description:* My portfolio showcases my skills, features my CV written in
-    Typst, highlights my projects, and includes my blog.
+  - *Description:* My portfolio showcases my skills, features my CV written in Typst, highlights my projects, and includes my blog.
   - *Technologies Used:* Nuxt.js, Vue.js, VueUse, Sass
-  - *Challenges Overcome:* Designing a clean and professional layout, optimizing for
-    SEO, and ensuring fast load times.
-  - *Impact:* Enhanced personal branding and online presence.
+  - *Challenges Overcome:* Designing a clean and professional layout, optimizing for SEO, and ensuring fast load times.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/2giosangmitom.github.io", "https://2giosangmitom.is-a.dev/",
     )
 
+- *Year Progress*
+  - *Description:* A website for tracking the progress of the current year visually.
+  - *Technologies Used:* Nuxt.js, TypeScript, Tailwind, Vitest, Pinia
+  - *Challenges Overcome:* Implementing responsive design, optimizing performance, and ensuring accurate date calculations.
+  - *Links:* #projectLinks(
+      "https://github.com/2giosangmitom/year-progress", "https://year-progress-kappa.vercel.app/",
+    )
+
 - *Fylo Dark Theme Landing Page*
-  - *Description:* A landing page challenge from Frontend Mentor, designed to
-    showcase responsive design skills and frontend development capabilities.
+  - *Description:* A landing page challenge from Frontend Mentor, designed to showcase responsive design skills and frontend development capabilities.
   - *Technologies Used:* Nuxt.js, Vue.js, SCSS
-  - *Challenges Overcome:* Implementing responsive layouts and ensuring
-    cross-browser compatibility.
-  - *Impact:* Demonstrated ability to meet design requirements and deliver polished
-    projects.
+  - *Challenges Overcome:* Implementing responsive layouts and ensuring cross-browser compatibility.
   - *Links:* #projectLinks(
       "https://github.com/2giosangmitom/fylo-landing-page", "https://fylo-landing-page-ebon.vercel.app/",
     )
 
 = Open-source Contributions
 
-Although these projects are not directly related to web development, they have
-helped me improve my collaboration skills. I am passionate about contributing to
-open-source software initiatives.
+Although these projects are not directly related to web development, they have helped me improve my collaboration skills. I am passionate about contributing to open-source software initiatives.
 
 *Personal Projects*
-- #link("https://github.com/2giosangmitom/nightfall.nvim")[*nightfall.nvim*]: A
-  sublime Neovim colorscheme, immerse in twilight hues for enhanced focus and
-  creativity.
+- #link("https://github.com/2giosangmitom/nightfall.nvim")[*nightfall.nvim*]: A sublime Neovim colorscheme, immerse in twilight hues for enhanced focus and creativity.
 
-// AI recommendation :)))
 // = Awards and Honors
-
+//
 // - *Best Final Year Project* - Hue University of Sciences, 2024
 // - *Top 10 in National Coding Competition* - Vietnam, 2022
-
+//
 // = Volunteer Experience
-
+//
 // - *Web Developer* - Nonprofit Organization XYZ
 //   - *Duration*: January 2023 - Present
 //   - *Responsibilities*:
 //     - Developed and maintained the organization's website.
 //     - Implemented features to improve user experience and accessibility.
 //     - Provided technical support and training to staff members.
-
+//
 // - *Event Organizer* - Tech Community ABC
 //   - *Duration*: June 2021 - December 2022
 //   - *Responsibilities*:
 //     - Organized and managed tech meetups and workshops.
 //     - Coordinated with speakers and participants.
 //     - Promoted events through social media and community outreach.
-
+//
 // = Professional Memberships
-
+//
 // - *Member*, International Web Developers Association
 // - *Member*, JavaScript Developers Network
-
-// = References
-
-// Available upon request.
+//

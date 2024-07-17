@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   },
   image: {
     dir: "assets/images",
+    format: ["webp"],
   },
   fonts: {
     defaults: {

@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "format": "prettier --write .",
-    "build:cv": "typst compile ./assets/cv/cv.typ ./public/voquangchien.pdf"
+    "build:cv": "typst compile ./cv/cv.typ ./public/voquangchien.pdf"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.7.1",
