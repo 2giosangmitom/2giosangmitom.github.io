@@ -123,10 +123,12 @@ Here are some projects I have developed to learn new technologies and enhance my
 
 = Open-source Contributions
 
-Although these projects are not directly related to web development, they have helped me improve my collaboration skills. I am passionate about contributing to open-source software initiatives.
+My passion for contributing to open-source software has significantly enhanced my collaboration skills. While these projects are not directly related to web development, they showcase my commitment to continuous learning and community engagement.
 
 *Personal Projects*
 - #link("https://github.com/2giosangmitom/nightfall.nvim")[*nightfall.nvim*]: A sublime Neovim colorscheme, immerse in twilight hues for enhanced focus and creativity.
+- #link("https://github.com/2giosangmitom/dotfiles")[*dotfiles*]: My NixOS configuration tailored for daily use ensures a smooth and productive environment.
+- #link("https://github.com/2giosangmitom/leetcode")[*leetcode*]: LeetCode solutions implemented in Rust, Go, and TypeScript.
 
 // = Awards and Honors
 //
