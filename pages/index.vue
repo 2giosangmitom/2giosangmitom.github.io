@@ -113,11 +113,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="photo">
-        <NuxtImg
-          src="hero.webp"
-          alt="Hero image of Chien"
-          class="photo__image"
-        />
+        <NuxtImg src="avt.png" alt="Hero image of Chien" class="photo__image" />
       </div>
     </div>
   </main>
