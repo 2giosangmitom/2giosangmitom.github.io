@@ -48,10 +48,10 @@
           luma(0),
         )[#icon("github.svg") 2giosangmitom]]],
     rect[
-      #link("tel:0852008975")[#text(
+      #link("https://t.me/voquangchien")[#text(
           12pt,
           luma(0),
-        )[#icon("phone.svg") 0852008975]]],
+        )[#icon("telegram.svg") 0852008975]]],
   )
 ]
 
