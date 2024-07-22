@@ -19,7 +19,7 @@
     "@vueuse/nuxt": "^10.11.0",
     "iconify-icon": "^2.1.0",
     "nuxt": "^3.12.3",
-    "vue": "^3.4.31"
+    "vue": "^3.4.33"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.13.1",
