@@ -81,7 +81,7 @@
 
     #for item in edu {
       block(width: 100%, breakable: true)[
-        *#link(item.url)[#item.school]* #h(1fr) *#item.area*\
+        #link(item.url)[*#item.school*] #h(1fr) *#item.area*\
         #text(style: "italic")[#item.studyType #h(1fr) #dateRange(
             item.startDate,
             item.endDate,
