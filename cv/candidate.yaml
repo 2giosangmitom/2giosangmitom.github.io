@@ -1,0 +1,141 @@
+personal:
+  name: Vo Quang Chien
+  positions:
+    - Software Engineer
+    - Web Developer
+  email: voquangchien.dev@proton.me
+  location:
+    city: Hue
+    region: Thua Thien Hue
+    country: Vietnam
+  profiles:
+    - network: LinkedIn
+      username: 2giosangmitom
+      url: https://www.linkedin.com/in/2giosangmitom
+    - network: GitHub
+      username: 2giosangmitom
+      url: https://github.com/2giosangmitom
+    - network: Telegram
+      username: voquangchien
+      url: https://t.me/voquangchien
+
+summary: I am a passionate and dedicated web developer skilled in creating dynamic web applications and building high-performance systems. I am eager to apply my knowledge in a professional context, driven by a commitment to continuous learning and professional growth. Currently, I am seeking an internship to gain hands-on experience and contribute to meaningful projects in a real-world setting.
+
+education:
+  - school: Hue University of Sciences
+    url: http://husc.hueuni.edu.vn/
+    area: Hue, Vietnam
+    studyType: Bachelor of Science in Information Technology
+    startDate: 2024
+    endDate: false
+
+skills:
+  - category: Programming
+    knowledge:
+      - HTML
+      - CSS
+      - Sass
+      - JavaScript
+      - Go
+      - Nix
+      - TypeScript
+      - Typst
+      - Markdown
+      - SQL
+  - category: Frameworks & Libraries
+    knowledge:
+      - Vue.js
+      - Nuxt.js
+      - Tailwind
+      - Vitest/Jest
+      - Pinia
+  - category: Tools & Platforms
+    knowledge:
+      - Docker
+      - Git
+      - GitHub
+      - Node.js
+      - Vercel
+      - Neovim
+      - Nix
+  - category: Operating Systems
+    knowledge:
+      - Linux (NixOS)
+  - category: Databases
+    knowledge:
+      - PostgreSQL
+      - MongoDB
+  - category: Development Practices
+    knowledge:
+      - Test-Driven Development (TDD)
+  - category: Languages
+    knowledge:
+      - Vietnamese (Native)
+      - English (Fluent)
+  - category: Interests
+    knowledge:
+      - Jogging
+      - Calisthenics
+      - Reading
+
+projects:
+  - name: Portfolio Website
+    description: My portfolio showcases my skills, features my CV written in Typst, highlights my projects, and includes my blog.
+    detailed:
+      - Designed and developed the entire site from scratch, implementing a clean and professional layout.
+      - Implemented responsive design with a mobile-first approach for faster loading on mobile devices.
+      - Integrated professional CV written in Typst and ensured all sections are easily navigable.
+      - Optimized the website for SEO to improve visibility on search engines.
+    technologies:
+      - Vue.js
+      - Nuxt.js
+      - Sass
+      - Typst
+      - VueUse
+    links:
+      github: https://github.com/2giosangmitom/2giosangmitom.github.io
+      preview: https://2giosangmitom.is-a.dev/
+  - name: Year Progress
+    description: A website for tracking the progress of the current year visually.
+    detailed:
+      - Built the application to display the percentage of the year that has passed with real-time updates and a visually appealing progress bar.
+      - Used TypeScript for type safety and improved code quality.
+      - Optimized the performance of the application to ensure it loads quickly and runs smoothly.
+      - Improved ability to create efficient and responsive web applications.
+      - Implemented a dark theme toggle with Pinia and Tailwind.
+      - Ensured the progress calculation is accurate.
+      - Wrote unit tests with Vitest.
+    technologies:
+      - Vue.js
+      - Nuxt.js
+      - Pinia
+      - TypeScript
+      - Vitest
+      - Tailwind
+    links:
+      github: https://github.com/2giosangmitom/year-progress
+      preview: https://year-progress-kappa.vercel.app/
+  - name: Fylo Dark Theme Landing Page
+    description: A landing page challenge from Frontend Mentor.
+    detailed:
+      - Implemented the UI according to the provided design.
+      - Ensured cross-browser compatibility and maintained consistent design across different screen sizes.
+      - Reduced load times and enhanced overall performance by optimizing images, minifying CSS and JavaScript files, and using lazy loading techniques.
+    technologies:
+      - Vue.js
+      - Nuxt.js
+      - Sass
+    links:
+      github: https://github.com/2giosangmitom/fylo-landing-page
+      preview: https://fylo-landing-page-ebon.vercel.app/
+
+opensource:
+  - name: nightfall.nvim
+    description: A sublime Neovim colorscheme, immersing in twilight hues for enhanced focus and creativity.
+    url: https://github.com/2giosangmitom/nightfall.nvim
+  - name: dotfiles
+    description: My NixOS configuration tailored for daily use, ensuring a smooth and productive environment.
+    url: https://github.com/2giosangmitom/dotfiles
+  - name: leetcode
+    description: LeetCode solutions implemented in Rust, Go, and TypeScript.
+    url: https://github.com/2giosangmitom/leetcode

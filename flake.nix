@@ -1,5 +1,5 @@
 {
-  description = "NodeJS project flake template";
+  description = "My portfolio showcases my skills, features my CV written in Typst, highlights my projects, and includes my blog";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
