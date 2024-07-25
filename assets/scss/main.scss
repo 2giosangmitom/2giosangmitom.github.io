@@ -37,6 +37,12 @@ strong {
   color: var(--accent);
 }
 
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.1s ease-in;

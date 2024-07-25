@@ -24,7 +24,9 @@ const triggerIcon = computed(() =>
 
 <template>
   <nav class="mobile-nav" id="sidebar">
-    <span class="logo">2giosangmitom<span class="logo-dot">.</span></span>
+    <span class="logo prevent-select">
+      2giosangmitom<span class="logo-dot">.</span>
+    </span>
     <button class="nav-trigger" @click="isOpen = !isOpen">
       <iconify-icon :icon="triggerIcon" class="iconify" />
     </button>
@@ -147,6 +149,12 @@ const triggerIcon = computed(() =>
     color: var(--foreground);
     text-decoration: none;
     transition: all 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    width: 5rem;
+    justify-content: center;
+    text-align: center;
 
     &:not(:first-child) {
       margin-top: 0.2rem;
@@ -193,6 +201,8 @@ const triggerIcon = computed(() =>
         color: var(--foreground);
         text-decoration: none;
         transition: all 0.2s ease-in;
+        text-align: center;
+        width: fit-content;
 
         &:hover {
           color: var(--accent);
@@ -202,7 +212,6 @@ const triggerIcon = computed(() =>
 
     .active-route {
       color: var(--accent);
-      font-weight: 500;
     }
   }
 
