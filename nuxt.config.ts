@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
     "@nuxt/test-utils/module",
+    "@nuxt/eslint",
   ],
   vue: {
     compilerOptions: {

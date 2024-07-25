@@ -1,0 +1,10 @@
+node_modules/
+.github/
+.git/
+.devcontainer/
+.nuxt/
+.output/
+dist/
+.gitignore
+.pre-commit-config.yaml
+.prettierignore
