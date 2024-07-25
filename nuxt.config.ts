@@ -26,10 +26,6 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => tag === "iconify-icon",
     },
   },
-  image: {
-    dir: "assets/images",
-    format: ["webp"],
-  },
   fonts: {
     defaults: {
       weights: [400, 500, 600],

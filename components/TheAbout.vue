@@ -2,7 +2,7 @@
   <div id="about">
     <div class="about__avatar">
       <NuxtImg
-        src="avt.png"
+        src="/images/avt.png"
         alt="Avatar of Vo Quang Chien"
         width="100"
         height="100"
