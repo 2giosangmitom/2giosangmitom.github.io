@@ -127,7 +127,7 @@ projects:
       - Sass
     links:
       github: https://github.com/2giosangmitom/fylo-landing-page
-      preview: https://fylo-landing-page-ebon.vercel.app/
+      preview: https://fylo-landing-page-two-rho.vercel.app/
 
 opensource:
   - name: nightfall.nvim
