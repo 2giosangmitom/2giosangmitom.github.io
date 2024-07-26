@@ -30,30 +30,30 @@ education:
     endDate: false
 
 skills:
-  - category: Programming
+  - category: Programming Languages
+    knowledge:
+      - JavaScript
+      - TypeScript
+      - Go
+      - SQL
+  - category: Markup & Styling
     knowledge:
       - HTML
       - CSS
       - Sass
-      - JavaScript
-      - Go
-      - Nix
-      - TypeScript
-      - Typst
       - Markdown
-      - SQL
+      - Typst
   - category: Frameworks & Libraries
     knowledge:
       - Vue.js
       - Nuxt.js
-      - Tailwind
+      - Tailwind CSS
       - Vitest/Jest
       - Pinia
   - category: Tools & Platforms
     knowledge:
       - Docker
-      - Git
-      - GitHub
+      - Git/GitHub
       - Node.js
       - Vercel
       - Neovim
@@ -82,9 +82,9 @@ projects:
   - name: Portfolio Website
     description: My portfolio showcases my skills, features my CV written in Typst, highlights my projects, and includes my blog.
     detailed:
-      - Designed and developed the entire site from scratch, implementing a clean and professional layout.
+      - Designed and developed the entire site from scratch with a clean and professional layout.
       - Implemented responsive design with a mobile-first approach for faster loading on mobile devices.
-      - Integrated professional CV written in Typst and ensured all sections are easily navigable.
+      - Integrated a professional CV written in Typst, ensuring all sections are easily navigable.
       - Optimized the website for SEO to improve visibility on search engines.
     technologies:
       - Vue.js
@@ -101,9 +101,8 @@ projects:
       - Built the application to display the percentage of the year that has passed with real-time updates and a visually appealing progress bar.
       - Used TypeScript for type safety and improved code quality.
       - Optimized the performance of the application to ensure it loads quickly and runs smoothly.
-      - Improved ability to create efficient and responsive web applications.
       - Implemented a dark theme toggle with Pinia and Tailwind.
-      - Ensured the progress calculation is accurate.
+      - Ensured accurate progress calculation.
       - Wrote unit tests with Vitest.
     technologies:
       - Vue.js
@@ -111,16 +110,34 @@ projects:
       - Pinia
       - TypeScript
       - Vitest
-      - Tailwind
+      - Tailwind CSS
     links:
       github: https://github.com/2giosangmitom/year-progress
       preview: https://year-progress-kappa.vercel.app/
+  - name: Meme Generator
+    description: A website that generates a random meme when the user clicks.
+    detailed:
+      - Developed an application that generates a random meme when the user clicks a button.
+      - Stored memes in Firebase storage.
+      - Used Pinia to manage application state.
+      - Integrated Firebase with Nuxt.js using VueFire.
+      - Set up GitHub Actions for automatic deployment to Firebase Hosting.
+    technologies:
+      - Vue.js
+      - Nuxt.js
+      - Pinia
+      - TypeScript
+      - VueFire
+      - Firebase
+    links:
+      github: https://github.com/2giosangmitom/meme-generator
+      preview: https://meme-generator-52ac0.web.app/
   - name: Fylo Dark Theme Landing Page
     description: A landing page challenge from Frontend Mentor.
     detailed:
       - Implemented the UI according to the provided design.
       - Ensured cross-browser compatibility and maintained consistent design across different screen sizes.
-      - Reduced load times and enhanced overall performance by optimizing images, minifying CSS and JavaScript files, and using lazy loading techniques.
+      - Reduced load times and enhanced performance by optimizing images, minifying CSS and JavaScript files, and using lazy loading techniques.
     technologies:
       - Vue.js
       - Nuxt.js
