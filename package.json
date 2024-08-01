@@ -15,7 +15,7 @@
     "@nuxt/eslint": "^0.3.13",
     "@nuxt/fonts": "^0.7.1",
     "@nuxt/image": "^1.7.0",
-    "@pinia/nuxt": "^0.5.1",
+    "@pinia/nuxt": "^0.5.2",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "iconify-icon": "^2.1.0",
