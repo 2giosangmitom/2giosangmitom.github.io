@@ -157,3 +157,6 @@ opensource:
   - name: leetcode
     description: LeetCode solutions implemented in Rust, Go, and TypeScript.
     url: https://github.com/2giosangmitom/leetcode
+  - name: codetime.nvim
+    description: A lightweight plugin for tracking your coding time.
+    url: https://github.com/2giosangmitom/codetime.nvim
