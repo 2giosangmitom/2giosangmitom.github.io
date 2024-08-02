@@ -124,6 +124,10 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+h1 {
+  font-weight: 500;
+}
+
 .photo__image {
   border-radius: 50%;
   width: 250px;
