@@ -6,6 +6,7 @@ const links = [
   { name: "About", path: "/about" },
   { name: "Blog", path: "/blog" },
   { name: "Work", path: "/work" },
+  { name: "Projects", path: "/projects" },
 ];
 
 const handleClickOutside = (event: MouseEvent) => {

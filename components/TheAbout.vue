@@ -9,39 +9,42 @@
       />
     </div>
     <h3 class="section-title">About Me</h3>
-    <p>
-      I'm <strong>Vo Quang Chien</strong>, a dedicated software engineer with
-      expertise in web development.
-    </p>
-    <p>
-      I began my journey as a web developer in 2021, starting with HTML, CSS,
-      and JavaScript.
-    </p>
-    <p>
-      In 2022, I expanded my skillset to include various technologies such as
-      TypeScript, React, Next.js, Vue.js, and Nuxt.js. I've learned these
-      technologies through official documentation, ebooks, and YouTube. At this
-      stage, I feel that I'm still young and have nothing to lose, so whenever I
-      hear about a new technology, I immediately want to explore it.
-    </p>
-    <p>
-      My journey continues to this day. Currently, I'm focusing on front-end
-      development with Vue.js and Nuxt.js. Additionally, I'm delving into
-      backend development, with a particular interest in using Go to build
-      high-performance systems. Besides web development, I also enjoy
-      contributing to open-source projects, especially those related to Neovim
-      Lua plugins and Linux CLI tools. I love motivating people to build cool
-      stuff and encourage people to never stop learning.
-    </p>
+    <div>
+      <p>
+        I am a passionate and dedicated web developer with a strong foundation
+        in creating dynamic web applications and building high-performance
+        systems. My journey in technology has been fueled by curiosity and a
+        relentless drive to master new skills. I am currently pursuing a
+        Bachelor of Science in Information Technology at Hue University of
+        Sciences in Vietnam. With a solid grasp of modern programming languages,
+        frameworks, and development practices, I am eager to apply my knowledge
+        in a professional setting. I am actively seeking an internship to gain
+        hands-on experience, contribute to meaningful projects, and grow further
+        in the tech industry.
+      </p>
+      <div>
+        <h3 class="section-title">Education</h3>
+        <p>Hue University of Sciences, Hue, Vietnam</p>
+        <p>Bachelor of Science in Information Technology</p>
+        <p><em>Since 2024</em></p>
+      </div>
+      <div>
+        <h3 class="section-title">Professional Goals</h3>
+        <p>
+          I am motivated by a desire for continuous learning and professional
+          growth. My goal is to become a well-rounded developer who can tackle
+          complex challenges and contribute effectively to a team. Through an
+          internship, I hope to bridge the gap between academic knowledge and
+          real-world application, while also gaining valuable insights into
+          industry practices.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .about__avatar img {
   border-radius: 50%;
-}
-
-p:not(:first-child) {
-  margin-top: 0.25rem;
 }
 </style>

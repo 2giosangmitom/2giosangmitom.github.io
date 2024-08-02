@@ -60,8 +60,4 @@ const skills: Skill[] = [
   font-weight: 400;
   text-align: center;
 }
-
-#skills {
-  margin-top: 1rem;
-}
 </style>
