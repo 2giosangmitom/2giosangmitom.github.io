@@ -5,12 +5,25 @@
   </header>
   <main class="main">
     <p>
-      I&apos;m an aspiring web developer from Vietnam, specializing in front-end development with Vue.js and back-end
-      development with Node.js.
-      I have a strong understanding of JavaScript and its ecosystem, and I&apos;m passionate about building scalable web
-      applications.
-      In my free time, I love contributing to open-source projects and continuously expanding my knowledge.
-      My goal is to become a professional programmer in the future.
+      I&apos;m a passionate developer from Vietnam, specializing in back-end
+      development with
+      <a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer">Node.js</a>
+      and exploring front-end with
+      <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue.js</a>.
+    </p>
+    <p>
+      I also have experience with
+      <em class="text-medium">C, C++, and Rust</em>, developing useful CLI
+      tools that enhance my productivity in my
+      <a href="https://archlinux.org/" target="_blank" rel="noopener noreferrer">Linux</a>
+      environment.
+    </p>
+    <p>
+      Currently, I&apos;m diving deeper into the world of back-end development,
+      focusing on building scalable and efficient systems. I actively contribute
+      to open-source projects and continuously expand my skills. My ultimate
+      goal is to grow into a professional programmer and make a meaningful
+      impact in the tech world.
     </p>
   </main>
   <footer class="footer">
@@ -22,22 +35,32 @@
 </template>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: #03dac6;
+  transition: color 0.1s ease-in;
+}
+
+a:hover {
+  color: #bb86fc;
+}
+
 .header h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 700;
   color: #bb86fc;
 }
 
 .header h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
-  color: #b0b0b0;
-  margin-top: -10px;
+  color: #ffbcbc;
+  margin-top: 10px;
 }
 
 .main {
   max-width: 700px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.6;
   margin-top: 20px;
@@ -45,18 +68,7 @@
 
 .footer {
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
-}
-
-.footer a {
-  text-decoration: none;
-  color: #03dac6;
-  font-weight: 500;
-  transition: color 0.1s ease-in;
-}
-
-.footer a:hover {
-  color: #bb86fc;
 }
 </style>

@@ -14,3 +14,7 @@ html {
 	margin-left: 10rem;
 	margin-top: 5rem;
 }
+
+.text-medium {
+	font-weight: 400;
+}
