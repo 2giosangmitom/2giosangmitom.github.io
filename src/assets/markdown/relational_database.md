@@ -2,7 +2,7 @@
 
 Hello 👋
 
-In this blog post, I will introduce you all things about relational database design. The relational database is the most widely used type of database. It is likely you are using a relational database when you purchase things online or at local store.
+In this blog post, I will introduce you all things about relational database design. The relational database is the most widely used type of database. It is likely you are using a relational database when you purchase things online or at a local store.
 
 ## What Is A Database?
 
@@ -18,12 +18,52 @@ In contrast, analytical databases are primarily used in _online analytical proce
 
 The relational database was invented in 1969 and is still one of the most widely used database models in database management today. The father of relational database is _Dr. Edgar F. Codd_. He was an IBM research scientist in the late 1960s and was at that time looking for new ways to handle large amount of data. Being a mathematical by profession, he strongly believed that he could apply specific branches of mathematics to solve problems such as data redundancy, weak data integrity, and a database structure's over-dependence on its physical implementation.
 
-Dr. Codd formally presented his new relational model in a landmark work entitled "A Relational Model of Data for Large Shared Data Banks" in June of 1970. He based his new model on two branches of mathematics - _set theory_ and _first-order predicate logic_. Indeed, the name of the model itself is derived from the term _relation_, which is part of set theory.
+Dr. Codd formally presented his new relational model in a landmark work entitled "A Relational Model of Data for Large Shared Data Banks" in June 1970. He based his new model on two branches of mathematics - _set theory_ and _first-order predicate logic_. Indeed, the name of the model itself is derived from the term _relation_, which is part of set theory.
 
-A relational database stores data in _relations_, which the user perceives as tables. Each relation is composed of _tuples_, or records, and _attributes_ or fields. The physical order of the records or fields in a table is completely immaterial, and each record in the table is identified by a field that contains a unique value. These are the two characteristics of a relational database that allow the data to exists independently of the way it is physically stored in the computer. As such, a user isn't required the physical location of a record in order to retrieve its data.
+A relational database stores data in _relations_, which the user perceives as tables. Each relation is composed of _tuples_, or records, and _attributes_ or fields. The physical order of the records or fields in a table is completely immaterial, and each record in the table is identified by a field that contains a unique value. These are the two characteristics of a relational database that allow the data to exist independently of the way it is physically stored in the computer. As such, a user isn't required of the physical location of a record in order to retrieve its data.
 
 The relational database categorizes relationships as _one to one_, _one to many_, and _many to many_. These relationships will be covered in detail later. A relationship between a pair of tables is established implicitly through matching values of a shared field.
 
-A _relational database management system (RDBMS)_ is a software program you use to create, maintain, modify, and manipulate a relational database. Many RDBMS programs also provide the tool you need to create a wide variety of end-user applications that interact with the data stored in the database. Of course, the quality of an RDBMS is a direct function of the extent to which it supports the relational database model. Examples of an RDBMS include PostgreSQL, MySQL and SQLite.
+A _relational database management system (RDBMS)_ is a software program you use to create, maintain, modify, and manipulate a relational database. Many RDBMS programs also provide the tool you need to create a wide variety of end-user applications that interact with the data stored in the database. Of course, the quality of an RDBMS is a direct function of the extent to which it supports the relational database model. Examples of an RDBMS include PostgreSQL, MySQL, and SQLite.
 
 ## Terminology
+
+These terms below are very important, you must understand them before learning the design process.
+
+There are four categories of terms used in relational database: _value-related_, _relationship-related_, _structure-related_ and _integrity-related_.
+
+### Value-Related Terms
+
+**Data**
+
+The values you store in database are _data_. Data is _static_, it remains the same state until you modify it.
+
+**Information**
+
+_Information_ is data that you process in a way that makes sense when you work with it or look at it. It is _dynamic_ because its content will change constantly based on the data stored in the database. You can show information as the result of the SQL SELECT statement, display it in a form on your computer screen, or print it as a report. The point to remember is that _you must process your data in some manner so that you can turn it into meaningful information_.
+
+`Data is what you store. Information is what you retrieve.`
+
+**Null**
+
+_Null_ is a condition that represents a missing or unknown value. You must understand that Null _does not represent_ a zero or an empty text strings. The reasons are quite simple.
+
+- The zero can have a wide variety of meanings. It can represent the state of an account balance, the current items quantity in a store, and more.
+- The text strings with one or more spaces may meaningless to most of us. However, it's definitely meaningful to a query language like SQL.
+- The empty strings is also an acceptable value to languages such as SQL and can be meaningful under certain circumstances.
+
+**The value of Null**
+
+Null is quite useful when you use it for its stated purpose. To use Nulls correctly, you must first understand why they occur at all.
+
+_Missing values_ are commonly the result of human error. Imagine you're a receptionist adding a client to a database. If you forget to ask for the client's country name, that data will be considered missing and represented as Null. Once you recognize the error, you can contact the client to obtain the missing information.
+
+_Unknown values_ appear in the database for variety of reasons. One reason may be that a specific value you need for a field is as yet undefined. Consider old example again, but in this case the client doesn't remember the country name, then the data is _unknown_ and represented in database as a Null.
+
+It's important to know the differences between "does not apply" and "is not applicable". Now assume you're working with a PATIENTS table that contains a field called HAIRCOLOR and you're currently updating a record for an existing male patient. If that patient recently became bald, then the value for that field is definitely "not applicable." Although you could just use Null to represent a value that is not applicable, I always recommend that you use a true value such as "N/A" or "Not Applicable." This will make the information clearer in the long run.
+
+**The problem with Null**
+
+The major disadvantage of Null is that it has an adverse effect on mathematical operations. An operation involving a Null evaluates to Null. This is logically reasonable if a number is unknown, then the result of the operation is necessarily unknown. For example, 1 + Null = Null.
+
+The issues of missing values, unknown values, and whether a value will be used in a mathematical expression or aggregate function are all taken into consideration in the database design process, and we will revisit and discuss these issues further.
