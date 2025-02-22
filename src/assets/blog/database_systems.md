@@ -1,4 +1,4 @@
-# Relational Database Design
+# Database Systems
 
 Hello 👋
 
@@ -36,11 +36,11 @@ There are four categories of terms used in relational database: _value-related_,
 
 **Data**
 
-The values you store in database are _data_. Data is _static_, it remains the same state until you modify it.
+The values you store in database are _data_. Data is _static_, it remains the same state until you modify it. Data consists of raw facts. The word _raw_ indicates that the facts haven't yet been processed to reveal their meaning.
 
 **Information**
 
-_Information_ is data that you process in a way that makes sense when you work with it or look at it. It is _dynamic_ because its content will change constantly based on the data stored in the database. You can show information as the result of the SQL SELECT statement, display it in a form on your computer screen, or print it as a report. The point to remember is that _you must process your data in some manner so that you can turn it into meaningful information_.
+_Information_ is the result of processing raw data to reveal its meaning. It is _dynamic_ because its content will change constantly based on the data stored in the database. You can show information as the result of the SQL SELECT statement, display it in a form on your computer screen, or print it as a report. The point to remember is that _you must process your data in some manner so that you can turn it into meaningful information_.
 
 `Data is what you store. Information is what you retrieve.`
 
@@ -91,3 +91,18 @@ You’ll typically encounter three other types of fields in an improperly or poo
 **Record**
 
 A _record_ (or _tuple_) represents a unique instance of the subject of a table. It is composed of entire set of fields in a table, regardless of whether the fields contain values. Because of the manner in which a table is defined, each record is identified throughout the database by a unique value in the primary key field of that record. Records are a key factor in understanding table relationships because you’ll need to know how a record in one table relates to other records in another table.
+
+**View**
+
+A _view_ is a "virtual" table composed of fields from one or more tables in the database. The tables that comprise the view are known as _base tables_. The relational model refers to a view as being "virtual" because it draws data from base tables rather than storing data on its own. In fact, the only information about a view that is stored in the database is its structure. Many major RDBMS programs support views and typically refer to them as _saved queries_.
+
+Views enable you to see the information in your database from many different aspects, providing you with a great amount of flexibility when you work with your data. You can create views in a variety of ways, and they are especially useful when you base them on multiple related tables.
+
+This is an important part so I will talk about views in a dedicated section.
+
+> [!NOTE]
+> Although every major database vendor supports the type of view I've described in this section, several vendors support what is known as an _indexed_ view.
+
+**Keys**
+
+Keys are special fields that play very specific roles within a table, and the type of key determines its purpose within the table. There are several types of keys a table may contain, but the two most significant ones are the _primary key_ and the _foreign key_.
