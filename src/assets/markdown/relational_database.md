@@ -67,3 +67,27 @@ It's important to know the differences between "does not apply" and "is not appl
 The major disadvantage of Null is that it has an adverse effect on mathematical operations. An operation involving a Null evaluates to Null. This is logically reasonable if a number is unknown, then the result of the operation is necessarily unknown. For example, 1 + Null = Null.
 
 The issues of missing values, unknown values, and whether a value will be used in a mathematical expression or aggregate function are all taken into consideration in the database design process, and we will revisit and discuss these issues further.
+
+### Structure-Related Terms
+
+**Table**
+
+Data stored in relational database is _relation_, which are perceived by the user as _tables_. Each relation is composed of _tuples (records)_ and _attributes (fields)_.
+
+Tables are the chief structures in the database and each table always represents a single, specific subject. The logical order of records and fields within a table is of absolutely no importance, and every table contains at least one field known as a primary key that uniquely identifies each of its records.
+
+**Field**
+
+A _field_ (also known as _attribute_) represents a characteristic of the subject of the table which it belongs. Fields are the structures that actually store data. The data in these fields can be retrieved and represented as information in almost any configuration that you can imagine.
+
+Every field in a _properly designed_ database contains one and only one value, and its name will identify the type of value it holds. This makes entering data into a field very intuitive. If you see fields with names such as FIRSTNAME, LASTNAME, CITY, STATE, and ZIPCODE, you know exactly what type of values go into each field. You'll find it very easy to sort data by last name.
+
+You’ll typically encounter three other types of fields in an improperly or poorly designed database.
+
+1. A _multipart_ field (also known as a _composite_ field), which contains two or more distinct items within its value.
+2. A _multivalued_ field, which contains multiple instances of the same type of value.
+3. A _calculated_ field (also known as a _derived_ field), which contains a concatenated text value or the result of a mathematical expression.
+
+**Record**
+
+A _record_ (or _tuple_) represents a unique instance of the subject of a table. It is composed of entire set of fields in a table, regardless of whether the fields contain values. Because of the manner in which a table is defined, each record is identified throughout the database by a unique value in the primary key field of that record. Records are a key factor in understanding table relationships because you’ll need to know how a record in one table relates to other records in another table.
