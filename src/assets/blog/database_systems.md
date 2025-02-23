@@ -60,7 +60,7 @@ _Missing values_ are commonly the result of human error. Imagine you're a recept
 
 _Unknown values_ appear in the database for variety of reasons. One reason may be that a specific value you need for a field is as yet undefined. Consider old example again, but in this case the client doesn't remember the country name, then the data is _unknown_ and represented in database as a Null.
 
-It's important to know the differences between "does not apply" and "is not applicable". Now assume you're working with a PATIENTS table that contains a field called HAIRCOLOR and you're currently updating a record for an existing male patient. If that patient recently became bald, then the value for that field is definitely "not applicable." Although you could just use Null to represent a value that is not applicable, I always recommend that you use a true value such as "N/A" or "Not Applicable." This will make the information clearer in the long run.
+It's important to know the differences between "does not apply" and "is not applicable". Now assume you're working with a PATIENTS table that contains a field called HAIR-COLOR, and you're currently updating a record for an existing male patient. If that patient recently became bald, then the value for that field is definitely "not applicable." Although you could just use Null to represent a value that is not applicable, I always recommend that you use a true value such as "N/A" or "Not Applicable." This will make the information clearer in the long run.
 
 **The problem with Null**
 
@@ -80,7 +80,7 @@ Tables are the chief structures in the database and each table always represents
 
 A _field_ (also known as _attribute_) represents a characteristic of the subject of the table which it belongs. Fields are the structures that actually store data. The data in these fields can be retrieved and represented as information in almost any configuration that you can imagine.
 
-Every field in a _properly designed_ database contains one and only one value, and its name will identify the type of value it holds. This makes entering data into a field very intuitive. If you see fields with names such as FIRSTNAME, LASTNAME, CITY, STATE, and ZIPCODE, you know exactly what type of values go into each field. You'll find it very easy to sort data by last name.
+Every field in a _properly designed_ database contains one and only one value, and its name will identify the type of value it holds. This makes entering data into a field very intuitive. If you see fields with names such as FIRST-NAME, LAST-NAME, CITY, STATE, and ZIPCODE, you know exactly what type of values go into each field. You'll find it very easy to sort data by last name.
 
 You’ll typically encounter three other types of fields in an improperly or poorly designed database.
 
@@ -90,7 +90,7 @@ You’ll typically encounter three other types of fields in an improperly or poo
 
 **Record**
 
-A _record_ (or _tuple_) represents a unique instance of the subject of a table. It is composed of entire set of fields in a table, regardless of whether the fields contain values. Because of the manner in which a table is defined, each record is identified throughout the database by a unique value in the primary key field of that record. Records are a key factor in understanding table relationships because you’ll need to know how a record in one table relates to other records in another table.
+A _record_ (or _tuple_) represents a unique instance of the subject of a table. It is composed of the entire set of fields in a table, regardless of whether the fields contain values. Because of the manner in which a table is defined, each record is identified throughout the database by a unique value in the primary key field of that record. Records are a key factor in understanding table relationships because you’ll need to know how a record in one table relates to other records in another table.
 
 **View**
 
@@ -98,7 +98,7 @@ A _view_ is a "virtual" table composed of fields from one or more tables in the 
 
 Views enable you to see the information in your database from many different aspects, providing you with a great amount of flexibility when you work with your data. You can create views in a variety of ways, and they are especially useful when you base them on multiple related tables.
 
-This is an important part so I will talk about views in a dedicated section.
+This is an important part, so I will talk about views in a dedicated section.
 
 > [!NOTE]
 > Although every major database vendor supports the type of view I've described in this section, several vendors support what is known as an _indexed_ view.
