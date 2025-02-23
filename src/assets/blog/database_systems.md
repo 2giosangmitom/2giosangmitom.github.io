@@ -106,3 +106,15 @@ This is an important part so I will talk about views in a dedicated section.
 **Keys**
 
 Keys are special fields that play very specific roles within a table, and the type of key determines its purpose within the table. There are several types of keys a table may contain, but the two most significant ones are the _primary key_ and the _foreign key_.
+
+A primary key is a field or a group of fields that uniquely identifies each record within a table. A primary key composed of two or more fields is known as a _composite_ primary key. The primary key is absolutely the most important key in the table.
+
+- A primary key **value** identifies a _specific record_ throughout the entire database.
+- The primary key **field** identifies a _given table_ throughout the entire database.
+- The primary key enforces table-level integrity and helps establish relationships with other tables in the database.
+
+Every table in your database should have a primary key!
+
+When you determine that two tables bear a relationship to each other, you typically the relationship by taking a copy of the primary key from the first table and incorporating it into the structure of the second table, where it becomes a _foreign key_.
+
+Besides helping to establish relationships between pairs of tables, foreign keys also help implement and ensure relationship-level integrity. This means that the records in both tables will always be properly related because the values of a foreign key must match existing values of the primary key to which it refers. Relationship-level integrity also helps you avoid the dreaded "orphaned" record, a classic example of which is an order record without an associated customer. If you don't know who made the order, you can't process it, and you obviously can't invoice it. That'll throw your quarterly sales off!
