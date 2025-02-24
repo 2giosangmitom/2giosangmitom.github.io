@@ -80,9 +80,9 @@ Tables are the chief structures in the database and each table always represents
 
 A _field_ (also known as _attribute_) represents a characteristic of the subject of the table which it belongs. Fields are the structures that actually store data. The data in these fields can be retrieved and represented as information in almost any configuration that you can imagine.
 
-Every field in a _properly designed_ database contains one and only one value, and its name will identify the type of value it holds. This makes entering data into a field very intuitive. If you see fields with names such as FIRST-NAME, LAST-NAME, CITY, STATE, and ZIPCODE, you know exactly what type of values go into each field. You'll find it very easy to sort data by last name.
+Every field in a _properly designed_ database contains one and only one value, and its name will identify the type of value it holds. This makes entering data into a field very intuitive. If you see fields with names such as FIRSTNAME, LASTNAME, CITY, STATE, and ZIPCODE, you know exactly what type of values go into each field. You'll find it very easy to sort data by last name.
 
-You’ll typically encounter three other types of fields in an improperly or poorly designed database.
+You'll typically encounter three other types of fields in an improperly or poorly designed database.
 
 1. A _multipart_ field (also known as a _composite_ field), which contains two or more distinct items within its value.
 2. A _multivalued_ field, which contains multiple instances of the same type of value.
@@ -90,7 +90,7 @@ You’ll typically encounter three other types of fields in an improperly or poo
 
 **Record**
 
-A _record_ (or _tuple_) represents a unique instance of the subject of a table. It is composed of the entire set of fields in a table, regardless of whether the fields contain values. Because of the manner in which a table is defined, each record is identified throughout the database by a unique value in the primary key field of that record. Records are a key factor in understanding table relationships because you’ll need to know how a record in one table relates to other records in another table.
+A _record_ (or _tuple_) represents a unique instance of the subject of a table. It is composed of the entire set of fields in a table, regardless of whether the fields contain values. Because of the manner in which a table is defined, each record is identified throughout the database by a unique value in the primary key field of that record. Records are a key factor in understanding table relationships because you'll need to know how a record in one table relates to other records in another table.
 
 **View**
 
@@ -125,12 +125,86 @@ An _index_ is a structure RDBMS provides to improve data processing. Your partic
 
 ### Relationship-Related Terms
 
-A relationship exists between two tables when you can in some way associate the records of the first table with those of the second. You can establish the relationship via a set of primary or foreign keys or a _third table_ known as _linking table_ (also known as an _associative table_). The manner in which you establish the relationship really depends on the type of relationship that exists between the tables.
+A relationship exists between two tables when records in one table can be associated with records in another. Relationships are typically established using **primary keys**, **foreign keys**, or a **linking table** (also called an **associative table**) in many-to-many relationships. The type of relationship determines how data is structured and referenced.
 
-**Types of relationships**
+#### Types of Relationships
 
-Three specific types of relationship (traditionally known as a _cardinality_) can exist between a pair of tables: _one-to-one_, _one-to-many_, and _many-to-many_.
+There are three fundamental types of relationships (traditionally referred to as **cardinality**) between tables:
 
-**One-to-One Relationships**
+- One-to-One (1:1)
+- One-to-Many (1:M)
+- Many-to-Many (M:M)
 
-A pair of tables bears a _one-to-one_ relationship when a single record in the first table is related to zero or one and only one record in the second table, and a single record in the second table is related to one and only one record in the first table.
+#### One-to-One (1:1) Relationship
+
+In a _one-to-one_ relationship, each record in Table A corresponds to _at most one_ record in Table B, and vice versa. One table typically serves as the _parent_, while the other acts as the _child_.
+
+To implement this, the _primary key_ of the parent table is copied into the child table as a _foreign key_. In some cases, both tables may share the _same primary key_.
+
+#### One-to-Many (1:M) Relationship
+
+A _one-to-many_ relationship occurs when a single record in Table A can be related to _multiple_ records in Table B, but each record in Table B is linked to _only one_ record in Table A.
+
+The "one" side is the _parent_, and the "many" side is the _child_. This relationship is implemented by adding the _primary key_ of the parent table as a _foreign key_ in the child table.
+
+#### Many-to-Many (M:M) Relationship
+
+A _many-to-many_ relationship exists when multiple records in Table A can be related to multiple records in Table B.
+
+Since relational databases do not support direct many-to-many relationships, an _intermediate linking table_ is used to establish the connection. This linking table contains _foreign keys_ referencing the primary keys of both related tables. Together, these keys:
+
+1. Form a _composite primary key_ for the linking table.
+2. Serve as _foreign keys_ pointing to the original tables.
+
+This approach ensures _data integrity_ and _flexibility_ in managing relationships.
+
+### Types of Participation
+
+A table's participation in a relationship can be classified as either _mandatory_ or _optional_. Consider a relationship between two tables, _TABLE A_ and _TABLE B_.
+
+- _Mandatory participation_: If a record in _TABLE A_ must exist before you can add any records to _TABLE B_, then _TABLE A_'s participation is mandatory. In other words, _TABLE B_ cannot have any related records unless _TABLE A_ has at least one corresponding record.
+- _Optional participation_: If you can add records to _TABLE B_ without needing any related record in _TABLE A_, then _TABLE A_'s participation is optional. This means that _TABLE A_ may or may not have a corresponding record for each entry in _TABLE B_.
+
+### Degree of Participation
+
+The _degree of participation_ defines the minimum and maximum number of records in one table that can be associated with a single record in the related table. This concept sets the boundaries for how many relationships can exist between records in the two tables.
+
+For example, in a relationship between _TABLE A_ and _TABLE B_, the degree of participation for _TABLE B_ is expressed as a range. If a single record in _TABLE A_ can be associated with between 1 and 10 records in _TABLE B_, the degree of participation for _TABLE B_ is denoted as _1,10_. This means that for each record in _TABLE A_, there must be at least one corresponding record in _TABLE B_, but no more than ten.
+
+### Integrity-Related Terms
+
+#### Field Specification
+
+A _field specification_ (also known as _domain_) defines the characteristics and constraints of a field in a database. It is made up of three components:
+
+- _General elements_: These provide fundamental information about the field, including its _name_, _description_, and _parent table_.
+- _Physical elements_: These describe how the field is implemented and presented to users, covering aspects like _data type_, _length_, and _character support_.
+- _Logical elements_: These define the values that the field can contain, such as _required values_, _value ranges_, and _null support_.
+
+#### Data Integrity
+
+_Data integrity_ ensures that the data in a database is valid, consistent, and accurate. The accuracy of the data you retrieve is directly proportional to the level of data integrity enforced in the database.
+
+There are four main types of data integrity you'll implement during the database design process. Three of these are related to specific aspects of the database structure, while the fourth focuses on how an organization uses its data. Here's a brief overview of each:
+
+1. _Table-level integrity_ (also known as _entity integrity_) ensures that each record in the table is unique, preventing duplicates, and guaranteeing that the field used to identify records (often the primary key) is always non-null.
+2. _Field-level integrity_ (also known as _domain integrity_) ensures that the structure of each field is valid, and that the data stored in the field is consistent, accurate, and within the expected range. It also ensures that fields of the same type are defined consistently across the database.
+3. _Relationship-level integrity_ (also known as _referential integrity_) ensures that the relationships between tables are properly maintained. This means that any changes made to data in one table (insertions, updates, or deletions) are synchronized with related tables, preserving the consistency of the database.
+4. _Business rules_ enforce constraints that are specific to the organization's needs. These rules can influence many aspects of the database design, including the types of values allowed in a field, the participation and degree of participation of tables in relationships, and the synchronization methods used for relationship-level integrity.
+
+## Data Models
+
+### Data Modeling and Data Models
+
+Database design focus on how the database structure will be used to store and manage data. **Data modeling** is the first step in designing database, refers to the process of creating a specific data model for a requirement. A **data model** is a relatively simple representation, usually graphical, of more complex real-world data structures.
+
+### Data Model Terminology
+
+The basic building blocks of all data models are _entities_, _attributes_, _relationships_, and _constraints_.
+
+- An **entity** is a person, place, thing, concept, or event about which data will be collected and stored.
+- An **attribute** (or field) is a characteristic of an entity.
+- A **relationship** describes an association among entities. There are 3 types of relationship as we discussed before.
+- A **constraint** is a restriction placed on the data. Constraints are important because they help to ensure data integrity.
+
+For example, the STUDENT entity has STUDENT_ID, FIRSTNAME, LASTNAME attribute. The CLASS and STUDENT entity bear a 1:M relationship, and the GPA of a student must be between 0.0 to 4.0 (the constraint).
