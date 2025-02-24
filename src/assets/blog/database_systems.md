@@ -118,3 +118,19 @@ Every table in your database should have a primary key!
 When you determine that two tables bear a relationship to each other, you typically the relationship by taking a copy of the primary key from the first table and incorporating it into the structure of the second table, where it becomes a _foreign key_.
 
 Besides helping to establish relationships between pairs of tables, foreign keys also help implement and ensure relationship-level integrity. This means that the records in both tables will always be properly related because the values of a foreign key must match existing values of the primary key to which it refers. Relationship-level integrity also helps you avoid the dreaded "orphaned" record, a classic example of which is an order record without an associated customer. If you don't know who made the order, you can't process it, and you obviously can't invoice it. That'll throw your quarterly sales off!
+
+**Index**
+
+An _index_ is a structure RDBMS provides to improve data processing. Your particular RDBMS program will determine how the index works and how to use it. However, _an index has absolutely nothing to do with the logical database structure_! The only reason I include the term _index_ in this section is that people often confuse it with the term _key_.
+
+### Relationship-Related Terms
+
+A relationship exists between two tables when you can in some way associate the records of the first table with those of the second. You can establish the relationship via a set of primary or foreign keys or a _third table_ known as _linking table_ (also known as an _associative table_). The manner in which you establish the relationship really depends on the type of relationship that exists between the tables.
+
+**Types of relationships**
+
+Three specific types of relationship (traditionally known as a _cardinality_) can exist between a pair of tables: _one-to-one_, _one-to-many_, and _many-to-many_.
+
+**One-to-One Relationships**
+
+A pair of tables bears a _one-to-one_ relationship when a single record in the first table is related to zero or one and only one record in the second table, and a single record in the second table is related to one and only one record in the first table.
