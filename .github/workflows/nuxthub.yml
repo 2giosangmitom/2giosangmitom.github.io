@@ -1,13 +1,13 @@
 name: Deploy to NuxtHub
-
-on:
-  push:
-    branches: [master]
+on: push
 
 jobs:
   deploy:
     name: "Deploy to NuxtHub"
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref == 'refs/heads/master' && 'production' || 'preview' }}
+      url: ${{ steps.deploy.outputs.deployment-url }}
     permissions:
       contents: read
       id-token: write
@@ -15,17 +15,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: "npm"
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build site
+      - name: Ensure NuxtHub module is installed
+        run: npx nuxthub@latest ensure
+
+      - name: Build application
         run: npm run build
 
       - name: Deploy to NuxtHub
-        uses: nuxt-hub/action@v1.1.4
+        uses: nuxt-hub/action@v1
+        id: deploy
+        with:
+          project-key: 2giosangmitom-g-2ygi
