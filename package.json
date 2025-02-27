@@ -10,14 +10,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxthub/core": "0.8.17",
     "nuxt": "^3.15.4",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild"
-    ]
+  "devDependencies": {
+    "wrangler": "^3.110.0"
   }
 }
