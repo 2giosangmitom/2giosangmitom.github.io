@@ -172,8 +172,6 @@ For example, if a **student** can enroll in many **courses**, and a **course** c
 
 The **degree of participation** refers to the number of records in one table that can be associated with a single record in a related table. For instance, one student may have anywhere from 1 to 5 enrolled courses, which defines the degree of participation for the relationship between **Students** and **Courses**.
 
-Got it! Here's the same content but with the table format maintained, including the references to the images for clarity.
-
 ### Integrity-Related Terms
 
 #### Field Specification
