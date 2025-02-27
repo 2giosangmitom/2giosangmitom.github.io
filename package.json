@@ -1,31 +1,23 @@
 {
-	"name": "2giosangmitom.github.io",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "run-p type-check \"build-only {@}\" --",
-		"preview": "vite preview",
-		"build-only": "vite build",
-		"type-check": "vue-tsc --build"
-	},
-	"dependencies": {
-		"vue": "^3.5.13"
-	},
-	"devDependencies": {
-		"@tsconfig/node22": "^22.0.0",
-		"@types/node": "^22.13.5",
-		"@vitejs/plugin-vue": "^5.2.1",
-		"@vue/tsconfig": "^0.7.0",
-		"npm-run-all2": "^7.0.2",
-		"typescript": "~5.7.3",
-		"vite": "^6.2.0",
-		"vite-plugin-vue-devtools": "^7.7.2",
-		"vue-tsc": "^2.2.4"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild"
-		]
-	}
+  "name": "2giosangmitom",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.15.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild"
+    ]
+  }
 }
