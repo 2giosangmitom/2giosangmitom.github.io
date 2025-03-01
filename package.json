@@ -16,6 +16,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "wrangler": "^3.110.0"
+    "vitest": "^3.0.7",
+    "wrangler": "^3.111.0"
   }
 }

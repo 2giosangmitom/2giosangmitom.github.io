@@ -257,3 +257,63 @@ Each car can only be financed by one bank, therefore the primary key BankId from
 #### Cardinality and Ordinality notation
 
 ![Crow's Foot](./images/ERD-Notation.png)
+
+## The Relational Database Model
+
+### Keys
+
+In the relational model, keys are important because they are used to ensure that each row in a table is uniquely identifiable. They are also used to implement relationships among tables and to ensure the integrity of the data. A key consists of one or more attributes that determine other attributes. For example, an invoice number identifies all of the invoice attributes, such as the invoice date and customer's name.
+
+### Dependencies
+
+The role of a key is based on the concept of determination. **Determination** is the state in which knowing one attribute can makes it possible to determine the value of others. The idea of determination is not unique to the database environment. You are familiar with the formula `revenue - cost = profit`. This is a form of determination, because if you are given the revenue and the cost, you can determine the profit. Consider the STUDENT table, if you are given a value for STUDENT_ID, then you can determine the value of STUDENT_LNAME because one and only one value of STUDENT_LNAME is associated with any given value of STUDENT_ID. A specific terminology and notation are used to describe relationships based on determination. The relationship is called **functional dependence**, which means that the value of one or more attributes determines the value of one or more other attributes.
+
+The standard notation for representing the relationship between STUDENT_ID and STUDENT_LNAME is as follow:
+
+STUDENT_ID → STUDENT_LNAME
+
+In this notation:
+
+- STUDENT_ID is called **determinant**.
+- STUDENT_LNAME is called **dependent**.
+
+The attribute whose value determines another is called the **determinant** or the key. The attribute whose value is determined by the other attribute is called the **dependent**.
+
+As stated earlier, functional dependence can involve a determinant that comprises more than one attribute and multiple dependent attributes. Refer to the STUDENT table for the following example:
+
+STUDENT_ID → (STUDENT_LNAME, STUDENT_FNAME, STUDENT_GPA)
+
+### Types of keys
+
+Recall that a key is an attribute or group of attributes that can determine the values of other attributes. Therefore, keys are determinants in functional dependencies. Several types of keys are used in the relational model, and you need to be familiar with them.
+
+A composite key is a key that is composed of more than one attribute. An attribute that is a part of a key is called a key attribute. For example:
+
+STUDENT_ID → STUDENT_GPA
+(STUDENT_LNAME, STUDENT_FNAME, STUDENT_INITIAL_MIDDLE, STUDENT_PHONE) → STUDENT_CREDIT_HOURS_EARNED
+
+In the first functional dependency, STUDENT_ID is an example of a key composed of only one key attribute. In the second functional dependency, (STUDENT_LNAME, STUDENT_FNAME, STUDENT_INITIAL_MIDDLE, STUDENT_PHONE) is a composite key composed of four attributes.
+
+A **super key** is a key that can uniquely identify any row in the table. In other words, a super key functionally determines every attribute in the row. In the STUDENT table, the STUDENT_ID is a super key, as are the composite keys (STUDENT_ID, STUDENT_LNAME). In fact, because STUDENT_ID alone is a super key, any composite key that has STUDENT_ID as a key attribute will also be a super key.
+
+One specific type of super key is called a **candidate key**. A candidate key is a minimal super key. That is, a super key without any unnecessary attributes. A candidate key is based on a full functional dependency. Candidate keys are called _candidates_ because they are the eligible options from which the designer will choose when selecting the primary key. The primary key is the candidate key chosen to be the primary means by which the rows of the table are uniquely identified.
+
+What is the _full functional dependency_?
+
+Consider this table.
+
+| Student_ID | Course_ID | Student_Name | Instructor |
+| ---------- | --------- | ------------ | ---------- |
+| 101        | CS101     | Alice        | Dr. John   |
+| 102        | CS102     | Bob          | Dr. Smith  |
+| 101        | CS102     | Alice        | Dr. Smith  |
+
+- Full functional dependency: (Student_ID, Course_ID) → Instructor
+
+  - To determine the _Instructor_, we need both Student_ID and Course_ID. If we only take one, we can't determine the Instructor.
+
+- Partial Dependency: Student_ID → Student_Name
+
+  - Student_Name only depend on Student_ID, Course_ID is not necessary. Thus, we can remove Course_ID.
+
+This is absolutely important concept you need to understand. You will understand this to dive deeper into database normalization.
