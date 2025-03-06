@@ -356,3 +356,15 @@ Relational database integrity rules are the foundation of good database design. 
 ### Relational algebra
 
 The data in relational tables is of limited value unless the data can be manipulated to generate useful information. This section describes the basic data manipulation capabilities of the relational model. **Relational algebra** defines the theoretical way of manipulating table contents using relational operators. You will learn more about SQL commands can be used to accomplish relational algebra operations later.
+
+#### Formal Definitions and Terminology
+
+Recall that the relational model is actually based on mathematical principles and manipulating the data in the database can be described in mathematical terms. Before considering the specific relational algebra operators, it is necessary to formalize your understanding of a table.
+
+One important aspect of using the specific term _relation_ is that it acknowledges the distinction between the relation and the relation variable, or _relvar_, for short. A relation is the data that you see in your tables. A **relvar** is a variable that holds a relation. For example, imagine you were writing a program and created a variable named _i_ for holding integer data. The variable itself is not an integer itself, it's just a container for holding the integer. Similarly, when you create a table, the table structure holds the table data. The structure is properly called a relvar, and the data in the structure would be a relation.
+
+A relvar has two parts: the heading and the body. The relvar heading contains the names of the attributes, while the relvar body contains the relation.
+
+#### Relational Set Operators
+
+The relational operators have the property of closure. That is, the use of relational algebra ­operators on existing relations (tables) produces new relations. Numerous operators have been defined. Some operators are fundamental, while others are convenient but can be derived using the fundamental operators. In this section, the focus will be on the SELECT (or RESTRICT), PROJECT, UNION, INTERSECT, DIFFERENCE, PRODUCT, JOIN, and DIVIDE operators.
