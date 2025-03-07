@@ -380,3 +380,21 @@ Formally, SELECT is denoted by the lowercase Greek letter sigma ($`\sigma`$). Si
 ```math
 \sigma_{\text{CUS\_CODE}=10010}(\text{CUSTOMER})
 ```
+
+**Project**
+
+PROJECT yields all values for selected attributes. It's also an unary operator. PROJECT will return only the attributes requested, in the order in which they are requested. In other words, PROJECT yields a vertical subset of a table. PROJECT will not limit the rows returned, so all rows of the specified attributes will be included in the result.
+
+![project](./images/project.png)
+
+Formally, PROJECT is denoted by the Greek letter pi ($`\pi`$). Pi is followed by the list of attributes to be returned as subscripts and then the relation listed in parentheses. For example, to PROJECT the CUS_FNAME and CUS_LNAME in CUSTOMER table, you would write the following:
+
+```math
+\pi_{\text{CUS\_FNAME, CUS\_LNAME}}(\text{CUSTOMER})
+```
+
+Because relational operators have the property of closure, that is, they accept relations as input and produce relations as output, it is possible to combine operators. For example, you can combine the two previous operators to find the first and last name of the customer with customer code 10010:
+
+```math
+\pi_{\text{CUS\_FNAME, CUS\_LNAME}}(\sigma_{\text{CUS\_CODE=10010}}(\text{CUSTOMER}))
+```
