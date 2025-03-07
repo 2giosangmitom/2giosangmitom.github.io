@@ -398,3 +398,21 @@ Because relational operators have the property of closure, that is, they accept 
 ```math
 \pi_{\text{CUS\_FNAME, CUS\_LNAME}}(\sigma_{\text{CUS\_CODE=10010}}(\text{CUSTOMER}))
 ```
+
+**Union**
+
+UNION combines all rows from two tables, excluding duplicate rows. To be used in the UNION, the tables must have the same attribute characteristics. In other words, the columns and domains must be compatible. When two or more tables share the same number of columns, and when their corresponding columns share the same or compatible domains, they are said to be union-compatible.
+
+![union](./images/union.png)
+
+UNION is denoted by the symbol $`\cup`$. If the relations SUPPLIER and VENDOR are union-­compatible, then a UNION between them would be denoted as follows:
+
+```math
+\text{SUPPLIER} \cup \text{VENDOR}
+```
+
+It is rather unusual to find two relations that are union-compatible in a database. ­Typically, PROJECT operators are applied to relations to produce results that are union-­compatible. For example, assume the SUPPLIER and VENDOR tables are not union-­compatible. If you want to produce a listing of all vendor and supplier names, then you can PROJECT the names from each table and then perform a UNION with them.
+
+```math
+\pi_\text{SUPPLIER\_NAME}(\text{SUPPLIER}) \cup \pi_\text{VENDOR\_NAME}(\text{VENDOR})
+```
