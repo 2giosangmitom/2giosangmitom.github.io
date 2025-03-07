@@ -368,3 +368,13 @@ A relvar has two parts: the heading and the body. The relvar heading contains th
 #### Relational Set Operators
 
 The relational operators have the property of closure. That is, the use of relational algebra ­operators on existing relations (tables) produces new relations. Numerous operators have been defined. Some operators are fundamental, while others are convenient but can be derived using the fundamental operators. In this section, the focus will be on the SELECT (or RESTRICT), PROJECT, UNION, INTERSECT, DIFFERENCE, PRODUCT, JOIN, and DIVIDE operators.
+
+**Select (or restrict)**
+
+Select or restrict is referred to as an unary operator because it only uses one table as input. It yields values for all rows found in the table that satisfy a given condition. Select can be used to list all of the rows, or it can yield only rows that match a specific criterion. In other words, SELECT yields a horizontal subset of a table. SELECT will not limit the attributes returned so all attributes of the table will be included in the result.
+
+![select](./images/select.png)
+
+Formally, SELECT is denoted by the lowercase Greek letter sigma ($\sigma$). Sigma is followed by the condition to be evaluated (called a predicate) as a subscript, and then the relation is listed in parentheses. For example, to SELECT all of the rows in the CUSTOMER table that have the value "10010" in the CUS_CODE attribute, you would write the following:
+
+$\sigma_{CUS\_CODE=10010}(CUSTOMER)$
