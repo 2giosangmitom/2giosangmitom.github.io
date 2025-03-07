@@ -416,3 +416,21 @@ It is rather unusual to find two relations that are union-compatible in a databa
 ```math
 \pi_\text{SUPPLIER\_NAME}(\text{SUPPLIER}) \cup \pi_\text{VENDOR\_NAME}(\text{VENDOR})
 ```
+
+**Intersect**
+
+INTERSECT yields only the rows that appear in both tables. As with UNION, the tables must be union-compatible to yield valid results.
+
+![intersect](./images/intersect.png)
+
+INTERSECT is denoted by the symbol $`\cap`$. If the relations SUPPLIER and VENDOR are union-compatible, then an INTERSECT between them would be denoted as follows:
+
+```math
+\text{SUPPLIER} \cap \text{VENDOR}
+```
+
+Just as with the UNION operator, it is unusual to find two relations that are union-compatible in a database, so PROJECT operators are applied to relations to produce results that can be manipulated with an INTERSECT operator. For example, again assume the SUPPLIER and VENDOR tables are not union-compatible. If you want to produce a listing of any vendor and supplier names that are the same in both tables, then you can PROJECT the names from each table and then perform an INTERSECT with them.
+
+```math
+\pi_\text{SUPPLIER\_NAME}(\text{SUPPLIER}) \cap \pi_\text{VENDOR\_NAME}(\text{VENDOR})
+```
