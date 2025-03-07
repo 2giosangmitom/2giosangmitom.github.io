@@ -375,6 +375,8 @@ Select or restrict is referred to as an unary operator because it only uses one 
 
 ![select](./images/select.png)
 
-Formally, SELECT is denoted by the lowercase Greek letter sigma ($\sigma$). Sigma is followed by the condition to be evaluated (called a predicate) as a subscript, and then the relation is listed in parentheses. For example, to SELECT all of the rows in the CUSTOMER table that have the value "10010" in the CUS_CODE attribute, you would write the following:
+Formally, SELECT is denoted by the lowercase Greek letter sigma ($`\sigma`$). Sigma is followed by the condition to be evaluated (called a predicate) as a subscript, and then the relation is listed in parentheses. For example, to SELECT all of the rows in the CUSTOMER table that have the value "10010" in the CUS_CODE attribute, you would write the following:
 
-$\sigma_{CUS\_CODE=10010}(CUSTOMER)$
+```math
+\sigma_{\text{CUS\_CODE}=10010}(\text{CUSTOMER})
+```
