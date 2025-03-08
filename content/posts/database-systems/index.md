@@ -378,7 +378,7 @@ Select or restrict is referred to as an unary operator because it only uses one 
 Formally, SELECT is denoted by the lowercase Greek letter sigma ($`\sigma`$). Sigma is followed by the condition to be evaluated (called a predicate) as a subscript, and then the relation is listed in parentheses. For example, to SELECT all of the rows in the CUSTOMER table that have the value "10010" in the CUS_CODE attribute, you would write the following:
 
 ```math
-\sigma_{\text{CUS\_CODE}=10010}(\text{CUSTOMER})
+\sigma_{\text{CUS\_CODE}=10010}(\text{customer})
 ```
 
 **Project**
@@ -390,13 +390,13 @@ PROJECT yields all values for selected attributes. It's also an unary operator. 
 Formally, PROJECT is denoted by the Greek letter pi ($`\pi`$). Pi is followed by the list of attributes to be returned as subscripts and then the relation listed in parentheses. For example, to PROJECT the CUS_FNAME and CUS_LNAME in CUSTOMER table, you would write the following:
 
 ```math
-\pi_{\text{CUS\_FNAME, CUS\_LNAME}}(\text{CUSTOMER})
+\pi_{\text{CUS\_FNAME, CUS\_LNAME}}(\text{customer})
 ```
 
 Because relational operators have the property of closure, that is, they accept relations as input and produce relations as output, it is possible to combine operators. For example, you can combine the two previous operators to find the first and last name of the customer with customer code 10010:
 
 ```math
-\pi_{\text{CUS\_FNAME, CUS\_LNAME}}(\sigma_{\text{CUS\_CODE=10010}}(\text{CUSTOMER}))
+\pi_{\text{CUS\_FNAME, CUS\_LNAME}}(\sigma_{\text{CUS\_CODE=10010}}(\text{customer}))
 ```
 
 **Union**
@@ -408,13 +408,13 @@ UNION combines all rows from two tables, excluding duplicate rows. To be used in
 UNION is denoted by the symbol ($`\cup`$). If the relations SUPPLIER and VENDOR are union-­compatible, then a UNION between them would be denoted as follows:
 
 ```math
-\text{SUPPLIER} \cup \text{VENDOR}
+\text{supplier} \cup \text{vendor}
 ```
 
 It is rather unusual to find two relations that are union-compatible in a database. ­Typically, PROJECT operators are applied to relations to produce results that are union-­compatible. For example, assume the SUPPLIER and VENDOR tables are not union-­compatible. If you want to produce a listing of all vendor and supplier names, then you can PROJECT the names from each table and then perform a UNION with them.
 
 ```math
-\pi_\text{SUPPLIER\_NAME}(\text{SUPPLIER}) \cup \pi_\text{VENDOR\_NAME}(\text{VENDOR})
+\pi_\text{SUPPLIER\_NAME}(\text{supplier}) \cup \pi_\text{VENDOR\_NAME}(\text{vendor})
 ```
 
 **Intersect**
@@ -426,13 +426,13 @@ INTERSECT yields only the rows that appear in both tables. As with UNION, the ta
 INTERSECT is denoted by the symbol ($`\cap`$). If the relations SUPPLIER and VENDOR are union-compatible, then an INTERSECT between them would be denoted as follows:
 
 ```math
-\text{SUPPLIER} \cap \text{VENDOR}
+\text{supplier} \cap \text{vendor}
 ```
 
 Just as with the UNION operator, it is unusual to find two relations that are union-compatible in a database, so PROJECT operators are applied to relations to produce results that can be manipulated with an INTERSECT operator. For example, again assume the SUPPLIER and VENDOR tables are not union-compatible. If you want to produce a listing of any vendor and supplier names that are the same in both tables, then you can PROJECT the names from each table and then perform an INTERSECT with them.
 
 ```math
-\pi_\text{SUPPLIER\_NAME}(\text{SUPPLIER}) \cap \pi_\text{VENDOR\_NAME}(\text{VENDOR})
+\pi_\text{SUPPLIER\_NAME}(\text{supplier}) \cap \pi_\text{VENDOR\_NAME}(\text{vendor})
 ```
 
 **Different**
@@ -444,7 +444,7 @@ DIFFERENT yields all rows that found in the left table but not found in the righ
 DIFFERENCE is denoted by the minus symbol ($`-`$). If the relations SUPPLIER and VENDOR are union-compatible, then a DIFFERENCE of SUPPLIER minus VENDOR would be written as follows:
 
 ```math
-\text{SUPPLIER} - \text{VENDOR}
+\text{supplier} - \text{vendor}
 ```
 
 **Product**
@@ -456,7 +456,7 @@ PRODUCT yields all possible pairs of rows from two tables also known as the Cart
 PRODUCT is denoted by the multiplication symbol ($`\times`$). The PRODUCT of the CUSTOMER and AGENT relations would be written as follows:
 
 ```math
-\text{CUSTOMER} \times \text{AGENT}
+\text{customer} \times \text{agent}
 ```
 
 A Cartesian product produces a set of sequences in which every member of one set is paired with every member of another set. In terms of relations, this means that every tuple in one relation is paired with every tuple in the second relation.
@@ -488,3 +488,11 @@ Note a few crucial features of the natural join operation:
 - If no match is made between the table rows, the new table does not include the unmatched row.
 - The column on which the join was made - AGENT_CODE occurs only once in the new table.
 - If the same AGENT_CODE occur several times in the AGENT table, a customer would be listed for each match. For example, if the AGENT_CODE 235 occured three times in the AGENT table, the customer named Duy would also occur three times in the resulting table. (Of course, a good AGENT table cannot yield such a result because it would contain unique primary key values.)
+
+Natural join is normally just referred to as JOIN in formal treatments. JOIN is denoted by the symbol($`\bowtie`$). The JOIN of the CUSTOMER and AGENT relations would be written as follows:
+
+```math
+\text{customer} \bowtie \text{agent}
+```
+
+Notice that the JOIN of two relations returns all of the attributes of both relations, except only one copy of the common attribute is returned. Formally, this is described as a UNION of the relvar headings. Therefore, the JOIN of the relations ($`\text{c} \bowtie \text{a}`$) includes the UNION of the relvars ($`\text{C} \cup \text{A}`$).
