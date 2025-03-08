@@ -484,3 +484,7 @@ A _natural join_ links tables by selecting only the rows with common values in t
 The final outcome of a natural join yields a table that does not include unmatched pairs and provides only the copies of the matches.
 
 Note a few crucial features of the natural join operation:
+
+- If no match is made between the table rows, the new table does not include the unmatched row.
+- The column on which the join was made - AGENT_CODE occurs only once in the new table.
+- If the same AGENT_CODE occur several times in the AGENT table, a customer would be listed for each match. For example, if the AGENT_CODE 235 occured three times in the AGENT table, the customer named Duy would also occur three times in the resulting table. (Of course, a good AGENT table cannot yield such a result because it would contain unique primary key values.)
