@@ -460,3 +460,23 @@ PRODUCT is denoted by the multiplication symbol ($`\times`$). The PRODUCT of the
 ```
 
 A Cartesian product produces a set of sequences in which every member of one set is paired with every member of another set. In terms of relations, this means that every tuple in one relation is paired with every tuple in the second relation.
+
+**Join**
+
+JOIN allows information to be intelligently combined from two or more tables. JOIN is the real power behind the relational database, allowing the use of independent tables linked by common attributes. It is often used when you want produce information but the data stored in two or more tables. The CUSTOMER and AGENT tables will be used to illustrate several types of join.
+
+![tables](./images/customer-agent.png)
+
+A _natural join_ links tables by selecting only the rows with common values in their common attribute(s). A natural join is the result of a three-stage process:
+
+1. First, a PRODUCT of tables is created, yielding this result.
+
+![natural join step 1](./images/natural-join_step1.png)
+
+2. Second, a SELECT is performed on the output of Step 1 to yield only the rows for which the AGENT_CODE values are equal. The common columns are referred to as the **join columns**.
+
+![natural join step 2](./images/natural-join_step2.png)
+
+3. A PROJECT is performed on the results of step 2 to yield a single copy of each attribute, thereby eliminating duplicate columns.
+
+![natural join step 3](./images/natural-join-step3.png)
