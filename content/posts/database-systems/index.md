@@ -480,3 +480,7 @@ A _natural join_ links tables by selecting only the rows with common values in t
 3. A PROJECT is performed on the results of step 2 to yield a single copy of each attribute, thereby eliminating duplicate columns.
 
 ![natural join step 3](./images/natural-join-step3.png)
+
+The final outcome of a natural join yields a table that does not include unmatched pairs and provides only the copies of the matches.
+
+Note a few crucial features of the natural join operation:
