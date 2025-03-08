@@ -405,7 +405,7 @@ UNION combines all rows from two tables, excluding duplicate rows. To be used in
 
 ![union](./images/union.png)
 
-UNION is denoted by the symbol $`\cup`$. If the relations SUPPLIER and VENDOR are union-­compatible, then a UNION between them would be denoted as follows:
+UNION is denoted by the symbol ($`\cup`$). If the relations SUPPLIER and VENDOR are union-­compatible, then a UNION between them would be denoted as follows:
 
 ```math
 \text{SUPPLIER} \cup \text{VENDOR}
@@ -423,7 +423,7 @@ INTERSECT yields only the rows that appear in both tables. As with UNION, the ta
 
 ![intersect](./images/intersect.png)
 
-INTERSECT is denoted by the symbol $`\cap`$. If the relations SUPPLIER and VENDOR are union-compatible, then an INTERSECT between them would be denoted as follows:
+INTERSECT is denoted by the symbol ($`\cap`$). If the relations SUPPLIER and VENDOR are union-compatible, then an INTERSECT between them would be denoted as follows:
 
 ```math
 \text{SUPPLIER} \cap \text{VENDOR}
@@ -434,3 +434,29 @@ Just as with the UNION operator, it is unusual to find two relations that are un
 ```math
 \pi_\text{SUPPLIER\_NAME}(\text{SUPPLIER}) \cap \pi_\text{VENDOR\_NAME}(\text{VENDOR})
 ```
+
+**Different**
+
+DIFFERENT yields all rows that found in the left table but not found in the right table. It subtracts one table from other. As with UNION, the tables must be union-compatible to yield valid results. However, note that subtracting the first table from the second table is not the same as subtracting the second table from the first table.
+
+![different](./images/different.png)
+
+DIFFERENCE is denoted by the minus symbol ($`-`$). If the relations SUPPLIER and VENDOR are union-compatible, then a DIFFERENCE of SUPPLIER minus VENDOR would be written as follows:
+
+```math
+\text{SUPPLIER} - \text{VENDOR}
+```
+
+**Product**
+
+PRODUCT yields all possible pairs of rows from two tables also known as the Cartesian product. Therefore, if one table has 6 rows and the other table has 3 rows, the PRODUCT yields a list composed of $`6 \times 3 = 18`$ rows.
+
+![product](./images/product.png)
+
+PRODUCT is denoted by the multiplication symbol ($`\times`$). The PRODUCT of the CUSTOMER and AGENT relations would be written as follows:
+
+```math
+\text{CUSTOMER} \times \text{AGENT}
+```
+
+A Cartesian product produces a set of sequences in which every member of one set is paired with every member of another set. In terms of relations, this means that every tuple in one relation is paired with every tuple in the second relation.
