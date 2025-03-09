@@ -545,7 +545,7 @@ If an **outer join** is performed on the **CUSTOMER** and **AGENT** tables, thre
 The **DIVIDE** operator is used to answer queries where a set of data must be associated with **all** values from another dataset. The operation is valid only if:
 
 ```math
-\text{r}_1 \sube \text{r}_2
+\text{r}_1 \subseteq \text{r}_2
 ```
 
 This means all attributes in $`\text{r}_2`$ must also exist in $`\text{r}_1`$.
