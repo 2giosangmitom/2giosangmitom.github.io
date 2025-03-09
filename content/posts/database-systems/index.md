@@ -489,10 +489,26 @@ Note a few crucial features of the natural join operation:
 - The column on which the join was made - AGENT_CODE occurs only once in the new table.
 - If the same AGENT_CODE occur several times in the AGENT table, a customer would be listed for each match. For example, if the AGENT_CODE 235 occured three times in the AGENT table, the customer named Duy would also occur three times in the resulting table. (Of course, a good AGENT table cannot yield such a result because it would contain unique primary key values.)
 
-Natural join is normally just referred to as JOIN in formal treatments. JOIN is denoted by the symbol($`\bowtie`$). The JOIN of the CUSTOMER and AGENT relations would be written as follows:
+Natural join is normally just referred to as JOIN in formal treatments. JOIN is denoted by the symbol($`\Join`$). The JOIN of the CUSTOMER and AGENT relations would be written as follows:
 
 ```math
-\text{customer} \bowtie \text{agent}
+\text{customer} \Join \text{agent}
 ```
 
-Notice that the JOIN of two relations returns all of the attributes of both relations, except only one copy of the common attribute is returned. Formally, this is described as a UNION of the relvar headings. Therefore, the JOIN of the relations ($`\text{c} \bowtie \text{a}`$) includes the UNION of the relvars ($`\text{C} \cup \text{A}`$).
+Notice that the JOIN of two relations returns all of the attributes of both relations, except only one copy of the common attribute is returned. Formally, this is described as a UNION of the relvar headings. Therefore, the JOIN of the relations ($`\text{c} \Join \text{a}`$) includes the UNION of the relvars ($`\text{C} \cup \text{A}`$).
+
+Another form of join, known as an **equijoin** links tables on the basis of an equality condition that compares specified columns of each table. The outcome of the equijoin does not eliminate duplicate columns, and the condition or criterion used to join the tables must be explicitly defined. In fact, the result of an equijoin looks just like the outcome shown in the step 2 of the natural join. The equijoin takes its name from the equality comparison operator ($`=`$) used in the condition. If any other comparison operator is used, the join is called **theta join**.
+
+In formal terms, theta join is considered an extension of natural join. Theta join is denoted by adding a theta subscript after the JOIN symbol ($`\Join_{\theta}`$)
+
+Each of the preceding joins is often classified as an inner join. An inner join only returns matched records from the tables that are being joined. In an outer join, the matched pairs would be retained, and any unmatched values in the other table would be left null. It is an easy mistake to think that an outer join is the opposite of an inner join. However, it's more accurate to think of an outer join as an "inner join plus". The outer join still returns all of the matched records that the inner join returns, plus it returns the unmatched records from one of the tables. More specifically, if an outer join is produced for tables CUSTOMER and AGENT, two scenarios are possible:
+
+- A **left outer join** yields all of the rows in the CUSTOMER table, including those that do not have a matching value in the AGENT table.
+
+![left outer join](./images/left-outer-join.png)
+
+- A **right outer join** yields all of the rows in the AGENT table, including those that do not have matching values in the CUSTOMER table.
+
+![right outer join](./images/right-outer-join.png)
+
+Outer join is also an extension of JOIN. Outer joins are the application of JOIN, DIFFERENCE, UNION, and PRODUCT. A JOIN returns the matched tuples, DIFFERENCE finds the tuples in one table that have values in the common attribute that do not appear in the common attribute of the other relation, these unmatched tuples are combined with NULL values through a PRODUCT, and then a UNION combines these results into a single relation. Clearly, a defined outer join is a great simplification! Left and right outer joins are denoted by the symbols (⟕) and (⟖), respectively.
