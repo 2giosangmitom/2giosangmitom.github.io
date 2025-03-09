@@ -463,23 +463,27 @@ A Cartesian product produces a set of sequences in which every member of one set
 
 **Join**
 
-JOIN allows information to be intelligently combined from two or more tables. JOIN is the real power behind the relational database, allowing the use of independent tables linked by common attributes. It is often used when you want produce information but the data stored in two or more tables. The CUSTOMER and AGENT tables will be used to illustrate several types of join.
+The **JOIN** operation allows data to be intelligently combined from two or more tables. It is the backbone of relational databases, enabling independent tables to be linked through common attributes. JOIN is particularly useful when retrieving meaningful information stored across multiple tables.
+
+To illustrate different types of joins, we use the **CUSTOMER** and **AGENT** tables:
 
 ![tables](./images/customer-agent.png)
 
-A _natural join_ links tables by selecting only the rows with common values in their common attribute(s). A natural join is the result of a three-stage process:
+**Natural Join**
 
-1. First, a PRODUCT of tables is created, yielding this result.
+A **natural join** links tables by selecting only the rows that have matching values in their common attribute(s). This process consists of three steps:
 
-![natural join step 1](./images/natural-join_step1.png)
+1. **Cartesian Product** – The initial step creates a Cartesian product of the tables, yielding the following result:
 
-2. Second, a SELECT is performed on the output of Step 1 to yield only the rows for which the AGENT_CODE values are equal. The common columns are referred to as the **join columns**.
+   ![natural join step 1](./images/natural-join_step1.png)
 
-![natural join step 2](./images/natural-join_step2.png)
+2. **Selection** – A selection is performed on the output of Step 1 to retain only rows where **AGENT_CODE** values match. The common columns are referred to as **join columns**.
 
-3. A PROJECT is performed on the results of step 2 to yield a single copy of each attribute, thereby eliminating duplicate columns.
+   ![natural join step 2](./images/natural-join_step2.png)
 
-![natural join step 3](./images/natural-join-step3.png)
+3. **Projection** – Finally, the result is projected to eliminate duplicate columns, ensuring that each attribute appears only once.
+
+   ![natural join step 3](./images/natural-join-step3.png)
 
 The final outcome of a natural join yields a table that does not include unmatched pairs and provides only the copies of the matches.
 
@@ -495,20 +499,67 @@ Natural join is normally just referred to as JOIN in formal treatments. JOIN is 
 \text{customer} \Join \text{agent}
 ```
 
-Notice that the JOIN of two relations returns all of the attributes of both relations, except only one copy of the common attribute is returned. Formally, this is described as a UNION of the relvar headings. Therefore, the JOIN of the relations ($`\text{c} \Join \text{a}`$) includes the UNION of the relvars ($`\text{C} \cup \text{A}`$).
+The result of a **JOIN** includes all attributes from both tables, but only one copy of the common attribute. Formally, this is equivalent to the **UNION** of the attribute sets of the two relations ($`\text{C} \cup \text{A}`$).
 
-Another form of join, known as an **equijoin** links tables on the basis of an equality condition that compares specified columns of each table. The outcome of the equijoin does not eliminate duplicate columns, and the condition or criterion used to join the tables must be explicitly defined. In fact, the result of an equijoin looks just like the outcome shown in the step 2 of the natural join. The equijoin takes its name from the equality comparison operator ($`=`$) used in the condition. If any other comparison operator is used, the join is called **theta join**.
+**Equijoin & Theta Join**
 
-In formal terms, theta join is considered an extension of natural join. Theta join is denoted by adding a theta subscript after the JOIN symbol ($`\Join_{\theta}`$)
+An **equijoin** is a special type of join that links tables based on an **equality condition** between specific columns. Unlike a natural join, an equijoin retains duplicate columns and explicitly defines the join condition. The result of an **equijoin** is identical to Step 2 of the **natural join** process.
 
-Each of the preceding joins is often classified as an inner join. An inner join only returns matched records from the tables that are being joined. In an outer join, the matched pairs would be retained, and any unmatched values in the other table would be left null. It is an easy mistake to think that an outer join is the opposite of an inner join. However, it's more accurate to think of an outer join as an "inner join plus". The outer join still returns all of the matched records that the inner join returns, plus it returns the unmatched records from one of the tables. More specifically, if an outer join is produced for tables CUSTOMER and AGENT, two scenarios are possible:
+The equijoin gets its name from the **equality operator ($`=`$)** used in the condition. If another comparison operator is used (e.g., $`>`$, $`<`$, $`\neq`$), the join is called a **theta join**.
 
-- A **left outer join** yields all of the rows in the CUSTOMER table, including those that do not have a matching value in the AGENT table.
+Formally, a **theta join** is an extension of the **natural join** and is denoted by the subscripted JOIN symbol:
 
-![left outer join](./images/left-outer-join.png)
+```math
+\text{R} \Join_{\theta} \text{S}
+```
 
-- A **right outer join** yields all of the rows in the AGENT table, including those that do not have matching values in the CUSTOMER table.
+**Inner Join vs. Outer Join**
 
-![right outer join](./images/right-outer-join.png)
+Joins are often classified into **inner joins** and **outer joins**:
 
-Outer join is also an extension of JOIN. Outer joins are the application of JOIN, DIFFERENCE, UNION, and PRODUCT. A JOIN returns the matched tuples, DIFFERENCE finds the tuples in one table that have values in the common attribute that do not appear in the common attribute of the other relation, these unmatched tuples are combined with NULL values through a PRODUCT, and then a UNION combines these results into a single relation. Clearly, a defined outer join is a great simplification! Left and right outer joins are denoted by the symbols (⟕) and (⟖), respectively.
+- **Inner Join**: Returns only matching records from the joined tables.
+- **Outer Join**: Includes unmatched records from one or both tables, filling missing values with NULLs.
+
+It is a common misconception that an outer join is the opposite of an inner join. Instead, it is more accurately described as an **"inner join plus"**—returning both matched and unmatched records.
+
+If an **outer join** is performed on the **CUSTOMER** and **AGENT** tables, three scenarios arise:
+
+1. **Left Outer Join** – Returns all rows from the **CUSTOMER** table, including those without matching values in the **AGENT** table.
+
+   ![left outer join](./images/left-outer-join.png)
+
+   **Notation**: Left Outer Join is denoted by (⟕).
+
+2. **Right Outer Join** – Returns all rows from the **AGENT** table, including those without matching values in the **CUSTOMER** table.
+
+   ![right outer join](./images/right-outer-join.png)
+
+   **Notation**: Right Outer Join is denoted by (⟖).
+
+3. **Full Outer Join** – Returns all rows from both **CUSTOMER** and **AGENT** tables. If no match exists, NULL values are placed in the missing fields.
+
+   **Notation**: Full Outer Join is denoted by (⟗).
+
+**Divide**
+
+The **DIVIDE** operator is used to answer queries where a set of data must be associated with **all** values from another dataset. The operation is valid only if:
+
+```math
+\text{r}_1 \sube \text{r}_2
+```
+
+This means all attributes in $`\text{r}_2`$ must also exist in $`\text{r}_1`$.
+
+Consider the following example:
+
+![divide](./images/divide.png)
+
+The **DIVIDE** operation results in a single-column output, containing values from the second column of the dividend (**Stu_Name**) that are associated with **every** row in the divisor.
+
+In formal notation, the **DIVIDE** operator is represented as:
+
+```math
+\text{r} \div \text{s}
+```
+
+Given two relations **R** and **S**, the division operation extracts only those tuples from **R** that match **every** value in **S**.
