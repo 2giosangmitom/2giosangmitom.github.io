@@ -605,3 +605,69 @@ The correct implementation is to use a table called **linking table**.
 ![correctMN](./images/correctMN.png)
 
 In the ENROLL table, the primary key is STU_ID + CLASS_ID, foreign keys are STU_ID, CLASS_ID. Note that the linking table can contain any number of attributes that the designer want to track.
+
+## The Entity Relationship Model
+
+### Entities
+
+An entity is an object of interest to user. In ERM, it corresponds to a table, not a row. The ERM refers to a table row as an _entity instance_ or _entity occurence_. In the Chen, Crow's Foot and UML notations, an entity is represented by a rectangle that contains the entity's name. The entity name is a noun, it usually written in uppercase.
+
+### Attributes
+
+Attributes are characteristics of entities. For example, the STUDENT entity includes the attributes STU_ID, STU_NAME, among many others. In the original Chen notation, attributes are represented by ovals and are connected to the entity rectangle with a line. Each oval contains the name of the attribute it represents. In the Crow's Foot notation, the attributes are written in the attribute box below the entity regtangle. Because Chen used more space, software vendors have adopted the Crow's Foot display.
+
+![Entity](./images/chen-crow-entity.png)
+
+**Required and Optional Attributes**
+
+A required attribute is an attribute that must have a value; in other words, it cannot be left empty. In above figure, the two boldfaced attributes in the Crow's Foot notation indicate that data entry is required. STU_LNAME and STU_FNAME require data entries because all students are assumed to have a last name and a first name. However, students might not have a middle name, and perhaps they do not yet have a phone number and an email address. Therefore, those attributes are not presented in boldface in the entity box. An optional attribute is an attribute that does not require a value. Therefore, it can be left empty.
+
+**Domains**
+
+Attributes have a domain. A domain is the set of possible values for a given attribute. For example, the domain for a grade point average (GPA) attribute is written (0,4) because the lowest possible GPA value is 0 and the highest possible value is 4. The domain for a gender attribute consists of only two possibilities: M or F (or some other equivalent code). The domain for a company's date of hire attribute consists of all dates that fit in a range (e.g., company startup date to current date)
+
+**Identifier (Primary Key)**
+
+The ERM uses identifiers—one or more attributes that uniquely identify each entity instance. In the relational model, entities are mapped to tables, and the entity identifier is mapped as the table's primary key (PK). Identifiers are underlined in the ERD. Key attributes are also underlined in a frequently used shorthand notation for the table structure, called a relational schema, that uses the following format:
+
+TABLE NAME (**<u>KEY ATTRIBUTE 1</u>**, ATTRIBUTE 2, ATTRIBUTE 3,...)
+
+For example, a CAR entity may be represented by
+
+CAR (**<u>CAR_VIN</u>**, MOD_CODE, CAR_YEAR, CAR_COLOR)
+
+Each car is identified by a unique vehicle identification number, or CAR_VIN.
+
+**Composite Identifiers**
+
+Ideally, an entity identifier is composed of only a single attribute. However, you can use a composite identifier, a primary key composed of more than one attribute.
+
+**Composite and Simple Attributes**
+
+Attributes are classified as simple or composite. A composite attribute, not to be confused with a composite key, is an attribute that can be further subdivided to yield additional attributes. For example, the attribute ADDRESS can be subdivided into street, city, state, and zip code. Similarly, the attribute PHONE_NUMBER can be subdivided into area code and exchange number. A simple attribute is an attribute that can not be subdivided. To facilitate detailed queries, it is wise to change composite attributes into a series of simple attributes.
+
+**Single-Valued Attributes**
+
+A single-valued attribute is an attribute that can have only a single value. For example, a person can have only one Social Security number. _Keep in mind that a single-valued attribute is not necessarily a simple attribute_. For instance, a part's serial number (such as SE-08-02-189935) is single-valued, but it is a composite attribute because it can be subdivided into the region in which the part was produced (SE), the plant within that region (08), the shift within the plant (02), and the part number (189935).
+
+**Multi-Valued Attributes**
+
+Multivalued attributes are attributes that can have many values. For instance, a person may have several college degrees, and a household may have several different phones, each with its own number. Similarly, a car's color may be subdivided into many colors for the roof, body, and trim. In the Chen ERM, multivalued attributes are shown by a double line connecting the attribute to the entity. The Crow's Foot notation does not identify multivalued attributes.
+
+![Example](./images/multivaluedCrowChen.png)
+
+**Implementing Multivalued Attributes**
+
+Although the conceptual model can handle M:N relationships and multivalued attributes, _you should not implement them in the RDBMS_. Note that each row and column intersection represents a single data value. So, if multivalued attribute exist, the designer must decide on one of two possible course of action:
+
+1. Within the original entity, create several new attributes, one for each component of the original multivalued attribute. For example, the CAR entity's attribute CAR_COLOR can be split to create the new attributes CAR_TOPCOLOR, CAR_BODYCOLOR, and CAR_TRIMCOLOR, which are then assigned to the CAR entity.
+
+Although this solution seems to work, its adoption can lead to major structural problems in the table. It is only acceptable if every instance will have the same number of values for the multivalued attribute, and no instance will ever have more values. However, even in this case, it is a gamble that new changes in the environment will never create a situation where an instance would have more values than before. For example, if additional color components - such as a logo color are added for some cars, the table structure must be modified to accommodate the new color section. In that case, cars that do not have such color sections generate nulls for the nonexistent components, or their color entries for those sections are entered as N/A to indicate "not applicable". The first solution is to split multivalued attribute into new attributes, but imagine the problems this type of solution would cause if it were applied to an employee entity that contains employee degrees and certifications. If some employees have 10 degrees and certifications while most have fewer or none, the number of degree/certification attributes would be 10, and most of those attribute values would be null for most employees. In short, although you have seen solution 1 applied, it is not always acceptable.
+
+2. Create a new entity composed of the original multivalued attribute’s components. This new entity allows the designer to define color for different sections of the car. Then, this new CAR_COLOR entity is related to the original CAR entity in a 1:M relationship. This is the preferred way to deal with multivalued attributes.
+
+**Derived Attributes**
+
+Finally, a derived attribute is an attribute whose value is calculated (derived) from other attributes. The derived attribute need not be physically stored within the database. Instead, it can be derived by using an algorithm. For example, an employee's age, EMP_AGE, may be found by computing the integer value of the difference between the current date and the EMP_DOB. Similarly, the total cost of an order can be derived by multiplying the quantity ordered by the unit price. A derived attribute is indicated in the Chen notation by a dashed line that connects the attribute and the entity. The Crow's Foot notation does not have a method for distinguishing the derived attribute from other attributes.
+
+![derived example](./images/derived_example.png)
