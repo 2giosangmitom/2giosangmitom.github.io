@@ -563,3 +563,45 @@ In formal notation, the **DIVIDE** operator is represented as:
 ```
 
 Given two relations **R** and **S**, the division operation extracts only those tuples from **R** that match **every** value in **S**.
+
+### Relationships within the Relational Database
+
+You already know that relational databases use common attributes to implement relationships between tables. These common attributes are created through the use of foreign keys. That is, the placing of the primary key of one table into another table. The issue is which primary key to use as a foreign key. Determining which primary key to use as a foreign key to create a common attribute in the relational model is based on the classification of the relationship.
+
+#### The 1:M Relationship
+
+The 1:M relationship is the norm for relational databases. The correct placement of a foreign key is essential for effectively implementing a one-to-many (1:M) relationship in a relational database. In a 1:M relationship, each record in the "one" side table can be associated with multiple records in the "many" side table, but each record in the "many" side table is associated with only one record in the "one" side table.
+
+To illustrate, consider two tables: **PAINTER** and **PAINTING**. Each painter can create multiple paintings, establishing a 1:M relationship between PAINTER and PAINTING. To implement this relationship:
+
+- **PAINTER** is the "one" side, where each painter has a unique identifier, **PAINTER_ID**.
+
+- **PAINTING** is the "many" side, where each painting is associated with one painter.
+
+To establish the relationship, include **PAINTER_ID** as a foreign key in the **PAINTING** table. This approach ensures that each painting references a valid painter, maintaining referential integrity. Placing the foreign key in the **PAINTING** table aligns with best practices for implementing 1:M relationships in relational databases.
+
+Attempting to place **PAINTING_ID** as a foreign key in the **PAINTER** table would be inappropriate because it would require a single painter record to reference multiple paintings, violating the rule that each cell in a relational database table can contain only a single value. This misplacement would lead to data anomalies and complicate data management.
+
+Therefore, in a 1:M relationship, the foreign key should be placed in the table on the "many" side of the relationship, referencing the primary key of the table on the "one" side. This design ensures data integrity and supports efficient database operations.
+
+#### The 1:1 Relationship
+
+As the 1:1 label implies, one entity in a 1:1 relationship can be related to only one other entity, and vice versa. For example, one department chair - a professor - can chair only one department, and one department can have only one department chair. The entities PROFESSOR and DEPARTMENT thus exhibit a 1:1 relationship.
+
+Each professor is an employee. Therefore, the professor identification is through the EMP_ID. The 1:1 "PROFESSOR chairs DEPARTMENT" relationship is implemented by having the EMP_ID foreign key in the DEPARMENT table. Note that a 1:1 relationship is treated as a special case of the 1:M relationship in which the "many" side is restricted to a single occurrence. In this case, DEPARTMENT contains the EMP_ID as a foreign key to indicate that it is the department that has a chair. Also note that the PROFESSOR table contains the DEPT_CODE foreign key to implement the 1:M "DEPARTMENT employs PROFESSOR" relationship. This is a good example of how two entities can participate in two (or even more) relationships simultaneously.
+
+In terms of foreign key placement with a 1:1 relationship, in theory the primary key from either entity can be used as a foreign key in the other entity. In practice, some situations will give us a preference for placing the foreign key in one direction or the other. In this example, the existence of the 1:M relationship between those same entities gave us a preference in placing the foreign key for the 1:1 relationship to avoid the synonym. Other situations like optional relationships are discussed later. Although 1:1 relationships should be rare, certain conditions absolutely require their use. We will explore the concept call generalization hierarchy, which is a powerful tool for improving database designs under specific conditions to avoid a proliferation of nulls. One characteristic of generalization hierarchies is that they are implemented as 1:1 relationships.
+
+#### The M:N Relationship
+
+A many-to-many (M:N) relationship is not supported directly in the relational environment. However, M:N relationships can be implemented by creating a new entity in 1:M relationships with the origin entities. Consider this example:
+
+The STUDENT can enroll multiple CLASS, and a CLASS can has multiple STUDENT, so STUDENT and CLASS create a many-to-many relationship. This is an example of a bad M:N relationship implementation. As you can see, this implementation create many data redundancies.
+
+![wrongMN](./images/wrongMN.png)
+
+The correct implementation is to use a table called **linking table**.
+
+![correctMN](./images/correctMN.png)
+
+In the ENROLL table, the primary key is STU_ID + CLASS_ID, foreign keys are STU_ID, CLASS_ID. Note that the linking table can contain any number of attributes that the designer want to track.
