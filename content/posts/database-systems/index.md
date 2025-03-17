@@ -298,7 +298,7 @@ A **super key** is a key that can uniquely identify any row in the table. In oth
 
 One specific type of super key is called a **candidate key**. A candidate key is a minimal super key. That is, a super key without any unnecessary attributes. A candidate key is based on a full functional dependency. Candidate keys are called _candidates_ because they are the eligible options from which the designer will choose when selecting the primary key. The primary key is the candidate key chosen to be the primary means by which the rows of the table are uniquely identified.
 
-What is the _full functional dependency_?
+**What is the _full functional dependency_?**
 
 Consider this table.
 
@@ -316,7 +316,7 @@ Consider this table.
 
   - Student_Name only depend on Student_ID, Course_ID is not necessary. Thus, we can remove Course_ID.
 
-This is absolutely important concept you need to understand. You will understand this to dive deeper into database normalization.
+A full functional dependency occurs when an attribute depends on a complete set of attributes in a composite key, rather than just a part of it. This is absolutely important concept you need to understand. You will understand this to dive deeper into database normalization.
 
 **Entity integrity** is the condition in which each row (entity instance) has its own known, unique identity. To ensure entity integrity, the primary key has two requirements:
 
