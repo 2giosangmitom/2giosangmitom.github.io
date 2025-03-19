@@ -4,6 +4,9 @@ Hello 👋
 
 In this blog post, I'll be diving deep into relational database design, which remains the cornerstone of modern database management systems. As one of the most widely used database types, relational databases are behind many critical systems you interact with daily, whether you're making an online purchase, managing your finances, or accessing a web application.
 
+> [!NOTE]
+> The content of my blog is gathered from various sources, including the internet and books. It primarily covers fundamental knowledge about database design.
+
 ## What Is A Database?
 
 A database is an organized collection of data, designed to model a specific organizational process or system. Databases allow users to store, manage, and retrieve data efficiently. Whether you're using a simple spreadsheet to track personal expenses or a complex database management system to handle millions of records for a large enterprise, the underlying idea is the same—data is stored in a structured way to meet a specific goal or need.
@@ -712,3 +715,87 @@ Note that connectivity and maximum cardinality are similar concepts. They both a
 A similar relationship exists between participation and minimum cardinality, except they address the question of how few rows in one table may be associated with a row in the related table. Participation is also a half-vague answer. If the fewest rows that must be related is zero, then participation is optional. If the fewest rows that must be related is anything greater than zero, then participation is mandatory. Participation does not specify exactly what the fewest number of rows is, only that it is more than zero. Minimum cardinality provides the specific number.
 
 Clearly, cardinalities provide more information than participation and connectivity. It would be fair, then, to wonder why we use participation and connectivity when cardinality seems superior. The issue is that there is no way for the DBMS to enforce specific values like five and eight from the previous example. To enforce those kinds of specific numeric requirements, application logic must be coded. That code may be written into the front-end application, or it may be embedded in the database as stored procedure or trigger.
+
+### Existence Dependence
+
+An entity is said to be **existence dependent** if it can exist in the database only when it is associated with another related entity occurence. In implementation terms, an entity is existence dependent if it has a mandatory foreign key - that is, a foreign key attribute can not be null.
+
+For example, if an employee wants to claim one or more dependents for tax-holding purposes, the relationship "EMPLOYEE claims DEPENDENT" would be appropriate. In that case, the DEPENDENT entity is clearly existence-depedent on the EMPLOYEE entity because. In that case, the DEPENDENT entity is clearly existence dependent on EMPLOYEE entity because it is impossible for the dependent to exist apart from the EMPLOYEE in the database.
+
+If an entity can exist apart from all of its related entities, then it is **existence-independent**, and it refers to a strong entity.
+
+### Relationship Strength
+
+The concept of relationship strength is based on how the primary key of a related entity is defined. To implement a relationship, the primary key of one entity appears as a foreign key in the related entity.
+
+#### Weak (Non-identifying) Relationships
+
+A **weak relationship** exists if the related entity does not contain a primary key component of the parent entity. By default, relationships are established by having the primary key of the parent entity appear as a foreign key (FK) on the related entity (also known as the child entity). For example, suppose the 1:M relationship between COURSE and CLASS is defined as:
+
+COURSE (**<u>CRS_CODE</u>**, DEPT_CODE, CRS_DESCRIPTION, CSR_CREDIT)
+
+CLASS (**<u>CLASS_CODE</u>**, CRS_CODE, CLASS_SECTION, CLASS_TIME, ROOM_CODE, PROF_NUM)
+
+In this example, the CLASS primary key did not inherit a primary key component from the COURSE entity. In this case, a weak relationship exists between COURSE and CLASS because CRS_CODE (the primary key of the parent entity) is only a foreign key in the CLASS entity.
+
+#### Strong (Identifying) Relationships
+
+A strong (identifying) relationship exists when the primary key of the related entity contains a primary key component of the parent entity. For example, suppose the 1:M relationship between COURSE and CLASS is defined as:
+
+COURSE (**<u>CRS_CODE</u>**, DEPT_CODE, CRS_DESCRIPTION, CSR_CREDIT)
+
+CLASS (**<u>CLASS_SECTION</u>**, **<u>CRS_CODE</u>**, CLASS_TIME, ROOM_CODE, PROF_NUM)
+
+In this case, the CLASS entity primary key is composed of CRS_CODE and CLASS_SECTION. Therefore, a strong relationship exists between COURSE and CLASS because CRS_CODE (the primary key of the parent entity) is a primary key component in the CLASS entity. In other words, the CLASS primary key did inherit a primary key component from the COURSE entity. (Note that the CRS_CODE in CLASS is also the FK to the COURSE entity.)
+
+In summary, whether the relationship between COURSE and CLASS is strong or weak depends on how the CLASS entity’s primary key is defined. Remember that the nature of the relationship is often determined by the database designer, who must use professional judgment to determine which relationship type and strength best suit the database transaction, efficiency, and information requirements. That point will be emphasized in detail!
+
+The Crow's Foot notation depicts the strong (identifying) relationship with a solid line
+between the entities
+
+![strong](./images/strong_relationship.png)
+
+### Weak Entities
+
+In contrast to the strong entity a weak entity is one that meets two conditions:
+
+1. The entity is existence-dependent, it cannot exist without the entity which it has a relationship.
+2. The entity has a primary key that is partially or totally derived from the parent entity in the relationship.
+
+For example, a company insurance policy insures an employee and any dependents. For the purpose of describing an insurance policy, an EMPLOYEE might or might not have a DEPENDENT, but the DEPENDENT must be associated with an EMPLOYEE. Moreover, the DEPENDENT cannot exist without the EMPLOYEE. That is, a person cannot get insurance coverage as a dependent unless the person is a dependent of an employee. DEPENDENT is the weak entity in the relationship "EMPLOYEE has DEPENDENT."
+
+![weak entity in erd](./images/weak_entity_in_erd.png)
+
+Note that the Chen notation identifies the weak entity by using a double-walled entity rectangle. The Crow's Foot notation uses the relationship line and the PK/FK designation to indicate whether the related entity is weak. A strong (identifying) relationship indicates that the related entity is weak.
+
+### Relationship Participation
+
+Participation in an entity relationship is either optional or mandatory. Recall that relationships are bidirectional. That is, they operate in both direction. If COURSE is related to CLASS, then by definition, CLASS is related to COURSE. Because of the bidirectional nature of relationships, it is necessary to determine the connectivity of the relationship from COURSE to CLASS and the connectivity of the relationship from CLASS to COURSE. Similarly, the specific maximum and minimum cardinalities must be determined in each direction for the relationship.
+
+**Optional participation** means that one entity occurrence does not require a corresponding entity occurrence in a particular relationship. For example, in the "COURSE generates CLASS" relationship, you noted that at least some courses do not generate a class. In other words, an entity occurrence (row) in the COURSE table does not necessarily require the existence of a corresponding entity occurrence in the CLASS table.
+
+Therefore, the CLASS entity is considered to be optional to the COURSE entity. In Crow's Foot notation, an optional relationship between entities is shown by drawing a small circle (O) on the side of the optional entity. The existence of an optional entity indicates that its minimum cardinality is 0.
+
+**Mandatory participation** means that one entity occurrence requires a corresponding entity occurrence in a particular relationship. If no optionality symbol is depicted with the entity, the entity is assumed to exist in a mandatory relationship with the related entity. If the mandatory participation is depicted graphically, it is typically shown as a small hash mark across the relationship line, similar to the Crow's Foot depiction of a connectivity of 1. The existence of a mandatory relationship indicates that the minimum cardinality is at least 1 for the mandatory entity.
+
+### Relationship Degree
+
+A relationship degree indicates the number of entities or participants associated with a relationship. A **unary relationship** exists when an association is maintained within a single entity. A **binary relationship** exists when two entities are associated. A **ternary relationship** exists when three entities are associated. Although higher degrees exist, they are rare and not specifically named. (For example, an association of four entities is described simply as a four-degree r­elationship.)
+
+![types](./images/types_of_relationship_degrees.png)
+
+#### Unary Relationships
+
+In the case of the unary relationship shown in above figure, an employee within the EMPLOYEE entity is the manager for one or more employees within that entity. In this case, the existence of the "manages" relationship means that EMPLOYEE requires another EMPLOYEE to be the manager. That is, EMPLOYEE has a relationship with itself. Such a relationship is known as a recursive relationship.
+
+#### Binary Relationships
+
+A binary relationship exists when two entities are associated in a relationship. Binary relationships are the most common type of relationship. In fact, to simplify the conceptual design, most higher-order (ternary and higher) relationships are decomposed into appropriate equivalent binary relationships whenever possible.
+
+#### Ternary and Higher-Order Relationships
+
+A ternary relationship implies an association among three different entities. For example in the above figure.
+
+- A DOCTOR writes one or more PRESCRIPTIONs.
+- A PATIENT may receive one or more PRESCRIPTIONs.
+- A DRUG may appear in one or more PRESCRIPTIONs.
