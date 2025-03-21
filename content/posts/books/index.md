@@ -33,3 +33,17 @@ Written by the **creator of C++**, this book is the **definitive guide** to mast
 - Explains **best practices and language philosophy**, not just syntax.
 
 🔗 [Buy on Amazon](https://www.amazon.com/Programming-Language-hardcover-4th/dp/0321958322/ref=sr_1_4?crid=RJNOHH0NES16&dib=eyJ2IjoiMSJ9.xERCOf1U1yrjnpD-x9WOJoLeotAubjXCLwx9N-mczwOjEhvKP3Pk6qv895m_hpbEx_zjdOo_vdX69RNdGMcVlo1TbHpnf7aTX-2gdgqKAr2DLEJYdmaVh4NpsncOImbzsZiX_GWpxxJzDBVs3AodwQrNBFlhw-HxvcwUHqX9uN7tFAlU048-Hq6cS7TVLrG7saD8ykiIMoxZKt2tbmkjxJ_HnorHR22HhOCrhGgIDVFkppUmx88yG_SUJX2vUsAzjRV-jDghSveZVgqlz3_vO143yFFimLN69DB1xmgVQqDF4Q9xaKjYs0cDtIeCDOtRN1c30JdIHQQMZ3uQ0ZNCL9L-ZQFpifNHbaFAbWO4nHg.YW-euJgUcnO89HOC-ONuqcmXQiQuz19q0ZmiUTvW9fk&dib_tag=se&keywords=C%2B%2B&qid=1742562904&s=books&sprefix=c%2B%2B%2Cstripbooks%2C427&sr=1-4)
+
+### JavaScript: The Definitive Guide (7th Edition)
+
+📖 _By David Flanagan_
+
+This is one of the most comprehensive books for mastering JavaScript. It covers everything from **fundamentals to advanced concepts**, including JavaScript's core features, object-oriented programming, inheritance, asynchronous programming, generators, and even Node.js.
+
+**Why I Recommend It:**
+
+- Covers JavaScript from basics to advanced topics
+- Provides in-depth explanations with clear examples
+- Beginner-friendly yet valuable for experienced developers
+
+🔗 [Buy on Amazon](https://www.amazon.com/dp/1491952024/?bestFormat=true&k=javascript%20the%20definitive%20guide&ref_=nb_sb_ss_w_scx-ent-pd-bk-d_de_k1_1_15&crid=JFRET4AMQZWC&sprefix=javascript%20the%20)
