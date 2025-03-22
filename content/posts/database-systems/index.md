@@ -799,3 +799,13 @@ A ternary relationship implies an association among three different entities. Fo
 - A DOCTOR writes one or more PRESCRIPTIONs.
 - A PATIENT may receive one or more PRESCRIPTIONs.
 - A DRUG may appear in one or more PRESCRIPTIONs.
+
+### Recursive Relationships
+
+As you just learned, a recursive relationship is one in which a relationship can exist between occurrences of the same entity set. (Naturally, such a condition is found within a unary relationship). For example, a 1:M unary relationship can be expressed by "an EMPLOYEE may manage many EMPLOYEEs, and each EMPLOYEE is managed by one EMPLOYEE". Also, a 1:1 unary relationship may be expressed by "an EMPLOYEE may be married to one and only one other EMPLOYEE". The M:N unary relationship may be expressed by "a COURSE may be a prerequisite to many other COURSEs, and each COURSE may have many other COURSEs as prerequisites".
+
+![recursive relationships](./images/recursive_relationships.png)
+
+The 1:1 and 1:M relationships in unary relationships can be implemented in a single table. The placement of the foreign keys in unary relationships follow the same rules as placing foreign key in binary relationships.
+
+The M:N relationships in unary relationships can be implemented with a linking table as binary relationships.
