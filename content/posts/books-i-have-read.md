@@ -1,4 +1,9 @@
-# 📖 Books I've Read
+---
+title: Books I've Read
+createdOn: 2025-03-31
+updatedOn: 2025-03-31
+tags: ["books"]
+---
 
 Hello! In this blog, I'd like to share some books that have made a strong impression on me. Whether you're a beginner or an experienced developer, I highly recommend them!
 

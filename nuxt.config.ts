@@ -9,5 +9,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
     "@nuxtjs/color-mode",
+    "@nuxt/content",
   ],
 });
