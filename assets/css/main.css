@@ -25,6 +25,7 @@
 
 body {
   background-color: var(--bg-0);
+  transition: all 0.2s ease-in-out;
   color: var(--text-0);
   font-family: "Fira Sans", sans-serif;
   font-size: 1.1rem;
