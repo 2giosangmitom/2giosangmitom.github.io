@@ -10,7 +10,6 @@ defineProps<{
 
 <style scoped>
 .dot {
-  font-size: 1.2em;
   color: var(--accent-color);
 }
 </style>
