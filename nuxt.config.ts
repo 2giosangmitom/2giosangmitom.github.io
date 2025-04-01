@@ -11,4 +11,11 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/color-mode",
   ],
+  content: {
+    database: {
+      type: "d1",
+      bindingName: "content-db",
+    },
+  },
 });
+
