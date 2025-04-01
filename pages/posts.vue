@@ -1,7 +1,10 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData("posts", () =>
-  queryCollection("posts").select("id", "createdOn", "path", "title").all()
+const { data: posts } = await useAsyncData(() =>
+  queryCollection("posts").select("id", "createdOn", "path", "title").all(),
 );
+
+const route = useRoute();
+const isHome = computed(() => route.path === "/posts");
 
 useSeoMeta({
   title: "Posts - Vo Quang Chien",
@@ -9,7 +12,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <section>
+  <section v-if="isHome">
     <h1>Posts</h1>
     <ul>
       <li v-for="post in posts" :key="post.id">
@@ -20,4 +23,5 @@ useSeoMeta({
       </li>
     </ul>
   </section>
+  <NuxtPage v-else />
 </template>
