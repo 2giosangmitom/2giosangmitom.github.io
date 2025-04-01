@@ -25,6 +25,18 @@
 body {
   background-color: var(--bg-0);
   color: var(--text-0);
-  font-family: "Nunito", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 1.1rem;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+/* Global style for h1 tags */
+h1 {
+  font-family: "Fira Mono", monospaces;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
 }

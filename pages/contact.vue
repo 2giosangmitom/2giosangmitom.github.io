@@ -1,6 +1,6 @@
 <template>
-  <section class="contact">
-    <h2>Contact me</h2>
+  <main class="contact">
+    <TheTitle text="contact" />
     <p>Feel free to reach out to me through:</p>
     <ul>
       <li>
@@ -16,5 +16,5 @@
         <a href="https://www.linkedin.com/in/2giosangmitom/">2giosangmitom</a>
       </li>
     </ul>
-  </section>
+  </main>
 </template>

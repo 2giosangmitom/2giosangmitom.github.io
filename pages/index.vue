@@ -14,9 +14,9 @@ const { data: posts } = await useAsyncData("posts", () =>
 
 <template>
   <main class="main">
-    <h1>Welcome!</h1>
+    <TheTitle text="welcome" />
     <p>
-      My name is Võ Quang Chiến, a passionate developer from Vietnam. I have a
+      My name is Vo Quang Chien, a passionate developer from Vietnam. I have a
       deep passion for full-stack web development, network programming, and
       system programming. I enjoy working with Linux, and building efficient
       applications. I also love ricing and tinkering!
@@ -39,3 +39,6 @@ const { data: posts } = await useAsyncData("posts", () =>
     </div>
   </main>
 </template>
+
+<style scoped>
+</style>

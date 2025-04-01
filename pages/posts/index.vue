@@ -9,8 +9,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <section>
-    <h1>Posts</h1>
+  <main class="posts">
+    <TheTitle text="posts" />
     <ul>
       <li v-for="post in posts" :key="post.id">
         <span>
@@ -21,5 +21,5 @@ useSeoMeta({
         <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
       </li>
     </ul>
-  </section>
+  </main>
 </template>

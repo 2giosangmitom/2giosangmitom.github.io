@@ -24,8 +24,8 @@ const tags = computed(() => {
 </script>
 
 <template>
-  <section>
-    <h1>Tags</h1>
+  <main class="tags">
+    <TheTitle text="tags" />
     <ul>
       <li v-for="item in tags" :key="item">
         <NuxtLink :to="{ name: 'tags-tag', params: { tag: item } }">
@@ -33,5 +33,5 @@ const tags = computed(() => {
         </NuxtLink>
       </li>
     </ul>
-  </section>
+  </main>
 </template>
