@@ -809,3 +809,4 @@ As you just learned, a recursive relationship is one in which a relationship can
 The 1:1 and 1:M relationships in unary relationships can be implemented in a single table. The placement of the foreign keys in unary relationships follow the same rules as placing foreign key in binary relationships.
 
 The M:N relationships in unary relationships can be implemented with a linking table as binary relationships.
+

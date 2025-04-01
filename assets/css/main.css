@@ -7,3 +7,24 @@
 :root {
   --main-color: #ef5350;
 }
+
+:root.light-mode {
+  --text-0: #212121;
+  --text-1: #666666;
+  --bg-0: #ffffff;
+  --bg-1: #e6e6e6;
+}
+
+:root.dark-mode {
+  --text-0: #f0f0f0;
+  --text-1: #ababab;
+  --bg-0: #121212;
+  --bg-1: #1f1f1f;
+}
+
+body {
+  background-color: var(--bg-0);
+  color: var(--text-0);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+}
