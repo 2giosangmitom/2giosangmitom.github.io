@@ -1,10 +1,7 @@
 <script setup lang="ts">
 const { data: posts } = await useAsyncData("posts", () =>
-  queryCollection("posts").select("tags").all()
+  queryCollection("posts").select("tags").all(),
 );
-
-const route = useRoute();
-const isHome = computed(() => route.path === "/tags");
 
 // Get all unique tags from all blog posts
 const tags = computed(() => {
@@ -27,7 +24,7 @@ const tags = computed(() => {
 </script>
 
 <template>
-  <section v-if="isHome">
+  <section>
     <h1>Tags</h1>
     <ul>
       <li v-for="item in tags" :key="item">
@@ -37,5 +34,4 @@ const tags = computed(() => {
       </li>
     </ul>
   </section>
-  <NuxtPage v-else />
 </template>

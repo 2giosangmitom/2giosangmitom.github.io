@@ -10,6 +10,7 @@
     <nav class="header__nav">
       <NuxtLink to="/posts">posts</NuxtLink>
       <NuxtLink to="/tags">tags</NuxtLink>
+      <NuxtLink to="/contact">contact</NuxtLink>
     </nav>
   </header>
 </template>

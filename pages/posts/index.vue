@@ -3,16 +3,13 @@ const { data: posts } = await useAsyncData(() =>
   queryCollection("posts").select("id", "createdOn", "path", "title").all(),
 );
 
-const route = useRoute();
-const isHome = computed(() => route.path === "/posts");
-
 useSeoMeta({
   title: "Posts - Vo Quang Chien",
 });
 </script>
 
 <template>
-  <section v-if="isHome">
+  <section>
     <h1>Posts</h1>
     <ul>
       <li v-for="post in posts" :key="post.id">
@@ -23,5 +20,4 @@ useSeoMeta({
       </li>
     </ul>
   </section>
-  <NuxtPage v-else />
 </template>
