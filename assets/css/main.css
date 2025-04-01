@@ -6,6 +6,7 @@
 
 :root {
   --accent-color: #ef5350;
+  --header-font: "Fira Mono", monospaces;
 }
 
 :root.light-mode {
@@ -33,10 +34,29 @@ main {
   margin-top: 5rem;
 }
 
-/* Global style for h1 tags */
 h1 {
-  font-family: "Fira Mono", monospaces;
-  font-size: 2rem;
+  font-family: var(--header-font);
+  font-size: 2.2rem;
   position: relative;
   margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: var(--header-font);
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  line-height: 25px;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }

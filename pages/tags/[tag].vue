@@ -12,8 +12,8 @@ const filteredPosts = posts.value?.filter((v) => v.tags.includes(tag));
 </script>
 
 <template>
-  <section>
-    <h1>Entries tagged :: {{ tag }}</h1>
+  <main>
+    <TheTitle :text="`Entries tagged :: ${tag}`" />
     <ul>
       <li v-for="post in filteredPosts" :key="post.id">
         <span>
@@ -24,5 +24,5 @@ const filteredPosts = posts.value?.filter((v) => v.tags.includes(tag));
         <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
       </li>
     </ul>
-  </section>
+  </main>
 </template>

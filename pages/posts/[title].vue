@@ -10,7 +10,7 @@ if (data.value) {
 </script>
 
 <template>
-  <div v-if="data">
+  <main v-if="data">
     <h1>{{ data.title }}</h1>
     <p>
       Posted on
@@ -26,6 +26,6 @@ if (data.value) {
       >
     </p>
     <ContentRenderer :value="data" />
-  </div>
-  <div v-else>Page not found</div>
+  </main>
+  <main v-else>Page not found</main>
 </template>

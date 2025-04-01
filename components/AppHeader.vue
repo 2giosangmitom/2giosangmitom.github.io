@@ -72,6 +72,7 @@ const handleSwitchColorMode = () => {
 .header__left > a:first-child {
   position: relative;
   overflow: hidden;
+  text-wrap-mode: nowrap;
 }
 
 .header__left a:last-child {
