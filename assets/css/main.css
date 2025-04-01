@@ -5,7 +5,7 @@
 }
 
 :root {
-  --main-color: #ef5350;
+  --accent-color: #ef5350;
 }
 
 :root.light-mode {

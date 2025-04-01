@@ -1,5 +1,5 @@
 ---
-title: Books I've Read - Vo Quang Chien
+title: Books I've Read
 createdOn: 2025-03-31
 updatedOn: 2025-03-31
 tags: ["books"]
