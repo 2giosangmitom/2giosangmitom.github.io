@@ -17,7 +17,7 @@ const { data: post } = await useAsyncData(() =>
       <NuxtLink
         v-for="item in post.tags"
         :key="post.id"
-        :href="`tags/${item}`"
+        :to="`/tags/${item}`"
         >{{ item }}</NuxtLink
       >
     </p>
