@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: posts } = await useAsyncData("posts", () =>
-  queryCollection("posts").all()
+  queryCollection("posts").select("id", "createdOn", "path", "title").all()
 );
 
 useSeoMeta({

@@ -20,6 +20,7 @@ useSeoMeta({
   </main>
 
   <section class="contact">
+    <h2>Contact me</h2>
     <p>Feel free to reach out to me through:</p>
     <ul>
       <li>

@@ -1,27 +1,27 @@
 <script setup lang="ts">
 const route = useRoute();
-const { data: post } = await useAsyncData(() =>
+const { data } = await useAsyncData(route.path, () =>
   queryCollection("posts").path(route.path).first()
 );
 </script>
 
 <template>
-  <div v-if="post">
-    <h1>{{ post.title }}</h1>
+  <div v-if="data">
+    <h1>{{ data.title }}</h1>
     <p>
       Posted on
-      {{ new Intl.DateTimeFormat("en-ca").format(new Date(post.createdOn)) }}
+      {{ new Intl.DateTimeFormat("en-ca").format(new Date(data.createdOn)) }}
     </p>
     <p>
       Tags:
       <NuxtLink
-        v-for="item in post.tags"
-        :key="post.id"
-        :to="`/tags/${item}`"
+        v-for="item in data.tags"
+        :key="item"
+        :to="{ name: 'tags-tag', params: { tag: item } }"
         >{{ item }}</NuxtLink
       >
     </p>
-    <ContentRenderer :value="post" />
+    <ContentRenderer :value="data" />
   </div>
   <div v-else>Page not found</div>
 </template>

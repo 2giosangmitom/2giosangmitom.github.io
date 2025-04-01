@@ -1,15 +1,15 @@
 <template>
   <header class="header">
     <div>
-      <NuxtLink href="/">2giosangmitom</NuxtLink>
-      <a href="https://github.com/2giosangmitom" target="_blank">
+      <NuxtLink to="/">2giosangmitom</NuxtLink>
+      <NuxtLink to="https://github.com/2giosangmitom" target="_blank">
         <Icon name="mdi:github" />
-      </a>
+      </NuxtLink>
     </div>
 
     <nav class="header__nav">
-      <NuxtLink href="/posts">posts</NuxtLink>
-      <NuxtLink href="/tags">tags</NuxtLink>
+      <NuxtLink to="/posts">posts</NuxtLink>
+      <NuxtLink to="/tags">tags</NuxtLink>
     </nav>
   </header>
 </template>
