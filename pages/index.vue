@@ -2,6 +2,14 @@
 useSeoMeta({
   title: "Vo Quang Chien",
 });
+
+const { data: posts } = await useAsyncData("posts", () =>
+  queryCollection("posts")
+    .select("id", "updatedOn", "title", "path")
+    .order("updatedOn", "DESC")
+    .limit(10)
+    .all(),
+);
 </script>
 
 <template>
@@ -16,6 +24,18 @@ useSeoMeta({
     <p>My primary languages are C++, Java and JavaScript.</p>
     <p>My editor is Neovim, and I do everything in the terminal.</p>
 
-    <!-- TODO: Fetch latest blog posts here -->
+    <div>
+      <h2>Recently updated</h2>
+      <ul>
+        <li v-for="post in posts" :key="post.id">
+          <span>
+            {{
+              new Intl.DateTimeFormat("en-ca").format(new Date(post.updatedOn))
+            }}
+          </span>
+          <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
+        </li>
+      </ul>
+    </div>
   </main>
 </template>
