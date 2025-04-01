@@ -17,5 +17,7 @@ export default defineNuxtConfig({
       bindingName: "content-db",
     },
   },
+  hub: {
+    database: true,
+  },
 });
-
