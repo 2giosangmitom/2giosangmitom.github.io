@@ -15,12 +15,15 @@ const filteredPosts = computed(() => {
   }
   return posts.value.filter((v) => v.tags.includes(tag));
 });
+
+useSeoMeta({
+  title: `Entries tagged :: ${tag}`,
+});
 </script>
 
 <template>
   <div>
-    <TheTitle :text="`Entries tagged :: ${tag}`" />
-
+    <TheTitle :text="`Entries tagged :: ${tag}`" class="mb-2" />
     <ul>
       <li v-for="post in filteredPosts" :key="post.id">
         <ThePost
