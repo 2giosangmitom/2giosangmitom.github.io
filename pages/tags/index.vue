@@ -1,37 +1,45 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData("posts", () =>
-  queryCollection("posts").select("tags").all(),
+const { data: posts } = await useAsyncData("all-tags", () =>
+  queryCollection("posts").select("tags").all()
 );
 
-// Get all unique tags from all blog posts
 const tags = computed(() => {
   if (!posts.value) {
-    return [];
+    return null;
   }
 
-  let result = new Set<string>();
+  const result = new Map<string, number>();
 
-  posts.value.forEach((post) => {
-    post.tags.forEach((tag) => {
-      if (!result.has(tag)) {
-        result.add(tag);
+  for (const post of posts.value) {
+    for (const tag of post.tags) {
+      const currentValue = result.get(tag);
+      if (!currentValue) {
+        result.set(tag, 1);
+      } else {
+        result.set(tag, currentValue + 1);
       }
-    });
-  });
+    }
+  }
 
   return result;
 });
 </script>
 
 <template>
-  <main class="tags">
-    <TheTitle text="tags" />
+  <div>
+    <TheTitle text="tags" class="mb-2" />
     <ul>
-      <li v-for="item in tags" :key="item">
-        <NuxtLink :to="{ name: 'tags-tag', params: { tag: item } }">
-          {{ item }}
-        </NuxtLink>
+      <li v-for="tag of tags?.keys()" :key="tag">
+        <UButton
+          :to="{ name: 'tags-tag', params: { tag } }"
+          icon="mdi:tag-text"
+          variant="link"
+          color="neutral"
+          size="xl"
+        >
+          {{ tag }} ({{ tags?.get(tag) }} posts)
+        </UButton>
       </li>
     </ul>
-  </main>
+  </div>
 </template>

@@ -1,22 +1,9 @@
 <template>
-  <div class="wrapper">
-    <AppHeader />
-    <div class="content">
-      <slot />
+  <UApp>
+    <div class="mx-4 sm:mx-auto sm:max-w-[600px] flex flex-col min-h-dvh">
+      <TheHeader class="mt-10" />
+      <NuxtPage class="flex-1/2 mt-10" />
+      <TheFooter class="mb-4" />
     </div>
-    <AppFooter />
-  </div>
+  </UApp>
 </template>
-
-<style scoped>
-.wrapper {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content {
-  flex: 1;
-}
-</style>

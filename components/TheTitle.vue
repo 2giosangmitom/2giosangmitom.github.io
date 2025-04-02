@@ -5,11 +5,5 @@ defineProps<{
 </script>
 
 <template>
-  <h1>{{ text }}<span class="dot">.</span></h1>
+  <h1 class="text-3xl">{{ text }}<span class="text-accent">.</span></h1>
 </template>
-
-<style scoped>
-.dot {
-  color: var(--accent-color);
-}
-</style>
