@@ -12,7 +12,9 @@ const isDark = computed({
 </script>
 
 <template>
-  <header class="flex flex-col items-center text-xl">
+  <header
+    class="flex flex-col items-center text-xl sm:flex-row sm:justify-between"
+  >
     <div class="flex items-center gap-x-2">
       <NuxtLink
         to="/"
@@ -25,6 +27,13 @@ const isDark = computed({
         class="flex items-center justify-center hover:bg-accent transition-colors"
       >
         <Icon name="mdi:github" />
+      </NuxtLink>
+      <NuxtLink
+        to="https://www.youtube.com/@2giosangmitom"
+        target="_blank"
+        class="flex items-center justify-center hover:bg-accent transition-colors"
+      >
+        <Icon name="mdi:youtube" />
       </NuxtLink>
     </div>
 
