@@ -1,3 +1,3 @@
 <template>
-  <div>Hello cuc cut</div>
+  <div>Render post page</div>
 </template>

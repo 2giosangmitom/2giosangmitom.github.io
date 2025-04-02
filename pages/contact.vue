@@ -1,3 +1,3 @@
 <template>
-  <div>Hello cuc cut</div>
+  <div>Contact page</div>
 </template>

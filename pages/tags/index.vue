@@ -31,6 +31,7 @@ const tags = computed(() => {
     <ul>
       <li v-for="tag of tags?.keys()" :key="tag">
         <UButton
+          class="p-0"
           :to="{ name: 'tags-tag', params: { tag } }"
           icon="mdi:tag-text"
           variant="link"

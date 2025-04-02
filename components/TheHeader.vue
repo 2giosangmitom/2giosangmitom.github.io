@@ -19,14 +19,13 @@ const isDark = computed({
         class="relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10"
         >2giosangmitom</NuxtLink
       >
-      <UButton
-        size="xl"
+      <NuxtLink
         to="https://github.com/2giosangmitom"
-        color="neutral"
-        variant="link"
         target="_blank"
-        icon="mdi:github"
-      />
+        class="flex items-center justify-center hover:bg-accent transition-colors"
+      >
+        <Icon name="mdi:github" />
+      </NuxtLink>
     </div>
 
     <div class="flex gap-x-2">
@@ -53,13 +52,12 @@ const isDark = computed({
         >
       </nav>
       <ClientOnly v-if="!colorMode?.forced">
-        <UButton
-          size="xl"
-          :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
-          color="neutral"
-          variant="ghost"
+        <span
+          class="flex items-center justify-center cursor-pointer"
           @click="isDark = !isDark"
-        />
+        >
+          <Icon :name="isDark ? 'i-lucide-moon' : 'i-lucide-sun'" />
+        </span>
       </ClientOnly>
     </div>
   </header>
