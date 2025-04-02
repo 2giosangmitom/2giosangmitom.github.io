@@ -23,4 +23,7 @@ export default defineNuxtConfig({
   hub: {
     database: true,
   },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
 });

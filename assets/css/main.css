@@ -9,3 +9,23 @@
 .dark {
   --ui-bg: #121212;
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  filter: blur(1rem);
+  transform: translateY(10px) scale(0.98);
+}
+
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+  transform: translateY(-10px) scale(1.02);
+}
