@@ -8,8 +8,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="grid grid-cols-[120px_20px_1fr]">
-    <div class="text-gray-500">
+  <div class="flex items-start gap-4 py-2 border-b border-zinc-800">
+    <div class="text-gray-500 min-w-[90px]">
       {{
         dateFormat(date, "en-CA", {
           year: "numeric",
@@ -18,18 +18,23 @@ defineProps<{
         })
       }}
     </div>
-    <div class="text-accent">#</div>
-    <div class="flex justify-between items-center">
+
+    <div class="text-accent font-bold w-5">#</div>
+
+    <div class="flex flex-wrap justify-between items-center w-full">
       <ULink
         raw
-        class="hover:text-accent transition-colors after:transition-all relative after:h-0.5 after:absolute after:bottom-0 after:w-0 after:left-0 after:bg-accent hover:after:w-full"
+        class="relative text-text-0 hover:text-accent transition-colors inline-block border-b-2 border-transparent hover:border-accent"
         :to="path"
       >
         {{ title }}
       </ULink>
-      <span class="text-gray-500">
-        {{ tags.map((v) => `#${v}`).join(" ") }}
-      </span>
+
+      <div class="text-gray-500 text-sm">
+        <span v-for="(tag, index) in tags" :key="index" class="mr-2">
+          #{{ tag }}
+        </span>
+      </div>
     </div>
   </div>
 </template>

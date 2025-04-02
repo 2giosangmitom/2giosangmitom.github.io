@@ -31,6 +31,8 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.34",
+    "@iconify-json/mdi": "^1.2.3",
     "prettier": "^3.5.3",
     "wrangler": "^4.6.0"
   },
