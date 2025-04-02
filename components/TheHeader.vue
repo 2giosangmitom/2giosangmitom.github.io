@@ -9,6 +9,9 @@ const isDark = computed({
     colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
   },
 });
+
+const underlineAnimation =
+  "relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10";
 </script>
 
 <template>
@@ -16,11 +19,7 @@ const isDark = computed({
     class="flex flex-col items-center text-xl sm:flex-row sm:justify-between"
   >
     <div class="flex items-center gap-x-2">
-      <NuxtLink
-        to="/"
-        class="relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10"
-        >2giosangmitom</NuxtLink
-      >
+      <NuxtLink to="/" :class="underlineAnimation">2giosangmitom</NuxtLink>
       <NuxtLink
         to="https://github.com/2giosangmitom"
         target="_blank"
@@ -39,26 +38,10 @@ const isDark = computed({
 
     <div class="flex gap-x-2">
       <nav class="flex gap-x-2 text-nowrap">
-        <NuxtLink
-          to="/posts"
-          class="relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10"
-          >/posts</NuxtLink
-        >
-        <NuxtLink
-          to="/tags"
-          class="relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10"
-          >/tags</NuxtLink
-        >
-        <NuxtLink
-          to="/about"
-          class="relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10"
-          >/about</NuxtLink
-        >
-        <NuxtLink
-          to="/contact"
-          class="relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10"
-          >/contact</NuxtLink
-        >
+        <NuxtLink to="/posts" :class="underlineAnimation">/posts</NuxtLink>
+        <NuxtLink to="/tags" :class="underlineAnimation">/tags</NuxtLink>
+        <NuxtLink to="/about" :class="underlineAnimation">/about</NuxtLink>
+        <NuxtLink to="/contact" :class="underlineAnimation">/contact</NuxtLink>
       </nav>
       <ClientOnly v-if="!colorMode?.forced">
         <span

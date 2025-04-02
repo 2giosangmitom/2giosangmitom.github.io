@@ -30,9 +30,11 @@ const { data: posts } = await useAsyncData("recently-updated-posts", () =>
         Vo Quang Chien</ULink
       >, a passionate developer from Vietnam. I have a deep passion for
       full-stack web development, network programming, and system programming. I
-      enjoy working with Linux, and building high-performance systems. I also
+      enjoy working with Linux, and building high performance systems. I also
       love ricing and tinkering!
     </p>
+    <p class="mt-2">My primary languages are C, C++, Java and JavaScript.</p>
+    <p class="mt-2">My editor is Neovim, and I do everything in the terminal.</p>
 
     <h2 class="text-2xl mt-4">recently updated posts</h2>
     <ul class="mt-2">
