@@ -3,6 +3,7 @@ defineProps<{
   date: Date;
   title: string;
   path: string;
+  tags: string[];
 }>();
 </script>
 
@@ -12,7 +13,7 @@ defineProps<{
       {{ new Intl.DateTimeFormat("en-ca").format(date) }}
     </div>
     <div class="text-accent">#</div>
-    <div>
+    <div class="flex justify-between items-center">
       <ULink
         raw
         class="hover:text-accent transition-colors after:transition-all relative after:h-0.5 after:absolute after:bottom-0 after:w-0 after:left-0 after:bg-accent hover:after:w-full"
@@ -20,6 +21,9 @@ defineProps<{
       >
         {{ title }}
       </ULink>
+      <span class="text-gray-500">
+        {{ tags.map((v) => `#${v}`).join(" ") }}
+      </span>
     </div>
   </div>
 </template>

@@ -10,7 +10,7 @@ useSeoMeta({
 
 const { data: posts } = await useAsyncData("recently-updated-posts", () =>
   queryCollection("posts")
-    .select("id", "updatedOn", "title", "path")
+    .select("id", "updatedOn", "title", "path", "tags")
     .order("updatedOn", "DESC")
     .limit(4)
     .all()
@@ -40,6 +40,7 @@ const { data: posts } = await useAsyncData("recently-updated-posts", () =>
           :date="new Date(post.updatedOn)"
           :title="post.title"
           :path="post.path"
+          :tags="post.tags"
         />
       </li>
     </ul>

@@ -20,6 +20,7 @@ const { data: posts } = await useAsyncData("all-posts", () =>
           :date="new Date(post.createdOn)"
           :title="post.title"
           :path="post.path"
+          :tags="post.tags"
         />
       </li>
     </ul>

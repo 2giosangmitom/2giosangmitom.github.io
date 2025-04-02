@@ -27,6 +27,7 @@ const filteredPosts = computed(() => {
           :date="new Date(post.createdOn)"
           :title="post.title"
           :path="post.path"
+          :tags="post.tags"
         />
       </li>
     </ul>
