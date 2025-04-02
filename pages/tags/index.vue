@@ -1,6 +1,13 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData("all-tags", () =>
-  queryCollection("posts").select("tags").all()
+useSeoMeta({
+  title: "Tags",
+});
+
+const { data: posts } = await useAsyncData("all-posts", () =>
+  queryCollection("posts")
+    .select("id", "createdOn", "path", "title", "tags")
+    .order("createdOn", "DESC")
+    .all()
 );
 
 const tags = computed(() => {
@@ -30,16 +37,14 @@ const tags = computed(() => {
     <TheTitle text="tags" class="mb-2" />
     <ul>
       <li v-for="tag of tags?.keys()" :key="tag">
-        <UButton
-          class="p-0"
+        <NuxtLink
           :to="{ name: 'tags-tag', params: { tag } }"
-          icon="mdi:tag-text"
-          variant="link"
-          color="neutral"
-          size="xl"
+          class="inline-flex items-center relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10"
         >
-          {{ tag }} ({{ tags?.get(tag) }} posts)
-        </UButton>
+          <Icon name="mdi:tag-text" class="mr-0.5" />
+          {{ tag }}
+          ({{ tags?.get(tag) }} posts)
+        </NuxtLink>
       </li>
     </ul>
   </div>

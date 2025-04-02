@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t-accent border-dashed border-t-[1px] pt-4">
+  <footer class="border-t-accent border-dashed border-t-[1px] pt-4 mt-10">
     <p class="text-center">
       &copy; 2024-2025 Vo Quang Chien. Made with ❤️ using
       <ULink

@@ -1,10 +1,13 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "Posts - Vo Quang Chien",
+  title: "Posts",
 });
 
 const { data: posts } = await useAsyncData("all-posts", () =>
-  queryCollection("posts").select("id", "createdOn", "path", "title", "tags").all()
+  queryCollection("posts")
+    .select("id", "createdOn", "path", "title", "tags")
+    .order("createdOn", "DESC")
+    .all()
 );
 </script>
 

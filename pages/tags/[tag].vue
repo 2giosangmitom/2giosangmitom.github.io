@@ -5,6 +5,7 @@ const tag = route.params.tag as string;
 const { data: posts } = await useAsyncData("all-posts", () =>
   queryCollection("posts")
     .select("id", "createdOn", "path", "title", "tags")
+    .order("createdOn", "DESC")
     .all()
 );
 
