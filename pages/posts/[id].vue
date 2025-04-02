@@ -5,13 +5,14 @@ const { data: post } = await useAsyncData(postId, () =>
   queryCollection("posts").path(route.path).first()
 );
 
-if (post.value) {
-  useSeoMeta(post.value.seo);
-} else {
-  useSeoMeta({
-    title: "404 Not Found",
+if (!post.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Page not found",
   });
 }
+
+useSeoMeta(post.value.seo);
 </script>
 
 <template>
@@ -34,25 +35,22 @@ if (post.value) {
           v-for="tag in post.tags"
           :key="tag"
           :to="{ name: 'tags-tag', params: { tag } }"
-          class="inline-flex items-center relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10"
+          class="inline-flex items-center relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10 hover:text-black"
         >
           <Icon name="mdi:tag-text" class="mr-0.5" />{{ tag }}
         </NuxtLink>
       </div>
     </div>
-    <ContentRenderer :value="post" :prose="true" />
+    <ContentRenderer :value="post" />
     <p class="text-gray-500 mt-5 text-right">
       Last update:
-      {{ new Intl.DateTimeFormat("en-ca").format(new Date(post.updatedOn)) }}
+      {{
+        dateFormat(new Date(post.updatedOn), "en-CA", {
+          year: "numeric",
+          month: "short",
+          day: "2-digit",
+        })
+      }}
     </p>
-  </div>
-  <div v-else>
-    <div class="text-center">
-      <h1 class="text-3xl mb-4">Page Not Found</h1>
-      <p>Oops! The content you're looking for doesn't exist.</p>
-      <UButton to="/" class="mt-2 bg-accent hover:bg-red-400"
-        >Go back home</UButton
-      >
-    </div>
   </div>
 </template>
