@@ -26,7 +26,8 @@ const { data: posts } = await useAsyncData("recently-updated-posts", () =>
         raw
         to="/about"
         class="underline decoration-dotted transition-colors hover:text-accent"
-        >Vo Quang Chien</ULink
+      >
+        Vo Quang Chien</ULink
       >, a passionate developer from Vietnam. I have a deep passion for
       full-stack web development, network programming, and system programming. I
       enjoy working with Linux, and building high-performance systems. I also

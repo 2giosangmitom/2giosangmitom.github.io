@@ -10,7 +10,13 @@ defineProps<{
 <template>
   <div class="grid grid-cols-[120px_20px_1fr]">
     <div class="text-gray-500">
-      {{ new Intl.DateTimeFormat("en-ca").format(date) }}
+      {{
+        dateFormat(date, "en-CA", {
+          year: "numeric",
+          month: "short",
+          day: "2-digit",
+        })
+      }}
     </div>
     <div class="text-accent">#</div>
     <div class="flex justify-between items-center">
