@@ -1,5 +1,5 @@
 ---
-title: Books I've Read
+title: Some books I have read
 createdOn: 2025-03-31
 updatedOn: 2025-04-01
 tags: ["books"]
@@ -26,7 +26,7 @@ This book provides a **comprehensive introduction** to database concepts, relati
 
 ## 💻 Programming Books
 
-### **The C++ Programming Language (4th Edition)**
+### The C++ Programming Language (4th Edition)
 
 📖 _By Bjarne Stroustrup_
 
