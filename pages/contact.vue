@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheTitle text="Contact Me" class="mb-4" />
+    <TheTitle text="contact me" class="mb-4" />
     <p>Feel free to reach out via email or LinkedIn.</p>
 
     <ul class="mt-4 space-y-2">

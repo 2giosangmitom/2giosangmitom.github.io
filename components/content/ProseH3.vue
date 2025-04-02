@@ -5,7 +5,7 @@ const props = defineProps<{ id?: string }>();
 <template>
   <h2
     :id="props.id"
-    class="text-2xl my-1 before:content-['##'] before:mr-2 before:text-accent"
+    class="text-xl my-1 before:content-['###'] before:mr-2 before:text-accent"
   >
     <ULink
       raw

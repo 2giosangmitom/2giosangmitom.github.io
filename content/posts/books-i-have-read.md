@@ -22,7 +22,7 @@ This book provides a **comprehensive introduction** to database concepts, relati
 - Explains **normalization and database design** in an detailed and easy to understand manner.
 - Includes **real-world examples and exercises** to reinforce concepts.
 
-🔗 [Buy on Amazon](https://www.amazon.com/Database-Systems-Implementation-Management-MindTap/dp/0357673034/?_encoding=UTF8&pd_rd_w=ACmsw&content-id=amzn1.sym.bc3ba8d1-5076-4ab7-9ba8-a5c6211e002d&pf_rd_p=bc3ba8d1-5076-4ab7-9ba8-a5c6211e002d&pf_rd_r=137-2961708-2105107&pd_rd_wg=XSoMV&pd_rd_r=1b14b74f-119a-4db3-9054-ff880432ab6b&ref_=aufs_ap_sc_dsk)
+[🔗 Buy on Amazon](https://www.amazon.com/Database-Systems-Implementation-Management-MindTap/dp/0357673034/?_encoding=UTF8&pd_rd_w=ACmsw&content-id=amzn1.sym.bc3ba8d1-5076-4ab7-9ba8-a5c6211e002d&pf_rd_p=bc3ba8d1-5076-4ab7-9ba8-a5c6211e002d&pf_rd_r=137-2961708-2105107&pd_rd_wg=XSoMV&pd_rd_r=1b14b74f-119a-4db3-9054-ff880432ab6b&ref_=aufs_ap_sc_dsk)
 
 ## 💻 Programming Books
 
@@ -38,7 +38,7 @@ Written by the **creator of C++**, this book is the **definitive guide** to mast
 - Covers **modern C++ (C++11 and later)** in depth.
 - Explains **best practices and language philosophy**, not just syntax.
 
-🔗 [Buy on Amazon](https://www.amazon.com/Programming-Language-hardcover-4th/dp/0321958322/ref=sr_1_4?crid=RJNOHH0NES16&dib=eyJ2IjoiMSJ9.xERCOf1U1yrjnpD-x9WOJoLeotAubjXCLwx9N-mczwOjEhvKP3Pk6qv895m_hpbEx_zjdOo_vdX69RNdGMcVlo1TbHpnf7aTX-2gdgqKAr2DLEJYdmaVh4NpsncOImbzsZiX_GWpxxJzDBVs3AodwQrNBFlhw-HxvcwUHqX9uN7tFAlU048-Hq6cS7TVLrG7saD8ykiIMoxZKt2tbmkjxJ_HnorHR22HhOCrhGgIDVFkppUmx88yG_SUJX2vUsAzjRV-jDghSveZVgqlz3_vO143yFFimLN69DB1xmgVQqDF4Q9xaKjYs0cDtIeCDOtRN1c30JdIHQQMZ3uQ0ZNCL9L-ZQFpifNHbaFAbWO4nHg.YW-euJgUcnO89HOC-ONuqcmXQiQuz19q0ZmiUTvW9fk&dib_tag=se&keywords=C%2B%2B&qid=1742562904&s=books&sprefix=c%2B%2B%2Cstripbooks%2C427&sr=1-4)
+[🔗 Buy on Amazon](https://www.amazon.com/Programming-Language-hardcover-4th/dp/0321958322/ref=sr_1_4?crid=RJNOHH0NES16&dib=eyJ2IjoiMSJ9.xERCOf1U1yrjnpD-x9WOJoLeotAubjXCLwx9N-mczwOjEhvKP3Pk6qv895m_hpbEx_zjdOo_vdX69RNdGMcVlo1TbHpnf7aTX-2gdgqKAr2DLEJYdmaVh4NpsncOImbzsZiX_GWpxxJzDBVs3AodwQrNBFlhw-HxvcwUHqX9uN7tFAlU048-Hq6cS7TVLrG7saD8ykiIMoxZKt2tbmkjxJ_HnorHR22HhOCrhGgIDVFkppUmx88yG_SUJX2vUsAzjRV-jDghSveZVgqlz3_vO143yFFimLN69DB1xmgVQqDF4Q9xaKjYs0cDtIeCDOtRN1c30JdIHQQMZ3uQ0ZNCL9L-ZQFpifNHbaFAbWO4nHg.YW-euJgUcnO89HOC-ONuqcmXQiQuz19q0ZmiUTvW9fk&dib_tag=se&keywords=C%2B%2B&qid=1742562904&s=books&sprefix=c%2B%2B%2Cstripbooks%2C427&sr=1-4)
 
 ### JavaScript: The Definitive Guide (7th Edition)
 
@@ -52,4 +52,4 @@ This is one of the most comprehensive books for mastering JavaScript. It covers 
 - Provides in-depth explanations with clear examples
 - Beginner-friendly yet valuable for experienced developers
 
-🔗 [Buy on Amazon](https://www.amazon.com/dp/1491952024/?bestFormat=true&k=javascript%20the%20definitive%20guide&ref_=nb_sb_ss_w_scx-ent-pd-bk-d_de_k1_1_15&crid=JFRET4AMQZWC&sprefix=javascript%20the%20)
+[🔗 Buy on Amazon](https://www.amazon.com/dp/1491952024/?bestFormat=true&k=javascript%20the%20definitive%20guide&ref_=nb_sb_ss_w_scx-ent-pd-bk-d_de_k1_1_15&crid=JFRET4AMQZWC&sprefix=javascript%20the%20)
