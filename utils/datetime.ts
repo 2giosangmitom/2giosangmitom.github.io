@@ -4,7 +4,7 @@
 export function dateFormat(
   date: Date,
   locale: Intl.LocalesArgument,
-  options: Intl.DateTimeFormatOptions
+  options: Intl.DateTimeFormatOptions,
 ): string {
   const i18n = new Intl.DateTimeFormat(locale, options);
   return i18n.format(date);

@@ -13,7 +13,7 @@ const { data: posts } = await useAsyncData("recently-updated-posts", () =>
     .select("id", "updatedOn", "title", "path", "tags")
     .order("updatedOn", "DESC")
     .limit(4)
-    .all()
+    .all(),
 );
 </script>
 
@@ -34,7 +34,9 @@ const { data: posts } = await useAsyncData("recently-updated-posts", () =>
       love ricing and tinkering!
     </p>
     <p class="mt-2">My primary languages are C, C++, Java and JavaScript.</p>
-    <p class="mt-2">My editor is Neovim, and I do everything in the terminal.</p>
+    <p class="mt-2">
+      My editor is Neovim, and I do everything in the terminal.
+    </p>
 
     <h2 class="text-2xl mt-4">recently updated posts</h2>
     <ul class="mt-2">
