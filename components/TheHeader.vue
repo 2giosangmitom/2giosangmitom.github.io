@@ -43,12 +43,12 @@ const underlineAnimation =
         <NuxtLink to="/about" :class="underlineAnimation">/about</NuxtLink>
         <NuxtLink to="/contact" :class="underlineAnimation">/contact</NuxtLink>
       </nav>
-      <ClientOnly v-if="!colorMode?.forced">
+      <ClientOnly>
         <span
-          class="flex items-center justify-center cursor-pointer"
+          class="flex items-center justify-center cursor-pointer min-w-6"
           @click="isDark = !isDark"
         >
-          <Icon :name="isDark ? 'i-lucide-moon' : 'i-lucide-sun'" />
+          <Icon :name="isDark ? 'i-lucide-moon' : 'i-lucide-sun'" size="20px" />
         </span>
       </ClientOnly>
     </div>

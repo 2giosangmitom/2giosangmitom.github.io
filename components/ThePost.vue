@@ -8,7 +8,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex items-start gap-4 py-2 border-b border-zinc-800">
+  <div
+    class="flex items-start gap-4 py-2 border-b dark:border-zinc-800 border-zinc-200"
+  >
     <div class="text-gray-500 min-w-[90px]">
       {{
         dateFormat(date, "en-CA", {
