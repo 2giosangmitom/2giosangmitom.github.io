@@ -11,7 +11,7 @@ const info = [
 const skills = [
   {
     category: "Programming Languages",
-    items: ["C++", "Java", "JavaScript", "TypeScript", "Typst", "Lua", "Bash"],
+    items: ["C++", "Java", "JavaScript", "TypeScript", "Lua", "Bash"],
   },
   {
     category: "Frontend Development",
