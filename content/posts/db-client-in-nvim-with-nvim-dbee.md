@@ -10,11 +10,14 @@ If you work with databases and love Neovim, you'll appreciate **[nvim-dbee](http
 
 In this post, I'll show you how to set it up and supercharge it with SQL linting and formatting.
 
+![nvim-dbee](/images/db-client-in-nvim-with-nvim-dbee/nvim-dbee.png)
+
 ## Why nvim-dbee?
 
 - **No external CLI needed**: Works directly with databases (PostgreSQL, MySQL, SQLite, etc.).
 - **Docker-friendly**: Ideal if you run databases in containers.
 - **Modern UI**: It has a friendly and easy to use and manage connections.
+- **Auto pagination**: Results are automatically split across pages.
 
 ## Installation
 
@@ -36,9 +39,9 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 For a polished SQL workflow, integrate:
 
-- **[sqlfluff](https://github.com/sqlfluff/sqlfluff)** - A robust SQL linter/formatter.
-- **[nvim-lint](https://github.com/mfussenegger/nvim-lint)** - Real-time linting.
-- **[conform.nvim](https://github.com/stevearc/conform.nvim)** - Auto-formatting.
+- **[sqlfluff](https://github.com/sqlfluff/sqlfluff)** - A modular SQL linter and auto-formatter with support for multiple dialects and templated code.
+- **[nvim-lint](https://github.com/mfussenegger/nvim-lint)** - An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support.
+- **[conform.nvim](https://github.com/stevearc/conform.nvim)** - Lightweight yet powerful formatter plugin for Neovim.
 
 ### Setup
 
@@ -70,6 +73,7 @@ For a polished SQL workflow, integrate:
 }
 ```
 
-## Enjoy it!
+## Enjoy it
 
 Run `:Dbee` in Neovim and connect to your database.
+
