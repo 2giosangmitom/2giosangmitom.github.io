@@ -13,7 +13,7 @@ const { data: posts } = await useAsyncData("all-posts", () =>
 
 <template>
   <div>
-    <TheTitle text="posts" class="mb-2" />
+    <TheTitle class="mb-4">Posts</TheTitle>
     <ul>
       <li v-for="post in posts" :key="post.id">
         <ThePost

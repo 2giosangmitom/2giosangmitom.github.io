@@ -19,7 +19,7 @@ const { data: posts } = await useAsyncData("recently-updated-posts", () =>
 
 <template>
   <div>
-    <TheTitle text="welcome" class="mb-2" />
+    <TheTitle class="mb-4">Welcome</TheTitle>
     <p>
       My name is
       <ULink
@@ -38,7 +38,7 @@ const { data: posts } = await useAsyncData("recently-updated-posts", () =>
       My editor is Neovim, and I do everything in the terminal.
     </p>
 
-    <h2 class="text-2xl mt-4">recently updated posts</h2>
+    <h2 class="text-2xl mt-4">Recently Updated Posts</h2>
     <ul class="mt-2">
       <li v-for="post in posts" :key="post.id">
         <ThePost

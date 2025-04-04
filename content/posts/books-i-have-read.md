@@ -1,9 +1,9 @@
 ---
-title: Some books I have read
-createdOn: 2025-03-31
-updatedOn: 2025-04-01
+title: "Some books I have read"
+createdOn: "2025-03-31"
+updatedOn: "2025-04-01"
 tags: ["books"]
-description: Some books that have made a strong impression on me!
+description: "Some books that have made a strong impression on me!"
 ---
 
 Hello! In this blog, I'd like to share some books that have made a strong impression on me. Whether you're a beginner or an experienced developer, I highly recommend them!

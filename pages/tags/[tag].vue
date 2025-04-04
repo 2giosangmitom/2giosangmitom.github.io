@@ -23,7 +23,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <TheTitle :text="`Entries tagged :: ${tag}`" class="mb-2" />
+    <TheTitle class="mb-2">Entries tagged :: {{ tag }}</TheTitle>
     <ul>
       <li v-for="post in filteredPosts" :key="post.id">
         <ThePost

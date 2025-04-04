@@ -30,7 +30,7 @@ const skills = [
 
 <template>
   <div>
-    <TheTitle text="about me" class="mb-4" />
+    <TheTitle class="mb-4">About Me</TheTitle>
 
     <!-- Personal Info -->
     <h2 class="text-xl font-semibold">Vo Quang Chien</h2>

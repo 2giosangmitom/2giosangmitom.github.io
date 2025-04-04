@@ -17,30 +17,8 @@ useSeoMeta(post.value.seo);
 
 <template>
   <div v-if="post">
-    <TheTitle :text="post.title" class="mb-2" />
-    <div class="flex gap-x-4 items-center mb-5 text-gray-500">
-      <p>
-        Posted on
-        <span class="underline decoration-dotted">{{
-          dateFormat(new Date(post.createdOn), "en-CA", {
-            year: "numeric",
-            month: "short",
-            day: "2-digit",
-          })
-        }}</span>
-      </p>
-      <div class="text-accent">::</div>
-      <div class="flex gap-2 items-center">
-        <NuxtLink
-          v-for="tag in post.tags"
-          :key="tag"
-          :to="{ name: 'tags-tag', params: { tag } }"
-          class="inline-flex items-center relative before:transition-all before:absolute before:w-full before:h-0.5 before:bg-accent before:bottom-0 before:left-0 hover:before:h-full before:-z-10 hover:text-black"
-        >
-          <Icon name="mdi:tag-text" class="mr-0.5" />{{ tag }}
-        </NuxtLink>
-      </div>
-    </div>
+    <TheTitle>{{ post.title }}</TheTitle>
+    <PostMeta :created-on="new Date(post.createdOn)" :tags="post.tags" />
     <ContentRenderer :value="post" />
     <p class="text-gray-500 mt-5 text-right">
       Last update:

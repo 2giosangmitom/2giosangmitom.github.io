@@ -34,7 +34,7 @@ const tags = computed(() => {
 
 <template>
   <div>
-    <TheTitle text="tags" class="mb-2" />
+    <TheTitle class="mb-2">Tags</TheTitle>
     <ul>
       <li v-for="tag of tags?.keys()" :key="tag">
         <NuxtLink
