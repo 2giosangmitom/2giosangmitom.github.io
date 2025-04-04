@@ -19,6 +19,17 @@ export default defineNuxtConfig({
       type: "d1",
       bindingName: "content-db",
     },
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: "github-light",
+            dark: "github-dark",
+          },
+          langs: ["lua"],
+        },
+      },
+    },
   },
   hub: {
     database: true,
