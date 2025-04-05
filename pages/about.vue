@@ -5,6 +5,7 @@ const info = [
   { label: "Pronouns", value: "He/Him" },
   { label: "Nationality", value: "Vietnam" },
   { label: "Human Languages", value: "English, Vietnamese" },
+  { label: "Beer Or Wine?", value: "Beer" },
   { label: "Favorite Beer", value: "Huda" },
 ];
 
