@@ -15,10 +15,6 @@ export default defineNuxtConfig({
     "@nuxthub/core",
   ],
   content: {
-    database: {
-      type: "d1",
-      bindingName: "content-db",
-    },
     build: {
       markdown: {
         highlight: {
