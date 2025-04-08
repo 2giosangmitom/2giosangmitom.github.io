@@ -76,4 +76,3 @@ For a polished SQL workflow, integrate:
 ## Enjoy it
 
 Run `:Dbee` in Neovim and connect to your database.
-
