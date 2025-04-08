@@ -6,6 +6,6 @@ export function dateFormat(
   locale: Intl.LocalesArgument,
   options: Intl.DateTimeFormatOptions,
 ): string {
-  const i18n = new Intl.DateTimeFormat(locale, options);
-  return i18n.format(date);
+  const formatter = new Intl.DateTimeFormat(locale, options);
+  return formatter.format(date);
 }
