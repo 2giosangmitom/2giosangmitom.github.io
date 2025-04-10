@@ -19,12 +19,20 @@ const skills = [
     items: ["Vue.js", "Nuxt.js"],
   },
   {
+    category: "Backend Development",
+    items: ["Node.js", "Fastify", "Express"],
+  },
+  {
     category: "Databases",
-    items: ["MySQL", "SQLite"],
+    items: ["MySQL", "SQLite", "PostgreSQL"],
   },
   {
     category: "Editor",
     items: ["Neovim"],
+  },
+  {
+    category: "Operating System",
+    items: ["Linux"],
   },
 ];
 </script>
