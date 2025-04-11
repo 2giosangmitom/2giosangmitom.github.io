@@ -1,7 +1,7 @@
 <template>
   <UApp>
     <div
-      class="mx-4 sm:mx-auto sm:max-w-[600px] flex flex-col min-h-dvh md:max-w-[800px]"
+      class="mx-4 sm:mx-auto sm:max-w-[600px] flex flex-col min-h-dvh md:max-w-[700px] lg:max-w-[850px]"
     >
       <NuxtLoadingIndicator color="#ef5350" />
       <TheHeader class="mt-10" />
