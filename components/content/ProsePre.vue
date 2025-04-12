@@ -59,7 +59,7 @@ const handleCopy = async () => {
       />
     </div>
     <pre
-      class="dark:bg-zinc-900 border dark:border-zinc-800 bg-zinc-100 border-zinc-300 my-2"
+      class="dark:bg-zinc-900 border dark:border-zinc-800 bg-zinc-100 border-zinc-300 my-2 overflow-auto"
       :class="$props.class"
     ><slot/></pre>
   </div>
