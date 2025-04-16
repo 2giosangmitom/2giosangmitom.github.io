@@ -1,5 +1,11 @@
 <template>
-  <p class="leading-7">
+  <p>
     <slot />
   </p>
 </template>
+
+<style scoped>
+p {
+  line-height: 1.5rem;
+}
+</style>

@@ -1,71 +1,63 @@
 <script setup lang="ts">
-useSeoMeta({ title: "About Me" });
-
-const info = [
-  { label: "Pronouns", value: "He/Him" },
-  { label: "Nationality", value: "Vietnam" },
-  { label: "Human Languages", value: "English, Vietnamese" },
-  { label: "Beer Or Wine?", value: "Beer" },
-  { label: "Favorite Beer", value: "Huda" },
-];
-
-const skills = [
-  {
-    category: "Programming Languages",
-    items: ["C++", "Java", "JavaScript", "TypeScript", "Lua", "Bash"],
-  },
-  {
-    category: "Frontend Development",
-    items: ["Vue.js", "Nuxt.js"],
-  },
-  {
-    category: "Backend Development",
-    items: ["Node.js", "Fastify", "Express"],
-  },
-  {
-    category: "Databases",
-    items: ["MySQL", "SQLite", "PostgreSQL"],
-  },
-  {
-    category: "Editor",
-    items: ["Neovim"],
-  },
-  {
-    category: "Operating System",
-    items: ["Linux"],
-  },
-];
+const { data: author } = await useAsyncData("author", () =>
+  queryCollection("author").first()
+);
 </script>
 
 <template>
-  <div>
-    <TheTitle class="mb-4">About Me</TheTitle>
-
-    <!-- Personal Info -->
-    <h2 class="text-xl font-semibold">Vo Quang Chien</h2>
-    <p class="text-accent mb-2">
-      <em>Always, I&apos;m a newbie...</em>
+  <div v-if="author" class="about">
+    <TheTitle>About me</TheTitle>
+    <h2 class="about__name">{{ author.fullName }}</h2>
+    <p class="about__caption">
+      <em>{{ author.caption }}</em>
     </p>
-    <ul class="ml-5 space-y-1">
-      <li
-        v-for="item in info"
-        :key="item.label"
-        class="relative before:content-['-'] before:absolute before:-left-5 before:text-accent"
-      >
-        <b class="capitalize">{{ item.label }}:</b> {{ item.value }}
+    <!-- Personal -->
+    <ul>
+      <li v-for="item of author.personal" :key="item.label">
+        <strong>{{ item.label }}: </strong>{{ item.value }}
       </li>
     </ul>
-
-    <!-- Professional Skills -->
-    <h2 class="text-xl font-semibold mt-6">Professional Skills</h2>
-    <ul class="ml-5 space-y-1">
-      <li
-        v-for="item in skills"
-        :key="item.category"
-        class="relative before:content-['-'] before:absolute before:-left-5 before:text-accent"
-      >
-        <b>{{ item.category }}:</b> {{ item.items.join(", ") }}
+    <!-- Skills -->
+    <h2 class="about__skills-heading">Professional skills</h2>
+    <ul>
+      <li v-for="item of author.skills" :key="item.category">
+        <strong>{{ item.category }}: </strong>{{ item.items.join(", ") }}
       </li>
     </ul>
   </div>
+  <div v-else>An error occured while fetching author's data</div>
 </template>
+
+<style lang="scss" scoped>
+.about__caption {
+  color: var(--color-sapphire);
+  margin-bottom: 10px;
+}
+
+.about__skills-heading {
+  margin-top: 2rem;
+}
+
+.about__name {
+  margin-top: 10px;
+}
+
+.about h2 {
+  font-size: $text-lg;
+  font-weight: 600;
+}
+
+.about ul {
+  list-style: none;
+
+  li {
+    margin-top: 5px;
+
+    &::before {
+      content: "-";
+      margin-right: 10px;
+      color: var(--color-sapphire);
+    }
+  }
+}
+</style>

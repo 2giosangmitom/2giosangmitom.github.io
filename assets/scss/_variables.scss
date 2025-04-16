@@ -1,0 +1,41 @@
+/* screen sizes */
+$screen-medium: 768px;
+$screen-mediumpp: 900px;
+$screen-wide: 1200px;
+$screen-widepp: 1440px;
+
+/* content width */
+$content-medium: 650px;
+$content-mediumpp: 800px;
+$content-wide: 900px;
+$content-widepp: 1000px;
+
+/* font */
+$font-mono: "JetBrains Mono", monospace;
+$font-sans: "Fira Sans", sans-serif;
+$text-sm: 0.9rem;
+$text-md: 1rem;
+$text-lg: 1.25rem;
+$text-xl: 2rem;
+
+:root {
+  /* colors */
+  --bg-color: #ebefff;
+  --text-color: #4c4f69;
+  --color-pink: 234, 118, 203;
+  --color-sapphire: #209fb5;
+  --color-red: #d20f39;
+  --color-mantle: #e6e9ef;
+  --color-mauve: 136, 57, 239;
+}
+
+:root.dark-mode {
+  /* colors */
+  --bg-color: #121212;
+  --text-color: #cdd6f4;
+  --color-pink: 245, 194, 231;
+  --color-sapphire: #74c7ec;
+  --color-red: #f38ba8;
+  --color-mantle: #181825;
+  --color-mauve: 203, 166, 247;
+}

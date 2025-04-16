@@ -1,20 +1,16 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: "Posts",
-});
-
 const { data: posts } = await useAsyncData("all-posts", () =>
   queryCollection("posts")
     .select("id", "createdOn", "path", "title", "tags")
     .order("createdOn", "DESC")
-    .all(),
+    .all()
 );
 </script>
 
 <template>
-  <div>
-    <TheTitle class="mb-4">Posts</TheTitle>
-    <ul>
+  <div class="posts">
+    <TheTitle>Posts</TheTitle>
+    <ul class="posts__list">
       <li v-for="post in posts" :key="post.id">
         <ThePost
           :date="new Date(post.createdOn)"
@@ -26,3 +22,13 @@ const { data: posts } = await useAsyncData("all-posts", () =>
     </ul>
   </div>
 </template>
+
+<style scoped>
+.posts__list {
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+</style>

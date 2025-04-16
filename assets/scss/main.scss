@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: $font-sans;
+  font-size: 1.025rem;
+  scroll-behavior: smooth;
+  transition: background-color 0.4s ease;
+}
+
+/* Page transitions animation */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Fast, material-like timing */
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.page-leave-from,
+.page-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
