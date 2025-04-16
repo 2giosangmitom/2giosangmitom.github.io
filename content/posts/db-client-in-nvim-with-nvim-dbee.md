@@ -1,16 +1,20 @@
 ---
-title: "How I use Neovim as database client"
 createdOn: "2025-04-02"
 updatedOn: "2025-04-04"
-tags: ["neovim", "database", "productivity"]
+tags: ["neovim", "productivity"]
 description: "How to setup and use nvim-dbee"
 ---
 
-If you work with databases and love Neovim, you'll appreciate **[nvim-dbee](https://github.com/kndndrj/nvim-dbee)**—a plugin that turns Neovim into a powerful database client. Unlike alternatives like [vim-dadbod](https://github.com/tpope/vim-dadbod), **nvim-dbee doesn't require CLI tools**, making it perfect for Docker-based workflows.
+# How I use Neovim as database client
+
+::post-info{:createdOn="createdOn" :tags='["neovim", "productivity"]'}
+::
+
+If you work with databases and love Neovim, you'll appreciate [nvim-dbee](https://github.com/kndndrj/nvim-dbee) - a plugin that turns Neovim into a powerful database client. Unlike alternatives like [vim-dadbod](https://github.com/tpope/vim-dadbod), **nvim-dbee doesn't require CLI tools**, making it perfect for Docker-based workflows.
 
 In this post, I'll show you how to set it up and supercharge it with SQL linting and formatting.
 
-![nvim-dbee](/images/db-client-in-nvim-with-nvim-dbee/nvim-dbee.png)
+![nvim-dbee](/images/posts/db-client-in-nvim-with-nvim-dbee/nvim-dbee.png)
 
 ## Why nvim-dbee?
 

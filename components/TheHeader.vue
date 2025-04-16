@@ -13,11 +13,25 @@ const isDark = computed({
   <header class="header">
     <div class="header__home-btn">
       <NuxtLink to="/">2giosangmitom</NuxtLink>
+      <NuxtLink
+        to="https://github.com/2giosangmitom"
+        target="_blank"
+        class="header-icon"
+      >
+        <Icon name="mdi:github" />
+      </NuxtLink>
+      <NuxtLink
+        to="https://www.youtube.com/@2giosangmitom"
+        target="_blank"
+        class="header-icon"
+      >
+        <Icon name="mdi:youtube" />
+      </NuxtLink>
     </div>
     <nav class="header__nav">
-      <NuxtLink to="/about">about</NuxtLink>
       <NuxtLink to="/posts">posts</NuxtLink>
       <NuxtLink to="/tags">tags</NuxtLink>
+      <NuxtLink to="/about">about</NuxtLink>
       <ClientOnly>
         <button
           class="toggle-theme-btn"
@@ -40,9 +54,35 @@ const isDark = computed({
   gap: 5px;
   margin-top: 20px;
 
-  a {
+  .header-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(4px);
+    color: var(--text-color);
+
+    span {
+      font-size: $text-lg;
+    }
+
+    &:hover {
+      background-color: var(--color-red);
+      color: var(--color-mantle);
+    }
+  }
+
+  &__home-btn a:last-child {
+    margin-left: 5px;
+  }
+
+  &__home-btn a:first-child {
+    margin-right: 10px;
+  }
+
+  &__home-btn a:first-child,
+  &__nav a {
     text-decoration: none;
-    color: var(--color-red);
+    color: var(--text-color);
     font-size: 1.1rem;
     font-family: $font-mono;
     position: relative;
@@ -99,7 +139,7 @@ const isDark = computed({
 
   a::before {
     content: "/";
-    color: var(--color-red);
+    color: var(--text-color);
   }
 
   a:hover::before {

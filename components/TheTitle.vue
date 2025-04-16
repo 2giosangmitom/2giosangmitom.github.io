@@ -1,5 +1,5 @@
 <template>
-  <h1><slot /><span> .</span></h1>
+  <h1><slot /><span>.</span></h1>
 </template>
 
 <style lang="scss" scoped>
@@ -8,6 +8,6 @@ h1 {
 }
 
 span {
-  color: var(--color-pink);
+  color: rgb(var(--color-pink));
 }
 </style>

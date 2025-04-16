@@ -6,15 +6,15 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
+    "nuxt-site-config",
     "nuxt-seo-utils",
+    "@nuxthub/core",
     "@nuxt/eslint",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxtjs/color-mode",
     "@nuxt/content",
-    "@nuxthub/core",
-    "nuxt-site-config",
   ],
   app: {
     pageTransition: { name: "page", mode: "out-in" },
@@ -39,6 +39,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  hub: {
+    database: true,
+  },
   content: {
     build: {
       markdown: {
@@ -59,9 +62,6 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  hub: {
-    database: true,
   },
   seo: {
     meta: {

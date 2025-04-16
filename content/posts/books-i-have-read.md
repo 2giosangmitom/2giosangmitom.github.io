@@ -7,6 +7,9 @@ description: "Sharing some books that have made a strong impression on me!"
 
 # Sharing some books I have read
 
+::post-info{:createdOn="createdOn" :tags='["books"]'}
+::
+
 Hello! In this blog, I'd like to share some books that have made a strong impression on me. Whether you're a beginner or an experienced developer, I highly recommend them!
 
 ## 📚 Database Books
