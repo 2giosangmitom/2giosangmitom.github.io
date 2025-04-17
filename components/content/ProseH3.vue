@@ -16,6 +16,7 @@ const props = defineProps<{ id?: string }>();
   font-family: $font-sans;
   color: var(--text-color);
   scroll-margin-top: 5rem;
+  margin: 10px 0;
 
   &::before {
     content: "###";
