@@ -1,11 +1,38 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
 
+const isOpen = ref<boolean>(false);
+
+const handleKeydown = (e: KeyboardEvent) => {
+  // ESC to close
+  if (e.key === "Escape" && isOpen.value) {
+    isOpen.value = false;
+  }
+
+  // Ctrl+K / Cmd+K to open
+  if (e.ctrlKey && e.key === "k") {
+    e.preventDefault();
+    isOpen.value = true;
+  }
+};
+
+const handleModal = () => {
+  isOpen.value = !isOpen.value;
+};
+
 const isDark = computed({
   get: () => colorMode.value === "dark",
   set: () => {
     colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
   },
+});
+
+onMounted(() => {
+  window.addEventListener("keydown", handleKeydown);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("keydown", handleKeydown);
 });
 </script>
 
@@ -32,6 +59,9 @@ const isDark = computed({
       <NuxtLink to="/posts">posts</NuxtLink>
       <NuxtLink to="/tags">tags</NuxtLink>
       <NuxtLink to="/about">about</NuxtLink>
+      <button class="toggle-search-modal-btn" @click="handleModal">
+        <Icon name="ic:round-search" />
+      </button>
       <ClientOnly>
         <button
           class="toggle-theme-btn"
@@ -43,6 +73,7 @@ const isDark = computed({
         </button>
       </ClientOnly>
     </nav>
+    <TheSearch v-if="isOpen" @close-modal="handleModal" />
   </header>
 </template>
 
@@ -147,7 +178,8 @@ const isDark = computed({
   }
 }
 
-.toggle-theme-btn {
+.toggle-theme-btn,
+.toggle-search-modal-btn {
   background: none;
   border: none;
   color: var(--text-color);

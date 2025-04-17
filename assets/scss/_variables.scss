@@ -28,6 +28,8 @@ $text-xl: 2rem;
   --color-red: #d20f39;
   --color-mantle: #e6e9ef;
   --color-mauve: 136, 57, 239;
+  --color-surface: #bcc0cc;
+  --color-subtext: #6c6f85;
 }
 
 :root.dark-mode {
@@ -39,4 +41,6 @@ $text-xl: 2rem;
   --color-red: #f38ba8;
   --color-mantle: #181825;
   --color-mauve: 203, 166, 247;
+  --color-surface: #45475a;
+  --color-subtext: #a6adc8;
 }

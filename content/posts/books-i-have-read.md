@@ -58,7 +58,7 @@ This is one of the most comprehensive books for mastering JavaScript. It covers 
 
 [🔗 Buy on Amazon](https://www.amazon.com/dp/1491952024/?bestFormat=true&k=javascript%20the%20definitive%20guide&ref_=nb_sb_ss_w_scx-ent-pd-bk-d_de_k1_1_15&crid=JFRET4AMQZWC&sprefix=javascript%20the%20)
 
-### Introduction to Algorithm (4th Edition)
+### Introduction to Algorithms (4th Edition)
 
 📖 _By Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein_
 
