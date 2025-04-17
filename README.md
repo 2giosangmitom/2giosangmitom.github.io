@@ -1,75 +1,14 @@
-# Nuxt Minimal Starter
+# 2giosangmitom's minimalist blog
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is my minimalist blog, built with Nuxt.
 
-## Setup
+You can view the page here: [https://2giosangmitom.is-a.dev/](https://2giosangmitom.is-a.dev/)
 
-Make sure to install dependencies:
+## Features
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Responsive design
+- Search post's content
+- Dark/light theme
+- Smooth animations
+- Support syntax highlighting via [shiki](https://github.com/shikijs/shiki)
+- Filter blogs by tags
