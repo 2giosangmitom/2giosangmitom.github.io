@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: surround } = await useLazyAsyncData("surround", () =>
+const { data: surround } = await useAsyncData("surround", () =>
   queryCollectionSearchSections("posts", {
     ignoredTags: ["pre"]
   })

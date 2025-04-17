@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: author } = await useLazyAsyncData("author", () => queryCollection("author").first());
+const { data: author } = await useAsyncData("author", () => queryCollection("author").first());
 </script>
 
 <template>

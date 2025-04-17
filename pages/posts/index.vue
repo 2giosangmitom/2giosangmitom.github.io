@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: posts } = await useLazyAsyncData("all-posts", () =>
+const { data: posts } = await useAsyncData("all-posts", () =>
   queryCollection("posts").select("id", "createdOn", "path", "title", "tags").order("createdOn", "DESC").all()
 );
 </script>
