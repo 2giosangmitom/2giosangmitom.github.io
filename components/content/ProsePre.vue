@@ -42,10 +42,10 @@ const handleCopy = async () => {
 <template>
   <div>
     <div v-show="!copied">
-      <button title="Copy code" @click="handleCopy" />
+      <button title="Copy code" @click="handleCopy">Copy</button>
     </div>
     <div v-show="copied">
-      <button title="Copy code" />
+      <button title="Copied" @click="handleCopy">Copied</button>
     </div>
     <pre :class="$props.class"><slot/></pre>
   </div>

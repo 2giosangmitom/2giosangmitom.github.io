@@ -1,5 +1,6 @@
 <template>
   <div class="layout">
+    <TheLoadingIndicator />
     <TheHeader />
     <div class="wrapper">
       <TheSeparator />

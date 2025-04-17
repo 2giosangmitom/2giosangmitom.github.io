@@ -3,11 +3,11 @@ const props = defineProps<{ id?: string }>();
 </script>
 
 <template>
-  <h2 :id="props.id" class="markdown-heading">
+  <h3 :id="props.id" class="markdown-heading">
     <NuxtLink :to="`#${props.id}`" class="markdown-heading__link">
       <slot />
     </NuxtLink>
-  </h2>
+  </h3>
 </template>
 
 <style scoped lang="scss">

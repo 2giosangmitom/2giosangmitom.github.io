@@ -21,5 +21,23 @@ useSeoMeta({
 <template>
   <div v-if="post">
     <ContentRenderer :value="post" />
+    <p class="post__last-update">
+      Last update:
+      {{
+        dateFormat(new Date(post.updatedOn), "en-CA", {
+          year: "numeric",
+          month: "short",
+          day: "2-digit",
+        })
+      }}
+    </p>
   </div>
 </template>
+
+<style scoped>
+.post__last-update {
+  text-align: right;
+  margin-top: 1rem;
+  color: rgb(var(--color-pink));
+}
+</style>
