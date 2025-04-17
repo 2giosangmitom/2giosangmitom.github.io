@@ -12,3 +12,13 @@ You can view the page here: [https://2giosangmitom.is-a.dev/](https://2giosangmi
 - Smooth animations
 - Support syntax highlighting via [shiki](https://github.com/shikijs/shiki)
 - Filter blogs by tags
+
+## Planned features
+
+- RSS
+- TOC
+- 404 page
+- Reading progress bar
+- Keyboard navigation (use j/k for scroll,...)
+- Projects page
+- TL;DRs (may be AI-powered)
