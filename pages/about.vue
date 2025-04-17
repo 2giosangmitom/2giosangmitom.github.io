@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: author } = await useAsyncData("author", () =>
-  queryCollection("author").first()
+  queryCollection("author").first(),
 );
 </script>
 

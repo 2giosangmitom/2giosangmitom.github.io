@@ -3,7 +3,7 @@ const { data: posts } = await useAsyncData("all-posts", () =>
   queryCollection("posts")
     .select("id", "createdOn", "path", "title", "tags")
     .order("createdOn", "DESC")
-    .all()
+    .all(),
 );
 </script>
 

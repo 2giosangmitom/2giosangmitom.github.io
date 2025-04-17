@@ -2,7 +2,7 @@
 const route = useRoute();
 const postId = route.params.post as string;
 const { data: post } = await useAsyncData(postId, () =>
-  queryCollection("posts").path(route.path).first()
+  queryCollection("posts").path(route.path).first(),
 );
 
 if (!post.value) {

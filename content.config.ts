@@ -25,20 +25,20 @@ export default defineContentConfig({
           z.object({
             label: z.string(),
             value: z.string(),
-          })
+          }),
         ),
         skills: z.array(
           z.object({
             category: z.string(),
             items: z.array(z.string()),
-          })
+          }),
         ),
         contact: z.array(
           z.object({
             name: z.string(),
             type: z.enum(["email", "social"]),
             url: z.string().url(),
-          })
+          }),
         ),
       }),
     }),
