@@ -197,13 +197,13 @@ onUnmounted(() => {
   }
 
   kbd {
-    background: #2e2e2e;
-    border: 1px solid #444;
+    background: var(--color-mantle);
+    border: 1px solid var(--color-surface);
     border-radius: 4px;
     padding: 2px 6px;
     font-size: 0.75rem;
-    font-family: monospace;
-    color: #fff;
+    font-family: $font-mono;
+    color: var(--color-text);
   }
 }
 
