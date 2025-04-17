@@ -1,17 +1,10 @@
 <script setup lang="ts">
-const { data: intro } = await useAsyncData("intro", () =>
-  queryCollection("intro").first(),
-);
+const { data: intro } = await useLazyAsyncData("intro", () => queryCollection("intro").first());
 </script>
 
 <template>
   <main class="main">
-    <ContentRenderer
-      v-if="intro"
-      :value="intro"
-      :prose="true"
-      class="content"
-    />
+    <ContentRenderer v-if="intro" :value="intro" :prose="true" class="content" />
   </main>
 </template>
 

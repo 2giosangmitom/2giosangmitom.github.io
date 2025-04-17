@@ -24,7 +24,7 @@ const isDark = computed({
   get: () => colorMode.value === "dark",
   set: () => {
     colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
-  },
+  }
 });
 
 onMounted(() => {
@@ -40,18 +40,10 @@ onUnmounted(() => {
   <header class="header">
     <div class="header__home-btn">
       <NuxtLink to="/">2giosangmitom</NuxtLink>
-      <NuxtLink
-        to="https://github.com/2giosangmitom"
-        target="_blank"
-        class="header-icon"
-      >
+      <NuxtLink to="https://github.com/2giosangmitom" target="_blank" class="header-icon">
         <Icon name="mdi:github" />
       </NuxtLink>
-      <NuxtLink
-        to="https://www.youtube.com/@2giosangmitom"
-        target="_blank"
-        class="header-icon"
-      >
+      <NuxtLink to="https://www.youtube.com/@2giosangmitom" target="_blank" class="header-icon">
         <Icon name="mdi:youtube" />
       </NuxtLink>
     </div>
@@ -63,11 +55,7 @@ onUnmounted(() => {
         <Icon name="ic:round-search" />
       </button>
       <ClientOnly>
-        <button
-          class="toggle-theme-btn"
-          aria-label="Toggle dark mode"
-          @click="isDark = !isDark"
-        >
+        <button class="toggle-theme-btn" aria-label="Toggle dark mode" @click="isDark = !isDark">
           <Icon v-show="!isDark" name="material-symbols:clear-day-rounded" />
           <Icon v-show="isDark" name="material-symbols:moon-stars" />
         </button>

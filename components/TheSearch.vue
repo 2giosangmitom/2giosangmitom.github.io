@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const { data: surround } = await useAsyncData("surround", () =>
+const { data: surround } = await useLazyAsyncData("surround", () =>
   queryCollectionSearchSections("posts", {
-    ignoredTags: ["code"],
-  }),
+    ignoredTags: ["pre"]
+  })
 );
 
 const router = useRouter();
@@ -15,10 +15,7 @@ const page = ref<number>(1);
 const emit = defineEmits(["close-modal"]);
 
 const pagedResults = computed(() => {
-  return filteredList.value?.slice(
-    (page.value - 1) * pageSize,
-    page.value * pageSize,
-  );
+  return filteredList.value?.slice((page.value - 1) * pageSize, page.value * pageSize);
 });
 const totalPages = computed(() => {
   return Math.ceil((filteredList.value?.length || 0) / pageSize);
@@ -104,13 +101,8 @@ onUnmounted(() => {
           <ul>
             <li><kbd>Ctrl</kbd> + <kbd>K</kbd> - Open modal</li>
             <li><kbd>Esc</kbd> - Close modal</li>
-            <li>
-              <kbd>Ctrl</kbd> + <kbd>J</kbd> / <kbd>K</kbd> - Move down/up
-            </li>
-            <li>
-              <kbd>Ctrl</kbd> + <kbd>H</kbd> / <kbd>L</kbd> - Move prev/next
-              page
-            </li>
+            <li><kbd>Ctrl</kbd> + <kbd>J</kbd> / <kbd>K</kbd> - Move down/up</li>
+            <li><kbd>Ctrl</kbd> + <kbd>H</kbd> / <kbd>L</kbd> - Move prev/next page</li>
             <li><kbd>Enter</kbd> - Select item</li>
           </ul>
         </div>
@@ -122,9 +114,7 @@ onUnmounted(() => {
             class="search-item"
             :class="{ 'search-item--selecting': index === selectedIndex }"
           >
-            <span class="search-item__title">{{
-              item.level === 1 ? item.title : item.titles[0]
-            }}</span>
+            <span class="search-item__title">{{ item.level === 1 ? item.title : item.titles[0] }}</span>
             <span class="search-item__excerpt">{{ item.content }}</span>
           </NuxtLink>
           <p v-if="totalPages > 0">{{ page }}/{{ totalPages }}</p>

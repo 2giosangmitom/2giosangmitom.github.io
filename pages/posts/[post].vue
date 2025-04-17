@@ -1,20 +1,18 @@
 <script setup lang="ts">
 const route = useRoute();
 const postId = route.params.post as string;
-const { data: post } = await useAsyncData(postId, () =>
-  queryCollection("posts").path(route.path).first(),
-);
+const { data: post } = await useLazyAsyncData(postId, () => queryCollection("posts").path(route.path).first());
 
 if (!post.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Page not found",
+    statusMessage: "Page not found"
   });
 }
 
 useSeoMeta({
   title: post.value.title,
-  description: post.value.description,
+  description: post.value.description
 });
 </script>
 
@@ -27,7 +25,7 @@ useSeoMeta({
         dateFormat(new Date(post.updatedOn), "en-CA", {
           year: "numeric",
           month: "short",
-          day: "2-digit",
+          day: "2-digit"
         })
       }}
     </p>

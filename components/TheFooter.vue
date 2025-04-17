@@ -7,6 +7,7 @@
 <style lang="scss" scoped>
 .footer {
   padding: 10px 0;
+  margin-top: 5rem;
 
   &__text {
     text-align: center;

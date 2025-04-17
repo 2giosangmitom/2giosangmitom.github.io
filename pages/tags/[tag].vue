@@ -2,11 +2,8 @@
 const route = useRoute();
 const tag = route.params.tag as string;
 
-const { data: posts } = await useAsyncData("all-posts", () =>
-  queryCollection("posts")
-    .select("id", "createdOn", "path", "title", "tags")
-    .order("createdOn", "DESC")
-    .all(),
+const { data: posts } = await useLazyAsyncData("all-posts", () =>
+  queryCollection("posts").select("id", "createdOn", "path", "title", "tags").order("createdOn", "DESC").all()
 );
 
 const filteredPosts = computed(() => {
@@ -15,7 +12,7 @@ const filteredPosts = computed(() => {
 });
 
 useSeoMeta({
-  title: `Entries tagged :: ${tag}`,
+  title: `Entries tagged :: ${tag}`
 });
 </script>
 
@@ -27,12 +24,7 @@ useSeoMeta({
     </TheTitle>
     <ul class="tag-page__list">
       <li v-for="post in filteredPosts" :key="post.id" class="tag-page__item">
-        <ThePost
-          :date="new Date(post.createdOn)"
-          :title="post.title"
-          :path="post.path"
-          :tags="post.tags"
-        />
+        <ThePost :date="new Date(post.createdOn)" :title="post.title" :path="post.path" :tags="post.tags" />
       </li>
     </ul>
   </div>

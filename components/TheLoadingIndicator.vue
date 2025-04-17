@@ -18,11 +18,7 @@ watch(progress, (val) => {
 </script>
 
 <template>
-  <div
-    class="loading-indicator"
-    :class="{ 'is-visible': visible }"
-    :style="{ width: `${progress}%` }"
-  />
+  <div class="loading-indicator" :class="{ 'is-visible': visible }" :style="{ width: `${progress}%` }" />
 </template>
 
 <style scoped lang="scss">

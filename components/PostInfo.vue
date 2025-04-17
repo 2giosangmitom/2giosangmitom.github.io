@@ -12,18 +12,13 @@ defineProps<{
         dateFormat(new Date(createdOn), "en-CA", {
           year: "numeric",
           month: "short",
-          day: "2-digit",
+          day: "2-digit"
         })
       }}
     </div>
     <span class="post-info-sep">::</span>
     <div class="post-info__tags">
-      <NuxtLink
-        v-for="tag of tags"
-        :key="tag"
-        :to="{ name: 'tags-tag', params: { tag } }"
-        >{{ tag }}</NuxtLink
-      >
+      <NuxtLink v-for="tag of tags" :key="tag" :to="{ name: 'tags-tag', params: { tag } }">{{ tag }}</NuxtLink>
     </div>
   </div>
 </template>

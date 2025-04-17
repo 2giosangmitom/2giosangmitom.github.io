@@ -14,7 +14,7 @@ defineProps<{
         dateFormat(date, "en-CA", {
           year: "numeric",
           month: "short",
-          day: "2-digit",
+          day: "2-digit"
         })
       }}
     </span>

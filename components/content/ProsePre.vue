@@ -5,10 +5,10 @@ const props = defineProps({
   filename: { type: String, default: null },
   highlights: {
     type: Array as () => number[],
-    default: () => [],
+    default: () => []
   },
   meta: { type: String, default: null },
-  class: { type: String, default: null },
+  class: { type: String, default: null }
 });
 
 const copied = ref(false);

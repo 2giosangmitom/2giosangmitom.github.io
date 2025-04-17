@@ -14,33 +14,33 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxtjs/color-mode",
-    "@nuxt/content",
+    "@nuxt/content"
   ],
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
+    pageTransition: { name: "page", mode: "out-in" }
   },
   site: {
     url: "https://2giosangmitom.is-a.dev/",
-    name: "Vo Quang Chien",
+    name: "Vo Quang Chien"
   },
   robots: {
-    blockNonSeoBots: true,
+    blockNonSeoBots: true
   },
   colorMode: {
     preference: "system",
-    fallback: "light",
+    fallback: "light"
   },
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "~/assets/scss/_variables.scss" as *;',
-        },
-      },
-    },
+          additionalData: '@use "~/assets/scss/_variables.scss" as *;'
+        }
+      }
+    }
   },
   hub: {
-    database: true,
+    database: true
   },
   content: {
     build: {
@@ -48,27 +48,19 @@ export default defineNuxtConfig({
         highlight: {
           theme: {
             default: "catppuccin-latte",
-            ["dark-mode"]: "catppuccin-mocha",
+            ["dark-mode"]: "catppuccin-mocha"
           },
-          langs: [
-            "lua",
-            "javascript",
-            "cpp",
-            "java",
-            "typescript",
-            "bash",
-            "shell",
-          ],
-        },
-      },
-    },
+          langs: ["lua", "javascript", "cpp", "java", "typescript", "bash", "shell"]
+        }
+      }
+    }
   },
   seo: {
     meta: {
       description: "Discover the blog of Vo Quang Chien.",
       author: "Vo Quang Chien",
       colorScheme: "dark light",
-      applicationName: "Vo Quang Chien",
-    },
-  },
+      applicationName: "Vo Quang Chien"
+    }
+  }
 });
