@@ -29,8 +29,8 @@ skills:
 
 contact:
   - name: Email
-    type: email
-    url: voquangchien.dev@proton.me
+    href: mailto:voquangchien.dev@proton.me
+    value: voquangchien.dev@proton.me
   - name: LinkedIn
-    type: social
-    url: https://www.linkedin.com/in/2giosangmitom/
+    href: https://www.linkedin.com/in/2giosangmitom/
+    value: 2giosangmitom

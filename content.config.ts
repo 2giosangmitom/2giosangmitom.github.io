@@ -36,8 +36,8 @@ export default defineContentConfig({
         contact: z.array(
           z.object({
             name: z.string(),
-            type: z.enum(["email", "social"]),
-            url: z.string().url()
+            href: z.string(),
+            value: z.string()
           })
         )
       })

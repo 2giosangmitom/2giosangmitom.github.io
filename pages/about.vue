@@ -22,6 +22,15 @@ const { data: author } = await useAsyncData("author", () => queryCollection("aut
         <strong>{{ item.category }}: </strong>{{ item.items.join(", ") }}
       </li>
     </ul>
+    <!-- Contact -->
+    <h2 class="about__contact-heading">Contact me</h2>
+    <p class="contact-sub-heading">Feel free to contact me via</p>
+    <ul class="contact-list">
+      <li v-for="item of author.contact" :key="item.href">
+        <b>{{ item.name }}</b> :
+        <a :href="item.href" target="_blank">{{ item.value }}</a>
+      </li>
+    </ul>
   </div>
   <div v-else>An error occured while fetching author's data</div>
 </template>
@@ -32,8 +41,24 @@ const { data: author } = await useAsyncData("author", () => queryCollection("aut
   margin-bottom: 10px;
 }
 
-.about__skills-heading {
+.about__skills-heading,
+.about__contact-heading {
   margin-top: 2rem;
+}
+
+.contact-sub-heading {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: var(--color-sapphire);
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: var(--color-red);
+  }
 }
 
 .about__name {
