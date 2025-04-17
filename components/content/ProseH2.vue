@@ -3,16 +3,39 @@ const props = defineProps<{ id?: string }>();
 </script>
 
 <template>
-  <h2
-    :id="props.id"
-    class="text-2xl my-1 before:content-['##'] before:mr-2 before:text-accent"
-  >
-    <ULink
-      raw
-      :to="`#${props.id}`"
-      class="hover:bg-accent transition-all px-0.5"
-    >
+  <h2 :id="props.id" class="markdown-heading">
+    <NuxtLink :to="`#${props.id}`" class="markdown-heading__link">
       <slot />
-    </ULink>
+    </NuxtLink>
   </h2>
 </template>
+
+<style scoped lang="scss">
+.markdown-heading {
+  font-size: $text-lg;
+  font-family: $font-sans;
+  color: var(--text-color);
+  scroll-margin-top: 5rem;
+  margin: 10px 0;
+
+  &::before {
+    content: "##";
+    font-family: $font-mono;
+    margin-right: 0.5rem;
+    color: rgb(var(--color-mauve));
+  }
+
+  &__link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition:
+      color 0.4s ease,
+      background-color 0.4s ease;
+
+    &:hover {
+      color: var(--color-mantle);
+      background-color: rgb(var(--color-mauve));
+    }
+  }
+}
+</style>

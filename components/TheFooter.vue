@@ -1,14 +1,16 @@
 <template>
-  <footer class="border-t-accent border-dashed border-t-[1px] pt-4 mt-10">
-    <p class="text-center">
-      &copy; 2024-2025 Vo Quang Chien. Made with ❤️ using
-      <ULink
-        raw
-        to="https://nuxt.com/"
-        target="_blank"
-        class="underline decoration-dotted transition-colors hover:text-accent"
-        >Nuxt</ULink
-      >.
-    </p>
+  <footer class="footer">
+    <p class="footer__text">&copy; 2024-2025 Vo Quang Chien</p>
   </footer>
 </template>
+
+<style lang="scss" scoped>
+.footer {
+  padding: 10px 0;
+
+  &__text {
+    text-align: center;
+    font-size: $text-sm;
+  }
+}
+</style>

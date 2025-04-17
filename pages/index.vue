@@ -1,53 +1,24 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: "Vo Quang Chien",
-  ogTitle: "Vo Quang Chien",
-  description:
-    "This is the blog of Vo Quang Chien, a passionate full-stack developer from Vietnam.",
-  ogDescription:
-    "This is the blog of Vo Quang Chien, a passionate full-stack developer from Vietnam.",
-});
-
-const { data: posts } = await useAsyncData("recently-updated-posts", () =>
-  queryCollection("posts")
-    .select("id", "updatedOn", "title", "path", "tags")
-    .order("updatedOn", "DESC")
-    .limit(4)
-    .all(),
+const { data: intro } = await useAsyncData("intro", () =>
+  queryCollection("intro").first(),
 );
 </script>
 
 <template>
-  <div>
-    <TheTitle class="mb-4">Welcome</TheTitle>
-    <p>
-      My name is
-      <ULink
-        raw
-        to="/about"
-        class="underline decoration-dotted transition-colors hover:text-accent"
-      >
-        Vo Quang Chien</ULink
-      >, a passionate developer from Vietnam. I have a deep passion for
-      full-stack web development, network programming, and system programming. I
-      enjoy working with Linux, and building high performance systems. I also
-      love ricing and tinkering!
-    </p>
-    <p class="mt-2">My primary languages are C, C++, Java and JavaScript.</p>
-    <p class="mt-2">
-      My editor is Neovim, and I do everything in the terminal.
-    </p>
-
-    <h2 class="text-2xl mt-4">Recently Updated Posts</h2>
-    <ul class="mt-2">
-      <li v-for="post in posts" :key="post.id">
-        <ThePost
-          :date="new Date(post.updatedOn)"
-          :title="post.title"
-          :path="post.path"
-          :tags="post.tags"
-        />
-      </li>
-    </ul>
-  </div>
+  <main class="main">
+    <ContentRenderer
+      v-if="intro"
+      :value="intro"
+      :prose="true"
+      class="content"
+    />
+  </main>
 </template>
+
+<style scoped>
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+</style>

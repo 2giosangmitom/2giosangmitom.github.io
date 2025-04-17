@@ -1,7 +1,17 @@
 <template>
-  <li
-    class="relative before:content-['-'] before:absolute before:-left-5 before:text-accent"
-  >
+  <li>
     <slot />
   </li>
 </template>
+
+<style scoped>
+li::before {
+  content: "-";
+  margin-right: 10px;
+  color: var(--color-sapphire);
+}
+
+li:not(:first-child) {
+  margin-top: 5px;
+}
+</style>

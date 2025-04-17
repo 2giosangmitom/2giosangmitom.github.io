@@ -1,10 +1,14 @@
 ---
-title: "Some books I have read"
 createdOn: "2025-03-31"
-updatedOn: "2025-04-01"
+updatedOn: "2025-04-16"
 tags: ["books"]
-description: "Some books that have made a strong impression on me!"
+description: "Sharing some books that have made a strong impression on me!"
 ---
+
+# Sharing some books I have read
+
+::post-info{:createdOn="createdOn" :tags='["books"]'}
+::
 
 Hello! In this blog, I'd like to share some books that have made a strong impression on me. Whether you're a beginner or an experienced developer, I highly recommend them!
 
@@ -48,8 +52,22 @@ This is one of the most comprehensive books for mastering JavaScript. It covers 
 
 **Why I Recommend It:**
 
-- Covers JavaScript from basics to advanced topics
-- Provides in-depth explanations with clear examples
-- Beginner-friendly yet valuable for experienced developers
+- Covers JavaScript from basics to advanced topics.
+- Provides in-depth explanations with clear examples.
+- Beginner-friendly yet valuable for experienced developers.
 
 [🔗 Buy on Amazon](https://www.amazon.com/dp/1491952024/?bestFormat=true&k=javascript%20the%20definitive%20guide&ref_=nb_sb_ss_w_scx-ent-pd-bk-d_de_k1_1_15&crid=JFRET4AMQZWC&sprefix=javascript%20the%20)
+
+### Introduction to Algorithm (4th Edition)
+
+📖 _By Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein_
+
+This is one of the most detailed books about **data structures and algorithm** (DSA). It covers most popular data structures and algorithms, complexity analysis. Personally, I thing this is the easiest to understand book about DSA. It's suitable for both people who either or have much programming experience.
+
+**Why I Recommend It:**
+
+- It covers very much data structures and algorithms in detailed manner.
+- It is used to teach DSA in most university.
+- Has practice problems to test your knowledge for each chapter.
+
+[🔗 Buy on Amazon](https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X/ref=pd_sbs_d_sccl_2_1/137-7028963-0580330?psc=1)

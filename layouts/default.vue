@@ -1,12 +1,56 @@
 <template>
-  <UApp>
-    <div
-      class="mx-4 sm:mx-auto sm:max-w-[600px] flex flex-col min-h-dvh md:max-w-[700px] lg:max-w-[850px]"
-    >
-      <NuxtLoadingIndicator color="#ef5350" />
-      <TheHeader class="mt-10" />
-      <NuxtPage class="flex-1/2 mt-10 sm:mt-20" />
-      <TheFooter class="mb-4" />
+  <div class="layout">
+    <TheLoadingIndicator />
+    <TheHeader />
+    <div class="wrapper">
+      <TheSeparator />
+      <slot />
     </div>
-  </UApp>
+    <TheFooter />
+  </div>
 </template>
+
+<style lang="scss" scoped>
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  flex: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+/* medium */
+@media (min-width: $screen-medium) {
+  .wrapper {
+    width: $content-medium;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* medium++ */
+@media (min-width: $screen-mediumpp) {
+  .wrapper {
+    width: $content-mediumpp;
+  }
+}
+
+/* wide */
+@media (min-width: $screen-wide) {
+  .wrapper {
+    width: $content-wide;
+  }
+}
+
+/* wide++ */
+@media (min-width: $screen-widepp) {
+  .wrapper {
+    width: $content-widepp;
+  }
+}
+</style>

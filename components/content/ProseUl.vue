@@ -1,5 +1,11 @@
 <template>
-  <ul class="ml-5 space-y-1">
+  <ul>
     <slot />
   </ul>
 </template>
+
+<style scoped>
+ul {
+  list-style: none;
+}
+</style>

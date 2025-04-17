@@ -8,10 +8,8 @@ defineProps<{
 </script>
 
 <template>
-  <div
-    class="flex items-start gap-4 py-2 border-b dark:border-zinc-800 border-zinc-200"
-  >
-    <div class="text-gray-500 min-w-[90px]">
+  <NuxtLink :to="path" class="post">
+    <span class="post__date">
       {{
         dateFormat(date, "en-CA", {
           year: "numeric",
@@ -19,24 +17,74 @@ defineProps<{
           day: "2-digit",
         })
       }}
-    </div>
-
-    <div class="text-accent font-bold w-5">#</div>
-
-    <div class="flex flex-wrap justify-between items-center w-full">
-      <ULink
-        raw
-        class="relative text-text-0 hover:text-accent transition-colors inline-block border-b-2 border-transparent hover:border-accent"
-        :to="path"
-      >
-        {{ title }}
-      </ULink>
-
-      <div class="text-gray-500 text-sm">
-        <span v-for="(tag, index) in tags" :key="index" class="mr-2">
-          #{{ tag }}
-        </span>
+    </span>
+    <div class="post__header">
+      <h2 class="post__title">{{ title }}</h2>
+      <div class="post__tags">
+        <span v-for="tag in tags" :key="tag" class="post__tag">{{ tag }}</span>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
+
+<style lang="scss" scoped>
+.post {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 1rem 1.25rem;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: 8px;
+  gap: 5px;
+
+  &:hover {
+    background-color: rgb(var(--color-mauve), 0.05);
+  }
+
+  &__date {
+    color: var(--text-color);
+    font-size: $text-sm;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @media (min-width: $screen-wide) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: $text-md;
+    color: rgb(var(--color-pink));
+    transition: color 0.3s ease;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    @media (min-width: $screen-wide) {
+      margin-top: 0;
+    }
+  }
+
+  &__tag {
+    background-color: rgba(var(--color-pink), 0.15);
+    color: rgb(var(--color-pink));
+    font-size: 0.75rem;
+    font-family: $font-mono;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+  }
+}
+</style>

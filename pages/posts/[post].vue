@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
-const postId = route.params.id as string;
+const postId = route.params.post as string;
 const { data: post } = await useAsyncData(postId, () =>
   queryCollection("posts").path(route.path).first(),
 );
@@ -12,15 +12,16 @@ if (!post.value) {
   });
 }
 
-useSeoMeta(post.value.seo);
+useSeoMeta({
+  title: post.value.title,
+  description: post.value.description,
+});
 </script>
 
 <template>
   <div v-if="post">
-    <TheTitle>{{ post.title }}</TheTitle>
-    <PostMeta :created-on="new Date(post.createdOn)" :tags="post.tags" />
     <ContentRenderer :value="post" />
-    <p class="text-gray-500 mt-5 text-right">
+    <p class="post__last-update">
       Last update:
       {{
         dateFormat(new Date(post.updatedOn), "en-CA", {
@@ -32,3 +33,11 @@ useSeoMeta(post.value.seo);
     </p>
   </div>
 </template>
+
+<style scoped>
+.post__last-update {
+  text-align: right;
+  margin-top: 1rem;
+  color: rgb(var(--color-pink));
+}
+</style>

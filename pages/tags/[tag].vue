@@ -10,10 +10,8 @@ const { data: posts } = await useAsyncData("all-posts", () =>
 );
 
 const filteredPosts = computed(() => {
-  if (!posts.value) {
-    return [];
-  }
-  return posts.value.filter((v) => v.tags.includes(tag));
+  if (!posts.value) return [];
+  return posts.value.filter((post) => post.tags.includes(tag));
 });
 
 useSeoMeta({
@@ -22,10 +20,13 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <TheTitle class="mb-2">Entries tagged :: {{ tag }}</TheTitle>
-    <ul>
-      <li v-for="post in filteredPosts" :key="post.id">
+  <div class="tag-page">
+    <TheTitle class="tag-page__title">
+      Entries tagged <span class="tag-page__title-sep">::</span>
+      {{ tag }}
+    </TheTitle>
+    <ul class="tag-page__list">
+      <li v-for="post in filteredPosts" :key="post.id" class="tag-page__item">
         <ThePost
           :date="new Date(post.createdOn)"
           :title="post.title"
@@ -36,3 +37,25 @@ useSeoMeta({
     </ul>
   </div>
 </template>
+
+<style scoped lang="scss">
+.tag-page {
+  padding: 2rem 0;
+
+  &__title {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+
+    &-sep {
+      color: var(--color-sapphire);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+</style>
