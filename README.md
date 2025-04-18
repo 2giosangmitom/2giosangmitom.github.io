@@ -21,4 +21,3 @@ You can view the page here: [https://2giosangmitom.is-a.dev/](https://2giosangmi
 - Reading progress bar
 - Keyboard navigation (use j/k for scroll,...)
 - Projects page
-- TL;DRs (may be AI-powered)
