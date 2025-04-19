@@ -21,7 +21,7 @@ skills:
   - category: Backend development
     items: [Node.js, Express, Fastify]
   - category: Database
-    items: [MySQL, SQLite]
+    items: [MySQL, SQLite, MariaDB, PostgreSQL]
   - category: Editor
     items: [Neovim]
   - category: Operating system
