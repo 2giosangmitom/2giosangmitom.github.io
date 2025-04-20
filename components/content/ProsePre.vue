@@ -11,18 +11,12 @@ const props = defineProps({
   class: { type: String, default: null }
 });
 
-const copied = ref(false);
-
-const handleCopy = async () => {
-  copied.value = true;
-  await navigator.clipboard.writeText(props.code);
-  setTimeout(() => (copied.value = false), 1000);
-};
+const { copy, copied } = useClipboard({ source: props.code, copiedDuring: 3000 });
 </script>
 
 <template>
   <div class="code-block">
-    <button class="code-block__copy" title="Copy code" @click="handleCopy">
+    <button class="code-block__copy" title="Copy code" @click="copy()">
       <Icon v-show="!copied" name="mdi-light:clipboard" />
       <Icon v-show="copied" name="mdi-light:clipboard-check" />
     </button>
