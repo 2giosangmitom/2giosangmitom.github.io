@@ -7,7 +7,6 @@ const { data: surround } = await useAsyncData("surround", () =>
 
 const router = useRouter();
 const input = ref<string>("");
-const inputRef = useTemplateRef("input-box");
 const filteredList = ref<typeof surround.value>([]);
 const selectedIndex = ref<number>(-1);
 const pageSize = 5;
@@ -28,7 +27,8 @@ const handleInput = () => {
     }) || [];
 };
 
-const handleKeymap = (e: KeyboardEvent) => {
+// Handle keymap on modal
+useEventListener("keydown", (e: KeyboardEvent) => {
   if (e.ctrlKey && e.key === "h") {
     e.preventDefault();
     if (page.value > 1) {
@@ -65,20 +65,16 @@ const handleKeymap = (e: KeyboardEvent) => {
       emit("close-modal");
     }
   }
-};
+});
 
+// If input or page change, reset the selectedIndex
 watch([input, page], () => {
   selectedIndex.value = 0;
 });
 
+const inputRef = useTemplateRef<HTMLInputElement>("search-input");
 onMounted(() => {
   inputRef.value?.focus();
-
-  window.addEventListener("keydown", handleKeymap);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("keydown", handleKeymap);
 });
 </script>
 
@@ -88,7 +84,7 @@ onUnmounted(() => {
       <div class="search-modal__content">
         <!-- eslint-disable-next-line vue/html-self-closing -->
         <input
-          ref="input-box"
+          ref="search-input"
           v-model="input"
           type="text"
           class="search-modal__input"
