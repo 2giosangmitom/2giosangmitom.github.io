@@ -22,14 +22,11 @@ useSeoMeta({
       <div class="flex flex-col gap-y-4">
         <div>
           <UBadge size="md">Full stack developer</UBadge>
-          <h1 class="text-7xl font-bold">
-            Yo! I'm <span class="text-primary-400">Vo Quang Chien</span>.
-          </h1>
+          <h1 class="text-7xl font-bold">Yo! I'm <span class="text-primary">Vo Quang Chien</span>.</h1>
         </div>
         <p>
-          I enjoy developing projects that both functionally sound and artistic. Currently, I'm
-          interesting in full stack development, seeking to improve my skills to provide as much as
-          possible value.
+          I enjoy developing projects that both functionally sound and artistic. Currently, I'm interesting in full
+          stack development, seeking to improve my skills to provide as much as possible value.
         </p>
         <div class="space-x-4">
           <UButton icon="lucide:arrow-up-right" to="/contact">Contact Me</UButton>
@@ -39,16 +36,13 @@ useSeoMeta({
     </section>
 
     <section class="flex flex-col items-center space-y-12">
-      <h2 class="text-3xl font-bold text-primary-400 text-center">Technologies I use</h2>
+      <h2 class="text-3xl font-bold text-primary text-center">Technologies I use</h2>
       <p class="text-center max-w-2xl">
-        Here are some programming languages, frameworks, and productivity tools that I use. I'm
-        fully equipped to tackle complex software development challenges, crafting innovate
-        solutions that drive business forward.
+        Here are some programming languages, frameworks, and productivity tools that I use. I'm fully equipped to tackle
+        complex software development challenges, crafting innovate solutions that drive business forward.
       </p>
 
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 place-items-center"
-      >
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 place-items-center">
         <AtomsIconsFastify />
         <AtomsIconsExpress />
         <AtomsIconsVuejs />
@@ -67,7 +61,7 @@ useSeoMeta({
     </section>
 
     <section>
-      <h2 class="text-3xl font-bold text-primary-400 text-center">Latest Posts</h2>
+      <h2 class="text-3xl font-bold text-primary text-center">Latest Posts</h2>
       <!-- TODO: Implement latest posts section -->
     </section>
   </div>

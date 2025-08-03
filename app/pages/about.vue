@@ -8,15 +8,15 @@ useSeoMeta({
   <div class="space-y-6">
     <!-- Intro -->
     <section class="space-y-4">
-      <h1 class="text-4xl font-bold text-primary-400">Hello there!</h1>
+      <h1 class="text-4xl font-bold text-primary">Hello there!</h1>
       <div class="text-base">
         <p>
-          I'm <b>Vo Quang Chien</b>, a second-year software development student from Vietnam 🇻🇳,
-          currently studying at <b>Hue University of Science</b>.
+          I'm <b>Vo Quang Chien</b>, a second-year software development student from Vietnam 🇻🇳, currently studying at
+          <b>Hue University of Science</b>.
         </p>
         <p>
-          I'm passionate about building efficient software and exploring how systems work - from web
-          applications to low-level programming.
+          I'm passionate about building efficient software and exploring how systems work - from web applications to
+          low-level programming.
         </p>
       </div>
     </section>
@@ -30,8 +30,7 @@ useSeoMeta({
         <li>Network programming & Linux system programming</li>
       </ul>
       <p class="mt-3">
-        I work mainly on <b>Linux</b>, and I'm a fan of the terminal, Vim, and tweaking my setup
-        (BTW, I use Arch 🐧).
+        I work mainly on <b>Linux</b>, and I'm a fan of the terminal, Vim, and tweaking my setup (BTW, I use Arch 🐧).
       </p>
     </section>
 
@@ -52,27 +51,25 @@ useSeoMeta({
         <li>
           <NuxtLink
             to="https://www.youtube.com/@2giosangmitom"
-            class="text-blue-300 transition-colors hover:text-blue-500"
+            class="text-primary transition-colors hover:text-primary-700"
             target="_blank"
+            >YouTube</NuxtLink
           >
-            YouTube
-          </NuxtLink>
         </li>
         <li>
           <NuxtLink
             to="https://www.linkedin.com/in/2giosangmitom/"
-            class="text-blue-300 transition-colors hover:text-blue-500"
+            class="text-primary transition-colors hover:text-primary-700"
             target="_blank"
+            >LinkedIn</NuxtLink
           >
-            LinkedIn
-          </NuxtLink>
         </li>
       </ul>
     </section>
 
     <!-- Quote -->
     <section>
-      <blockquote class="italic text-gray-400">
+      <blockquote class="italic text-dimmed">
         "🍜 Accept the things you cannot change, and change the things you cannot accept."
       </blockquote>
     </section>
