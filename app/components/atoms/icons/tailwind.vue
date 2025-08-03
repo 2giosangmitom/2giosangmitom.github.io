@@ -1,5 +1,8 @@
 <template>
-  <span class="flex items-center gap-x-4 select-none">
-    <UIcon name="devicon-plain:tailwindcss-wordmark" size="150" />
-  </span>
+  <UTooltip text="TailwindCSS" :content="{ side: 'top' }">
+    <span class="flex items-center gap-x-4 select-none">
+      <UIcon name="mdi:tailwind" size="60" />
+      <span class="text-3xl font-medium">TailwindCSS</span>
+    </span>
+  </UTooltip>
 </template>

@@ -60,5 +60,10 @@ useSeoMeta({
         <AtomsIconsPython />
       </div>
     </section>
+
+    <section>
+      <h2 class="text-3xl font-bold text-primary-400 text-center">Latest Posts</h2>
+      <!-- TODO: Implement latest posts section -->
+    </section>
   </div>
 </template>
