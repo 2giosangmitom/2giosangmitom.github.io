@@ -19,7 +19,7 @@
           Contact
         </NuxtLink>
         <UTooltip text="Search">
-          <UButton icon="i-lucide-search" size="md" color="primary" variant="solid" />
+          <UButton icon="i-lucide-search" size="md" color="primary" variant="ghost" />
         </UTooltip>
       </nav>
     </header>

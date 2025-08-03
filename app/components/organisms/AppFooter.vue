@@ -1,7 +1,7 @@
 <template>
   <UContainer>
-    <footer class="text-center py-4 space-y-4">
-      <p>Copyright &copy; 2025 Vo Quang Chien</p>
+    <footer class="text-center text-sm py-8 space-y-8">
+      <p>Made with 💻 + 🍜 at 2AM</p>
       <!-- Social Media Links -->
       <div class="text-center space-x-4">
         <UButton

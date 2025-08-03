@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
+*::selection {
+  background-color: color-mix(in oklab, var(--ui-color-primary-400) 50%, transparent);
+}
+
 :root {
   --ui-color-primary: var(--ui-color-primary-400);
 }

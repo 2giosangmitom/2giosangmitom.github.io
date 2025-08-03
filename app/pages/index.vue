@@ -38,11 +38,16 @@ useSeoMeta({
       </div>
     </section>
 
-    <section class="flex flex-col items-center">
+    <section class="flex flex-col items-center space-y-12">
       <h2 class="text-3xl font-bold text-primary-400 text-center">Technologies I use</h2>
+      <p class="text-center max-w-2xl">
+        Here are some programming languages, frameworks, and productivity tools that I use. I'm
+        fully equipped to tackle complex software development challenges, crafting innovate
+        solutions that drive business forward.
+      </p>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mt-16 place-items-center"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 place-items-center"
       >
         <AtomsIconsFastify />
         <AtomsIconsExpress />
