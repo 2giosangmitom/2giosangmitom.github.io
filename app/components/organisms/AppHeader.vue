@@ -52,7 +52,8 @@ const isDark = computed({
             description="Navigate through the site"
             :close="{
               variant: 'soft',
-              color: 'primary'
+              color: 'primary',
+              size: 'lg'
             }"
           >
             <UButton icon="i-lucide-menu" size="lg" color="primary" variant="soft" />
