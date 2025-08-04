@@ -7,7 +7,7 @@ useSeoMeta({
 <template>
   <div class="space-y-32">
     <!-- Hero Section  -->
-    <section class="flex gap-x-20">
+    <section class="flex flex-col-reverse gap-y-12 md:flex-row gap-x-20">
       <NuxtImg
         format="webp"
         quality="100"
@@ -16,7 +16,7 @@ useSeoMeta({
         height="350"
         src="/images/avt.png"
         alt="Avatar"
-        class="rounded-sm"
+        class="rounded-sm self-center md:self-start"
       />
 
       <div class="flex flex-col gap-y-4">

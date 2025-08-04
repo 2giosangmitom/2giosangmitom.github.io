@@ -20,9 +20,7 @@ const otherProjects = computed(() => {
     <!-- Page Title -->
     <header class="text-center space-y-4">
       <h1 class="text-5xl font-extrabold text-primary">My Projects</h1>
-      <p class="text-lg text-dimmed">
-        A collection of featured and personal projects I've built to sharpen my skills.
-      </p>
+      <p class="text-lg text-dimmed">A collection of featured and personal projects I've built to sharpen my skills.</p>
     </header>
 
     <section class="space-y-4">
