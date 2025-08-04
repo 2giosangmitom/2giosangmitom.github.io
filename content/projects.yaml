@@ -1,0 +1,8 @@
+projects:
+  - title: '2giosangmitom-bot'
+    description: 'A Discord bot that fetch random problem from LeetCode and cute anime girls.'
+    gitRepo: https://github.com/2giosangmitom/2giosangmitom-bot
+    technologies: ['Node.js', 'Discord.js', 'TypeScript']
+    images:
+      - /images/projects/2giosangmitom-bot-1.png
+      - /images/projects/2giosangmitom-bot-2.png

@@ -29,7 +29,7 @@ useSeoMeta({
           stack development, seeking to improve my skills to provide as much as possible value.
         </p>
         <div class="space-x-4">
-          <UButton icon="lucide:arrow-up-right" to="/contact">Contact Me</UButton>
+          <UButton icon="lucide:at-sign" to="/contact">Contact Me</UButton>
           <UButton icon="lucide:code-xml" variant="outline" to="/projects">My Projects</UButton>
         </div>
       </div>
