@@ -3,7 +3,7 @@ useSeoMeta({
   title: 'Blog'
 });
 
-const { data: blogs } = await useAsyncData('blog', () => {
+const { data: blogs } = await useAsyncData('all-blogs', () => {
   return queryCollection('blog').all();
 });
 </script>

@@ -2,6 +2,10 @@
 useSeoMeta({
   titleTemplate: 'Vo Quang Chien'
 });
+
+const { data: blogs } = await useAsyncData('latest-blogs', () => {
+  return queryCollection('blog').order('createdAt', 'DESC').limit(6).all();
+});
 </script>
 
 <template>
@@ -60,9 +64,21 @@ useSeoMeta({
       </div>
     </section>
 
-    <section>
+    <section class="space-y-12">
       <h2 class="text-3xl font-bold text-primary text-center">Latest Posts</h2>
-      <!-- TODO: Implement latest posts section -->
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
+        <OrganismsBlogCard
+          v-for="item in blogs"
+          :key="item.path"
+          :title="item.title"
+          :description="item.description"
+          :tags="item.tags"
+          :created-at="item.createdAt"
+          :path="item.path"
+          variant="square"
+        />
+      </div>
     </section>
   </div>
 </template>
