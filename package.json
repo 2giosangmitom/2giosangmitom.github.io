@@ -36,6 +36,7 @@
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/simple-icons": "^1.2.46",
     "@iconify-json/teenyicons": "^1.2.2",
+    "@types/nodemailer": "^6.4.17",
     "happy-dom": "^18.0.1",
     "prettier": "^3.6.2",
     "vitest": "^3.2.4",

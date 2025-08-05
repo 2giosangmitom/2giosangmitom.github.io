@@ -13,7 +13,7 @@ defineProps<{
   <div v-if="variant == 'square'"></div>
   <div v-else>
     <NuxtLink
-      class="flex flex-col gap-y-2 bg-primary/30 py-6 px-8 rounded-lg shadow-md hover:bg-primary/40 transition-colors"
+      class="flex flex-col gap-y-2 outline-1 outline-primary-200/30 py-6 px-8 rounded-lg shadow-md hover:bg-primary-300/10 transition-colors"
       :to="path"
     >
       <h2 class="text-2xl font-semibold text-primary">{{ title }}</h2>
