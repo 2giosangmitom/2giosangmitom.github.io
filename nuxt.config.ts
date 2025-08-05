@@ -17,7 +17,8 @@ export default defineNuxtConfig({
   },
   hub: {
     database: true,
-    workers: true
+    workers: true,
+    projectKey: 'blog-ehtm'
   },
   nitro: {
     prerender: {
