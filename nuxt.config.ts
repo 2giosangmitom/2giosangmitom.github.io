@@ -1,47 +1,29 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ["~/assets/scss/main.scss"],
+  css: ['~/assets/css/main.css'],
   modules: [
-    "@nuxtjs/robots",
-    "@nuxtjs/sitemap",
-    "nuxt-site-config",
-    "nuxt-seo-utils",
-    "@nuxthub/core",
-    "@nuxt/eslint",
-    "@nuxt/fonts",
-    "@nuxt/icon",
-    "@nuxt/image",
-    "@nuxtjs/color-mode",
-    "@nuxt/content",
-    "@vueuse/nuxt"
+    '@nuxt/content',
+    '@nuxt/eslint',
+    '@nuxt/ui',
+    '@nuxt/test-utils',
+    '@nuxt/scripts',
+    '@nuxt/image',
+    '@nuxthub/core'
   ],
   app: {
-    pageTransition: { name: "page", mode: "out-in" }
-  },
-  site: {
-    url: "https://2giosangmitom.is-a.dev/",
-    name: "Vo Quang Chien"
-  },
-  robots: {
-    blockNonSeoBots: true
-  },
-  colorMode: {
-    preference: "system",
-    fallback: "light"
-  },
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@use "~/assets/scss/_variables.scss" as *;'
-        }
-      }
-    }
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   hub: {
-    database: true
+    database: true,
+    workers: true,
+    projectKey: 'blog-ehtm'
+  },
+  nitro: {
+    prerender: {
+      routes: ['/', '/about', '/projects', '/contact']
+    }
   },
   content: {
     build: {
@@ -51,21 +33,12 @@ export default defineNuxtConfig({
         },
         highlight: {
           theme: {
-            default: "catppuccin-latte",
-            ["dark-mode"]: "catppuccin-mocha"
+            default: 'catppuccin-latte',
+            ['dark-mode']: 'catppuccin-mocha'
           },
-          langs: ["lua", "javascript", "cpp", "java", "typescript", "bash", "shell"]
+          langs: ['lua', 'javascript', 'cpp', 'java', 'typescript', 'bash', 'shell']
         }
       }
     }
-  },
-  seo: {
-    meta: {
-      description: "Discover the blog of Vo Quang Chien.",
-      author: "Vo Quang Chien",
-      colorScheme: "dark light",
-      applicationName: "Vo Quang Chien"
-    }
   }
 });
-
