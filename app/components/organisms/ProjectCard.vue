@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex justify-between">
+  <div class="flex flex-col gap-y-6 md:flex-row md:gap-x-6 md:justify-between">
     <div class="space-y-4">
       <h2 class="text-lg font-semibold">{{ title }}</h2>
       <div class="space-x-2">

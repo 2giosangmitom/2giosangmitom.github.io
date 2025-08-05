@@ -28,14 +28,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative w-96 h-62">
-    <div
-      v-for="(item, index) in items"
-      :key="item"
-      class="absolute border size-full border-zinc-700"
-      :style="getStyle(index)"
-    >
-      <NuxtImg :src="item" alt="preview" class="size-full" />
+  <div class="relative w-full min-h-62 md:max-w-96">
+    <div v-for="(item, index) in items" :key="item" class="absolute border border-zinc-700" :style="getStyle(index)">
+      <NuxtImg :src="item" alt="preview" class="object-fill" />
     </div>
   </div>
 </template>
