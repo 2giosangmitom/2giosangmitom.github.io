@@ -9,9 +9,11 @@ const { data: blogs } = await useAsyncData('blog', () => {
 </script>
 
 <template>
-  <div class="space-y-4">
-    <h1 class="text-5xl text-primary font-bold">Blog</h1>
-    <p class="text-dimmed">Sharing tips, experiences, tutorial,...</p>
+  <div class="space-y-12">
+    <div class="space-y-4">
+      <h1 class="text-5xl text-primary font-bold text-center">SELECT * FROM blog</h1>
+      <p class="text-dimmed text-center">Sharing tips, experiences, and tutorials.</p>
+    </div>
 
     <div class="space-y-4">
       <OrganismsBlogCard
