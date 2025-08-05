@@ -15,7 +15,7 @@ const isDark = computed({
 </script>
 
 <template>
-  <UContainer class="py-8">
+  <UContainer class="py-4 md:py-8">
     <header class="flex items-center justify-between">
       <NuxtLink to="/" class="text-lg md:text-xl font-bold hover:text-primary transition-colors"
         >2giosangmitom</NuxtLink
