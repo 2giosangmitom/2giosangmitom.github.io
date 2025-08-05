@@ -23,5 +23,21 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/', '/about', '/projects', '/contact']
     }
+  },
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 3
+        },
+        highlight: {
+          theme: {
+            default: 'catppuccin-latte',
+            ['dark-mode']: 'catppuccin-mocha'
+          },
+          langs: ['lua', 'javascript', 'cpp', 'java', 'typescript', 'bash', 'shell']
+        }
+      }
+    }
   }
 });
