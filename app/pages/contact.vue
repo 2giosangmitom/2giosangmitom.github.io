@@ -82,6 +82,11 @@ async function handleSubmit() {
             </UButton>
           </UForm>
         </div>
+
+        <p class="text-sm text-dimmed mt-4">
+          Having trouble? You can also email me directly at
+          <a href="mailto:voquangchien.dev@proton.me" class="text-primary font-medium">voquangchien.dev@proton.me</a>.
+        </p>
       </div>
 
       <!-- Info Cards -->
