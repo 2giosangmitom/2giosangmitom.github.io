@@ -18,5 +18,10 @@ export default defineNuxtConfig({
   hub: {
     database: true,
     workers: true
+  },
+  nitro: {
+    prerender: {
+      routes: ['/', '/about', '/projects', '/contact']
+    }
   }
 });

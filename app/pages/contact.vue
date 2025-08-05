@@ -29,7 +29,7 @@ async function handleSubmit() {
 </script>
 
 <template>
-  <section class="py-16">
+  <section>
     <div class="flex flex-col lg:flex-row gap-20 items-start">
       <!-- Contact Form -->
       <div class="flex-1">

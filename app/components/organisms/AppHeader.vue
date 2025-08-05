@@ -59,30 +59,30 @@ const isDark = computed({
             <UButton icon="i-lucide-menu" size="lg" color="primary" variant="soft" />
 
             <template #body>
-              <nav class="flex flex-col gap-y-12 items-center mt-12">
+              <nav class="flex flex-col gap-y-6">
                 <NuxtLink
+                  class="text-xl flex items-center gap-x-4 hover:bg-primary-200/10 w-full p-4"
                   to="/about"
-                  class="font-semibold text-xl hover:text-primary transition-colors"
                   @click="open = !open"
-                  >About</NuxtLink
+                  ><UIcon name="material-symbols:person" />About</NuxtLink
                 >
                 <NuxtLink
+                  class="text-xl flex items-center gap-x-4 hover:bg-primary-200/10 w-full p-4"
                   to="/projects"
-                  class="font-semibold text-xl hover:text-primary transition-colors"
                   @click="open = !open"
-                  >Projects</NuxtLink
+                  ><UIcon name="lucide:code-xml" />Projects</NuxtLink
                 >
                 <NuxtLink
+                  class="text-xl flex items-center gap-x-4 hover:bg-primary-200/10 w-full p-4"
                   to="/blog"
-                  class="font-semibold text-xl hover:text-primary transition-colors"
                   @click="open = !open"
-                  >Blog</NuxtLink
+                  ><UIcon name="icomoon-free:blog" />Blog</NuxtLink
                 >
                 <NuxtLink
+                  class="text-xl flex items-center gap-x-4 hover:bg-primary-200/10 w-full p-4"
                   to="/contact"
-                  class="font-semibold text-xl hover:text-primary transition-colors"
                   @click="open = !open"
-                  >Contact</NuxtLink
+                  ><UIcon name="mdi:email" />Contact</NuxtLink
                 >
               </nav>
             </template>
