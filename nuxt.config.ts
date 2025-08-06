@@ -2,18 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  modules: ['@nuxt/content', '@nuxt/ui', '@nuxt/image'],
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxt/test-utils', '@nuxt/scripts', '@nuxt/image'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
-  },
-  nitro: {
-    prerender: {
-      routes: ['/', '/about', '/projects', '/contact']
-    },
-    experimental: {
-      openAPI: true
-    }
   },
   content: {
     build: {
