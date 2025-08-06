@@ -12,16 +12,22 @@ const state = reactive({
 });
 
 const loading = ref(false);
+const toast = useToast();
 
 async function handleSubmit() {
   try {
     loading.value = true;
-    await $fetch('/api/send_email', { method: 'POST', body: { ...state } });
-    useToast().add({ title: 'Success', description: 'Your message has been sent successfully!', color: 'success' });
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify({ ...state }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    toast.add({ title: 'Success', description: 'Your message has been sent successfully!', color: 'success' });
     Object.assign(state, { fullName: '', email: '', topic: '', message: '' });
   } catch (error) {
-    useToast().add({ title: 'Error', description: 'Failed to send message. Please try again later.', color: 'error' });
-    console.error('Error sending email:', error);
+    toast.add({ title: 'Error', description: String(error), color: 'error' });
   } finally {
     loading.value = false;
   }
