@@ -10,15 +10,9 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/scripts',
     '@nuxt/image',
-    '@nuxthub/core'
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
-  },
-  hub: {
-    database: true,
-    workers: true,
-    projectKey: 'blog-ehtm'
   },
   nitro: {
     prerender: {
