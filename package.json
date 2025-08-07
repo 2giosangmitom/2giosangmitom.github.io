@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "2giosangmitom-blog",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,27 +7,33 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/content": "3.6.3",
+    "@nuxt/content": "^3.6.3",
+    "@nuxt/eslint": "1.8.0",
+    "@nuxt/fonts": "0.11.4",
+    "@nuxt/icon": "1.15.0",
     "@nuxt/image": "1.10.0",
-    "@nuxt/ui": "3.3.0",
+    "@nuxt/test-utils": "3.19.2",
     "better-sqlite3": "^12.2.0",
+    "eslint": "^9.32.0",
     "nodemailer": "^7.0.5",
-    "nuxt": "^3.17.7",
+    "nuxt": "^4.0.3",
+    "sass-embedded": "^1.90.0",
     "typescript": "^5.9.2",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1",
+    "vue-tsc": "^3.0.5",
     "zod": "^4.0.15"
   },
   "devDependencies": {
-    "@iconify-json/devicon-plain": "^1.2.34",
-    "@iconify-json/fa-brands": "^1.2.1",
-    "@iconify-json/lucide": "^1.2.60",
-    "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.46",
-    "@iconify-json/teenyicons": "^1.2.2",
-    "@types/nodemailer": "^6.4.17"
+    "@iconify-json/lucide": "^1.2.61",
+    "@types/nodemailer": "^6.4.17",
+    "prettier": "^3.6.2"
   }
 }

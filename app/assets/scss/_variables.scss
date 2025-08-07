@@ -1,0 +1,29 @@
+// Font styles
+$font-xs: 0.5rem;
+$font-sm: 0.9rem;
+$font-base: 1rem;
+$font-lg: 1.25rem;
+$font-xl: 1.5rem;
+$font-2xl: 2rem;
+$font-3xl: 4rem;
+$font-4xl: 5rem;
+
+// Border radius
+$rounded-sm: 0.2rem;
+$rounded-md: 0.5rem;
+$rounded-lg: 0.8rem;
+
+// Colors
+$color-background: hsl(235 19% 13%);
+$color-foreground: hsl(229 35% 75%);
+$color-primary: hsl(221 89% 72%);
+$color-secondary: hsl(230 24% 19%);
+$color-dimmed: hsl(225 32% 55%);
+$color-error: hsl(348.84 88.97% 71.57%);
+
+// Breakpoints
+$screen-sm: 40rem;
+$screen-md: 48rem;
+$screen-lg: 64rem;
+$screen-xl: 80rem;
+$screen-2xl: 96rem;
