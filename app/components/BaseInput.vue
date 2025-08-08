@@ -81,7 +81,7 @@ const emit = defineEmits(['blur']);
       }
 
       &.error {
-        outline: 2px solid variables.$color-error;
+        outline-color: variables.$color-error;
       }
     }
 

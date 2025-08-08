@@ -5,6 +5,26 @@ useSeoMeta({
   title: 'Contact'
 });
 
+const cards = [
+  {
+    icon: 'eos-icons:atom-electron',
+    title: 'Customized software solutions',
+    description: 'I develop custom software solutions designed to meet your unique needs.'
+  },
+  {
+    icon: 'ph:lightbulb-filament-bold',
+    title: 'Expertise in the latest technologies',
+    description:
+      'I leverage modern technologies to build responsive, high-performance websites and applications that deliver exceptional user experiences.'
+  },
+  {
+    icon: 'material-symbols:support',
+    title: 'Support and maintenance',
+    description:
+      "My work doesn't end at delivery - I provide ongoing support and maintenance to keep your solutions running smoothly."
+  }
+];
+
 const state = reactive({
   fullName: '',
   email: '',
@@ -62,9 +82,9 @@ async function handleSubmit() {
 </script>
 
 <template>
-  <main class="container">
-    <form class="contact-form" @submit.prevent="handleSubmit">
-      <h1 class="contact-form__title">Let's Get in Touch!</h1>
+  <main class="container contact">
+    <form class="contact__form" @submit.prevent="handleSubmit">
+      <h1 class="contact__form__title">Let's Get in Touch!</h1>
       <p>
         Have a question, suggestion, or just want to say hello? Fill out the form below, and I'll get back to you soon.
       </p>
@@ -108,33 +128,72 @@ async function handleSubmit() {
       <BaseButton
         type="submit"
         icon="lucide:send-horizontal"
-        class="contact-form__submit-btn"
+        class="contact__form__submit-btn"
         :loading="loading"
         loading-icon="lucide:loader"
         >Send Message</BaseButton
       >
     </form>
+
+    <div class="contact__info-cards">
+      <div v-for="item in cards" :key="item.title" class="contact__info-cards__item">
+        <div class="contact__info-cards__item__header">
+          <Icon :name="item.icon" size="50" />
+          <h2 class="font-bold">{{ item.title }}</h2>
+        </div>
+        <p class="contact__info-cards__item__body">{{ item.description }}</p>
+      </div>
+    </div>
   </main>
 </template>
 
 <style lang="scss">
 @use '~/assets/scss/variables';
 
-.contact-form {
-  background-color: variables.$color-secondary;
-  border-radius: variables.$rounded-lg;
-  padding: 1.5rem 2rem;
+.contact {
   display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+  column-gap: 4rem;
+  justify-content: space-between;
 
-  &__title {
-    color: variables.$color-primary;
+  &__form {
+    background-color: variables.$color-secondary;
+    border-radius: variables.$rounded-lg;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &__title {
+      color: variables.$color-primary;
+    }
+
+    &__submit-btn {
+      width: fit-content;
+      cursor: pointer;
+    }
   }
 
-  &__submit-btn {
-    width: fit-content;
-    cursor: pointer;
+  &__info-cards {
+    background-color: variables.$color-secondary;
+    border-radius: variables.$rounded-lg;
+    padding: 1.5rem 2rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &__item {
+      outline: 1px solid variables.$color-dimmed;
+      padding: 1.5rem 2rem;
+      border-radius: variables.$rounded-md;
+
+      &__header {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        font-size: variables.$font-lg;
+      }
+    }
   }
 }
 </style>
