@@ -21,21 +21,14 @@ const icons = [
   { name: 'simple-icons:linux', label: 'Linux' }
 ];
 
-const iconsRef = useTemplateRef<HTMLDivElement>('tech-icons');
-onMounted(() => {
-  if (iconsRef.value) {
-    const childs = iconsRef.value.childNodes as NodeListOf<HTMLDivElement>;
-    childs.forEach((element) => {
-      element.addEventListener('click', () => {
-        element.classList.add('spinning');
+function handleTadaa(e: MouseEvent) {
+  const target = e.currentTarget as HTMLSpanElement;
 
-        setTimeout(() => {
-          element.classList.remove('spinning');
-        }, 200);
-      });
-    });
-  }
-});
+  target.classList.add('tadaa');
+  setTimeout(() => {
+    target.classList.remove('tadaa');
+  }, 1000);
+}
 </script>
 
 <template>
@@ -77,8 +70,8 @@ onMounted(() => {
         development challenges, crafting innovate solutions that drive business forward.
       </p>
 
-      <div ref="tech-icons" class="icons">
-        <div v-for="(icon, index) in icons" :key="icon.name + index" class="icon-item">
+      <div class="icons">
+        <div v-for="(icon, index) in icons" :key="icon.name + index" class="icon-item" @click="handleTadaa">
           <Icon :name="icon.name" size="80" />
           <span v-if="icon.label">{{ icon.label }}</span>
         </div>
@@ -164,8 +157,8 @@ section .title {
           color: variables.$color-primary;
         }
 
-        &.spinning {
-          animation: 200ms spin ease-out;
+        &.tadaa {
+          animation: 1s tadaa ease;
         }
       }
     }

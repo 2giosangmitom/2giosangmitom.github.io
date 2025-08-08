@@ -17,7 +17,7 @@
   .page-content {
     flex: 1;
     margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 12rem;
   }
 }
 </style>
