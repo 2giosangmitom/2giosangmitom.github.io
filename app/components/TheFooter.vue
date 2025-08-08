@@ -32,7 +32,7 @@ const socials = [
 @use '~/assets/scss/variables';
 
 .footer {
-  background-color: variables.$color-secondary;
+  background-color: variables.$color-surface;
   padding-top: 2rem;
   padding-bottom: 2rem;
 

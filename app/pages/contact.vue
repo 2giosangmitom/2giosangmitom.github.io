@@ -156,7 +156,7 @@ async function handleSubmit() {
   justify-content: space-between;
 
   &__form {
-    background-color: variables.$color-secondary;
+    background-color: variables.$color-surface;
     border-radius: variables.$rounded-lg;
     padding: 1.5rem 2rem;
     display: flex;
@@ -174,7 +174,7 @@ async function handleSubmit() {
   }
 
   &__info-cards {
-    background-color: variables.$color-secondary;
+    background-color: variables.$color-surface;
     border-radius: variables.$rounded-lg;
     padding: 1.5rem 2rem;
     height: fit-content;

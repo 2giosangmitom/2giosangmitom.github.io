@@ -54,7 +54,7 @@ const { copy, copied } = useClipboard({ source: props.code, copiedDuring: 3000 }
 
   &__pre {
     background-color: color-mix(in hsl, variables.$color-dimmed, transparent 90%);
-    border: 1px solid variables.$color-secondary;
+    border: 1px solid variables.$color-surface;
     border-radius: variables.$rounded-sm;
     overflow-x: auto;
     padding: 0.5rem;
