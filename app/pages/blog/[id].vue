@@ -14,8 +14,30 @@ if (page.value) {
 </script>
 
 <template>
-  <main class="container blog-details">
-    <ContentRenderer v-if="page" :value="page" class="blog-details__content" />
+  <main v-if="page" class="container blog-details">
+    <div class="blog-details__meta">
+      <div class="blog-details__meta__item">
+        <BaseBadge variant="subtle">
+          <Icon name="mdi:calendar-blank" size="16" />
+        </BaseBadge>
+        <NuxtTime :datetime="page.createdOn" />
+      </div>
+      <div class="blog-details__meta__item">
+        <BaseBadge variant="subtle">
+          <Icon name="mdi:calendar-edit" size="16" />
+        </BaseBadge>
+        <NuxtTime :datetime="page.updatedOn" />
+      </div>
+      <div class="blog-details__meta__item">
+        <BaseBadge variant="subtle">
+          <Icon name="mdi:tag" size="16" />
+        </BaseBadge>
+        <NuxtLink v-for="tag in page.tags" :key="tag" :to="{ name: 'tags-id', params: { id: tag } }" class="btn--link">
+          {{ tag }}
+        </NuxtLink>
+      </div>
+    </div>
+    <ContentRenderer :value="page" class="blog-details__content" />
   </main>
 </template>
 
@@ -23,6 +45,21 @@ if (page.value) {
 @use '~/assets/scss/variables';
 
 .blog-details {
+  &__meta {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 0.5rem;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      column-gap: 0.25rem;
+      color: variables.$color-dimmed;
+      font-size: variables.$font-sm;
+    }
+  }
+
   &__content {
     h1 {
       margin-bottom: 0.5rem;

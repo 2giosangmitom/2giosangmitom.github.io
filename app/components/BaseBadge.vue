@@ -1,7 +1,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    variant?: 'solid' | 'outline';
+    variant?: 'solid' | 'outline' | "subtle";
   }>(),
   {
     variant: 'solid'
@@ -31,6 +31,11 @@ withDefaults(
 
   &.outline {
     outline: 1px solid variables.$color-primary;
+  }
+
+  &.subtle {
+    color: variables.$color-primary;
+    background-color: color-mix(in hsl, variables.$color-primary, transparent 90%);
   }
 }
 </style>

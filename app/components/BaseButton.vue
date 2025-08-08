@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    variant?: 'solid' | 'soft' | 'outline';
+    variant?: 'solid' | 'soft' | 'outline' | 'subtle';
     icon?: string;
     loading?: boolean;
     loadingIcon?: string;
@@ -74,6 +74,15 @@ const props = withDefaults(
 
     &:hover {
       background-color: color-mix(in hsl, variables.$color-primary, transparent 90%);
+    }
+  }
+
+  &.subtle {
+    color: variables.$color-primary;
+    background-color: color-mix(in hsl, variables.$color-primary, transparent 90%);
+
+    &:hover {
+      background-color: color-mix(in hsl, variables.$color-primary, transparent 70%);
     }
   }
 }

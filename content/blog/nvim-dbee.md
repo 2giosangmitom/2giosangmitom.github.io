@@ -1,6 +1,6 @@
 ---
 createdOn: '2025-04-02'
-updatedOn: '2025-04-17'
+updatedOn: '2025-08-08'
 tags:
   - neovim
   - productivity
@@ -9,7 +9,7 @@ description: 'How to setup and use nvim-dbee'
 
 # How I use Neovim as database client
 
-If you work with databases and love Neovim, you'll appreciate [nvim-dbee](https://github.com/kndndrj/nvim-dbee) - a plugin that turns Neovim into a powerful database client. Unlike alternatives like [vim-dadbod](https://github.com/tpope/vim-dadbod), **nvim-dbee doesn't require CLI tools**, making it perfect for Docker-based workflows.
+If you work with databases and love Neovim, you'll appreciate [nvim-dbee](https://github.com/kndndrj/nvim-dbee){target="\_blank"} - a plugin that turns Neovim into a powerful database client. Unlike alternatives like [vim-dadbod](https://github.com/tpope/vim-dadbod){target="\_blank"}, **nvim-dbee just need cURL**, making it perfect for Docker-based workflows.
 
 In this post, I'll show you how to set it up and supercharge it with SQL linting and formatting.
 
@@ -24,7 +24,7 @@ In this post, I'll show you how to set it up and supercharge it with SQL linting
 
 ## Installation
 
-Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+Using [lazy.nvim](https://github.com/folke/lazy.nvim){target="\_blank"}:
 
 ```lua
 {
@@ -42,7 +42,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 I'm using these tools for my SQL workflow on Neovim.
 
-- [sqruff](https://github.com/quarylabs/sqruff): A fast SQL formatter/linter
+- [sqruff](https://github.com/quarylabs/sqruff){target="\_blank"}: A fast SQL formatter/linter
 
 ### Setup
 
