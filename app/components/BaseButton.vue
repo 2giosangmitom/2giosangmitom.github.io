@@ -19,7 +19,8 @@ const props = withDefaults(
 
 <template>
   <button :class="`base-button ${props.variant}`" :type="type">
-    <Icon v-if="props.icon" class="icon" :name="props.icon" />
+    <Icon v-if="props.icon" v-show="!loading" class="icon" :name="props.icon" size="20" />
+    <Icon v-if="props.loading && props.loadingIcon" :name="props.loadingIcon" size="20" class="loading-icon" />
     <slot />
   </button>
 </template>
@@ -38,6 +39,10 @@ const props = withDefaults(
   border-radius: variables.$rounded-sm;
   transition: background-color 200ms ease;
   font-size: variables.$font-base;
+
+  .loading-icon {
+    animation: 1s infinite spin linear;
+  }
 
   .icon {
     width: variables.$font-lg;

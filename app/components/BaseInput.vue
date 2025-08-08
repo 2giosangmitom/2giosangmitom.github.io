@@ -5,13 +5,18 @@ withDefaults(
     required?: boolean;
     placeholder?: string;
     icon?: string;
+    error?: string;
   }>(),
   {
     required: false,
     placeholder: '',
-    icon: undefined
+    icon: undefined,
+    error: ''
   }
 );
+
+const input = defineModel<string>();
+const emit = defineEmits(['blur']);
 </script>
 
 <template>
@@ -24,17 +29,20 @@ withDefaults(
     <div class="input-box">
       <input
         :id="name"
+        v-model="input"
         type="text"
         :name="name"
         :placeholder="placeholder"
-        :required="required"
         :style="icon ? 'padding-left: 2rem;' : ''"
+        :class="{ error: error }"
+        @blur="emit('blur')"
       />
 
       <span v-if="icon" class="input-box__icon">
         <Icon :name="icon" size="20" />
       </span>
     </div>
+    <p v-if="error" class="input-error">{{ error }}</p>
   </div>
 </template>
 
@@ -71,6 +79,10 @@ withDefaults(
       &::placeholder {
         font-size: variables.$font-sm;
       }
+
+      &.error {
+        outline: 2px solid variables.$color-error;
+      }
     }
 
     &__icon {
@@ -83,6 +95,11 @@ withDefaults(
       justify-content: center;
       pointer-events: none;
     }
+  }
+
+  .input-error {
+    color: variables.$color-error;
+    font-size: variables.$font-sm;
   }
 }
 </style>
