@@ -1,7 +1,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    variant?: 'solid' | 'outline' | "subtle";
+    variant?: 'solid' | 'outline' | 'subtle';
   }>(),
   {
     variant: 'solid'
