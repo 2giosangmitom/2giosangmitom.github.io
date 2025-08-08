@@ -11,5 +11,15 @@ export default defineNuxtConfig({
       titleTemplate: '%s - Vo Quang Chien'
     },
     pageTransition: { name: 'page', mode: 'out-in' }
+  },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'tokyo-night',
+          langs: ['lua', 'javascript', 'cpp', 'java', 'typescript', 'bash', 'shell']
+        }
+      }
+    }
   }
 });

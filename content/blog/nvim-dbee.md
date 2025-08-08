@@ -13,7 +13,7 @@ If you work with databases and love Neovim, you'll appreciate [nvim-dbee](https:
 
 In this post, I'll show you how to set it up and supercharge it with SQL linting and formatting.
 
-![nvim-dbee](/images/blog/db-client-in-nvim-with-nvim-dbee/nvim-dbee.png)
+![nvim-dbee](/content/blog/nvim-dbee/nvim-dbee.png)
 
 ## Why nvim-dbee?
 
