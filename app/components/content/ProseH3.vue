@@ -14,7 +14,7 @@ defineProps<{ id?: string }>();
 .prose-h3 {
   a {
     color: variables.$color-primary;
-    font-size: variables.$font-base;
+    font-size: variables.$font-lg;
     text-decoration: none;
 
     &::before {

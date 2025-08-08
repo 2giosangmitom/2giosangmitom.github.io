@@ -14,8 +14,8 @@ defineProps<{
     <h3 class="blog-card__title">{{ title }}</h3>
     <p class="blog-card__desc">{{ description }}</p>
     <div class="blog-card__footer">
-      <NuxtLink :to="path" class="blog-card__footer__read-btn">
-        <BaseButton icon="ep:d-arrow-right" variant="outline">Read more</BaseButton>
+      <NuxtLink :to="path" class="blog-card__footer__read-btn btn--link">
+        Read more
       </NuxtLink>
       <div class="blog-card__footer__tags">
         <NuxtLink v-for="tag in tags" :key="tag" :to="{ name: 'tags-id', params: { id: tag } }">

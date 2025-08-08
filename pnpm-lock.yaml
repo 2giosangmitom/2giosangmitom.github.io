@@ -60,6 +60,12 @@ importers:
       '@iconify-json/lucide':
         specifier: ^1.2.61
         version: 1.2.61
+      '@iconify-json/mdi':
+        specifier: ^1.2.3
+        version: 1.2.3
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.46
+        version: 1.2.46
       '@types/nodemailer':
         specifier: ^6.4.17
         version: 6.4.17
@@ -639,6 +645,12 @@ packages:
 
   '@iconify-json/lucide@1.2.61':
     resolution: {integrity: sha512-0sLmi3vyEsJ6XL/uhl0a+uphdYIW1viYkUmiuT4SK3e2R3o3GIWY9k8N+SZL++GVBbMKy9oatx8KrzyoPZ6WqQ==}
+
+  '@iconify-json/mdi@1.2.3':
+    resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
+
+  '@iconify-json/simple-icons@1.2.46':
+    resolution: {integrity: sha512-MJfKQDhOMQD5Fc8PcTtCdFX0oBf/nKVfp69ScdEKIXW0JXELX5V2Ld45EsjShi8aJ6DNhdDtSDZvKuDnkDiKnw==}
 
   '@iconify/collections@1.0.577':
     resolution: {integrity: sha512-gQ/j93X8r3sVE6uGAZKHCZuH/U8rXJMhfPqc/HqiFlf6oo7rYb6RcmqEP8tRKxoR6t27lv+W+zWPD/8ivaRm7g==}
@@ -6104,6 +6116,14 @@ snapshots:
   '@humanwhocodes/retry@0.4.3': {}
 
   '@iconify-json/lucide@1.2.61':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/mdi@1.2.3':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.46':
     dependencies:
       '@iconify/types': 2.0.0
 
