@@ -28,6 +28,6 @@ const { data: blogs } = await useAsyncData('all-blogs', () => {
 .blogs {
   display: flex;
   flex-direction: column;
-  row-gap: 4rem;
+  row-gap: 2rem;
 }
 </style>

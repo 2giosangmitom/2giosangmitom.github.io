@@ -33,6 +33,8 @@ defineProps<{
   display: flex;
   flex-direction: column;
   row-gap: 0.25rem;
+  padding: 0.75rem 1rem;
+  outline: 1px solid variables.$color-primary;
 
   &__time {
     font-size: variables.$font-sm;

@@ -12,7 +12,7 @@ const tags = computed(() => {
     return [];
   }
 
-  const res = new Set();
+  const res = new Set<string>();
 
   for (const blog of blogs.value) {
     for (const tag of blog.tags) {
