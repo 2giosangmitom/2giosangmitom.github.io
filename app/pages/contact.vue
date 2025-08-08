@@ -139,7 +139,7 @@ async function handleSubmit() {
       <div v-for="item in cards" :key="item.title" class="contact__info-cards__item">
         <div class="contact__info-cards__item__header">
           <Icon :name="item.icon" size="50" />
-          <h2 class="font-bold">{{ item.title }}</h2>
+          <h2 class="font-medium">{{ item.title }}</h2>
         </div>
         <p class="contact__info-cards__item__body">{{ item.description }}</p>
       </div>

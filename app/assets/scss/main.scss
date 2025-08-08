@@ -22,6 +22,7 @@ html {
   color: variables.$color-foreground;
   font-size: variables.$font-base;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 p,

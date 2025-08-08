@@ -15,19 +15,19 @@ const { copy, copied } = useClipboard({ source: props.code, copiedDuring: 3000 }
 </script>
 
 <template>
-  <div class="code-block">
-    <button class="code-block__copy" title="Copy code" @click="copy()">
+  <div class="prose-pre">
+    <button class="prose-pre__copy" title="Copy code" @click="copy()">
       <Icon v-show="!copied" name="lucide:clipboard" size="24" />
       <Icon v-show="copied" name="lucide:clipboard-check" size="24" />
     </button>
-    <pre :class="['code-block__pre', $props.class]"><slot /></pre>
+    <pre :class="['prose-pre__pre', $props.class]"><slot /></pre>
   </div>
 </template>
 
 <style lang="scss">
 @use '~/assets/scss/variables';
 
-.code-block {
+.prose-pre {
   position: relative;
   margin: 10px 0;
 
@@ -41,7 +41,7 @@ const { copy, copied } = useClipboard({ source: props.code, copiedDuring: 3000 }
     border: none;
     cursor: pointer;
     font-size: 1.1rem;
-    border-bottom-left-radius: 0.25rem;
+    border-bottom-left-radius: variables.$rounded-md;
     transition: background-color 0.2s;
     display: flex;
     align-items: center;
@@ -55,9 +55,9 @@ const { copy, copied } = useClipboard({ source: props.code, copiedDuring: 3000 }
   &__pre {
     background-color: color-mix(in hsl, variables.$color-dimmed, transparent 90%);
     border: 1px solid variables.$color-secondary;
-    border-radius: 6px;
+    border-radius: variables.$rounded-sm;
     overflow-x: auto;
-    padding: 1rem;
+    padding: 0.5rem;
     font-family: 'JetBrainsMono', monospace;
     font-size: variables.$font-sm;
     color: variables.$color-foreground;
