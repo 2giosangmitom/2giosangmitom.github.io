@@ -7,13 +7,6 @@ const navigations = [
 ];
 
 const isOpen = ref(false);
-const toggleIcon = computed(() => {
-  if (isOpen.value) {
-    return 'lucide:x';
-  }
-  return 'lucide:menu';
-});
-
 const searchModalOpen = useState('search-modal', () => false);
 </script>
 
@@ -34,14 +27,20 @@ const searchModalOpen = useState('search-modal', () => false);
       <!-- Mobile navigation -->
       <nav class="header__navigation__mobile">
         <BaseButton
-          :icon="toggleIcon"
-          class="header__navigation__mobile__toggle"
+          icon="lucide:menu"
+          class="header__navigation__mobile__open"
           variant="subtle"
-          @click="isOpen = !isOpen"
+          @click="isOpen = true"
         />
 
         <Transition name="slide">
           <div v-show="isOpen" class="header__navigation__mobile__list">
+            <BaseButton
+              icon="lucide:x"
+              class="header__navigation__mobile__list__close"
+              variant="subtle"
+              @click="isOpen = false"
+            />
             <NuxtLink
               v-for="item in navigations"
               :key="item.href"
@@ -104,11 +103,6 @@ const searchModalOpen = useState('search-modal', () => false);
     }
 
     &__mobile {
-      &__toggle {
-        position: relative;
-        z-index: 20;
-      }
-
       &__list {
         position: fixed;
         z-index: 10;
@@ -132,6 +126,12 @@ const searchModalOpen = useState('search-modal', () => false);
             justify-content: flex-start;
             padding: 1rem 1rem;
           }
+        }
+
+        &__close {
+          position: fixed;
+          top: 2rem;
+          right: 1rem;
         }
       }
 
