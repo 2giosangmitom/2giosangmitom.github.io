@@ -133,6 +133,11 @@ async function handleSubmit() {
         loading-icon="lucide:loader"
         >Send Message</BaseButton
       >
+
+      <p class="contact__form__alternative">
+        Having troubles? You can also contact me via email:
+        <a href="mailto:voquangchien.dev@proton.me" target="_blank">voquangchien.dev@proton.me</a>
+      </p>
     </form>
 
     <div class="contact__info-cards">
@@ -177,6 +182,12 @@ async function handleSubmit() {
     &__submit-btn {
       width: fit-content;
       cursor: pointer;
+    }
+
+    &__alternative {
+      a {
+        color: variables.$color-primary;
+      }
     }
   }
 
