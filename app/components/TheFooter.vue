@@ -16,8 +16,7 @@ const socials = [
         <p class="copyright">&copy; 2025 Vo Quang Chien. All rights are reserved.</p>
       </div>
       <div>
-        <p>Built with Nuxt.js, TypeScript, and TailwindCSS.</p>
-        <p>Made with 🍜 and ❤️ at 2AM.</p>
+        <p>Built with Nuxt.js and 🍜 at 2AM.</p>
         <div class="socials">
           <NuxtLink v-for="item in socials" :key="item.href" :to="item.href" target="_blank">
             <BaseButton :icon="item.icon" variant="soft" />
