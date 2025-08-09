@@ -20,6 +20,15 @@ const emit = defineEmits(['close']);
 
 const router = useRouter();
 
+const resultItem = useTemplateRef('search-result');
+
+watch(currentIndex, (value) => {
+  resultItem.value?.children[value]?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+});
+
 onMounted(() => {
   window.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key.toLowerCase() == 'j') {
@@ -53,7 +62,7 @@ onMounted(() => {
   <div class="search-modal">
     <input v-model="query" placeholder="Search" class="search-modal__search-box" />
 
-    <div class="search-modal__result">
+    <div ref="search-result" class="search-modal__result">
       <NuxtLink
         v-for="(item, index) in result"
         :key="item.item.id"
