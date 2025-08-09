@@ -3,7 +3,7 @@ defineProps<{ id?: string }>();
 </script>
 
 <template>
-  <h2 :id="`#${id}`" class="prose-h2">
+  <h2 :id="id" class="prose-h2">
     <a :href="`#${id}`"><slot /></a>
   </h2>
 </template>

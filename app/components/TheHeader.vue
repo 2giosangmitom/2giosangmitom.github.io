@@ -13,6 +13,8 @@ const toggleIcon = computed(() => {
   }
   return 'lucide:menu';
 });
+
+const searchModalOpen = useState('search-modal', () => false);
 </script>
 
 <template>
@@ -27,7 +29,7 @@ const toggleIcon = computed(() => {
         </NuxtLink>
       </nav>
 
-      <BaseButton icon="lucide:search" variant="soft" />
+      <BaseButton icon="lucide:search" variant="soft" @click="searchModalOpen = !searchModalOpen" />
 
       <!-- Mobile navigation -->
       <nav class="header__navigation__mobile">
