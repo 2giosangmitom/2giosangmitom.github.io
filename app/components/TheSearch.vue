@@ -21,6 +21,7 @@ const emit = defineEmits(['close']);
 const router = useRouter();
 
 const resultItem = useTemplateRef('search-result');
+const searchInput = useTemplateRef('search-input');
 
 watch(currentIndex, (value) => {
   resultItem.value?.children[value]?.scrollIntoView({
@@ -30,6 +31,9 @@ watch(currentIndex, (value) => {
 });
 
 onMounted(() => {
+  // Auto-focus input when modal opens
+  searchInput.value?.focus();
+
   window.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key.toLowerCase() == 'j') {
       e.preventDefault();
@@ -54,26 +58,32 @@ onMounted(() => {
         emit('close');
       }
     }
+
+    if (e.key === 'Escape') {
+      query.value = '';
+    }
   });
 });
 </script>
 
 <template>
-  <div class="search-modal">
-    <input v-model="query" placeholder="Search" class="search-modal__search-box" />
+  <div class="search-overlay" @click.self="emit('close')">
+    <div class="search-modal">
+      <input ref="search-input" v-model="query" placeholder="Search" class="search-modal__search-box" />
 
-    <div ref="search-result" class="search-modal__result">
-      <NuxtLink
-        v-for="(item, index) in result"
-        :key="item.item.id"
-        :to="item.item.id"
-        class="search-modal__result__item"
-        :class="{ 'search-modal__result__item--current': currentIndex === index }"
-        @click="emit('close')"
-      >
-        <h3 class="search-modal__result__item__title">{{ item.item.title }}</h3>
-        <p class="search-modal__result__item__description">{{ item.item.content.slice(0, 100) }}...</p>
-      </NuxtLink>
+      <div ref="search-result" class="search-modal__result">
+        <NuxtLink
+          v-for="(item, index) in result"
+          :key="item.item.id"
+          :to="item.item.id"
+          class="search-modal__result__item"
+          :class="{ 'search-modal__result__item--current': currentIndex === index }"
+          @click="emit('close')"
+        >
+          <h3 class="search-modal__result__item__title">{{ item.item.title }}</h3>
+          <p class="search-modal__result__item__description">{{ item.item.content.slice(0, 100) }}...</p>
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
@@ -81,8 +91,20 @@ onMounted(() => {
 <style lang="scss">
 @use '~/assets/scss/variables';
 
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(6px);
+  z-index: 9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
 .search-modal {
-  position: absolute;
+  position: fixed;
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
@@ -91,7 +113,7 @@ onMounted(() => {
   width: 90%;
   height: 30rem;
   z-index: 10;
-  outline: 1px solid variables.$color-dimmed;
+  outline: 2px solid variables.$color-dimmed;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-gutter: stable;
@@ -106,14 +128,14 @@ onMounted(() => {
   &__search-box {
     background-color: variables.$color-background;
     border: none;
-    outline: 1px solid variables.$color-dimmed;
+    outline: 2px solid variables.$color-dimmed;
     padding: 0.5rem 1rem;
     color: variables.$color-foreground;
     width: 100%;
-    font-size: variables.$font-sm;
+    font-size: variables.$font-base;
 
     &::placeholder {
-      font-size: variables.$font-sm;
+      font-size: variables.$font-base;
     }
 
     &:focus {
