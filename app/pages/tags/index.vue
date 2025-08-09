@@ -26,6 +26,7 @@ const tags = computed(() => {
 
 <template>
   <main class="container tags">
+    <h1 class="tags__title">SELECT DISTINCT tags FROM blog</h1>
     <div v-if="tags" class="tags__list">
       <div v-for="tag in tags" :key="tag" class="btn--link">
         <Icon name="lucide:tag" />
@@ -37,6 +38,11 @@ const tags = computed(() => {
 
 <style lang="scss">
 .tags {
+  &__title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
   .btn--link {
     width: fit-content;
     display: flex;

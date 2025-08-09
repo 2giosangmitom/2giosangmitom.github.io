@@ -9,8 +9,9 @@ const { data: blogs } = await useAsyncData('all-blogs', () => {
 </script>
 
 <template>
-  <main class="container">
-    <div v-if="blogs" class="blogs">
+  <main class="container blogs">
+    <h1 class="blogs__title">SELECT * FROM blogs</h1>
+    <div v-if="blogs" class="blogs__list">
       <BlogCard
         v-for="item in blogs"
         :key="item.id"
@@ -26,8 +27,15 @@ const { data: blogs } = await useAsyncData('all-blogs', () => {
 
 <style lang="scss">
 .blogs {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
+  &__title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
 }
 </style>
