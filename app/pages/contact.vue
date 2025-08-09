@@ -152,8 +152,14 @@ async function handleSubmit() {
 
 .contact {
   display: flex;
-  column-gap: 4rem;
-  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 4rem;
+
+  @media screen and (min-width: variables.$screen-xl) {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 4rem;
+  }
 
   &__form {
     background-color: variables.$color-surface;
@@ -162,6 +168,7 @@ async function handleSubmit() {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+    flex: 1.25;
 
     &__title {
       color: variables.$color-primary;
@@ -176,22 +183,23 @@ async function handleSubmit() {
   &__info-cards {
     background-color: variables.$color-surface;
     border-radius: variables.$rounded-lg;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     height: fit-content;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+    flex: 1;
 
     &__item {
       outline: 1px solid variables.$color-dimmed;
-      padding: 1.5rem 2rem;
       border-radius: variables.$rounded-md;
+      padding: 1rem 1.25rem;
 
       &__header {
         display: flex;
         align-items: center;
         column-gap: 1rem;
-        font-size: variables.$font-lg;
+        font-size: variables.$font-base;
       }
     }
   }

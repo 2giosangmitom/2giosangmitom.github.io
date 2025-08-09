@@ -22,13 +22,14 @@ const toggleIcon = computed(() => {
     <div class="header__navigation">
       <!-- Desktop navigation -->
       <nav class="header__navigation__desktop">
-        <NuxtLink v-for="item in navigations" :key="item.href" class="btn--link" :to="item.href">{{
-          item.name
-        }}</NuxtLink>
+        <NuxtLink v-for="item in navigations" :key="item.href" class="btn--link" :to="item.href">
+          {{ item.name }}
+        </NuxtLink>
       </nav>
 
       <BaseButton icon="lucide:search" variant="soft" />
 
+      <!-- Mobile navigation -->
       <nav class="header__navigation__mobile">
         <BaseButton
           :icon="toggleIcon"

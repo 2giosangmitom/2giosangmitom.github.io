@@ -76,7 +76,7 @@ const socials = [
       @media screen and (min-width: variables.$screen-md) {
         text-align: right;
       }
-      
+
       .socials {
         display: inline-flex;
         column-gap: 1rem;
