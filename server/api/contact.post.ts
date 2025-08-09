@@ -90,7 +90,7 @@ function buildDiscordEmbed(data: ContactInput) {
 
 function buildConfirmationEmail(data: ContactInput) {
   return {
-    from: { name: 'Vo Quang Chien', address: '2giosangmitom@gmail.com' },
+    from: { name: 'Vo Quang Chien', address: process.env.GMAIL_USER as string },
     to: data.email,
     subject: "I've received your message!",
     html: `
