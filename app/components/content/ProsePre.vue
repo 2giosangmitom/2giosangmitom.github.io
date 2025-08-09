@@ -57,6 +57,7 @@ const { copy, copied } = useClipboard({ source: props.code, copiedDuring: 3000 }
     border: 1px solid variables.$color-surface;
     border-radius: variables.$rounded-sm;
     overflow-x: auto;
+    scrollbar-width: thin;
     padding: 0.5rem;
     font-family: 'JetBrainsMono', monospace;
     font-size: variables.$font-sm;

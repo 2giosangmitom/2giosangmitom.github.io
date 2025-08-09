@@ -47,6 +47,7 @@ if (page.value) {
 .blog-details {
   &__meta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     column-gap: 1rem;
     margin-bottom: 0.5rem;
