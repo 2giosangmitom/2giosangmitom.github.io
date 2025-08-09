@@ -1,23 +1,30 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxt/ui', '@nuxt/image'],
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/scss/main.scss'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/test-utils',
+    '@nuxt/content',
+    '@vueuse/nuxt'
+  ],
+  typescript: {
+    typeCheck: false
+  },
   app: {
+    head: {
+      titleTemplate: '%s - Vo Quang Chien'
+    },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   content: {
     build: {
       markdown: {
-        toc: {
-          depth: 3
-        },
         highlight: {
-          theme: {
-            default: 'catppuccin-latte',
-            ['dark-mode']: 'catppuccin-mocha'
-          },
+          theme: 'tokyo-night',
           langs: ['lua', 'javascript', 'cpp', 'java', 'typescript', 'bash', 'shell']
         }
       }
