@@ -38,16 +38,24 @@ const socials = [
 
   .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 0.5rem;
     color: variables.$color-dimmed;
+
+    @media screen and (min-width: variables.$screen-md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     > div {
       display: flex;
       flex-direction: column;
       row-gap: 0.5rem;
 
-      &:last-child {
-        align-items: flex-end;
+      @media screen and (min-width: variables.$screen-md) {
+        &:last-child {
+          align-items: flex-end;
+        }
       }
     }
 
@@ -65,8 +73,10 @@ const socials = [
     }
 
     > :last-child {
-      text-align: right;
-
+      @media screen and (min-width: variables.$screen-md) {
+        text-align: right;
+      }
+      
       .socials {
         display: inline-flex;
         column-gap: 1rem;

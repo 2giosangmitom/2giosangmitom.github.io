@@ -17,7 +17,7 @@ defineProps<{
       <NuxtLink :to="path" class="blog-card__footer__read-btn btn--link"> Read more </NuxtLink>
       <div class="blog-card__footer__tags">
         <NuxtLink v-for="tag in tags" :key="tag" :to="{ name: 'tags-id', params: { id: tag } }">
-          <BaseBadge variant="outline">#{{ tag }}</BaseBadge>
+          <BaseBadge variant="subtle">#{{ tag }}</BaseBadge>
         </NuxtLink>
       </div>
     </div>
@@ -44,10 +44,16 @@ defineProps<{
 
   &__footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column-reverse;
+    row-gap: 0.5rem;
 
+    @media screen and (min-width: variables.$screen-sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
     &__read-btn {
+      width: fit-content;
       button {
         cursor: pointer;
       }

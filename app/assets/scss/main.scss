@@ -16,13 +16,13 @@
 
 html {
   scrollbar-width: thin;
+  scrollbar-color: variables.$color-primary transparent;
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
   background-color: variables.$color-background;
   color: variables.$color-foreground;
   font-size: variables.$font-base;
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
 }
 
 p,

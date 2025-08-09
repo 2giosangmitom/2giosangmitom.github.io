@@ -47,12 +47,12 @@ function handleTadaa(e: MouseEvent) {
 
       <div class="main-page__author__text">
         <BaseBadge>Full stack developer</BaseBadge>
-        <h1 class="greeting font-bold">Yo! I&apos;m <span>Vo Quang Chien</span>.</h1>
-        <p class="description">
+        <h1 class="main-page__author__text__greeting font-bold">Yo! I&apos;m <span>Vo Quang Chien</span>.</h1>
+        <p class="main-page__author__text__description">
           I enjoy developing projects that both functionally sound and artistic. Currently, I'm interesting in full
           stack development, seeking to improve my skills to provide as much as possible value.
         </p>
-        <div class="actions">
+        <div class="main-page__author__text__actions">
           <NuxtLink to="/contact">
             <BaseButton icon="lucide:at-sign">Contact Me</BaseButton>
           </NuxtLink>
@@ -96,22 +96,28 @@ section .title {
 
   &__author {
     display: flex;
-    column-gap: 6rem;
+    flex-direction: column-reverse;
+    row-gap: 6rem;
+
+    @media screen and (min-width: variables.$screen-lg) {
+      flex-direction: row;
+      column-gap: 6rem;
+    }
 
     &__text {
       > :not(:first-child) {
         margin-top: 1rem;
       }
 
-      .greeting {
-        font-size: variables.$font-4xl;
+      &__greeting {
+        font-size: variables.$font-3xl;
         line-height: 5rem;
 
         span {
           color: variables.$color-primary;
         }
       }
-      .actions {
+      &__actions {
         display: flex;
         align-items: center;
         column-gap: 1rem;
@@ -124,6 +130,13 @@ section .title {
 
     .avt {
       border-radius: variables.$rounded-sm;
+      align-self: center;
+      max-width: 100%;
+      height: auto;
+
+      @media screen and (min-width: variables.$screen-lg) {
+        align-self: flex-start;
+      }
     }
   }
 
@@ -131,18 +144,33 @@ section .title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 1rem;
+    row-gap: 2rem;
 
     .description {
       text-align: center;
-      max-width: 70%;
+
+      @media screen and (min-width: variables.$screen-sm) {
+        max-width: 80%;
+      }
     }
 
     .icons {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       place-items: center;
       gap: 4rem 6rem;
+
+      @media screen and (min-width: variables.$screen-sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (min-width: variables.$screen-lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (min-width: variables.$screen-xl) {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
       .icon-item {
         user-select: none;
