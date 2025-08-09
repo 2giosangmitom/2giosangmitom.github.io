@@ -25,6 +25,7 @@
     "better-sqlite3": "^12.2.0",
     "eslint": "^9.32.0",
     "fuse.js": "^7.1.0",
+    "googleapis": "^155.0.1",
     "nodemailer": "^7.0.5",
     "nuxt": "^4.0.3",
     "sass-embedded": "^1.90.0",
