@@ -69,6 +69,10 @@ li {
   font-weight: 600;
 }
 
+.text-primary {
+  color: variables.$color-primary;
+}
+
 // Link button
 .btn--link {
   color: inherit;
