@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const navigations = [
+type NavigationItem = {
+  icon: string;
+  href: string;
+  name: string;
+};
+
+const navigations: NavigationItem[] = [
   { icon: 'material-symbols:person', href: '/about', name: 'About' },
   { icon: 'icomoon-free:blog', href: '/blog', name: 'Blog' },
   { icon: 'lucide:tag', href: '/tags', name: 'Tags' },
@@ -8,6 +14,10 @@ const navigations = [
 
 const isOpen = ref(false);
 const searchModalOpen = useState('search-modal', () => false);
+
+const toggleSearchModal = () => (searchModalOpen.value = !searchModalOpen.value);
+const openMobileNav = () => (isOpen.value = true);
+const closeMobileNav = () => (isOpen.value = false);
 </script>
 
 <template>
@@ -22,7 +32,7 @@ const searchModalOpen = useState('search-modal', () => false);
         </NuxtLink>
       </nav>
 
-      <BaseButton icon="lucide:search" variant="soft" @click="searchModalOpen = !searchModalOpen" />
+      <BaseButton icon="lucide:search" variant="soft" @click="toggleSearchModal" />
 
       <!-- Mobile navigation -->
       <nav class="header__navigation__mobile">
@@ -30,7 +40,7 @@ const searchModalOpen = useState('search-modal', () => false);
           icon="lucide:menu"
           class="header__navigation__mobile__open"
           variant="subtle"
-          @click="isOpen = true"
+          @click="openMobileNav"
         />
 
         <Transition name="slide">
@@ -39,16 +49,18 @@ const searchModalOpen = useState('search-modal', () => false);
               icon="lucide:x"
               class="header__navigation__mobile__list__close"
               variant="subtle"
-              @click="isOpen = false"
+              @click="closeMobileNav"
             />
             <NuxtLink
               v-for="item in navigations"
               :key="item.href"
               :to="item.href"
               class="header__navigation__mobile__list__item"
-              @click="isOpen = false"
+              @click="closeMobileNav"
             >
-              <BaseButton :icon="item.icon" variant="soft">{{ item.name }}</BaseButton>
+              <BaseButton :icon="item.icon" variant="soft">
+                {{ item.name }}
+              </BaseButton>
             </NuxtLink>
           </div>
         </Transition>
@@ -58,34 +70,14 @@ const searchModalOpen = useState('search-modal', () => false);
 </template>
 
 <style lang="scss">
-@use '~/assets/scss/variables';
-
-.slide-enter-active,
-.slide-leave-active {
-  transition:
-    transform 400ms cubic-bezier(0.19, 0.83, 0.38, 0.91),
-    opacity 400ms cubic-bezier(0.19, 0.83, 0.38, 0.91);
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.slide-enter-to,
-.slide-leave-from {
-  opacity: 1;
-  transform: translateX(0%);
-}
+@use '~/assets/scss/variables' as v;
 
 .header {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-block: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: variables.$font-lg;
+  font-size: v.$font-lg;
 
   &__navigation {
     display: flex;
@@ -93,24 +85,25 @@ const searchModalOpen = useState('search-modal', () => false);
     column-gap: 1rem;
 
     &__desktop {
+      display: none;
       align-items: center;
       column-gap: 1rem;
-      display: none;
 
-      @media screen and (min-width: variables.$screen-sm) {
+      @media (min-width: v.$screen-sm) {
         display: flex;
       }
     }
 
     &__mobile {
+      @media (min-width: v.$screen-sm) {
+        display: none;
+      }
+
       &__list {
         position: fixed;
         z-index: 10;
-        top: 0;
-        right: 0;
-        background-color: variables.$color-surface;
-        height: 100vh;
-        width: 100%;
+        inset: 0;
+        background-color: v.$color-surface;
         padding-top: 5rem;
         display: flex;
         flex-direction: column;
@@ -124,7 +117,7 @@ const searchModalOpen = useState('search-modal', () => false);
           button {
             width: 100%;
             justify-content: flex-start;
-            padding: 1rem 1rem;
+            padding: 1rem;
           }
         }
 
@@ -133,10 +126,6 @@ const searchModalOpen = useState('search-modal', () => false);
           top: 2rem;
           right: 1rem;
         }
-      }
-
-      @media screen and (min-width: variables.$screen-sm) {
-        display: none;
       }
     }
   }
