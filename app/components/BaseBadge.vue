@@ -1,41 +1,47 @@
 <script setup lang="ts">
-withDefaults(
+type BadgeVariant = 'solid' | 'outline' | 'subtle';
+
+const props = withDefaults(
   defineProps<{
-    variant?: 'solid' | 'outline' | 'subtle';
+    variant?: BadgeVariant;
   }>(),
   {
     variant: 'solid'
   }
 );
+
+const badgeClasses = computed(() => ['base-badge', `base-badge--${props.variant}`]);
 </script>
 
 <template>
-  <span :class="`base-badge ${variant}`"><slot /></span>
+  <span :class="badgeClasses">
+    <slot />
+  </span>
 </template>
 
 <style lang="scss">
-@use '~/assets/scss/variables';
+@use '~/assets/scss/variables' as v;
 
 .base-badge {
-  border-radius: variables.$rounded-sm;
+  border-radius: v.$rounded-sm;
   padding: 0.3rem 0.4rem;
-  font-size: variables.$font-sm;
+  font-size: v.$font-sm;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 
-  &.solid {
-    color: variables.$color-background;
-    background-color: variables.$color-primary;
+  &--solid {
+    color: v.$color-background;
+    background-color: v.$color-primary;
   }
 
-  &.outline {
-    outline: 1px solid variables.$color-primary;
+  &--outline {
+    outline: 1px solid v.$color-primary;
   }
 
-  &.subtle {
-    color: variables.$color-primary;
-    background-color: color-mix(in hsl, variables.$color-primary, transparent 90%);
+  &--subtle {
+    color: v.$color-primary;
+    background-color: color-mix(in hsl, v.$color-primary, transparent 90%);
   }
 }
 </style>
