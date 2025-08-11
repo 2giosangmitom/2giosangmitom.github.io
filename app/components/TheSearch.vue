@@ -30,39 +30,39 @@ watch(currentIndex, (value) => {
   });
 });
 
+useEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.key.toLowerCase() == 'j') {
+    e.preventDefault();
+
+    if (total.value) {
+      currentIndex.value = (currentIndex.value + 1) % total.value;
+    }
+  }
+
+  if (e.ctrlKey && e.key.toLowerCase() == 'k') {
+    e.preventDefault();
+
+    if (total.value) {
+      currentIndex.value = (total.value + currentIndex.value - 1) % total.value;
+    }
+  }
+
+  if (e.key === 'Enter') {
+    const path = result.value[currentIndex.value]?.item.id;
+    if (path) {
+      router.push(path);
+      emit('close');
+    }
+  }
+
+  if (e.key === 'Escape') {
+    query.value = '';
+  }
+});
+
 onMounted(() => {
   // Auto-focus input when modal opens
   searchInput.value?.focus();
-
-  window.addEventListener('keydown', (e) => {
-    if (e.ctrlKey && e.key.toLowerCase() == 'j') {
-      e.preventDefault();
-
-      if (total.value) {
-        currentIndex.value = (currentIndex.value + 1) % total.value;
-      }
-    }
-
-    if (e.ctrlKey && e.key.toLowerCase() == 'k') {
-      e.preventDefault();
-
-      if (total.value) {
-        currentIndex.value = (total.value + currentIndex.value - 1) % total.value;
-      }
-    }
-
-    if (e.key === 'Enter') {
-      const path = result.value[currentIndex.value]?.item.id;
-      if (path) {
-        router.push(path);
-        emit('close');
-      }
-    }
-
-    if (e.key === 'Escape') {
-      query.value = '';
-    }
-  });
 });
 </script>
 
