@@ -71,7 +71,7 @@ onMounted(() => {
     <div class="search-modal">
       <input ref="search-input" v-model="query" placeholder="Search" class="search-modal__search-box" />
 
-      <div ref="search-result" class="search-modal__result">
+      <div v-if="result.length" ref="search-result" class="search-modal__result">
         <NuxtLink
           v-for="(item, index) in result"
           :key="item.item.id"
@@ -83,6 +83,14 @@ onMounted(() => {
           <h3 class="search-modal__result__item__title">{{ item.item.title }}</h3>
           <p class="search-modal__result__item__description">{{ item.item.content.slice(0, 100) }}...</p>
         </NuxtLink>
+      </div>
+      <div v-else class="search-modal__keymaps">
+        <p class="search-modal__keymaps__title text-primary font-medium">Keymaps:</p>
+        <ul class="search-modal__keymaps__list">
+          <li><kbd>Ctrl</kbd> + <kbd>/</kbd> - Toggle modal</li>
+          <li><kbd>Ctrl</kbd> + <kbd>J</kbd> / <kbd>K</kbd> - Move down/up</li>
+          <li><kbd>Enter</kbd> - Select item</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -97,10 +105,6 @@ onMounted(() => {
   background: rgb(0 0 0 / 0.3);
   backdrop-filter: blur(6px);
   z-index: 9;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 10vh;
 }
 
 .search-modal {
@@ -119,7 +123,6 @@ onMounted(() => {
   scrollbar-gutter: stable;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   @media screen and (min-width: variables.$screen-md) {
     width: 50rem;
@@ -167,6 +170,27 @@ onMounted(() => {
       &--current,
       &:hover {
         outline-color: variables.$color-primary;
+      }
+    }
+  }
+
+  &__keymaps {
+    margin-top: 1rem;
+    font-size: variables.$font-sm;
+
+    &__list {
+      list-style: none;
+
+      kbd {
+        background: variables.$color-surface;
+        outline: 1px solid variables.$color-dimmed;
+        border-radius: 4px;
+        padding: 1px 4px;
+        font-family: 'JetBrainsMono', monospace;
+      }
+
+      li {
+        margin-top: 0.25rem;
       }
     }
   }
