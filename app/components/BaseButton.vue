@@ -1,32 +1,42 @@
 <script setup lang="ts">
+type ButtonVariant = 'solid' | 'soft' | 'outline' | 'subtle';
+type ButtonType = 'button' | 'submit' | 'reset' | undefined;
+
 const props = withDefaults(
   defineProps<{
-    variant?: 'solid' | 'soft' | 'outline' | 'subtle';
+    variant?: ButtonVariant;
     icon?: string;
     loading?: boolean;
     loadingIcon?: string;
-    type?: 'button' | 'submit' | 'reset' | undefined;
+    type?: ButtonType;
   }>(),
   {
     variant: 'solid',
-    loading: false,
     icon: undefined,
+    loading: false,
     loadingIcon: undefined,
     type: undefined
   }
 );
+
+const buttonClasses = computed(() => ['base-button', `base-button--${props.variant}`]);
 </script>
 
 <template>
-  <button :class="`base-button ${props.variant}`" :type="type">
-    <Icon v-if="props.icon" v-show="!loading" class="icon" :name="props.icon" size="20" />
-    <Icon v-if="props.loading && props.loadingIcon" :name="props.loadingIcon" size="20" class="loading-icon" />
+  <button :class="buttonClasses" :type="props.type">
+    <Icon v-if="props.icon && !props.loading" class="base-button__icon" :name="props.icon" size="20" />
+    <Icon
+      v-if="props.loading && props.loadingIcon"
+      class="base-button__loading-icon"
+      :name="props.loadingIcon"
+      size="20"
+    />
     <slot />
   </button>
 </template>
 
 <style lang="scss">
-@use '~/assets/scss/variables';
+@use '~/assets/scss/variables' as v;
 
 .base-button {
   display: inline-flex;
@@ -36,53 +46,54 @@ const props = withDefaults(
   padding: 0.35rem;
   outline: none;
   border: none;
-  border-radius: variables.$rounded-sm;
+  border-radius: v.$rounded-sm;
   transition: background-color 200ms ease;
-  font-size: variables.$font-base;
+  font-size: v.$font-base;
 
-  .loading-icon {
+  &__loading-icon {
     animation: 1s infinite spin linear;
   }
 
-  .icon {
-    width: variables.$font-lg;
-    height: variables.$font-lg;
+  &__icon {
+    width: v.$font-lg;
+    height: v.$font-lg;
   }
 
   // Variants
-  &.solid {
-    background-color: variables.$color-primary;
+  &--solid {
+    background-color: v.$color-primary;
+    color: v.$color-background;
 
     &:hover {
-      background-color: color-mix(in hsl, variables.$color-primary, transparent 20%);
+      background-color: color-mix(in hsl, v.$color-primary, transparent 20%);
     }
   }
 
-  &.soft {
+  &--soft {
     background-color: transparent;
-    color: variables.$color-primary;
+    color: v.$color-primary;
 
     &:hover {
-      background-color: color-mix(in hsl, variables.$color-primary, transparent 80%);
+      background-color: color-mix(in hsl, v.$color-primary, transparent 80%);
     }
   }
 
-  &.outline {
+  &--outline {
     background-color: transparent;
-    color: variables.$color-primary;
-    outline: 1px solid variables.$color-primary;
+    color: v.$color-primary;
+    outline: 1px solid v.$color-primary;
 
     &:hover {
-      background-color: color-mix(in hsl, variables.$color-primary, transparent 90%);
+      background-color: color-mix(in hsl, v.$color-primary, transparent 90%);
     }
   }
 
-  &.subtle {
-    color: variables.$color-primary;
-    background-color: color-mix(in hsl, variables.$color-primary, transparent 90%);
+  &--subtle {
+    color: v.$color-primary;
+    background-color: color-mix(in hsl, v.$color-primary, transparent 90%);
 
     &:hover {
-      background-color: color-mix(in hsl, variables.$color-primary, transparent 70%);
+      background-color: color-mix(in hsl, v.$color-primary, transparent 70%);
     }
   }
 }
