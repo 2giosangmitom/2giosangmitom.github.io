@@ -18,12 +18,12 @@
     "@nuxt/eslint": "1.8.0",
     "@nuxt/fonts": "0.11.4",
     "@nuxt/icon": "1.15.0",
-    "@nuxt/image": "1.10.0",
+    "@nuxt/image": "1.11.0",
     "@nuxt/test-utils": "3.19.2",
     "@vueuse/core": "^13.6.0",
     "@vueuse/nuxt": "^13.6.0",
     "better-sqlite3": "^12.2.0",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "fuse.js": "^7.1.0",
     "googleapis": "^155.0.1",
     "nodemailer": "^7.0.5",
@@ -33,15 +33,15 @@
     "vue": "^3.5.18",
     "vue-router": "^4.5.1",
     "vue-tsc": "^3.0.5",
-    "zod": "^4.0.15"
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@iconify-json/eos-icons": "^1.2.2",
-    "@iconify-json/lucide": "^1.2.61",
-    "@iconify-json/material-symbols": "^1.2.30",
+    "@iconify-json/lucide": "^1.2.62",
+    "@iconify-json/material-symbols": "^1.2.31",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ph": "^1.2.2",
-    "@iconify-json/simple-icons": "^1.2.46",
+    "@iconify-json/simple-icons": "^1.2.47",
     "@types/nodemailer": "^6.4.17",
     "prettier": "^3.6.2"
   }
