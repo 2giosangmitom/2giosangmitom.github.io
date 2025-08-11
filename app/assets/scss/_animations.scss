@@ -1,5 +1,6 @@
+/* Keyframes */
 @keyframes tadaa {
-  from {
+  0% {
     transform: scale3d(1, 1, 1);
   }
 
@@ -21,23 +22,22 @@
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
 
-  to {
+  100% {
     transform: scale3d(1, 1, 1);
   }
 }
 
 @keyframes spin {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
 }
 
-/* Transition animations */
-
-// Fade transition
+/* Transitions */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 200ms ease;
@@ -47,20 +47,17 @@
   opacity: 0;
 }
 
-// Slide transition
 .slide-enter-active,
 .slide-leave-active {
   transition:
     transform 400ms cubic-bezier(0.19, 0.83, 0.38, 0.91),
     opacity 400ms cubic-bezier(0.19, 0.83, 0.38, 0.91);
 }
-
 .slide-enter-from,
 .slide-leave-to {
   opacity: 0;
   transform: translateX(100%);
 }
-
 .slide-enter-to,
 .slide-leave-from {
   opacity: 1;
