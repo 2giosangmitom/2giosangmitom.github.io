@@ -29,5 +29,11 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+  icon: {
+    mode: 'svg'
+  },
+  routeRules: {
+    '/': { prerender: true }
   }
 });
