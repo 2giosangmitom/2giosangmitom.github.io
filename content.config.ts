@@ -7,7 +7,7 @@ export default defineContentConfig({
       source: 'blog/*.md',
       schema: z.object({
         createdOn: z.date(),
-        updatedOn: z.date(),
+        updatedOn: z.date().optional(),
         tags: z.array(z.string())
       })
     }),

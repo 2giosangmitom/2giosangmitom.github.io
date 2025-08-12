@@ -6,7 +6,7 @@
 @use '~/assets/scss/variables';
 
 .prose-code {
-  background-color: color-mix(in hsl, variables.$color-dimmed, transparent 50%);
+  background-color: color-mix(in hsl, variables.$color-dimmed, transparent 70%);
   padding: 0.02rem;
   border-radius: variables.$rounded-sm;
 }

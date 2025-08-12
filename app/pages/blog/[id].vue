@@ -22,7 +22,7 @@ if (page.value) {
         </BaseBadge>
         <NuxtTime :datetime="page.createdOn" />
       </div>
-      <div class="blog-details__meta__item">
+      <div v-if="page.updatedOn" class="blog-details__meta__item">
         <BaseBadge variant="subtle">
           <Icon name="mdi:calendar-edit" size="16" />
         </BaseBadge>
@@ -50,6 +50,7 @@ if (page.value) {
     flex-wrap: wrap;
     align-items: center;
     column-gap: 1rem;
+    row-gap: 0.5rem;
     margin-bottom: 0.5rem;
 
     &__item {
