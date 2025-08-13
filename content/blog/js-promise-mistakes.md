@@ -1,5 +1,6 @@
 ---
 createdOn: '2025-08-12'
+updatedOn: '2025-08-13'
 tags:
   - programming
   - javascript
@@ -184,7 +185,7 @@ fetchData('https://jsonplaceholder.typicode.com/todos/1');
 
 ### Converting promise rejection into fulfillment
 
-Each method in the Promise object returns a new Promise. If we are not careful, we can write code that can implicitly convert rejection into Promise fulfillment. Let's take a look at an example:
+Each method in the `Promise.prototype` object returns a new Promise. If we are not careful, we can write code that can implicitly convert rejection into Promise fulfillment. Let's take a look at an example:
 
 ```javascript
 function rejectPromise() {
