@@ -78,8 +78,14 @@ if (page.value) {
     }
     h2,
     h3 {
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+    p {
+      margin-top: 0.5rem;
+    }
+    li {
       margin-top: 0.2rem;
-      margin-bottom: 0.2rem;
     }
   }
 }
