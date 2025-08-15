@@ -109,7 +109,7 @@ onMounted(() => {
 
 .search-modal {
   position: fixed;
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   background-color: variables.$color-surface;
