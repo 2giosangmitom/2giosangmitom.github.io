@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/test-utils',
     '@nuxt/content',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxtjs/sitemap'
   ],
   typescript: {
     typeCheck: false
@@ -35,5 +36,9 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': { prerender: true }
+  },
+  site: {
+    url: 'https://2giosangmitom.is-a.dev/',
+    name: 'Full stack developer - Vo Quang Chien'
   }
 });
