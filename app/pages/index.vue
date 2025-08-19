@@ -18,7 +18,8 @@ const icons = [
   { name: 'simple-icons:postgresql', label: 'PostgreSQL' },
   { name: 'simple-icons:mysql', label: null },
   { name: 'mdi:docker', label: 'Docker' },
-  { name: 'simple-icons:linux', label: 'Linux' }
+  { name: 'simple-icons:linux', label: 'Linux' },
+  { name: 'simple-icons:prisma', label: 'Prisma' }
 ];
 
 function handleTadaa(e: MouseEvent) {
