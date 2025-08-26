@@ -10,7 +10,7 @@ const icons = [
   { name: 'mdi:language-python', label: 'Python' },
   { name: 'simple-icons:express', label: 'Express' },
   { name: 'simple-icons:fastify', label: 'Fastify' },
-  { name: 'simple-icons:nestjs', label: 'NestJS' },
+  // { name: 'simple-icons:nestjs', label: 'NestJS' },
   { name: 'mdi:nuxt', label: 'Nuxt' },
   { name: 'mdi:vuejs', label: 'Vue' },
   { name: 'mdi:nodejs', label: 'Node.js' },
