@@ -5,6 +5,8 @@ useSeoMeta({
   title: 'Contact'
 });
 
+const toaster = useToast();
+
 const cards = [
   {
     icon: 'eos-icons:atom-electron',
@@ -72,9 +74,15 @@ async function handleSubmit() {
         'Content-Type': 'application/json'
       }
     });
+    toaster.push({
+      title: 'Success',
+      content: "Your message has been sent successfully. I'll get back to you shortly!"
+    });
     Object.assign(state, { fullName: '', email: '', topic: '', message: '' });
   } catch (error) {
-    console.error(error);
+    if (error instanceof Error) {
+      toaster.push({ title: 'Error', content: error.message });
+    }
   } finally {
     loading.value = false;
   }

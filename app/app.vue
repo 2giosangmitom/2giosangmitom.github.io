@@ -6,6 +6,8 @@ useEventListener('keyup', (e) => {
     searchModalOpen.value = !searchModalOpen.value;
   }
 });
+
+const { toasts } = useToast();
 </script>
 
 <template>
@@ -13,9 +15,21 @@ useEventListener('keyup', (e) => {
   <Transition name="fade">
     <TheSearch v-if="searchModalOpen" @close="searchModalOpen = false" />
   </Transition>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+
+  <ToastProvider>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+
+    <TheToast
+      v-for="toast in toasts"
+      :title="toast.title"
+      :content="toast.content"
+      :key="`${toast.content}-${toast.title}`"
+    />
+
+    <ToastViewport class="toast-viewport" />
+  </ToastProvider>
 </template>
 
 <style lang="scss">
@@ -23,5 +37,15 @@ useEventListener('keyup', (e) => {
 
 .loading-indicator {
   background-color: variables.$color-primary;
+}
+
+.toast-viewport {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 </style>

@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/content',
     '@vueuse/nuxt',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    'reka-ui/nuxt'
   ],
   typescript: {
     typeCheck: false
