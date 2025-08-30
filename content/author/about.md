@@ -2,12 +2,12 @@
 
 I'm **Vo Quang Chien**, a second-year software development student from Vietnam 🇻🇳, currently studying at **Hue University of Science**.
 
-I'm passionate about building efficient software and digging into how things work - from full-stack web applications to low-level system programming.
+Passionate about **full-stack web development**, and **all things Linux**.
 
 ## 🧠 What I'm Working On
 
 - Programming in **C, C++, TypeScript**, and occasionally **Python**
-- Full-stack development with **Node.js** (Express, Fastify, NestJS) and **Vue/Nuxt**
+- Full-stack development with **Node.js** (Express, Fastify) and **Vue/Nuxt**
 - **Network programming** and learning how **Linux** works under the hood
 - Optimizing my development workflow with **Vim**, the **terminal**, and custom setups
 
