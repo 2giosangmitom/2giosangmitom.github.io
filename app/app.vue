@@ -23,9 +23,9 @@ const { toasts } = useToast();
 
     <TheToast
       v-for="toast in toasts"
+      :key="`${toast.content}-${toast.title}`"
       :title="toast.title"
       :content="toast.content"
-      :key="`${toast.content}-${toast.title}`"
     />
 
     <ToastViewport class="toast-viewport" />
