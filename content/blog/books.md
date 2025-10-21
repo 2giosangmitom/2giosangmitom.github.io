@@ -1,6 +1,6 @@
 ---
 createdOn: '2025-03-31'
-updatedOn: '2025-04-16'
+updatedOn: '2025-10-21'
 tags:
   - books
 description: 'Sharing some books that have made a strong impression on me!'
@@ -45,3 +45,13 @@ This is one of the most comprehensive books for mastering JavaScript. It covers 
 This is one of the most detailed books about **data structures and algorithm** (DSA). It covers most popular data structures and algorithms, complexity analysis. Personally, I thing this is the easiest to understand book about DSA. It's suitable for both people who either or have much programming experience.
 
 [🔗 Buy on Amazon](https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X/ref=pd_sbs_d_sccl_2_1/137-7028963-0580330?psc=1)
+
+## Linux Books
+
+### The Software Developer's Guide to Linux (1st Edition)
+
+📖 _David Cohen, Christian Sturm_
+
+This book introduce about Linux that every software developers should read. It teach me about basic commands in Linux, how to use SSH, Docker, how to manage logs with journalctl, and basic Bash. Recommend if you are a developer.
+
+[🔗 Buy on Amazon](https://www.amazon.com/Software-Developers-Guide-Linux-no-nonsense/dp/1804616923?dib=eyJ2IjoiMSJ9.dlbEIRzryXAqJRoVdPDghB-97JwVYjHd-OE1gdS7Oz5KP26q14HPStFn2plN9iqth9NwYGm0pXWP_kAN2HuFqBhEOoCqTYOodwTeoPkqQGhhc5Twlpk40NsoOPG-tFHah-2nGofaik5Ze68F3sGEP-xZeQ2VkrJ85xEA_hP4sktSu_maaoBRQpsbv9rJsh1zCeyU4hCDp6ADnPg6QFYnOrL2RK3gY15KneuzbFZz6Ns.DGByHe5SpPJehtX5PV9ZSKXF_gaQkyJjr7h-qr22fyE&dib_tag=se&qid=1761028360&refinements=p_27%3AChristian+Sturm&s=books&sr=1-3&text=Christian+Sturm)
