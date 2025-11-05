@@ -1,17 +1,11 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./.nuxt/tsconfig.app.json"
-    },
-    {
-      "path": "./.nuxt/tsconfig.server.json"
-    },
-    {
-      "path": "./.nuxt/tsconfig.shared.json"
-    },
-    {
-      "path": "./.nuxt/tsconfig.node.json"
+  "compilerOptions": {
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"]
     }
-  ]
+  },
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
 }

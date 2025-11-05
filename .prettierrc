@@ -4,5 +4,8 @@
   "singleQuote": true,
   "useTabs": false,
   "endOfLine": "auto",
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "tabWidth": 2,
+  "vueIndentScriptAndStyle": true,
+  "bracketSameLine": true
 }
