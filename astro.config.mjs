@@ -8,4 +8,3 @@ export default defineConfig({
   site: 'https://2giosangmitom.is-a.dev',
   integrations: [sitemap(), vue()]
 });
-
