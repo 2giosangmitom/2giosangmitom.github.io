@@ -17,6 +17,15 @@ importers:
       '@astrojs/vue':
         specifier: ^5.1.3
         version: 5.1.3(@types/node@24.10.1)(astro@5.15.9(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(typescript@5.9.3)(yaml@2.8.1))(jiti@2.6.1)(rollup@4.53.2)(vue@3.5.24(typescript@5.9.3))(yaml@2.8.1)
+      '@fontsource-variable/jetbrains-mono':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource-variable/public-sans':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@lucide/astro':
+        specifier: ^0.554.0
+        version: 0.554.0(astro@5.15.9(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(typescript@5.9.3)(yaml@2.8.1))
       astro:
         specifier: ^5.15.9
         version: 5.15.9(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(typescript@5.9.3)(yaml@2.8.1)
@@ -554,6 +563,12 @@ packages:
   '@fastify/busboy@3.2.0':
     resolution: {integrity: sha512-m9FVDXU3GT2ITSe0UaMA5rU3QkfC/UXtCU8y0gSN/GugTqtVldOBWIB5V6V3sbmenVZUIpU6f+mPEO2+m5iTaA==}
 
+  '@fontsource-variable/jetbrains-mono@5.2.8':
+    resolution: {integrity: sha512-WBA9elru6Jdp5df2mES55wuOO0WIrn3kpXnI4+W2ek5u3ZgLS9XS4gmIlcQhiZOWEKl95meYdvK7xI+ETLCq/Q==}
+
+  '@fontsource-variable/public-sans@5.2.7':
+    resolution: {integrity: sha512-4mvade2J3slKkvwRkS+p8T3szet/0vhWoSnuUJTVU81Uo2pRpSZY/Y8bSLRqpSwzIPxjVmRJ53oq6JKP/l/PSg==}
+
   '@humanwhocodes/momoa@2.0.4':
     resolution: {integrity: sha512-RE815I4arJFtt+FVeU1Tgp9/Xvecacji8w/V6XtXsWWH/wz/eNkNbhb+ny/+PlVZjV0rxQpRSQKNKE3lcktHEA==}
     engines: {node: '>=10.10.0'}
@@ -724,6 +739,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@lucide/astro@0.554.0':
+    resolution: {integrity: sha512-OKDxbkluX4+keoX2mwORwhGEyqbSyLb1kwmaAx9KpknCFJihTzKWxw7qJ00wdlwRC3TDa+c4HbTG68Cb0R5IbQ==}
+    peerDependencies:
+      astro: ^4 || ^5
 
   '@mapbox/node-pre-gyp@2.0.0':
     resolution: {integrity: sha512-llMXd39jtP0HpQLVI37Bf1m2ADlEb35GYSh1SDSLsBhR+5iCxiNGlT31yqbNtVHygHAtMy6dWFERpU2JgufhPg==}
@@ -4298,6 +4318,10 @@ snapshots:
 
   '@fastify/busboy@3.2.0': {}
 
+  '@fontsource-variable/jetbrains-mono@5.2.8': {}
+
+  '@fontsource-variable/public-sans@5.2.7': {}
+
   '@humanwhocodes/momoa@2.0.4': {}
 
   '@iarna/toml@2.2.5': {}
@@ -4431,6 +4455,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@lucide/astro@0.554.0(astro@5.15.9(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(typescript@5.9.3)(yaml@2.8.1))':
+    dependencies:
+      astro: 5.15.9(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(typescript@5.9.3)(yaml@2.8.1)
 
   '@mapbox/node-pre-gyp@2.0.0':
     dependencies:

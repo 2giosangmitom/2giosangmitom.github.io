@@ -1,0 +1,53 @@
+---
+const routes = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Articles', path: '/articles' },
+  { name: 'Uses', path: '/uses' },
+  { name: 'Contact', path: '/contact' }
+];
+---
+
+<header class="header">
+  <nav class="header__nav">
+    <ul>
+      {
+        routes.map((route) => (
+          <li>
+            <a href={route.path} title={route.name} aria-label={route.name}>
+              {route.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <div>Search button here</div>
+</header>
+
+<style>
+  .header {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header__nav a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.1s ease;
+  }
+  .header__nav li:hover a {
+    color: var(--color-accent);
+  }
+</style>
