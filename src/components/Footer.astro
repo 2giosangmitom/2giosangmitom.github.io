@@ -1,0 +1,37 @@
+---
+import Github from './icons/Github.astro';
+import LinkedIn from './icons/LinkedIn.astro';
+---
+
+<footer>
+  <p>&copy; {new Date().getFullYear()} Vo Quang Chien. All rights reserved.</p>
+  <div class="social-links">
+    <a href="https://github.com/2giosangmitom" aria-label="GitHub"><Github /></a>
+    <a href="https://www.linkedin.com/in/2giosangmitom/" aria-label="LinkedIn"><LinkedIn /></a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-links a {
+    color: var(--color-secondary);
+    transition: color 0.1s ease;
+  }
+  .social-links a:hover {
+    color: var(--color-accent);
+  }
+</style>

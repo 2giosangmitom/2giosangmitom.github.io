@@ -1,7 +1,30 @@
+@import '@fontsource-variable/public-sans';
+@import '@fontsource-variable/jetbrains-mono';
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: boder-box;
+}
+
+@layer theme {
+  :root {
+    --color-primary: hsl(235, 19%, 13%);
+    --color-secondary: hsl(230, 40%, 65%);
+    --color-accent: hsl(221, 89%, 72%);
+    --color-text: hsl(229, 35%, 75%);
+    --color-red: hsl(348.84, 88.97%, 71.57%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-dimmed: hsl(230, 19%, 20%);
+
+    --font-sans: 'Public Sans Variable', sans-serif;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-primary);
+  color: var(--color-text);
 }
