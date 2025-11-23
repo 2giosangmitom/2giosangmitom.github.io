@@ -1,14 +1,6 @@
 @import '@fontsource-variable/public-sans';
 @import '@fontsource-variable/jetbrains-mono';
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: boder-box;
-}
-
 @layer theme {
   :root {
     --color-primary: hsl(235, 19%, 13%);
@@ -23,8 +15,27 @@
   }
 }
 
-body {
-  font-family: var(--font-sans);
-  background-color: var(--color-primary);
-  color: var(--color-text);
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+  }
 }
