@@ -1,9 +1,141 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import morning from '@assets/images/hue.jpg';
+import Envelop from '@assets/icons/Envelop.svg';
+import Github from '@assets/icons/Github.svg';
+import LinkedIn from '@assets/icons/LinkedIn.svg';
 ---
 
 <Layout title="About - Vo Quang Chien">
-  <h1>About Me</h1>
-  <p>Hello! I'm Vo Quang Chien, a software engineer passionate about building web applications.</p>
-  <p>This site is built using Astro, a modern static site generator.</p>
+  <main class="main">
+    <div class="main__text">
+      <!-- Introduction -->
+      <h1>Hi, I&apos;m Vo Quang Chien</h1>
+      <p>
+        My passion for building websites started when I was 17. In 2024, I started my university journey, my main focus
+        is web development. My goal is to become a proficient full-stack developer with expertise in both frontend and
+        backend technologies. My favorite technologies are Vue.js, Astro, and Node.js.
+      </p>
+      <!-- Development Philosophy -->
+      <h2>Development Philosophy</h2>
+      <p>I believe in writing clean, maintainable code that solves real business problems. My approach emphasizes:</p>
+      <ul>
+        <li>
+          <strong>Code quality:</strong> Writing code that is easy to read, understand, and maintain. Using strict TypeScript
+          practices, comprehensive testing, and consistent code style through ESLint and Prettier.
+        </li>
+        <li>
+          <strong>Problem-solving:</strong> Focusing on understanding the business requirements and delivering solutions
+          that add real value. Prioritizing simplicity and efficiency in my code.
+        </li>
+        <li>
+          <strong>Performance:</strong> Ensuring that my applications are fast and responsive. Optimizing code and leveraging
+          modern web technologies to deliver the best user experience.
+        </li>
+      </ul>
+      <!-- Achievements -->
+      <h2>Personal Achievements</h2>
+      <ul>
+        <li>
+          <strong>Open Source Contributor:</strong> Actively contributing to various open source projects including Neovim
+          plugins, JavaScript libraries, and web development tools.
+        </li>
+        <li>
+          <strong>The ICPC HUSC:</strong> Participated in the ICPC HUSC (Hue University of Science) and luckyly achieved
+          the 3rd medal in 2024. At that time, I was just a freshman.
+        </li>
+      </ul>
+      <!-- Interests -->
+      <h2>Personal interests other than coding</h2>
+      <p>When not coding, I spend my time for reading books, my family and exploring the outdoors.</p>
+      <p>I&apos;m a big fan of martial arts and gym. I practice regularly to stay fit and healthy.</p>
+      <p>I also follow various MMA events such as UFC, ONE Championship, LION Championship, and more.</p>
+    </div>
+
+    <Image
+      class="main__image"
+      src={morning}
+      alt="Morning view"
+      width="350"
+      title="Morning view of Hue city, Vietnam"
+      loading="eager"
+    />
+
+    <div class="main__links">
+      <a
+        href="https://github.com/2giosangmitom"
+        aria-label="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="GitHub"
+        ><Github width="24" height="24" fill="currentColor" />
+        Follow me on GitHub
+      </a>
+      <a
+        href="https://www.linkedin.com/in/2giosangmitom/"
+        aria-label="LinkedIn"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="LinkedIn"
+        ><LinkedIn width="24" height="24" fill="currentColor" />
+        Connect with me on LinkedIn
+      </a>
+      <a href="mailto:2giosangmitom@proton.me" aria-label="Email" title="Email">
+        <Envelop width="24" height="24" fill="currentColor" />
+        Send me an email
+      </a>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  .main {
+    display: grid;
+    column-gap: 8rem;
+    grid-template-areas:
+      'text image'
+      'text links';
+  }
+
+  .main__text {
+    grid-area: text;
+  }
+  .main__text h1,
+  .main__text h2,
+  .main__text ul {
+    margin-bottom: 0.75rem;
+  }
+  .main__text h2,
+  .main__text ul {
+    margin-top: 1rem;
+  }
+
+  .main__image {
+    grid-area: image;
+    border-radius: 8px;
+    transform: rotate(2deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  .main__image:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+
+  .main__links {
+    grid-area: links;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .main__links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-secondary);
+    transition: color 0.2s ease-in-out;
+  }
+  .main__links a:hover {
+    color: var(--color-accent);
+  }
+</style>

@@ -10,6 +10,7 @@
     --color-red: hsl(348.84, 88.97%, 71.57%);
     --color-black: hsl(0, 0%, 0%);
     --color-dimmed: hsl(230, 19%, 20%);
+    --color-lighter-text: hsl(226, 64%, 88%);
 
     --font-sans: 'Public Sans Variable', sans-serif;
   }
@@ -31,6 +32,25 @@
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  strong {
+    color: var(--color-lighter-text);
+  }
+
+  p,
+  li {
+    line-height: 1.6;
+  }
+
+  ul {
+    margin-left: 1em;
+  }
+  li::marker {
+    color: var(--color-accent);
   }
 
   body {
