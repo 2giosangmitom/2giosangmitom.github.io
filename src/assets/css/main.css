@@ -11,6 +11,7 @@
     --color-black: hsl(0, 0%, 0%);
     --color-dimmed: hsl(230, 19%, 20%);
     --color-lighter-text: hsl(226, 64%, 88%);
+    --color-bg-alt: hsl(240, 21%, 15%);
 
     --font-sans: 'Public Sans Variable', sans-serif;
   }
@@ -37,6 +38,7 @@
   h1,
   h2,
   h3,
+  h4,
   strong {
     color: var(--color-lighter-text);
   }

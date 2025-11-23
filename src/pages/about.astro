@@ -5,6 +5,33 @@ import morning from '@assets/images/hue.jpg';
 import Envelop from '@assets/icons/Envelop.svg';
 import Github from '@assets/icons/Github.svg';
 import LinkedIn from '@assets/icons/LinkedIn.svg';
+
+import Astrojs from '@assets/icons/Astro.svg';
+import Vue from '@assets/icons/Vuejs.svg';
+import NodeJS from '@assets/icons/Nodejs.svg';
+import TypeScript from '@assets/icons/Typescript.svg';
+import JavaScript from '@assets/icons/Javascript.svg';
+import Fastify from '@assets/icons/Fastify.svg';
+import Express from '@assets/icons/Express.svg';
+import Prisma from '@assets/icons/Prisma.svg';
+import Python from '@assets/icons/Python.svg';
+import Nuxt from '@assets/icons/Nuxt.svg';
+import Nestjs from '@assets/icons/Nestjs.svg';
+import type { SvgComponent } from 'astro/types';
+
+const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
+  { name: 'Vue.js', icon: Vue },
+  { name: 'Nuxt.js', icon: Nuxt },
+  { name: 'Astro', icon: Astrojs },
+  { name: 'Node.js', icon: NodeJS },
+  { name: 'Fastify', icon: Fastify, fill: 'currentColor' },
+  { name: 'Express.js', icon: Express, fill: 'currentColor' },
+  { name: 'NestJS', icon: Nestjs },
+  { name: 'TypeScript', icon: TypeScript },
+  { name: 'JavaScript', icon: JavaScript },
+  { name: 'Prisma', icon: Prisma, fill: 'currentColor' },
+  { name: 'Python', icon: Python }
+];
 ---
 
 <Layout title="About - Vo Quang Chien">
@@ -13,9 +40,9 @@ import LinkedIn from '@assets/icons/LinkedIn.svg';
       <!-- Introduction -->
       <h1>Hi, I&apos;m Vo Quang Chien</h1>
       <p>
-        My passion for building websites started when I was 17. In 2024, I started my university journey, my main focus
-        is web development. My goal is to become a proficient full-stack developer with expertise in both frontend and
-        backend technologies. My favorite technologies are Vue.js, Astro, and Node.js.
+        My passion for building websites started when I was 17 years old. In 2024, I started my university journey, my
+        main focus is web development. My goal is to become a proficient full-stack developer with expertise in both
+        frontend and backend technologies. My favorite technologies are Vue.js, Astro, and Node.js.
       </p>
       <!-- Development Philosophy -->
       <h2>Development Philosophy</h2>
@@ -87,6 +114,23 @@ import LinkedIn from '@assets/icons/LinkedIn.svg';
       </a>
     </div>
   </main>
+
+  <section class="technical-expertise">
+    <h2 class="technical-expertise__title">Technical Expertise</h2>
+    <div class="technical-expertise__tech-stacks">
+      <h4 class="technical-expertise__tech-stacks__title">Core tech stacks</h4>
+      <div class="technical-expertise__tech-stacks__icons">
+        {
+          techStacks.map((tech) => (
+            <figure class="technical-expertise__tech-stacks__icon" title={tech.name}>
+              <tech.icon width="48" height="48" fill={tech.fill} />
+              <figcaption>{tech.name}</figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -137,5 +181,44 @@ import LinkedIn from '@assets/icons/LinkedIn.svg';
   }
   .main__links a:hover {
     color: var(--color-accent);
+  }
+
+  .technical-expertise {
+    margin-top: 4rem;
+  }
+  .technical-expertise__title {
+    margin-bottom: 2.5rem;
+  }
+  .technical-expertise__tech-stacks {
+    background-color: var(--color-bg-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(67, 66, 66, 0.1);
+  }
+  .technical-expertise__tech-stacks__title {
+    text-transform: uppercase;
+  }
+  .technical-expertise__tech-stacks__icons {
+    display: grid;
+    gap: 4rem;
+    margin-top: 1.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+  }
+  .technical-expertise__tech-stacks__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-lighter-text);
+    transition: color 0.2s ease-in-out;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .technical-expertise__tech-stacks__icon svg {
+    transition: transform 0.2s ease-in-out;
+  }
+  .technical-expertise__tech-stacks__icon svg:hover {
+    transform: scale(1.15);
   }
 </style>
