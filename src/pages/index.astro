@@ -1,8 +1,16 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import avt from '@assets/images/avt.png';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Vo Quang Chien - Software Engineer">
-  <h1>Welcome to My Astro Site</h1>
-  <p>This is the homepage of my awesome Astro project!</p>
+  <Image src={avt} alt="Vo Quang Chien" decoding="async" loading="eager" />
+  <h1>Software Engineer and Vue.js enthusiast</h1>
+  <p>
+    I&apos;m Chien, a Software Engineer with a focus on fullstack web development. I love building things with Vue.js,
+    Node.js and TypeScript. I enjoy learning new technologies and sharing my knowledge with the community. Currently,
+    I&apos;m expanding my abilities in AI applications development, high-performance backend systems, and microservices
+    with Node.js and Python.
+  </p>
 </Layout>

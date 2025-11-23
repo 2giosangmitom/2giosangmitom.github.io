@@ -6,7 +6,5 @@
   "endOfLine": "auto",
   "arrowParens": "always",
   "tabWidth": 2,
-  "vueIndentScriptAndStyle": true,
-  "bracketSameLine": true,
   "plugins": ["prettier-plugin-astro"]
 }
