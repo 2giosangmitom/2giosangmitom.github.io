@@ -6,6 +6,8 @@ const routes = [
   { name: 'Uses', path: '/uses' },
   { name: 'Contact', path: '/contact' }
 ];
+
+const current = Astro.url.pathname;
 ---
 
 <header class="header">
@@ -13,7 +15,7 @@ const routes = [
     <ul>
       {
         routes.map((route) => (
-          <li>
+          <li class:list={[{ active: current === route.path }]}>
             <a href={route.path} title={route.name} aria-label={route.name}>
               {route.name}
             </a>
@@ -47,7 +49,8 @@ const routes = [
     font-weight: 500;
     transition: color 0.2s ease-in-out;
   }
-  .header__nav li:hover a {
+  .header__nav li:hover a,
+  .header__nav li.active a {
     color: var(--color-accent);
   }
 </style>
