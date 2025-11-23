@@ -6,8 +6,6 @@ const routes = [
   { name: 'Uses', path: '/uses' },
   { name: 'Contact', path: '/contact' }
 ];
-
-const current = Astro.url.pathname;
 ---
 
 <header class="header">
@@ -15,7 +13,7 @@ const current = Astro.url.pathname;
     <ul>
       {
         routes.map((route) => (
-          <li class:list={[{ active: current === route.path }]}>
+          <li>
             <a href={route.path} title={route.name} aria-label={route.name}>
               {route.name}
             </a>
@@ -54,3 +52,22 @@ const current = Astro.url.pathname;
     color: var(--color-accent);
   }
 </style>
+
+<script>
+  const setActiveLink = () => {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.header__nav li');
+
+    navLinks.forEach((li) => {
+      const anchor = li.querySelector('a');
+      if (anchor && anchor.getAttribute('href') === currentPath) {
+        li.classList.add('active');
+      } else {
+        li.classList.remove('active');
+      }
+    });
+  };
+
+  document.addEventListener('DOMContentLoaded', setActiveLink);
+  document.addEventListener('astro:after-swap', setActiveLink);
+</script>
