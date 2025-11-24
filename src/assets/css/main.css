@@ -8,10 +8,12 @@
     --color-accent: hsl(221, 89%, 72%);
     --color-text: hsl(229, 35%, 75%);
     --color-red: hsl(348.84, 88.97%, 71.57%);
-    --color-black: hsl(0, 0%, 0%);
+    --color-black: hsl(240, 23%, 9%);
+    --color-white: hsl(220, 23%, 95%);
     --color-dimmed: hsl(230, 19%, 20%);
     --color-lighter-text: hsl(226, 64%, 88%);
     --color-bg-alt: hsl(240, 21%, 15%);
+    --color-green: hsl(96, 44%, 68%);
 
     --font-sans: 'Public Sans Variable', sans-serif;
   }

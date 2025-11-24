@@ -2,7 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import morning from '@assets/images/hue.jpg';
-import Envelop from '@assets/icons/Envelop.svg';
+import PaperPlane from '@assets/icons/PaperPlane.svg';
 import Github from '@assets/icons/Github.svg';
 import LinkedIn from '@assets/icons/LinkedIn.svg';
 
@@ -74,7 +74,7 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
         </li>
       </ul>
       <!-- Interests -->
-      <h2>Personal interests other than coding</h2>
+      <h2>Other Interests</h2>
       <p>When not coding, I spend my time for reading books, my family and exploring the outdoors.</p>
       <p>I&apos;m a big fan of martial arts and gym. I practice regularly to stay fit and healthy.</p>
       <p>I also follow various MMA events such as UFC, ONE Championship, LION Championship, and more.</p>
@@ -108,9 +108,9 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
         ><LinkedIn width="24" height="24" fill="currentColor" />
         Connect with me on LinkedIn
       </a>
-      <a href="mailto:2giosangmitom@proton.me" aria-label="Email" title="Email">
-        <Envelop width="24" height="24" fill="currentColor" />
-        Send me an email
+      <a href="/contact" aria-label="Contact me" title="Contact me">
+        <PaperPlane width="24" height="24" fill="currentColor" />
+        Contact me
       </a>
     </div>
   </main>
