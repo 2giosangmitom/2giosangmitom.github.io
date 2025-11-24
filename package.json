@@ -17,7 +17,8 @@
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/public-sans": "^5.2.7",
     "astro": "^5.15.9",
-    "astro-pagefind": "^1.8.5"
+    "astro-pagefind": "^1.8.5",
+    "overlayscrollbars": "^2.12.0"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",

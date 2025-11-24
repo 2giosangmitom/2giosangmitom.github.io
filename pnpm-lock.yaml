@@ -29,6 +29,9 @@ importers:
       astro-pagefind:
         specifier: ^1.8.5
         version: 1.8.5(astro@5.15.9(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(typescript@5.9.3)(yaml@2.8.1))
+      overlayscrollbars:
+        specifier: ^2.12.0
+        version: 2.12.0
     devDependencies:
       '@types/node':
         specifier: ^24.10.1
@@ -2571,6 +2574,9 @@ packages:
 
   oniguruma-to-es@4.3.3:
     resolution: {integrity: sha512-rPiZhzC3wXwE59YQMRDodUwwT9FZ9nNBwQQfsd1wfdtlKEyCdRV0avrTcSZ5xlIvGRVPd/cx6ZN45ECmS39xvg==}
+
+  overlayscrollbars@2.12.0:
+    resolution: {integrity: sha512-mWJ5MOkcZ/ljHwfLw8+bN0V9ziGCoNoqULcp994j5DTGNQvnkWKWkA7rnO29Kyew5AoHxUnJ4Ndqfcl0HSQjXg==}
 
   p-event@6.0.1:
     resolution: {integrity: sha512-Q6Bekk5wpzW5qIyUP4gdMEujObYstZl6DMMOSenwBvV0BlE5LkDwkjs5yHbZmdCEq2o4RJx4tE1vwxFVf2FG1w==}
@@ -6406,6 +6412,8 @@ snapshots:
       oniguruma-parser: 0.12.1
       regex: 6.0.1
       regex-recursion: 6.0.2
+
+  overlayscrollbars@2.12.0: {}
 
   p-event@6.0.1:
     dependencies:
