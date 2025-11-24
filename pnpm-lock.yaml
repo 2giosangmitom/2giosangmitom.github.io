@@ -26,6 +26,9 @@ importers:
       astro:
         specifier: ^5.16.0
         version: 5.16.0(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.1)
+      astro-loading-indicator:
+        specifier: ^0.7.1
+        version: 0.7.1(astro@5.16.0(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.1))
       astro-pagefind:
         specifier: ^1.8.5
         version: 1.8.5(astro@5.16.0(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.1))
@@ -768,6 +771,11 @@ packages:
 
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
+
+  astro-loading-indicator@0.7.1:
+    resolution: {integrity: sha512-SH5igTvcj+rHoy7o7JO7jIuPxxkNarHl2Bu1H41/fAOa1uiYuLoQNkGhV/Xqe4Jc9wnUHidwXNExjPHoL1plNg==}
+    peerDependencies:
+      astro: ^4.0.0 || ^5.0.0
 
   astro-pagefind@1.8.5:
     resolution: {integrity: sha512-CVhKKA9bTQ7hLsHk9KTNDzOdgR4EI04gn0mjDGfnXzaHx7rL92YkNpFM5AoFl9NWmOUbaIFC2DN7Yvs/ZFPRdA==}
@@ -2500,6 +2508,10 @@ snapshots:
   aria-query@5.3.2: {}
 
   array-iterate@2.0.1: {}
+
+  astro-loading-indicator@0.7.1(astro@5.16.0(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.1)):
+    dependencies:
+      astro: 5.16.0(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.1)
 
   astro-pagefind@1.8.5(astro@5.16.0(@netlify/blobs@10.4.1)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.1)):
     dependencies:

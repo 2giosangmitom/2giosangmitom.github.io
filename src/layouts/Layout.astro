@@ -4,6 +4,7 @@ import 'overlayscrollbars/overlayscrollbars.css';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
+import LoadingIndicator from 'astro-loading-indicator/component';
 
 interface Props {
   title: string;
@@ -21,11 +22,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ClientRouter />
+    <LoadingIndicator color="var(--color-accent)" />
   </head>
   <body data-overlayscrollbars-initialize>
     <div class="container" transition:animate="none">
       <Header />
-      <div class="content">
+      <div class="content" aria-live="assertive">
         <slot />
       </div>
       <Footer />
