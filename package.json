@@ -16,7 +16,7 @@
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/public-sans": "^5.2.7",
     "@lucide/astro": "^0.554.0",
-    "astro": "^5.15.9",
+    "astro": "^5.16.0",
     "astro-pagefind": "^1.8.5",
     "overlayscrollbars": "^2.12.0",
     "sharp": "^0.34.5"

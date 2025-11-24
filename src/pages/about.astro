@@ -35,8 +35,8 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
 ---
 
 <Layout title="About - Vo Quang Chien">
-  <main class="main">
-    <div class="main__text">
+  <main class="about">
+    <section class="about__content">
       <!-- Introduction -->
       <h1>Hi, I&apos;m Vo Quang Chien</h1>
       <p>
@@ -44,6 +44,7 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
         main focus is web development. My goal is to become a proficient full-stack developer with expertise in both
         frontend and backend technologies. My favorite technologies are Vue.js, Astro, and Node.js.
       </p>
+
       <!-- Development Philosophy -->
       <h2>Development Philosophy</h2>
       <p>I believe in writing clean, maintainable code that solves real business problems. My approach emphasizes:</p>
@@ -61,6 +62,7 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
           modern web technologies to deliver the best user experience.
         </li>
       </ul>
+
       <!-- Achievements -->
       <h2>Personal Achievements</h2>
       <ul>
@@ -73,15 +75,16 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
           the 3rd medal in 2024. At that time, I was just a freshman.
         </li>
       </ul>
+
       <!-- Interests -->
       <h2>Other Interests</h2>
       <p>When not coding, I spend my time for reading books, my family and exploring the outdoors.</p>
       <p>I&apos;m a big fan of martial arts and gym. I practice regularly to stay fit and healthy.</p>
       <p>I also follow various MMA events such as UFC, ONE Championship, LION Championship, and more.</p>
-    </div>
+    </section>
 
     <Image
-      class="main__image"
+      class="about__photo"
       src={morning}
       alt="Morning view"
       width="350"
@@ -89,7 +92,7 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
       loading="eager"
     />
 
-    <div class="main__links">
+    <section class="about__links">
       <a
         href="https://github.com/2giosangmitom"
         aria-label="GitHub"
@@ -112,17 +115,17 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
         <PaperPlane width="24" height="24" fill="currentColor" />
         Contact me
       </a>
-    </div>
+    </section>
   </main>
 
-  <section class="technical-expertise">
-    <h2 class="technical-expertise__title">Technical Expertise</h2>
-    <div class="technical-expertise__tech-stacks">
-      <h4 class="technical-expertise__tech-stacks__title">Core tech stacks</h4>
-      <div class="technical-expertise__tech-stacks__icons">
+  <section class="expertise">
+    <h2 class="expertise__title">Technical Expertise</h2>
+    <div class="expertise__stacks">
+      <h4 class="expertise__stacks-heading">Core tech stacks</h4>
+      <div class="expertise__icons">
         {
           techStacks.map((tech) => (
-            <figure class="technical-expertise__tech-stacks__icon" title={tech.name}>
+            <figure class="expertise__icon" title={tech.name}>
               <tech.icon width="48" height="48" fill={tech.fill} />
               <figcaption>{tech.name}</figcaption>
             </figure>
@@ -134,78 +137,78 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
 </Layout>
 
 <style>
-  .main {
+  .about {
     display: grid;
     column-gap: 8rem;
     grid-template-areas:
-      'text image'
-      'text links';
+      'content photo'
+      'content links';
   }
 
-  .main__text {
-    grid-area: text;
+  .about__content {
+    grid-area: content;
   }
-  .main__text h1,
-  .main__text h2,
-  .main__text ul {
+  .about__content h1,
+  .about__content h2,
+  .about__content ul {
     margin-bottom: 0.75rem;
   }
-  .main__text h2,
-  .main__text ul {
+  .about__content h2,
+  .about__content ul {
     margin-top: 1rem;
   }
 
-  .main__image {
-    grid-area: image;
+  .about__photo {
+    grid-area: photo;
     border-radius: 8px;
     transform: rotate(2deg);
     transition: transform 0.3s ease-in-out;
   }
-  .main__image:hover {
+  .about__photo:hover {
     transform: rotate(0deg) scale(1.05);
   }
 
-  .main__links {
+  .about__links {
     grid-area: links;
     justify-self: start;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
   }
-  .main__links a {
+  .about__links a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--color-secondary);
     transition: color 0.2s ease-in-out;
   }
-  .main__links a:hover {
+  .about__links a:hover {
     color: var(--color-accent);
   }
 
-  .technical-expertise {
+  .expertise {
     margin-top: 4rem;
   }
-  .technical-expertise__title {
+  .expertise__title {
     margin-bottom: 2.5rem;
   }
-  .technical-expertise__tech-stacks {
+  .expertise__stacks {
     background-color: var(--color-bg-alt);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(67, 66, 66, 0.1);
   }
-  .technical-expertise__tech-stacks__title {
+  .expertise__stacks-heading {
     text-transform: uppercase;
   }
-  .technical-expertise__tech-stacks__icons {
+  .expertise__icons {
     display: grid;
     gap: 4rem;
     margin-top: 1.5rem;
     grid-template-columns: repeat(6, 1fr);
     place-items: center;
   }
-  .technical-expertise__tech-stacks__icon {
+  .expertise__icon {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,10 +218,10 @@ const techStacks: { name: string; icon: SvgComponent; fill?: string }[] = [
     font-size: 0.9rem;
     font-weight: 600;
   }
-  .technical-expertise__tech-stacks__icon svg {
+  .expertise__icon svg {
     transition: transform 0.2s ease-in-out;
   }
-  .technical-expertise__tech-stacks__icon svg:hover {
+  .expertise__icon svg:hover {
     transform: scale(1.15);
   }
 </style>

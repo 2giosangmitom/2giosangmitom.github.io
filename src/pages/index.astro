@@ -7,17 +7,17 @@ import { AtSign, PenTool } from '@lucide/astro';
 ---
 
 <Layout title="Vo Quang Chien - Software Engineer">
-  <main class="home-page">
-    <Image src={avt} alt="Vo Quang Chien" decoding="async" loading="eager" width="350" class="avt-image" />
-    <div class="intro">
-      <h1>Software Engineer and <span>Vue.js</span> enthusiast</h1>
-      <p>
+  <main class="home">
+    <Image src={avt} alt="Vo Quang Chien" decoding="async" loading="eager" width="350" class="home__photo" />
+    <div class="home__content">
+      <h1 class="home__title">Software Engineer and <span class="home__title-accent">Vue.js</span> enthusiast</h1>
+      <p class="home__description">
         I&apos;m Chien, a Software Engineer with a focus on fullstack web development. I love building things with
         Vue.js, Node.js and TypeScript. I enjoy learning new technologies and sharing my knowledge with the community.
         Currently, I&apos;m expanding my abilities in AI applications development, high-performance backend systems, and
         microservices with Node.js and Python.
       </p>
-      <div class="intro__buttons">
+      <div class="home__controls">
         <Button href="/contact"><AtSign size="1.2em" /> Contact Me</Button>
         <Button href="/articles" variant="outline"><PenTool size="1.2em" /> Read Articles</Button>
       </div>
@@ -26,21 +26,22 @@ import { AtSign, PenTool } from '@lucide/astro';
 </Layout>
 
 <style>
-  .home-page {
+  .home {
     display: flex;
     column-gap: 5rem;
   }
 
-  .intro h1 {
+  .home__title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
-  .intro h1 > span {
+
+  .home__title-accent {
     color: var(--color-green);
   }
 
-  .intro__buttons {
-    margin-top: 0.5rem;
+  .home__controls {
+    margin-top: 0.75rem;
     display: flex;
     column-gap: 1rem;
   }
