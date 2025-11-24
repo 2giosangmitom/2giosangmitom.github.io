@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "2giosangmitom.is-a.dev",
   "type": "module",
   "private": true,
   "version": "3.0.0",
@@ -11,7 +11,6 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.6.1",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
