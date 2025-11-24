@@ -52,6 +52,9 @@ const routes = [
   .header__nav li.active a {
     color: var(--color-accent);
   }
+  .header__nav li.active a {
+    font-weight: 700;
+  }
 </style>
 
 <script>
@@ -70,5 +73,5 @@ const routes = [
   };
 
   document.addEventListener('DOMContentLoaded', setActiveLink);
-  document.addEventListener('astro:after-swap', setActiveLink);
+  document.addEventListener('astro:page-load', setActiveLink);
 </script>
