@@ -4,6 +4,7 @@ import avt from '@assets/images/avt.png';
 import { Image } from 'astro:assets';
 import Button from '@components/Button.astro';
 import { AtSign, PenTool } from '@lucide/astro';
+import { techStacks } from '@lib/constants';
 ---
 
 <Layout title="Vo Quang Chien - Software Engineer">
@@ -23,6 +24,16 @@ import { AtSign, PenTool } from '@lucide/astro';
       </div>
     </div>
   </main>
+  <section class="tech-stacks">
+    <div class="marquee__track">
+      <div>
+        {techStacks.map((tech) => <tech.icon width="56" height="56" fill={tech.fill} />)}
+      </div>
+      <div>
+        {techStacks.map((tech) => <tech.icon width="56" height="56" fill={tech.fill} />)}
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -44,5 +55,35 @@ import { AtSign, PenTool } from '@lucide/astro';
     margin-top: 0.75rem;
     display: flex;
     column-gap: 1rem;
+  }
+
+  .tech-stacks {
+    margin-top: 4rem;
+    overflow: hidden;
+    --marquee-duration: 14s;
+  }
+
+  .marquee__track {
+    display: inline-flex;
+    gap: 2.5rem;
+    align-items: center;
+    width: max-content;
+    animation: marquee var(--marquee-duration) linear infinite;
+    will-change: transform;
+  }
+
+  .marquee__track > * {
+    flex: none;
+    display: inline-flex;
+    gap: 2.5rem;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 </style>
