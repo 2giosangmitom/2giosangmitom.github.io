@@ -14,8 +14,7 @@ export default defineContentConfig({
     }),
     about: defineCollection({
       type: 'page',
-      source: 'author/about.md',
-      schema: z.object({})
+      source: 'author/about.md'
     })
   }
 });

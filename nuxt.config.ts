@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', 'overlayscrollbars/overlayscrollbars.css'],
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
@@ -12,5 +12,16 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/sitemap'
   ],
-  sourcemap: false
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          themes: ['github-dark', 'github-light']
+        }
+      }
+    }
+  },
+  site: {
+    url: 'https://2giosangmitom.is-a.dev'
+  }
 });

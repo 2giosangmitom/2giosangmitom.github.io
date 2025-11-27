@@ -1,2 +1,16 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@theme {
+  --font-sans: 'Public Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Apply the custom fonts */
+body {
+  font-family: var(--font-sans);
+}
+code,
+pre {
+  font-family: var(--font-mono);
+}

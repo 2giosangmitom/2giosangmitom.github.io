@@ -1,9 +1,9 @@
 {
-  "name": "2giosangmitom-github-io",
+  "name": "2giosangmitom.is-a.dev",
   "type": "module",
   "private": true,
+  "version": "3.0.0",
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -20,6 +20,8 @@
     "better-sqlite3": "^12.4.6",
     "eslint": "^9.39.1",
     "nuxt": "^4.2.1",
+    "overlayscrollbars": "^2.13.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
     "vue": "^3.5.25",
