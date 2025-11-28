@@ -21,7 +21,7 @@ const { data } = await useAsyncData('latest-articles', () => {
 
 <template>
   <UContainer>
-    <h1 class="text-4xl font-bold">Latest Articles</h1>
+    <h1 class="text-4xl font-bold mb-4">Latest Articles</h1>
     <p>Some of my recent thoughts on programming and technology.</p>
 
     <UBlogPosts orientation="vertical" class="mt-24">
