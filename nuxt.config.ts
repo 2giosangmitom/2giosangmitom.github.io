@@ -1,45 +1,38 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ['~/assets/scss/main.scss'],
+  css: ['~/assets/css/main.css'],
   modules: [
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@nuxt/test-utils',
     '@nuxt/content',
-    '@vueuse/nuxt',
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/ui',
+    '@nuxtjs/robots',
     '@nuxtjs/sitemap',
-    'reka-ui/nuxt'
+    'motion-v/nuxt',
+    '@vueuse/nuxt'
   ],
-  typescript: {
-    typeCheck: false
-  },
-  app: {
-    head: {
-      titleTemplate: '%s - Vo Quang Chien'
-    },
-    pageTransition: { name: 'page', mode: 'out-in' }
-  },
   content: {
     build: {
       markdown: {
         highlight: {
-          theme: 'tokyo-night',
-          langs: ['lua', 'javascript', 'cpp', 'java', 'typescript', 'bash', 'shell']
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark'
+          },
+          langs: ['javascript', 'typescript']
         }
       }
     }
   },
-  icon: {
-    mode: 'svg'
-  },
-  routeRules: {
-    '/': { prerender: true }
-  },
   site: {
-    url: 'https://2giosangmitom.is-a.dev/',
-    name: 'Full stack developer - Vo Quang Chien'
+    url: 'https://2giosangmitom.is-a.dev',
+    name: "2giosangmitom's Personal Blog"
+  },
+  runtimeConfig: {
+    public: {
+      DISCORD_WEBHOOK_URL: import.meta.env.NUXT_DISCORD_WEBHOOK_URL
+    }
   }
 });

@@ -1,27 +1,22 @@
-# Hello there 👋
+# Hi, I'm Vo Quang Chien
 
-I'm **Vo Quang Chien**, a second-year software development student from Vietnam 🇻🇳, currently studying at **Hue University of Science**.
+My passion for building websites started when I was 17 years old. In 2024, I started my university journey, my main focus is web development. My goal is to become a proficient full-stack developer with expertise in both frontend and backend technologies. My favorite technologies are Vue.js, Nuxt.js, and Node.js.
 
-Passionate about **full-stack web development**, and **all things Linux**.
+## Development Philosophy
 
-## 🧠 What I'm Working On
+I believe in the power of simplicity and clarity in code. I strive to write clean, maintainable code that solves real business problems.
 
-- Programming in **C, C++, TypeScript**, and occasionally **Python**
-- Full-stack development with **Node.js** (Express, Fastify) and **Vue/Nuxt**
-- **Network programming** and learning how **Linux** works under the hood
-- Optimizing my development workflow with **Vim**, the **terminal**, and custom setups
+- **Code quality**: Writing code that is easy to read, understand, and maintain. Using strict TypeScript practices, comprehensive testing, and consistent code style through ESLint and Prettier.
+- **Performance**: Ensuring that my applications are fast and responsive. Optimizing code and leveraging modern web technologies to deliver the best user experience.
+- **Correctness**: Always write tests for my code to ensure its correctness and reliability. I use unit tests, integration tests, and end-to-end (infrequently) tests to cover different aspects of my applications.
 
-> BTW, I use Arch. 😉
+## Personal Achievements
 
-## ⚡ Quick Facts
+- **Open Source Contributor**: I have contributed to several open-source projects on GitHub, helping to improve documentation, add new features, and fix bugs.
+- **The ICPC HUSC**: I participated in the ICPC HUSC (Hue University of Science) and luckily achieved the bronze medal in 2024. At that time, I was just a freshman.
 
-- **Pronouns**: He/Him
-- **Languages**: Vietnamese, English
-- **Relationship status**: Single
-- **Loves**: Beer, clean code, and good terminal themes
+## Other Interests
 
-## 🌐 Find Me Online
+Beyond coding, I enjoy reading books about technology, spend time for family and outdoor activities.
 
-- **YouTube**: [@2giosangmitom](https://www.youtube.com/@2giosangmitom)
-- **LinkedIn**: [2giosangmitom](https://www.linkedin.com/in/2giosangmitom)
-- **Facebook**: [2giosangmitom](https://www.facebook.com/2giosangmitom)
+I'm also a big fan of martial arts and gym. I follow various martial arts events like UFC, ONE Championship, LION Championship, GMA, and more.

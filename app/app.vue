@@ -1,51 +1,46 @@
 <script setup lang="ts">
-const searchModalOpen = useState('search-modal', () => false);
+import { OverlayScrollbars } from 'overlayscrollbars';
 
-useEventListener('keyup', (e) => {
-  if (e.ctrlKey && e.key === '/') {
-    searchModalOpen.value = !searchModalOpen.value;
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+    'data-overlayscrollbars-initialize': ''
+  },
+  bodyAttrs: {
+    'data-overlayscrollbars-initialize': ''
   }
 });
 
-const { toasts } = useToast();
+const searchTerm = shallowRef('');
+
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('articles'));
+const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('articles'), {
+  server: false
+});
+
+onMounted(() => {
+  OverlayScrollbars(document.body, {
+    scrollbars: {
+      autoHide: 'leave'
+    }
+  });
+});
 </script>
 
 <template>
-  <NuxtLoadingIndicator :color="false" class="loading-indicator" />
-  <Transition name="fade">
-    <TheSearch v-if="searchModalOpen" @close="searchModalOpen = false" />
-  </Transition>
-
-  <ToastProvider>
+  <UApp>
+    <NuxtLoadingIndicator color="var(--ui-primary)" />
+    <ClientOnly>
+      <LazyUContentSearch
+        v-model:search-term="searchTerm"
+        shortcut="meta_k"
+        :fuse="{ resultLimit: 42 }"
+        :navigation="navigation"
+        :files="files"
+      />
+    </ClientOnly>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-
-    <TheToast
-      v-for="toast in toasts"
-      :key="`${toast.content}-${toast.title}`"
-      :title="toast.title"
-      :content="toast.content"
-    />
-
-    <ToastViewport class="toast-viewport" />
-  </ToastProvider>
+  </UApp>
 </template>
-
-<style lang="scss">
-@use '~/assets/scss/variables';
-
-.loading-indicator {
-  background-color: variables.$color-primary;
-}
-
-.toast-viewport {
-  position: fixed;
-  bottom: 2rem;
-  right: 1rem;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-}
-</style>

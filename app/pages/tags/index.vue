@@ -1,82 +1,48 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Tags'
+  title: 'Tags - Vo Quang Chien',
+  description: "Browse all tags on Vo Quang Chien's blog.",
+  ogTitle: 'Tags - Vo Quang Chien',
+  ogDescription: "Browse all tags on Vo Quang Chien's blog."
 });
 
-const { data: blogs, error } = await useAsyncData('all-tags', () =>
-  queryCollection('blog').select('tags').order('tags', 'ASC').all()
-);
+const { data } = await useAsyncData('tags', async () => {
+  const articlesPromise = queryCollection('articles').select('tags').order('tags', 'ASC');
 
-const tags = computed(() => {
-  if (!blogs.value) {
-    return [];
+  if (import.meta.env.PROD) {
+    articlesPromise.where('draft', '<>', true);
   }
 
-  const uniqueTags = new Set<string>();
-  for (const blog of blogs.value) {
-    if (blog.tags && blog.tags.length > 0) {
-      for (const tag of blog.tags) {
-        uniqueTags.add(tag);
+  const articles = await articlesPromise.all();
+  const tagSet = new Set<string>();
+
+  for (const article of articles) {
+    if (article.tags) {
+      for (const tag of article.tags) {
+        tagSet.add(tag);
       }
     }
   }
 
-  return Array.from(uniqueTags).sort((a, b) => a.localeCompare(b));
+  return Array.from(tagSet);
 });
 </script>
 
 <template>
-  <main class="container tags">
-    <h1 class="tags__title">SELECT DISTINCT <span class="text-primary">tags</span> FROM blog</h1>
+  <UContainer>
+    <h1 class="text-4xl font-bold mb-4">Tags</h1>
+    <p>Browse all tags on my blog.</p>
 
-    <div v-if="error" class="tags__error">
-      <p>Failed to load tags. Please try again later.</p>
+    <div v-if="data" class="flex flex-col mt-10 gap-y-4">
+      <UButton
+        v-for="tag in data"
+        :key="tag"
+        icon="mdi:tag"
+        variant="ghost"
+        :to="{ name: 'tags-slug', params: { slug: tag } }"
+        class="w-fit"
+        >{{ tag }}</UButton
+      >
     </div>
-
-    <div v-else-if="tags.length" class="tags__list">
-      <div v-for="tag in tags" :key="tag" class="btn--link">
-        <Icon name="lucide:tag" />
-        <NuxtLink :to="{ name: 'tags-id', params: { id: tag } }">{{ tag }}</NuxtLink>
-      </div>
-    </div>
-
-    <div v-else class="tags__empty">
-      <p>No tags found.</p>
-    </div>
-  </main>
+  </UContainer>
 </template>
-
-<style lang="scss">
-@use '~/assets/scss/variables';
-
-.tags {
-  &__title {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  &__error,
-  &__empty {
-    text-align: center;
-    margin-top: 2rem;
-    color: variables.$color-dimmed;
-    font-size: variables.$font-sm;
-  }
-
-  .btn--link {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    column-gap: 0.5rem;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    &:not(:first-child) {
-      margin-top: 1rem;
-    }
-  }
-}
-</style>

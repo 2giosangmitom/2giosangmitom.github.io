@@ -1,226 +1,152 @@
 <script setup lang="ts">
-import { contactSchema } from '#shared/schemas/contact';
+import z from 'zod';
 
 useSeoMeta({
-  title: 'Contact'
+  title: 'Contact - Vo Quang Chien',
+  description: 'Get in touch with Vo Quang Chien for collaborations, inquiries, or feedback.',
+  ogTitle: 'Contact - Vo Quang Chien',
+  ogDescription: 'Get in touch with Vo Quang Chien for collaborations, inquiries, or feedback.'
 });
 
-const toaster = useToast();
+const runtimeConfig = useRuntimeConfig();
+const discordWebhookUrl = runtimeConfig.public.DISCORD_WEBHOOK_URL;
 
-const cards = [
-  {
-    icon: 'eos-icons:atom-electron',
-    title: 'Customized software solutions',
-    description: 'I develop custom software solutions designed to meet your unique needs.'
-  },
-  {
-    icon: 'ph:lightbulb-filament-bold',
-    title: 'Expertise in the latest technologies',
-    description:
-      'I leverage modern technologies to build responsive, high-performance websites and applications that deliver exceptional user experiences.'
-  },
-  {
-    icon: 'material-symbols:support',
-    title: 'Support and maintenance',
-    description:
-      "My work doesn't end at delivery - I provide ongoing support and maintenance to keep your solutions running smoothly."
-  }
-];
+const schema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters long'),
+  email: z.email('Invalid email address'),
+  topic: z.string().min(5, 'Topic must be at least 5 characters long'),
+  message: z
+    .string()
+    .min(10, 'Message must be at least 10 characters long')
+    .max(1000, 'Message cannot exceed 1000 characters')
+});
 
-const state = reactive({
-  fullName: '',
+type Schema = z.infer<typeof schema>;
+
+const state = shallowReactive<Schema>({
+  name: '',
   email: '',
   topic: '',
   message: ''
 });
 
-const error = reactive({
-  fullName: '',
-  email: '',
-  topic: '',
-  message: ''
-});
+const loading = shallowRef(false);
 
-const loading = ref(false);
+const handleSubmit = async () => {
+  const toast = useToast();
 
-function validateField(field: keyof typeof state) {
-  const result = contactSchema.pick({ [field]: true }).safeParse({ [field]: state[field] });
-
-  if (!result.success && result.error.issues[0]) {
-    error[field] = result.error.issues[0].message;
-  } else {
-    error[field] = '';
-  }
-}
-
-async function handleSubmit() {
-  const result = contactSchema.safeParse(state);
-
-  if (!result.success) {
-    for (const issue of result.error.issues) {
-      const field = issue.path[0] as keyof typeof error;
-      error[field] = issue.message;
-    }
-    return;
-  }
+  const payload = {
+    embeds: [
+      {
+        title: 'New Contact Form Submission',
+        fields: [
+          { name: 'Name', value: state.name, inline: true },
+          { name: 'Email', value: state.email, inline: true },
+          { name: 'Topic', value: state.topic, inline: false },
+          { name: 'Message', value: state.message, inline: false }
+        ],
+        timestamp: new Date().toISOString()
+      }
+    ]
+  };
 
   try {
     loading.value = true;
-
-    await $fetch('/api/contact', {
+    await $fetch(discordWebhookUrl, {
+      timeout: 3000,
       method: 'POST',
-      body: JSON.stringify({ ...state }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
-    toaster.push({
+
+    toast.add({
       title: 'Success',
-      content: "Your message has been sent successfully. I'll get back to you shortly!"
+      description: 'Your message has been sent successfully!',
+      color: 'success'
     });
-    Object.assign(state, { fullName: '', email: '', topic: '', message: '' });
   } catch (error) {
-    if (error instanceof Error) {
-      toaster.push({ title: 'Error', content: error.message });
-    }
+    console.error('Error sending contact form submission:', error);
+    toast.add({
+      title: 'Error',
+      description: 'There was an error sending your message. Please try again later.',
+      color: 'error'
+    });
   } finally {
     loading.value = false;
+    Object.assign(state, {
+      name: '',
+      email: '',
+      topic: '',
+      message: ''
+    });
   }
-}
+};
 </script>
 
 <template>
-  <main class="container contact">
-    <form class="contact__form" @submit.prevent="handleSubmit">
-      <h1 class="contact__form__title">Let's Get in Touch!</h1>
+  <UContainer class="flex justify-between flex-col md:flex-row gap-8 md:gap-16 py-12">
+    <div>
+      <h1 class="text-4xl font-bold mb-4">Contact Me</h1>
       <p>
-        Have a question, suggestion, or just want to say hello? Fill out the form below, and I'll get back to you soon.
+        Have a question, suggestion, or just want to say hello? Feel free to reach out using the email, form, or connect
+        with me on social media!
       </p>
-
-      <BaseInput
-        v-model="state.fullName"
-        name="Full name"
-        placeholder="John Cena"
-        icon="lucide:circle-user-round"
-        :error="error.fullName"
-        required
-        @blur="validateField('fullName')"
-      />
-      <BaseInput
-        v-model="state.email"
-        name="Email"
-        placeholder="your@email.com"
-        icon="lucide:mail"
-        :error="error.email"
-        required
-        @blur="validateField('email')"
-      />
-      <BaseInput
-        v-model="state.topic"
-        name="Topic"
-        placeholder="Project Inquiry"
-        icon="lucide:tag"
-        :error="error.topic"
-        required
-        @blur="validateField('topic')"
-      />
-      <BaseTextarea
-        v-model="state.message"
-        name="Message"
-        placeholder="Write your message..."
-        icon="lucide:message-square"
-        :error="error.message"
-        required
-        @blur="validateField('message')"
-      />
-      <BaseButton
-        type="submit"
-        icon="lucide:send-horizontal"
-        class="contact__form__submit-btn"
-        :loading="loading"
-        loading-icon="lucide:loader"
-        >Send Message</BaseButton
-      >
-
-      <p class="contact__form__alternative">
-        Having troubles? You can also contact me via email:
-        <a href="mailto:voquangchien.dev@proton.me" target="_blank">voquangchien.dev@proton.me</a>
-      </p>
-    </form>
-
-    <div class="contact__info-cards">
-      <div v-for="item in cards" :key="item.title" class="contact__info-cards__item">
-        <div class="contact__info-cards__item__header">
-          <Icon :name="item.icon" size="50" />
-          <h2 class="font-medium">{{ item.title }}</h2>
-        </div>
-        <p class="contact__info-cards__item__body">{{ item.description }}</p>
+      <div class="flex flex-col mt-6 gap-2">
+        <UButton to="mailto:voquangchien.dev@proton.me" icon="lucide:mail" variant="ghost" class="max-w-fit"
+          >voquangchien.dev@proton.me</UButton
+        >
+        <UButton
+          icon="lucide:linkedin"
+          to="https://www.linkedin.com/in/2giosangmitom/"
+          variant="ghost"
+          class="max-w-fit"
+          >2giosangmitom</UButton
+        >
       </div>
     </div>
-  </main>
+
+    <UForm
+      :schema="schema"
+      :state="state"
+      class="flex flex-col gap-y-4 w-full bg-primary-500/5 dark:bg-primary-900/10 border-primary border p-8 rounded-lg shadow-lg"
+      @submit="handleSubmit"
+    >
+      <div class="mb-4">
+        <h1 class="text-4xl font-bold mb-1">Get in Touch</h1>
+        <p>Fill out the form below to send me a message. I'll get back to you as soon as possible!</p>
+      </div>
+
+      <UFormField label="Name" name="name">
+        <UInput v-model="state.name" icon="lucide:circle-user-round" placeholder="Your Name" class="w-full" />
+      </UFormField>
+
+      <UFormField label="Email" name="email">
+        <UInput v-model="state.email" icon="lucide:mail" placeholder="your@email.com" class="w-full" />
+      </UFormField>
+
+      <UFormField label="Topic" name="topic">
+        <UInput v-model="state.topic" icon="lucide:tag" placeholder="Subject of your message" class="w-full" />
+      </UFormField>
+
+      <UFormField label="Message" name="message">
+        <UTextarea
+          v-model="state.message"
+          icon="lucide:message-square"
+          placeholder="Your message..."
+          class="w-full"
+          :rows="12"
+        />
+      </UFormField>
+
+      <UButton
+        type="submit"
+        color="primary"
+        class="mt-4 self-start"
+        icon="lucide:send-horizontal"
+        :loading="loading"
+        loading-icon="lucide:loader"
+        >Send Message</UButton
+      >
+    </UForm>
+  </UContainer>
 </template>
-
-<style lang="scss">
-@use '~/assets/scss/variables';
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  row-gap: 4rem;
-
-  @media screen and (min-width: variables.$screen-xl) {
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 4rem;
-  }
-
-  &__form {
-    background-color: variables.$color-surface;
-    border-radius: variables.$rounded-lg;
-    padding: 1.5rem 2rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    flex: 1.25;
-
-    &__title {
-      color: variables.$color-primary;
-    }
-
-    &__submit-btn {
-      width: fit-content;
-      cursor: pointer;
-    }
-
-    &__alternative {
-      a {
-        color: variables.$color-primary;
-      }
-    }
-  }
-
-  &__info-cards {
-    background-color: variables.$color-surface;
-    border-radius: variables.$rounded-lg;
-    padding: 1.5rem 1.5rem;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    flex: 1;
-
-    &__item {
-      outline: 1px solid variables.$color-dimmed;
-      border-radius: variables.$rounded-md;
-      padding: 1rem 1.25rem;
-
-      &__header {
-        display: flex;
-        align-items: center;
-        column-gap: 1rem;
-        font-size: variables.$font-base;
-      }
-    }
-  }
-}
-</style>
