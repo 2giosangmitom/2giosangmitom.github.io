@@ -19,7 +19,7 @@ defineProps<{
       >
         <template #list-trailing>
           <div class="space-x-4">
-            <UContentSearchButton :kbds="['/']" />
+            <UButton variant="ghost" color="neutral" icon="lucide:search" />
             <UColorModeButton />
           </div>
         </template>

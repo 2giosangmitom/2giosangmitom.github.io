@@ -11,8 +11,6 @@ useHead({
   }
 });
 
-const searchTerm = shallowRef('');
-
 onMounted(() => {
   OverlayScrollbars(document.body, {
     scrollbars: {
@@ -25,9 +23,7 @@ onMounted(() => {
 <template>
   <UApp>
     <NuxtLoadingIndicator color="var(--ui-primary)" />
-    <ClientOnly>
-      <LazyUContentSearch v-model:search-term="searchTerm" shortcut="/" :fuse="{ resultLimit: 42 }" />
-    </ClientOnly>
+
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

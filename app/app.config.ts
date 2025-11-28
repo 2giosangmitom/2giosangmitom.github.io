@@ -3,6 +3,11 @@ export default defineAppConfig({
     icons: {
       light: 'lucide:sun',
       dark: 'lucide:moon'
+    },
+    prose: {
+      li: {
+        base: "marker:text-primary"
+      }
     }
   }
 });

@@ -20,17 +20,20 @@ if (!data.value) {
 </script>
 
 <template>
-  <UContainer as="main" class="flex gap-x-20 justify-between">
+  <UContainer
+    as="main"
+    class="flex flex-col items-center gap-y-20 lg:flex-row lg:items-start lg:gap-y-0 lg:gap-x-20 lg:justify-between"
+  >
     <section class="flex-1">
       <ContentRenderer v-if="data" :value="data.body" />
     </section>
     <section>
       <NuxtImg
         src="/images/hue.jpg"
-        width="350"
+        sizes="70vw sm:50vw lg:350px"
         alt="Morning view"
         title="Morning view of Hue city, Vietnam"
-        class="transition-transform duration-300 rounded shadow-xl rotate-3 hover:rotate-0 hover:scale-105"
+        class="transition-transform duration-300 rounded shadow-xl lg:rotate-3 lg:hover:rotate-0 lg:hover:scale-105"
       />
       <div class="flex flex-col mt-10">
         <UButton icon="lucide:github" to="https://github.com/2giosangmitom" variant="link" color="neutral"
