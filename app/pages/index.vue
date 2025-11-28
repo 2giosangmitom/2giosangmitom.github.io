@@ -7,10 +7,22 @@ useSeoMeta({
   ogDescription:
     'Welcome to the personal website of Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.'
 });
+
+const techStacks = [
+  'logos:nuxt-icon',
+  'devicon:vuejs',
+  'logos:nodejs-icon',
+  'logos:fastify-icon',
+  'logos:nestjs',
+  'logos:python',
+  'logos:typescript-icon',
+  'logos:prisma',
+  'devicon:express'
+];
 </script>
 
 <template>
-  <UContainer as="main">
+  <UContainer as="main" class="space-y-32">
     <!-- Introduction -->
     <section class="flex flex-col-reverse gap-y-14 lg:flex-row lg:gap-y-0 lg:gap-x-10 xl:gap-x-24">
       <NuxtImg
@@ -33,6 +45,13 @@ useSeoMeta({
           <UButton icon="lucide:pen-tool" variant="outline" to="/articles">Read Articles</UButton>
         </div>
       </div>
+    </section>
+
+    <!-- Tech Stacks -->
+    <section>
+      <UMarquee pause-on-hover>
+        <UIcon v-for="tech in techStacks" :key="tech" :name="tech" class="size-16 shrink-0 fill-current" mode="svg" />
+      </UMarquee>
     </section>
 
     <!-- Latest Articles -->
