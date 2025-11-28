@@ -19,10 +19,20 @@ const techStacks = [
   'logos:prisma',
   'devicon:express'
 ];
+
+const { data } = await useAsyncData('latest-articles-home', () => {
+  const articles = queryCollection('articles').order('pubDate', 'DESC');
+
+  if (import.meta.env.PROD) {
+    articles.where('draft', '<>', true);
+  }
+
+  return articles.limit(3).all();
+});
 </script>
 
 <template>
-  <UContainer as="main" class="space-y-32">
+  <UContainer as="main" class="space-y-36">
     <!-- Introduction -->
     <section class="flex flex-col-reverse gap-y-14 lg:flex-row lg:gap-y-0 lg:gap-x-10 xl:gap-x-24">
       <NuxtImg
@@ -55,5 +65,26 @@ const techStacks = [
     </section>
 
     <!-- Latest Articles -->
+    <section>
+      <h2 class="text-2xl font-bold text-center">Latest Articles</h2>
+
+      <UBlogPosts orientation="horizontal" class="mt-12">
+        <UBlogPost
+          v-for="article in data"
+          :key="article.id"
+          :title="article.title"
+          :description="article.description"
+          :date="article.pubDate"
+          :to="article.path"
+          variant="outline"
+        >
+          <template v-if="article.tags" #footer>
+            <div class="space-x-4 float-right mr-4 mb-4">
+              <UBadge v-for="tag in article.tags" :key="tag" variant="soft">{{ tag }}</UBadge>
+            </div>
+          </template>
+        </UBlogPost>
+      </UBlogPosts>
+    </section>
   </UContainer>
 </template>
