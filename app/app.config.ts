@@ -8,6 +8,11 @@ export default defineAppConfig({
       li: {
         base: 'marker:text-primary'
       }
+    },
+    blogPost: {
+      slots: {
+        root: 'rounded'
+      }
     }
   }
 });

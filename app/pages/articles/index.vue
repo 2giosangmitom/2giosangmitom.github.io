@@ -8,9 +8,15 @@ useSeoMeta({
     'Read the latest articles and insights on web development, programming, and technology by Vo Quang Chien.'
 });
 
-const { data } = await useAsyncData('latest-articles', () =>
-  queryCollection('articles').order('pubDate', 'DESC').all()
-);
+const { data } = await useAsyncData('latest-articles', () => {
+  const articles = queryCollection('articles').order('pubDate', 'DESC');
+
+  if (import.meta.env.PROD) {
+    articles.where('draft', '<>', true);
+  }
+
+  return articles.all();
+});
 </script>
 
 <template>
@@ -28,7 +34,13 @@ const { data } = await useAsyncData('latest-articles', () =>
         :to="article.path"
         variant="outline"
         orientation="vertical"
-      />
+      >
+        <template v-if="article.tags" #footer>
+          <div class="space-x-4 float-right mr-4 mb-4">
+            <UBadge v-for="tag in article.tags" :key="tag" variant="soft">{{ tag }}</UBadge>
+          </div>
+        </template>
+      </UBlogPost>
     </UBlogPosts>
   </UContainer>
 </template>

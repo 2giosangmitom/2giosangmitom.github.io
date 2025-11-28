@@ -9,7 +9,7 @@ export default defineContentConfig({
         pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
         tags: z.array(z.string()).optional(),
-        draft: z.boolean().optional()
+        draft: z.boolean().optional().default(false)
       })
     }),
     about: defineCollection({
