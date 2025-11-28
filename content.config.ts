@@ -2,9 +2,9 @@ import { defineContentConfig, defineCollection, z } from '@nuxt/content';
 
 export default defineContentConfig({
   collections: {
-    blog: defineCollection({
+    articles: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
+      source: 'articles/*.md',
       schema: z.object({
         pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),

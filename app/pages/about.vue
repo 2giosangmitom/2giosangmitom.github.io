@@ -1,22 +1,14 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Vo Quang Chien - About',
+  title: 'About - Vo Quang Chien',
   description:
     'Learn more about Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.',
-  ogTitle: 'Vo Quang Chien - About',
+  ogTitle: 'About - Vo Quang Chien',
   ogDescription:
     'Learn more about Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.'
 });
 
 const { data } = await useAsyncData('about', () => queryCollection('about').first());
-
-if (!data.value) {
-  throw createError({
-    statusCode: 500,
-    statusMessage: 'Internal Server Error',
-    message: 'Failed to load about data.'
-  });
-}
 </script>
 
 <template>

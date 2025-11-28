@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Vo Quang Chien - Software Engineer',
+  title: 'Software Engineer - Vo Quang Chien',
   description:
     'Welcome to the personal website of Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.',
-  ogTitle: 'Vo Quang Chien - Software Engineer',
+  ogTitle: 'Software Engineer - Vo Quang Chien',
   ogDescription:
     'Welcome to the personal website of Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.'
 });

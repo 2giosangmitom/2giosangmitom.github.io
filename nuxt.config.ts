@@ -16,12 +16,17 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
-          themes: ['github-dark', 'github-light']
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark'
+          },
+          langs: ['javascript', 'typescript']
         }
       }
     }
   },
   site: {
-    url: 'https://2giosangmitom.is-a.dev'
+    url: 'https://2giosangmitom.is-a.dev',
+    name: "2giosangmitom's Personal Blog"
   }
 });
