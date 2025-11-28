@@ -7,6 +7,15 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
+:root {
+  --ui-primary: var(--color-blue-500);
+  --ui-bg: var(--color-zinc-200);
+}
+:root.dark {
+  --ui-primary: var(--color-blue-400);
+  --ui-bg: var(--color-zinc-950);
+}
+
 /* Apply the custom fonts */
 body {
   font-family: var(--font-sans);
