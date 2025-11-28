@@ -6,7 +6,7 @@ export default defineAppConfig({
     },
     prose: {
       li: {
-        base: "marker:text-primary"
+        base: 'marker:text-primary'
       }
     }
   }

@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
+@import 'overlayscrollbars/overlayscrollbars.css';
 
 @theme {
   --font-sans: 'Public Sans', system-ui, sans-serif;
@@ -13,4 +14,17 @@ body {
 code,
 pre {
   font-family: var(--font-mono);
+}
+
+/* OverlayScrollbars */
+.os-scrollbar {
+  --os-handle-bg: var(--color-zinc-600);
+  --os-handle-bg-hover: var(--color-zinc-700);
+  --os-handle-bg-active: var(--color-zinc-800);
+}
+
+:root.dark .os-scrollbar {
+  --os-handle-bg: var(--color-zinc-400);
+  --os-handle-bg-hover: var(--color-zinc-300);
+  --os-handle-bg-active: var(--color-zinc-200);
 }
