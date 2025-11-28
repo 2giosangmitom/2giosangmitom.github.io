@@ -108,7 +108,7 @@ const handleSubmit = async () => {
     <UForm
       :schema="schema"
       :state="state"
-      class="flex flex-col gap-y-4 w-full bg-primary-500/5 dark:bg-primary-900/10 border-primary border p-8 rounded-lg shadow-lg"
+      class="flex flex-col gap-y-4 w-full bg-primary/5 dark:bg-primary/10 border-primary border p-8 rounded-lg shadow-lg"
       @submit="handleSubmit"
     >
       <div class="mb-4">

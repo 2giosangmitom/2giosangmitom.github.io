@@ -13,6 +13,13 @@ export default defineAppConfig({
       slots: {
         root: 'rounded'
       }
+    },
+    blogPosts: {
+      base: 'lg:gap-y-10'
+    },
+    colors: {
+      primary: 'blue',
+      secondary: 'green'
     }
   }
 });
