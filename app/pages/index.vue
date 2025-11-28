@@ -59,9 +59,11 @@ const { data } = await useAsyncData('latest-articles-home', () => {
 
     <!-- Tech Stacks -->
     <section>
-      <UMarquee pause-on-hover>
-        <UIcon v-for="tech in techStacks" :key="tech" :name="tech" class="size-16 shrink-0 fill-current" mode="svg" />
-      </UMarquee>
+      <ClientOnly>
+        <UMarquee>
+          <UIcon v-for="tech in techStacks" :key="tech" :name="tech" class="size-16 shrink-0 fill-current" mode="svg" />
+        </UMarquee>
+      </ClientOnly>
     </section>
 
     <!-- Latest Articles -->
