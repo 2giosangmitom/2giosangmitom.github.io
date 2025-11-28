@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui';
 
-const navLinks: NavigationMenuItem[] = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Articles', to: '/articles' },
-  { label: 'Tags', to: '/tags' },
-  { label: 'Uses', to: '/uses' },
-  { label: 'Contact', to: '/contact' }
-] as const;
+const navLinks = [
+  { label: 'About', to: '/about', icon: 'lucide:book-open' },
+  { label: 'Articles', to: '/articles', icon: 'lucide:pen-tool' },
+  { label: 'Tags', to: '/tags', icon: 'lucide:tags' },
+  { label: 'Uses', to: '/uses', icon: 'lucide:cpu' },
+  { label: 'Contact', to: '/contact', icon: 'lucide:mail' }
+] as const satisfies NavigationMenuItem[];
 </script>
 
 <template>

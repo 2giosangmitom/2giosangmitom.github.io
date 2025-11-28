@@ -7,23 +7,16 @@ defineProps<{
 </script>
 
 <template>
-  <header>
-    <UContainer>
-      <UNavigationMenu
-        :items="links"
-        variant="link"
-        :ui="{
-          link: 'px-0 data-active:font-semibold',
-          list: 'gap-x-5'
-        }"
-      >
-        <template #list-trailing>
-          <div class="space-x-4">
-            <UContentSearchButton />
-            <UColorModeButton />
-          </div>
-        </template>
-      </UNavigationMenu>
-    </UContainer>
-  </header>
+  <UHeader mode="slideover" title="2giosangmitom">
+    <UNavigationMenu :items="links" />
+
+    <template #right>
+      <UContentSearchButton />
+      <UColorModeButton />
+    </template>
+
+    <template #body>
+      <UNavigationMenu :items="links" orientation="vertical" class="-mx-2.5" />
+    </template>
+  </UHeader>
 </template>
