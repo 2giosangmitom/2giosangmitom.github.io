@@ -21,7 +21,9 @@ const techStacks = [
 ];
 
 const { data } = await useAsyncData('latest-articles-home', () => {
-  const articles = queryCollection('articles').order('pubDate', 'DESC');
+  const articles = queryCollection('articles')
+    .select('path', 'title', 'pubDate', 'description', 'id', 'tags')
+    .order('pubDate', 'DESC');
 
   if (import.meta.env.PROD) {
     articles.where('draft', '<>', true);
@@ -70,23 +72,7 @@ const { data } = await useAsyncData('latest-articles-home', () => {
     <section>
       <h2 class="text-2xl font-bold text-center">Latest Articles</h2>
 
-      <UBlogPosts orientation="horizontal" class="mt-12">
-        <UBlogPost
-          v-for="article in data"
-          :key="article.id"
-          :title="article.title"
-          :description="article.description"
-          :date="article.pubDate"
-          :to="article.path"
-          variant="outline"
-        >
-          <template v-if="article.tags" #footer>
-            <div class="space-x-4 float-right mr-4 mb-4">
-              <UBadge v-for="tag in article.tags" :key="tag" variant="soft">{{ tag }}</UBadge>
-            </div>
-          </template>
-        </UBlogPost>
-      </UBlogPosts>
+      <ArticleList v-if="data" :articles="data" orientation="horizontal" class="mt-12" />
     </section>
   </UContainer>
 </template>

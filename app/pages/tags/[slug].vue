@@ -31,17 +31,6 @@ const { data } = await useAsyncData(route.path, () => {
       Browse all articles tagged with <span class="text-primary">{{ route.params.slug }}</span> on my blog.
     </p>
 
-    <UBlogPosts orientation="vertical" class="mt-24">
-      <UBlogPost
-        v-for="article in data"
-        :key="article.id"
-        :title="article.title"
-        :description="article.description"
-        :date="article.pubDate"
-        :to="article.path"
-        variant="outline"
-        orientation="vertical"
-      />
-    </UBlogPosts>
+    <ArticleList v-if="data" :articles="data" orientation="vertical" class="mt-10" />
   </UContainer>
 </template>

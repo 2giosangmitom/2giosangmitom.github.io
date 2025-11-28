@@ -11,7 +11,15 @@ export default defineAppConfig({
     },
     blogPost: {
       slots: {
-        root: 'rounded'
+        root: 'rounded',
+        footer: 'inline-flex gap-x-2 justify-end mb-4 mr-4'
+      },
+      variants: {
+        orientation: {
+          vertical: {
+            body: 'sm:p-4'
+          }
+        }
       }
     },
     blogPosts: {
