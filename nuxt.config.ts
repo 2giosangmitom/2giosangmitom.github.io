@@ -6,7 +6,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
-    '@nuxt/hints',
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxtjs/robots',
@@ -30,5 +29,10 @@ export default defineNuxtConfig({
   site: {
     url: 'https://2giosangmitom.is-a.dev',
     name: "2giosangmitom's Personal Blog"
+  },
+  runtimeConfig: {
+    public: {
+      DISCORD_WEBHOOK_URL: import.meta.env.NUXT_DISCORD_WEBHOOK_URL
+    }
   }
 });
