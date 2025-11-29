@@ -5,7 +5,6 @@ const navLinks = [
   { label: 'About', to: '/about', icon: 'lucide:book-open' },
   { label: 'Articles', to: '/articles', icon: 'lucide:pen-tool' },
   { label: 'Tags', to: '/tags', icon: 'lucide:tags' },
-  { label: 'Uses', to: '/uses', icon: 'lucide:cpu' },
   { label: 'Contact', to: '/contact', icon: 'lucide:mail' }
 ] as const satisfies NavigationMenuItem[];
 </script>
