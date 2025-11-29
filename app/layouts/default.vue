@@ -16,6 +16,7 @@ const navLinks = [
     <div class="flex-1 my-24">
       <slot />
     </div>
+    <USeparator icon="lucide:code-xml" type="dotted" />
     <AppFooter />
   </div>
 </template>

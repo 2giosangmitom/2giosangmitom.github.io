@@ -1,5 +1,5 @@
 <template>
-  <UContainer as="footer" class="text-dimmed text-sm py-4">
+  <UFooter class="text-dimmed text-sm">
     <p class="text-center">&copy; {{ new Date().getFullYear() }} Vo Quang Chien. All rights reserved.</p>
-  </UContainer>
+  </UFooter>
 </template>
