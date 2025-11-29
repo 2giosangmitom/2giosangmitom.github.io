@@ -20,6 +20,13 @@ const { data } = await useAsyncData(route.path, () => {
 
   return articlesPromise.all();
 });
+
+if (!data.value || data.value.length === 0) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'No articles found for this tag'
+  });
+}
 </script>
 
 <template>

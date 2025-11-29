@@ -3,6 +3,13 @@ const route = useRoute();
 
 const { data } = await useAsyncData(route.path, () => queryCollection('articles').path(route.path).first());
 
+if (!data.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Article not found'
+  });
+}
+
 useSeoMeta({
   title: data.value?.title,
   description: data.value?.description,
