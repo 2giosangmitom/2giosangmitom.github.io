@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { AccordionItem } from '@nuxt/ui';
+
 useSeoMeta({
   title: 'Software Engineer - Vo Quang Chien',
   description:
@@ -19,6 +21,24 @@ const techStacks = [
   'logos:prisma',
   'devicon:express'
 ];
+
+const questions = [
+  {
+    icon: 'lucide:coffee',
+    label: 'Do you use Arch Linux?',
+    content: 'Yes, I use Arch BTW.'
+  },
+  {
+    icon: 'lucide:bird',
+    label: 'Does using Vim make us cooler?',
+    content: 'Absolutely! Using Vim is a mark of true coding mastery.'
+  },
+  {
+    icon: 'lucide:heart',
+    label: 'Do you have a girlfriend?',
+    content: "No, I've never even had a girlfriend 🥹."
+  }
+] satisfies AccordionItem[];
 
 const { data } = await useAsyncData('latest-articles-home', () => {
   const articles = queryCollection('articles')
@@ -73,6 +93,13 @@ const { data } = await useAsyncData('latest-articles-home', () => {
       <h2 class="text-2xl font-bold text-center">Latest Articles</h2>
 
       <ArticleList v-if="data" :articles="data" orientation="horizontal" class="mt-12" />
+    </section>
+
+    <!-- Never asked questions -->
+    <section>
+      <h2 class="text-2xl font-bold text-center mb-12">Never Asked Questions</h2>
+
+      <UAccordion :items="questions" />
     </section>
   </UContainer>
 </template>

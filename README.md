@@ -2,7 +2,7 @@
 
 A modern personal blog built with Nuxt 4, featuring articles, tags, and a clean, responsive design.
 
-🌐 **Live Site**: [https://2giosangmitom.is-a.dev](https://2giosangmitom.is-a.dev) | [https://2giosangmitom.github.io/](https://2giosangmitom.github.io/)
+🌐 **Live Site**: [https://2giosangmitom.is-a.dev](https://2giosangmitom.is-a.dev)
 
 ## ✨ Features
 
