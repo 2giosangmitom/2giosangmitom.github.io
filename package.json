@@ -19,7 +19,7 @@
     "@nuxtjs/sitemap": "7.4.7",
     "@vueuse/core": "^14.1.0",
     "@vueuse/nuxt": "^14.1.0",
-    "better-sqlite3": "^12.4.6",
+    "better-sqlite3": "^12.5.0",
     "eslint": "^9.39.1",
     "motion-v": "^1.7.4",
     "nuxt": "^4.2.1",
