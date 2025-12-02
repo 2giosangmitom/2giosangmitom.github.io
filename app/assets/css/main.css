@@ -7,15 +7,6 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
-:root {
-  --ui-primary: var(--color-blue-500);
-  --ui-bg: var(--color-zinc-200);
-}
-.dark {
-  --ui-primary: var(--color-blue-400);
-  --ui-bg: var(--color-zinc-950);
-}
-
 /* Apply the custom fonts */
 body {
   font-family: var(--font-sans);
@@ -27,13 +18,13 @@ pre {
 
 /* OverlayScrollbars */
 .os-scrollbar {
-  --os-handle-bg: var(--color-zinc-600);
-  --os-handle-bg-hover: var(--color-zinc-700);
-  --os-handle-bg-active: var(--color-zinc-800);
+  --os-handle-bg: var(--color-neutral-600);
+  --os-handle-bg-hover: var(--color-neutral-700);
+  --os-handle-bg-active: var(--color-neutral-800);
 }
 
 :root.dark .os-scrollbar {
-  --os-handle-bg: var(--color-zinc-400);
-  --os-handle-bg-hover: var(--color-zinc-300);
-  --os-handle-bg-active: var(--color-zinc-200);
+  --os-handle-bg: var(--color-neutral-400);
+  --os-handle-bg-hover: var(--color-neutral-300);
+  --os-handle-bg-active: var(--color-neutral-200);
 }

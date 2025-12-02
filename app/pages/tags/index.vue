@@ -34,15 +34,18 @@ const { data } = await useAsyncData('tags', async () => {
     <p>Browse all tags on my blog.</p>
 
     <div v-if="data" class="flex flex-col mt-10 gap-y-4">
-      <UButton
-        v-for="tag in data"
+      <Motion
+        v-for="(tag, index) in data"
         :key="tag"
-        icon="mdi:tag"
-        variant="ghost"
-        :to="{ name: 'tags-slug', params: { slug: tag } }"
-        class="w-fit"
-        >{{ tag }}</UButton
+        :initial="{ opacity: 0, transform: 'translateY(10px)' }"
+        :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
+        :transition="{ delay: 0.2 * index }"
+        :in-view-options="{ once: true }"
       >
+        <UButton icon="mdi:tag" variant="ghost" :to="{ name: 'tags-slug', params: { slug: tag } }" class="w-fit">{{
+          tag
+        }}</UButton>
+      </Motion>
     </div>
   </UContainer>
 </template>
