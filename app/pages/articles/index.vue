@@ -8,7 +8,7 @@ useSeoMeta({
     'Read the latest articles and insights on web development, programming, and technology by Vo Quang Chien.'
 });
 
-const { data } = await useAsyncData('latest-articles', () => {
+const { data } = await useAsyncData('all-articles', () => {
   const articles = queryCollection('articles')
     .select('path', 'title', 'pubDate', 'description', 'id', 'tags')
     .order('pubDate', 'DESC');

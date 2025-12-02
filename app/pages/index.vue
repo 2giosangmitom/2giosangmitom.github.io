@@ -40,7 +40,7 @@ const questions = [
   }
 ] satisfies AccordionItem[];
 
-const { data } = await useAsyncData('latest-articles-home', () => {
+const { data } = await useAsyncData('latest-articles', () => {
   const articles = queryCollection('articles')
     .select('path', 'title', 'pubDate', 'description', 'id', 'tags')
     .order('pubDate', 'DESC');

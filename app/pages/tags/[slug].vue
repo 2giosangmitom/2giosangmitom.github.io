@@ -8,7 +8,7 @@ useSeoMeta({
   ogDescription: `Browse all articles tagged with "${route.params.slug}" on Vo Quang Chien's blog.`
 });
 
-const { data } = await useAsyncData(route.path, () => {
+const { data, error } = await useAsyncData(route.path, () => {
   const articlesPromise = queryCollection('articles')
     .select('title', 'description', 'pubDate', 'path', 'id')
     .where('tags', 'LIKE', `%${route.params.slug}%`)
@@ -21,7 +21,7 @@ const { data } = await useAsyncData(route.path, () => {
   return articlesPromise.all();
 });
 
-if (!data.value || data.value.length === 0) {
+if (error.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'No articles found for this tag'
