@@ -18,9 +18,13 @@ export default defineAppConfig({
       base: 'lg:gap-y-10'
     },
     colors: {
-      primary: 'red',
+      primary: 'emerald',
       secondary: 'indigo',
-      neutral: 'neutral'
+      neutral: 'zinc',
+      error: 'red',
+      warning: 'yellow',
+      success: 'green',
+      info: 'blue'
     }
   }
 });
