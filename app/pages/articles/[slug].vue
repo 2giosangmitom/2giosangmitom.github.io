@@ -47,7 +47,7 @@ const handleCopyLink = () => {
 
 <template>
   <UContainer>
-    <div v-if="page" class="mb-12">
+    <UPage v-if="page" class="mb-12">
       <!-- Metadata -->
       <div class="flex flex-wrap gap-x-6 gap-y-2 mb-4 text-sm text-muted">
         <div class="inline-flex gap-x-2 items-center">
@@ -73,22 +73,29 @@ const handleCopyLink = () => {
       <ContentRenderer :value="page.body" />
 
       <!-- Share button -->
-      <div class="flex justify-end items-center">
+      <div class="flex justify-end items-center mt-12">
         <UButton
-          variant="link"
+          variant="ghost"
           icon="lucide:link"
           color="neutral"
-          class="cursor-pointer mt-12"
+          class="cursor-pointer"
           size="sm"
           @click="handleCopyLink"
           >Copy link</UButton
         >
       </div>
-    </div>
 
-    <!-- Surrounding articles -->
-    <div v-if="surround">
-      <UContentSurround :surround="surround" />
-    </div>
+      <USeparator class="my-12" />
+
+      <!-- Surrounding articles -->
+      <div v-if="surround">
+        <UContentSurround :surround="surround" />
+      </div>
+
+      <!-- TOC -->
+      <template v-if="page?.body?.toc?.links?.length" #right>
+        <UContentToc :links="page.body.toc.links" highlight />
+      </template>
+    </UPage>
   </UContainer>
 </template>
