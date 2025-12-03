@@ -1,20 +1,34 @@
 <script setup lang="ts">
 const route = useRoute();
 
-const { data, error } = await useAsyncData(route.path, () => queryCollection('articles').path(route.path).first());
+const [{ data: page, error: pageError }, { data: surround, error: surroundError }] = await Promise.all([
+  useAsyncData(route.path, () => queryCollection('articles').path(route.path).first()),
+  useAsyncData(`${route.path}-surround`, () =>
+    queryCollectionItemSurroundings('articles', route.path, {
+      fields: ['description']
+    })
+  )
+]);
 
-if (error.value) {
+if (pageError.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Article not found'
   });
 }
 
+if (surroundError.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Surrounding articles not found'
+  });
+}
+
 useSeoMeta({
-  title: data.value?.title,
-  description: data.value?.description,
-  ogTitle: data.value?.title,
-  ogDescription: data.value?.description
+  title: page.value?.title,
+  description: page.value?.description,
+  ogTitle: page.value?.title,
+  ogDescription: page.value?.description
 });
 
 const handleCopyLink = () => {
@@ -33,41 +47,48 @@ const handleCopyLink = () => {
 
 <template>
   <UContainer>
-    <!-- Metadata -->
-    <div v-if="data">
+    <div v-if="page" class="mb-12">
+      <!-- Metadata -->
       <div class="flex flex-wrap gap-x-6 gap-y-2 mb-4 text-sm text-muted">
         <div class="inline-flex gap-x-2 items-center">
           <UBadge icon="mdi:calendar-blank" variant="soft" />
-          <NuxtTime :datetime="data.pubDate" />
+          <NuxtTime :datetime="page.pubDate" />
         </div>
-        <div v-if="data.updatedDate" class="inline-flex gap-x-2 items-center">
+        <div v-if="page.updatedDate" class="inline-flex gap-x-2 items-center">
           <UBadge icon="mdi:calendar-edit" variant="soft" />
-          <NuxtTime :datetime="data.updatedDate" />
+          <NuxtTime :datetime="page.updatedDate" />
         </div>
-        <div v-if="data.tags" class="inline-flex gap-x-2 items-center">
+        <div v-if="page.tags" class="inline-flex gap-x-2 items-center">
           <UBadge icon="mdi:tag-multiple" variant="soft" />
           <div>
-            <span v-for="(tag, index) in data.tags" :key="tag">
+            <span v-for="(tag, index) in page.tags" :key="tag">
               <ULink :to="{ name: 'tags-slug', params: { slug: tag } }">{{ tag }}</ULink>
-              <span v-if="index < data.tags.length - 1">, </span>
+              <span v-if="index < page.tags.length - 1">, </span>
             </span>
           </div>
         </div>
       </div>
 
       <!-- Content -->
-      <ContentRenderer :value="data.body" />
+      <ContentRenderer :value="page.body" />
 
       <!-- Share button -->
-      <UButton
-        variant="link"
-        icon="lucide:link"
-        color="neutral"
-        class="float-right cursor-pointer"
-        size="sm"
-        @click="handleCopyLink"
-        >Copy link</UButton
-      >
+      <div class="flex justify-end items-center">
+        <UButton
+          variant="link"
+          icon="lucide:link"
+          color="neutral"
+          class="cursor-pointer mt-12"
+          size="sm"
+          @click="handleCopyLink"
+          >Copy link</UButton
+        >
+      </div>
+    </div>
+
+    <!-- Surrounding articles -->
+    <div v-if="surround">
+      <UContentSurround :surround="surround" />
     </div>
   </UContainer>
 </template>
