@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
+const path = withoutTrailingSlashes(route.path);
 
 useSeoMeta({
   title: `Articles.tagged(${route.params.slug}) - Vo Quang Chien`,
@@ -8,7 +9,7 @@ useSeoMeta({
   ogDescription: `Browse all articles tagged with "${route.params.slug}" on Vo Quang Chien's blog.`
 });
 
-const { data, error } = await useAsyncData(route.path, () => {
+const { data, error } = await useAsyncData(path, () => {
   const articlesPromise = queryCollection('articles')
     .select('title', 'description', 'pubDate', 'path', 'id')
     .where('tags', 'LIKE', `%${route.params.slug}%`)

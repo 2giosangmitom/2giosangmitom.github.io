@@ -1,10 +1,11 @@
 <script setup lang="ts">
 const route = useRoute();
+const path = withoutTrailingSlashes(route.path);
 
 const [{ data: page, error: pageError }, { data: surround, error: surroundError }] = await Promise.all([
-  useAsyncData(route.path, () => queryCollection('articles').path(route.path).first()),
-  useAsyncData(`${route.path}-surround`, () =>
-    queryCollectionItemSurroundings('articles', route.path, {
+  useAsyncData(path, () => queryCollection('articles').path(path).first()),
+  useAsyncData(`${path}-surround`, () =>
+    queryCollectionItemSurroundings('articles', path, {
       fields: ['description']
     })
   )
