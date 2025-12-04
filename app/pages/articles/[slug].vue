@@ -49,49 +49,51 @@ const handleCopyLink = () => {
 <template>
   <UContainer>
     <UPage v-if="page" class="mb-12">
-      <!-- Metadata -->
-      <div class="flex flex-wrap gap-x-6 gap-y-2 mb-4 text-sm text-muted">
-        <div class="inline-flex gap-x-2 items-center">
-          <UBadge icon="mdi:calendar-blank" variant="soft" />
-          <NuxtTime :datetime="page.pubDate" />
-        </div>
-        <div v-if="page.updatedDate" class="inline-flex gap-x-2 items-center">
-          <UBadge icon="mdi:calendar-edit" variant="soft" />
-          <NuxtTime :datetime="page.updatedDate" />
-        </div>
-        <div v-if="page.tags" class="inline-flex gap-x-2 items-center">
-          <UBadge icon="mdi:tag-multiple" variant="soft" />
-          <div>
-            <span v-for="(tag, index) in page.tags" :key="tag">
-              <ULink :to="{ name: 'tags-slug', params: { slug: tag } }">{{ tag }}</ULink>
-              <span v-if="index < page.tags.length - 1">, </span>
-            </span>
+      <UPageBody>
+        <!-- Metadata -->
+        <div class="flex flex-wrap gap-x-6 gap-y-2 mb-4 text-sm text-muted">
+          <div class="inline-flex gap-x-2 items-center">
+            <UBadge icon="mdi:calendar-blank" variant="soft" />
+            <NuxtTime :datetime="page.pubDate" />
+          </div>
+          <div v-if="page.updatedDate" class="inline-flex gap-x-2 items-center">
+            <UBadge icon="mdi:calendar-edit" variant="soft" />
+            <NuxtTime :datetime="page.updatedDate" />
+          </div>
+          <div v-if="page.tags" class="inline-flex gap-x-2 items-center">
+            <UBadge icon="mdi:tag-multiple" variant="soft" />
+            <div>
+              <span v-for="(tag, index) in page.tags" :key="tag">
+                <ULink :to="{ name: 'tags-slug', params: { slug: tag } }">{{ tag }}</ULink>
+                <span v-if="index < page.tags.length - 1">, </span>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Content -->
-      <ContentRenderer :value="page.body" />
+        <!-- Content -->
+        <ContentRenderer :value="page" />
 
-      <!-- Share button -->
-      <div class="flex justify-end items-center mt-12">
-        <UButton
-          variant="ghost"
-          icon="lucide:link"
-          color="neutral"
-          class="cursor-pointer"
-          size="sm"
-          @click="handleCopyLink"
-          >Copy link</UButton
-        >
-      </div>
+        <!-- Share button -->
+        <div class="flex justify-end items-center mt-12">
+          <UButton
+            variant="ghost"
+            icon="lucide:link"
+            color="neutral"
+            class="cursor-pointer"
+            size="sm"
+            @click="handleCopyLink"
+            >Copy link</UButton
+          >
+        </div>
 
-      <USeparator class="my-12" />
+        <USeparator class="my-12" />
 
-      <!-- Surrounding articles -->
-      <div v-if="surround">
-        <UContentSurround :surround="surround" />
-      </div>
+        <!-- Surrounding articles -->
+        <div v-if="surround">
+          <UContentSurround :surround="surround" />
+        </div>
+      </UPageBody>
 
       <!-- TOC -->
       <template v-if="page?.body?.toc?.links?.length" #right>
