@@ -19,7 +19,9 @@ const techStacks = [
   'logos:python',
   'logos:typescript-icon',
   'logos:prisma',
-  'devicon:express'
+  'devicon:express',
+  'logos:react',
+  'logos:nextjs'
 ];
 
 const questions = [
