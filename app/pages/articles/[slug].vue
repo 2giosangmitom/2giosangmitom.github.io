@@ -11,14 +11,14 @@ const [{ data: page, error: pageError }, { data: surround, error: surroundError 
   )
 ]);
 
-if (pageError.value) {
+if (pageError.value || !page.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Article not found'
   });
 }
 
-if (surroundError.value) {
+if (surroundError.value || !surround.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Surrounding articles not found'

@@ -22,7 +22,7 @@ const { data, error } = await useAsyncData(path, () => {
   return articlesPromise.all();
 });
 
-if (error.value) {
+if (error.value || !data.value?.length) {
   throw createError({
     statusCode: 404,
     statusMessage: 'No articles found for this tag'
