@@ -16,7 +16,7 @@
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.2.1",
     "@nuxtjs/robots": "5.6.1",
-    "@nuxtjs/sitemap": "7.4.8",
+    "@nuxtjs/sitemap": "7.4.9",
     "@vueuse/core": "^14.1.0",
     "@vueuse/nuxt": "^14.1.0",
     "better-sqlite3": "^12.5.0",
