@@ -34,7 +34,7 @@
   "devDependencies": {
     "@iconify-json/devicon": "^1.2.52",
     "@iconify-json/logos": "^1.2.10",
-    "@iconify-json/lucide": "^1.2.79",
+    "@iconify-json/lucide": "^1.2.81",
     "@iconify-json/mdi": "^1.2.3"
   }
 }
