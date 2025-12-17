@@ -21,7 +21,8 @@ const techStacks = [
   'logos:prisma',
   'devicon:express',
   'logos:react',
-  'logos:nextjs'
+  'logos:nextjs',
+  'logos:fastapi-icon'
 ];
 
 const questions = [
