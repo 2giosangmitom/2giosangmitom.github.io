@@ -22,7 +22,7 @@ const techStacks = [
   'devicon:express',
   'logos:react',
   'logos:nextjs',
-  'logos:fastapi-icon'
+  'simple-icons:langchain'
 ];
 
 const questions = [
