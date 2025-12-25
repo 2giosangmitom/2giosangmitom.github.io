@@ -1,8 +1,3 @@
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - unrs-resolver
-  - vue-demi
-
 onlyBuiltDependencies:
   - better-sqlite3
   - esbuild
