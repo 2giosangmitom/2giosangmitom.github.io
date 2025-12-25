@@ -11,7 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@nuxt/content": "3.9.0",
+    "@nuxt/content": "3.10.0",
     "@nuxt/eslint": "1.12.1",
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.3.0",
@@ -19,13 +19,11 @@
     "@nuxtjs/sitemap": "7.5.0",
     "@vueuse/core": "^14.1.0",
     "@vueuse/nuxt": "^14.1.0",
-    "better-sqlite3": "^12.5.0",
     "eslint": "^9.39.2",
     "motion-v": "^1.7.4",
     "nuxt": "^4.2.2",
     "nuxt-booster": "^3.3.2",
     "overlayscrollbars": "^2.13.0",
-    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "vue": "^3.5.26",
@@ -37,7 +35,6 @@
     "@iconify-json/logos": "^1.2.10",
     "@iconify-json/lucide": "^1.2.82",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.63",
-    "node-gyp": "^12.1.0"
+    "@iconify-json/simple-icons": "^1.2.63"
   }
 }

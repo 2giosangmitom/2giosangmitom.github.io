@@ -1,4 +1,4 @@
 [tools]
 node = "25"
 pnpm = "10"
-prettier = "latest"
+prettier = "3"
