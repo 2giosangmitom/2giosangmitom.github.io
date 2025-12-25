@@ -18,7 +18,7 @@ const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSe
   server: false
 });
 
-onBeforeMount(() => {
+onMounted(() => {
   OverlayScrollbars(
     {
       target: document.body,
@@ -28,7 +28,7 @@ onBeforeMount(() => {
     },
     {
       scrollbars: {
-        autoHide: 'move',
+        autoHide: 'leave',
         autoHideDelay: 500,
         autoHideSuspend: false
       }
