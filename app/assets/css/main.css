@@ -1,10 +1,13 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
-@import 'overlayscrollbars/overlayscrollbars.css';
 
 @theme {
   --font-sans: 'Public Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scrollbar-gutter: stable;
 }
 
 /* Apply the custom fonts */
@@ -14,17 +17,4 @@ body {
 code,
 pre {
   font-family: var(--font-mono);
-}
-
-/* OverlayScrollbars */
-.os-scrollbar {
-  --os-handle-bg: var(--color-neutral-600);
-  --os-handle-bg-hover: var(--color-neutral-700);
-  --os-handle-bg-active: var(--color-neutral-800);
-}
-
-:root.dark .os-scrollbar {
-  --os-handle-bg: var(--color-neutral-400);
-  --os-handle-bg-hover: var(--color-neutral-300);
-  --os-handle-bg-active: var(--color-neutral-200);
 }

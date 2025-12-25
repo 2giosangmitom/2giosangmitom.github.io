@@ -1,31 +1,9 @@
 <script setup lang="ts">
-import { OverlayScrollbars } from 'overlayscrollbars';
-
-useHead({
-  htmlAttrs: {
-    lang: 'en',
-    'data-overlayscrollbars-initialize': ''
-  },
-  bodyAttrs: {
-    'data-overlayscrollbars-initialize': ''
-  }
-});
-
 const searchTerm = shallowRef('');
 
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('articles'));
 const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('articles'), {
   server: false
-});
-
-onMounted(() => {
-  OverlayScrollbars(document.body, {
-    scrollbars: {
-      autoHide: 'leave',
-      autoHideDelay: 500,
-      autoHideSuspend: false
-    }
-  });
 });
 </script>
 
