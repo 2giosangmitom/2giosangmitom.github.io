@@ -19,21 +19,13 @@ const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSe
 });
 
 onMounted(() => {
-  OverlayScrollbars(
-    {
-      target: document.body,
-      cancel: {
-        nativeScrollbarsOverlaid: true
-      }
-    },
-    {
-      scrollbars: {
-        autoHide: 'leave',
-        autoHideDelay: 500,
-        autoHideSuspend: false
-      }
+  OverlayScrollbars(document.body, {
+    scrollbars: {
+      autoHide: 'leave',
+      autoHideDelay: 500,
+      autoHideSuspend: false
     }
-  );
+  });
 });
 </script>
 
