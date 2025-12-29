@@ -20,7 +20,6 @@
     "@vueuse/core": "^14.1.0",
     "@vueuse/nuxt": "^14.1.0",
     "eslint": "^9.39.2",
-    "motion-v": "^1.7.4",
     "nuxt": "^4.2.2",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",

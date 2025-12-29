@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
-    'motion-v/nuxt',
     '@vueuse/nuxt'
   ],
   content: {
@@ -34,5 +33,8 @@ export default defineNuxtConfig({
     public: {
       DISCORD_WEBHOOK_URL: import.meta.env.NUXT_DISCORD_WEBHOOK_URL
     }
+  },
+  sitemap: {
+    zeroRuntime: true
   }
 });

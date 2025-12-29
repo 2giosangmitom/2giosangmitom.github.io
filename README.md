@@ -23,7 +23,6 @@ A modern personal blog built with Nuxt 4, featuring articles, tags, and a clean,
 - **Content**: [Nuxt Content](https://content.nuxt.com/)
 - **UI Components**: [Nuxt UI](https://ui.nuxt.com/)
 - **Icons**: [Iconify](https://iconify.design/)
-- **Animations**: [Motion](https://motion.dev/docs/vue)
 - **Utilities**: [VueUse](https://vueuse.org/)
 - **Package Manager**: [pnpm](https://pnpm.io/)
 

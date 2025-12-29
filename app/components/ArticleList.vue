@@ -9,14 +9,7 @@ defineProps<{
 
 <template>
   <UBlogPosts :orientation="orientation" class="mt-10">
-    <Motion
-      v-for="(article, index) in articles"
-      :key="article.id"
-      :initial="{ opacity: 0, transform: 'translateY(10px)' }"
-      :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
-      :transition="{ delay: 0.2 * index }"
-      :in-view-options="{ once: true }"
-    >
+    <div v-for="article in articles" :key="article.id">
       <UBlogPost
         :key="article.id"
         :title="article.title"
@@ -30,6 +23,6 @@ defineProps<{
           <UBadge v-for="tag in article.tags" :key="tag" variant="soft" size="md">{{ tag }}</UBadge>
         </template>
       </UBlogPost>
-    </Motion>
+    </div>
   </UBlogPosts>
 </template>
