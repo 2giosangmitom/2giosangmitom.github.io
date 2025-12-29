@@ -3,9 +3,11 @@ import z from 'zod';
 
 useSeoMeta({
   title: 'Contact - Vo Quang Chien',
-  description: 'Get in touch with Vo Quang Chien for collaborations, inquiries, or feedback.',
+  description:
+    'Connect with Vo Quang Chien for professional collaborations, project inquiries, or technical discussions.',
   ogTitle: 'Contact - Vo Quang Chien',
-  ogDescription: 'Get in touch with Vo Quang Chien for collaborations, inquiries, or feedback.'
+  ogDescription:
+    'Connect with Vo Quang Chien for professional collaborations, project inquiries, or technical discussions.'
 });
 
 const runtimeConfig = useRuntimeConfig();
@@ -86,10 +88,10 @@ const handleSubmit = async () => {
 <template>
   <UContainer class="flex justify-between flex-col md:flex-row gap-8 md:gap-16 py-12">
     <div>
-      <h1 class="text-4xl font-bold mb-4">Contact Me</h1>
+      <h1 class="text-4xl font-bold mb-4">Let's Connect</h1>
       <p>
-        Have a question, suggestion, or just want to say hello? Feel free to reach out using the email, form, or connect
-        with me on social media!
+        Interested in collaborating on a project, discussing opportunities, or exploring technical solutions? Feel free
+        to reach out through email, the contact form, or connect with me on professional networks.
       </p>
       <div class="flex flex-col mt-6 gap-2">
         <UButton to="mailto:voquangchien.dev@proton.me" icon="lucide:mail" variant="ghost" class="max-w-fit"

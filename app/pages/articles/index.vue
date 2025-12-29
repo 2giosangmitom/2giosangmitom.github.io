@@ -1,11 +1,11 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Latest Articles - Vo Quang Chien',
+  title: 'Articles - Vo Quang Chien',
   description:
-    'Read the latest articles and insights on web development, programming, and technology by Vo Quang Chien.',
-  ogTitle: 'Latest Articles - Vo Quang Chien',
+    'Technical articles and insights on web development, software engineering best practices, and modern technology trends.',
+  ogTitle: 'Articles - Vo Quang Chien',
   ogDescription:
-    'Read the latest articles and insights on web development, programming, and technology by Vo Quang Chien.'
+    'Technical articles and insights on web development, software engineering best practices, and modern technology trends.'
 });
 
 const { data } = await useAsyncData('all-articles', () => {
@@ -23,8 +23,8 @@ const { data } = await useAsyncData('all-articles', () => {
 
 <template>
   <UContainer>
-    <h1 class="text-4xl font-bold mb-4">Latest Articles</h1>
-    <p>Some of my recent thoughts on programming and technology.</p>
+    <h1 class="text-4xl font-bold mb-4">Technical Articles</h1>
+    <p>Insights and best practices on web development, software engineering, and emerging technologies.</p>
 
     <ArticleList v-if="data" :articles="data" orientation="vertical" class="mt-10" />
   </UContainer>

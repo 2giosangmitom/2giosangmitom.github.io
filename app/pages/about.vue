@@ -2,10 +2,10 @@
 useSeoMeta({
   title: 'About - Vo Quang Chien',
   description:
-    'Learn more about Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.',
+    'Professional background and expertise of Vo Quang Chien, a software engineer specializing in modern web development and scalable application architecture.',
   ogTitle: 'About - Vo Quang Chien',
   ogDescription:
-    'Learn more about Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.'
+    'Professional background and expertise of Vo Quang Chien, a software engineer specializing in modern web development and scalable application architecture.'
 });
 
 const { data } = await useAsyncData('about', () => queryCollection('about').first());

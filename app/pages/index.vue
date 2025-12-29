@@ -4,10 +4,10 @@ import type { AccordionItem } from '@nuxt/ui';
 useSeoMeta({
   title: 'Software Engineer - Vo Quang Chien',
   description:
-    'Welcome to the personal website of Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.',
+    'Professional software engineer specializing in modern web development, full-stack solutions, and scalable application architecture.',
   ogTitle: 'Software Engineer - Vo Quang Chien',
   ogDescription:
-    'Welcome to the personal website of Vo Quang Chien, a passionate software engineer specializing in web development and technology solutions.'
+    'Professional software engineer specializing in modern web development, full-stack solutions, and scalable application architecture.'
 });
 
 const techStacks = [
@@ -29,17 +29,24 @@ const questions = [
   {
     icon: 'lucide:coffee',
     label: 'Do you use Arch Linux?',
-    content: 'Yes, I use Arch BTW.'
+    content: 'Yes, I use Arch BTW. And yes, I will tell you about it without you asking. 😎'
   },
   {
-    icon: 'lucide:bird',
-    label: 'Does using Vim make us cooler?',
-    content: 'Absolutely! Using Vim is a mark of true coding mastery.'
+    icon: 'lucide:flame',
+    label: 'Vim or Emacs?',
+    content:
+      'Vim, obviously! Because who needs a mouse when you have hjkl? Plus, exiting Vim is a valuable life skill. 🚀'
+  },
+  {
+    icon: 'lucide:sparkles',
+    label: 'Tabs or Spaces?',
+    content: 'Spaces. 2 spaces to be exact. Fight me. (Just kidding, use Prettier and let it handle the drama.) ✨'
   },
   {
     icon: 'lucide:heart',
     label: 'Do you have a girlfriend?',
-    content: "No, I've never even had a girlfriend 🥹."
+    content:
+      "No, I've never even had a girlfriend 🥹. But hey, at least my code compiles without errors... most of the time."
   }
 ] satisfies AccordionItem[];
 
@@ -68,12 +75,13 @@ const { data } = await useAsyncData('latest-articles', () => {
       />
 
       <div class="space-y-4">
-        <h1 class="text-6xl font-bold">Software Engineer and <span class="text-primary">Vue.js</span> enthusiast.</h1>
+        <h1 class="text-6xl font-bold">Full-Stack <span class="text-primary">Web</span> Engineer.</h1>
         <p class="leading-6">
-          I&apos;m Chien, a Software Engineer with a focus on fullstack web development. I love building things with
-          Vue.js, Node.js and TypeScript. I enjoy learning new technologies and sharing my knowledge with the community.
-          Currently, I&apos;m expanding my abilities in <span class="text-primary">AI applications development</span>,
-          and <span class="text-primary">Web3 technology</span>.
+          I&apos;m Chien, a Software Engineer focused on building robust, scalable web applications. I specialize in
+          Vue.js, React, Node.js, and TypeScript, delivering high-quality solutions for complex business challenges.
+          I&apos;m passionate about clean code, performance optimization, and staying current with emerging technologies
+          including
+          <span class="text-primary">AI integration</span> and <span class="text-primary">Web3 development</span>.
         </p>
         <div class="space-x-4">
           <UButton icon="lucide:at-sign" to="/contact">Contact Me</UButton>
@@ -98,7 +106,7 @@ const { data } = await useAsyncData('latest-articles', () => {
       <ArticleList v-if="data" :articles="data" orientation="horizontal" class="mt-12" />
     </section>
 
-    <!-- Never asked questions -->
+    <!-- Never Asked Questions -->
     <section>
       <h2 class="text-2xl font-bold text-center mb-12">Never Asked Questions</h2>
 
