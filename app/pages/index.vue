@@ -12,17 +12,12 @@ useSeoMeta({
 
 const techStacks = [
   'logos:nuxt-icon',
-  'devicon:vuejs',
-  'logos:nodejs-icon',
-  'logos:fastify-icon',
-  'logos:nestjs',
-  'logos:python',
-  'logos:typescript-icon',
-  'logos:prisma',
-  'devicon:express',
+  'logos:vue',
   'logos:react',
   'logos:nextjs',
-  'simple-icons:langchain'
+  'logos:nestjs',
+  'logos:python',
+  'logos:typescript-icon'
 ];
 
 const questions = [
