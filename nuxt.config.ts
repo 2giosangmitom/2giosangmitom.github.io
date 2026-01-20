@@ -25,6 +25,9 @@ export default defineNuxtConfig({
       }
     }
   },
+  icon: {
+    mode: 'svg'
+  },
   site: {
     url: 'https://2giosangmitom.is-a.dev',
     name: "2giosangmitom's Personal Blog"
