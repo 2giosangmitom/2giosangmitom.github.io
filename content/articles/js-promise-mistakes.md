@@ -1,14 +1,12 @@
 ---
-pubDate: '2025-08-12'
-updatedDate: '2025-08-13'
-tags:
-  - programming
-  - javascript
+pubdate: 2025-08-12
+updatedDate: 2025-08-13
+tags: ['programming', 'javascript']
 ---
 
-# 5 Mistakes I Made While Working with JavaScript Promises
+# 5 Mistakes JavaScript developers often made when working with Promises
 
-Hello everyone! Today, I want to share some mistakes I've made when working with JavaScript Promises, along with the reasons behind them. Hopefully, my experiences can help you avoid falling into the same traps.
+Hello everyone! Today, I want to share some mistakes JavaScript developers often made when working with JavaScript Promises, along with the reasons behind them. Hopefully, my experiences can help you avoid falling into the same traps.
 
 ## Let's go
 
@@ -248,6 +246,20 @@ p.catch((e) => void console.log(e.message));
 In this example, the `throw` inside the async executor doesn't reject `p`. Instead, it creates a rejection in the internal promise returned by the async function - a promise the constructor ignores. As a result, the `.catch` attached to `p` never runs.
 
 If the executor function is a synchronous function, then any error thrown inside the executor function will automatically reject the newly created promise. Try removing the async keyword in the above code example and observe the output.
+
+## Bonus: Prefer async/await over raw Promises
+
+While `.then()` and `.catch()` are powerful, `async/await` often leads to more readable and maintainable code.
+
+Use Promises directly when:
+
+- You need parallel execution (`Promise.all`)
+- You’re building low-level utilities
+
+Use `async/await` when:
+
+- Writing application logic
+- Handling sequential async flows
 
 ## Final Thoughts
 
