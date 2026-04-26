@@ -97,7 +97,7 @@ const handleCopyLink = () => {
             class="flex justify-end items-center mt-12"
             :initial="{ opacity: 0, y: 8 }"
             :while-in-view="{ opacity: 1, y: 0 }"
-            :viewport="{ once: true, amount: 0.8 }"
+            :in-view-options="{ once: true, amount: 0.8 }"
             :transition="{ duration: 0.3, ease: 'easeOut' }"
           >
             <UButton
@@ -118,7 +118,7 @@ const handleCopyLink = () => {
             v-if="surround"
             :initial="{ opacity: 0, y: 14 }"
             :while-in-view="{ opacity: 1, y: 0 }"
-            :viewport="{ once: true, amount: 0.3 }"
+            :in-view-options="{ once: true, amount: 0.3 }"
             :transition="{ duration: 0.35, ease: 'easeOut' }"
           >
             <UContentSurround :surround="surround" />

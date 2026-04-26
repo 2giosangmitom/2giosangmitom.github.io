@@ -27,7 +27,7 @@ const { data } = await useAsyncData('about', () => queryCollection('about').firs
         class="flex-1"
         :initial="{ opacity: 0, y: 24 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.3 }"
+        :in-view-options="{ once: true, amount: 0.3 }"
         :transition="{ duration: 0.5, ease: 'easeOut' }"
       >
         <ContentRenderer v-if="data" :value="data.body" />
@@ -35,7 +35,7 @@ const { data } = await useAsyncData('about', () => queryCollection('about').firs
       <motion.section
         :initial="{ opacity: 0, y: 24 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.35 }"
+        :in-view-options="{ once: true, amount: 0.35 }"
         :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.06 }"
       >
         <NuxtImg
@@ -49,7 +49,7 @@ const { data } = await useAsyncData('about', () => queryCollection('about').firs
           <motion.div
             :initial="{ opacity: 0, x: -12 }"
             :while-in-view="{ opacity: 1, x: 0 }"
-            :viewport="{ once: true, amount: 0.5 }"
+            :in-view-options="{ once: true, amount: 0.5 }"
             :transition="{ duration: 0.35, ease: 'easeOut', delay: 0.08 }"
           >
             <UButton icon="lucide:github" to="https://github.com/2giosangmitom" variant="link" color="neutral"
@@ -59,7 +59,7 @@ const { data } = await useAsyncData('about', () => queryCollection('about').firs
           <motion.div
             :initial="{ opacity: 0, x: -12 }"
             :while-in-view="{ opacity: 1, x: 0 }"
-            :viewport="{ once: true, amount: 0.5 }"
+            :in-view-options="{ once: true, amount: 0.5 }"
             :transition="{ duration: 0.35, ease: 'easeOut', delay: 0.14 }"
           >
             <UButton

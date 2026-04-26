@@ -25,7 +25,7 @@ const truncateDescription = (description?: string | null) => {
       :key="article.id"
       :initial="{ opacity: 0, y: 24, scale: 0.98 }"
       :while-in-view="{ opacity: 1, y: 0, scale: 1 }"
-      :viewport="{ once: true, amount: 0.3 }"
+      :in-view-options="{ once: true, amount: 0.3 }"
       :transition="{ duration: 0.45, ease: 'easeOut', delay: index * 0.08 }"
     >
       <UBlogPost

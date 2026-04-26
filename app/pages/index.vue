@@ -64,6 +64,7 @@ const { data } = await useAsyncData('latest-articles', () => {
     :initial="{ opacity: 0, y: 20 }"
     :animate="{ opacity: 1, y: 0 }"
     :transition="{ duration: 0.5, ease: 'easeOut' }"
+    :in-view-options="{ once: true }"
   >
     <UContainer as="main" class="space-y-36">
       <!-- Introduction -->
@@ -71,7 +72,7 @@ const { data } = await useAsyncData('latest-articles', () => {
         class="flex flex-col-reverse gap-y-14 lg:flex-row lg:gap-y-0 lg:gap-x-10 xl:gap-x-24"
         :initial="{ opacity: 0, y: 28 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.35 }"
+        :in-view-options="{ once: true, amount: 0.3 }"
         :transition="{ duration: 0.55, ease: 'easeOut' }"
       >
         <NuxtImg
@@ -101,7 +102,7 @@ const { data } = await useAsyncData('latest-articles', () => {
       <motion.section
         :initial="{ opacity: 0, y: 24 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.4 }"
+        :in-view-options="{ once: true, amount: 0.4 }"
         :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.05 }"
       >
         <ClientOnly>
@@ -121,7 +122,7 @@ const { data } = await useAsyncData('latest-articles', () => {
       <motion.section
         :initial="{ opacity: 0, y: 24 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.25 }"
+        :in-view-options="{ once: true, amount: 0.25 }"
         :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.1 }"
       >
         <h2 class="text-2xl font-bold text-center">Latest Articles</h2>
@@ -133,7 +134,7 @@ const { data } = await useAsyncData('latest-articles', () => {
       <motion.section
         :initial="{ opacity: 0, y: 24 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.2 }"
+        :in-view-options="{ once: true, amount: 0.2 }"
         :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.12 }"
       >
         <h2 class="text-2xl font-bold text-center mb-12">Never Asked Questions</h2>

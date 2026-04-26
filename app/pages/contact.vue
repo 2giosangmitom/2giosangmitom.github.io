@@ -96,7 +96,7 @@ const handleSubmit = async () => {
       <motion.section
         :initial="{ opacity: 0, x: -20 }"
         :while-in-view="{ opacity: 1, x: 0 }"
-        :viewport="{ once: true, amount: 0.45 }"
+        :in-view-options="{ once: true, amount: 0.45 }"
         :transition="{ duration: 0.45, ease: 'easeOut' }"
       >
         <h1 class="text-4xl font-bold mb-4">Let's Connect</h1>
@@ -122,7 +122,7 @@ const handleSubmit = async () => {
         class="w-full"
         :initial="{ opacity: 0, x: 20 }"
         :while-in-view="{ opacity: 1, x: 0 }"
-        :viewport="{ once: true, amount: 0.35 }"
+        :in-view-options="{ once: true, amount: 0.35 }"
         :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.06 }"
       >
         <UForm

@@ -42,7 +42,7 @@ if (error.value || !data.value?.length) {
       <motion.section
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.6 }"
+        :in-view-options="{ once: true, amount: 0.6 }"
         :transition="{ duration: 0.45, ease: 'easeOut' }"
       >
         <h1 class="text-4xl font-bold mb-4">
@@ -56,7 +56,7 @@ if (error.value || !data.value?.length) {
       <motion.section
         :initial="{ opacity: 0, y: 24 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.2 }"
+        :in-view-options="{ once: true, amount: 0.2 }"
         :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.06 }"
       >
         <ArticleList v-if="data" :articles="data" orientation="vertical" class="mt-10" />

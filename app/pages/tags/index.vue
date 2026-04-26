@@ -40,7 +40,7 @@ const { data } = await useAsyncData('tags', async () => {
       <motion.section
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :viewport="{ once: true, amount: 0.6 }"
+        :in-view-options="{ once: true, amount: 0.6 }"
         :transition="{ duration: 0.45, ease: 'easeOut' }"
       >
         <h1 class="text-4xl font-bold mb-4">Tags</h1>
@@ -53,7 +53,7 @@ const { data } = await useAsyncData('tags', async () => {
           :key="tag"
           :initial="{ opacity: 0, x: -12 }"
           :while-in-view="{ opacity: 1, x: 0 }"
-          :viewport="{ once: true, amount: 0.4 }"
+          :in-view-options="{ once: true, amount: 0.4 }"
           :transition="{ duration: 0.35, ease: 'easeOut', delay: index * 0.05 }"
         >
           <UButton icon="mdi:tag" variant="ghost" :to="{ name: 'tags-slug', params: { slug: tag } }" class="w-fit">
