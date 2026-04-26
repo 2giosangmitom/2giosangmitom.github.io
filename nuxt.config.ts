@@ -4,10 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   modules: [
+    '@nuxt/ui',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxt/ui',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     'motion-v/nuxt'
@@ -48,6 +48,11 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: ['zod', '@vue/devtools-core', '@vue/devtools-kit']
+    }
+  },
+  ui: {
+    experimental: {
+      componentDetection: true
     }
   }
 });
