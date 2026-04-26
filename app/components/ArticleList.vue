@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import type { ArticlesCollectionItem } from '@nuxt/content';
 
+const descriptionLimit = 120;
+
 defineProps<{
   articles: Pick<ArticlesCollectionItem, 'path' | 'title' | 'pubDate' | 'description' | 'id' | 'tags'>[];
   orientation?: 'vertical' | 'horizontal';
 }>();
+
+const truncateDescription = (description?: string | null) => {
+  if (!description) {
+    return '';
+  }
+
+  return description.length > descriptionLimit ? `${description.slice(0, descriptionLimit).trimEnd()}...` : description;
+};
 </script>
 
 <template>
@@ -13,7 +23,7 @@ defineProps<{
       <UBlogPost
         :key="article.id"
         :title="article.title"
-        :description="article.description"
+        :description="truncateDescription(article.description)"
         :date="article.pubDate"
         :to="article.path"
         variant="outline"
