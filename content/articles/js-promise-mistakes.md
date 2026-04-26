@@ -1,6 +1,6 @@
 ---
 pubdate: 2025-08-12
-updatedDate: 2025-08-13
+updatedDate: 2026-04-26
 tags: ['programming', 'javascript']
 ---
 
@@ -8,9 +8,7 @@ tags: ['programming', 'javascript']
 
 Hello everyone! Today, I want to share some mistakes JavaScript developers often made when working with JavaScript Promises, along with the reasons behind them. Hopefully, my experiences can help you avoid falling into the same traps.
 
-## Let's go
-
-### Forgetting to `await` a Promise inside an async function
+## Forgetting to `await` a Promise inside an async function
 
 Forgetting to `await` a Promise inside an async function can lead to bugs and unexpected output.  
 Take a look at the example below:
@@ -98,7 +96,7 @@ Because the catch block didn't throw an error or return a Promise that get rejec
 
 Another problem in this code example is that we didn't explicitly return any value in case the Promise was fulfilled and the catch block was never executed. So the foo function Promise will be fulfilled with `undefined`. Adding the `return` keyword before the await expression will do the job.
 
-### Unnecessary use of the Promise constructor
+## Unnecessary use of the Promise constructor
 
 I guess all JavaScript developer have made this mistake at least once. Let's take a look at an example:
 
@@ -123,7 +121,7 @@ function fetchData(url) {
 
 Unnecessary use of the Promise constructor can lead to another problem: if we forget to add the `catch` method call to the Promise chain inside Promise constructor, then any error thrown during the HTTP request won't be caught. Forgetting to call the `reject` function inside the executor function can hide the failure of the asynchronous operation inside the executor function.
 
-### Incorrect Error Handling
+## Incorrect Error Handling
 
 When writing code that uses Promises, one of the most important rules to keep in mind is to _either catch and handle the error or return the Promise to allow to calling code to catch and handle it_. This fundamental rule can help you avoid hidden bugs in the code that use Promises.
 
@@ -180,7 +178,7 @@ and you call the function above as shown below:
 fetchData('https://jsonplaceholder.typicode.com/todos/1');
 ```
 
-### Converting promise rejection into fulfillment
+## Converting promise rejection into fulfillment
 
 Each method in the `Promise.prototype` object returns a new Promise. If we are not careful, we can write code that can implicitly convert rejection into Promise fulfillment. Let's take a look at an example:
 
@@ -228,7 +226,7 @@ function rejectPromise() {
 }
 ```
 
-### Async executor function
+## Async executor function
 
 When creating a new Promise using the constructor, we pass in a function known as the _executor function_. This function should never be declared `async`.
 Why? Because the Promise constructor doesn't handle async executors the way you might expect.
@@ -246,20 +244,6 @@ p.catch((e) => void console.log(e.message));
 In this example, the `throw` inside the async executor doesn't reject `p`. Instead, it creates a rejection in the internal promise returned by the async function - a promise the constructor ignores. As a result, the `.catch` attached to `p` never runs.
 
 If the executor function is a synchronous function, then any error thrown inside the executor function will automatically reject the newly created promise. Try removing the async keyword in the above code example and observe the output.
-
-## Bonus: Prefer async/await over raw Promises
-
-While `.then()` and `.catch()` are powerful, `async/await` often leads to more readable and maintainable code.
-
-Use Promises directly when:
-
-- You need parallel execution (`Promise.all`)
-- You’re building low-level utilities
-
-Use `async/await` when:
-
-- Writing application logic
-- Handling sequential async flows
 
 ## Final Thoughts
 
