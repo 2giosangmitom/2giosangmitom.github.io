@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
-    '@vueuse/nuxt',
     'motion-v/nuxt'
   ],
   content: {
@@ -40,5 +39,15 @@ export default defineNuxtConfig({
   },
   sitemap: {
     zeroRuntime: true
+  },
+  build: {
+    analyze: {
+      analyzerMode: 'static'
+    }
+  },
+  vite: {
+    optimizeDeps: {
+      include: ['zod']
+    }
   }
 });

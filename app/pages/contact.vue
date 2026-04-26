@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { motion } from 'motion-v';
-import z from 'zod';
+import { z } from 'zod';
 
 useSeoMeta({
   title: 'Contact - Vo Quang Chien',
