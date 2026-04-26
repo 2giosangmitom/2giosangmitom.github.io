@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { motion } from 'motion-v';
+
 const route = useRoute();
 const path = withoutTrailingSlashes(route.path);
 
@@ -31,14 +33,34 @@ if (error.value || !data.value?.length) {
 </script>
 
 <template>
-  <UContainer>
-    <h1 class="text-4xl font-bold mb-4">
-      Articles tagged <span class="text-primary">::</span> {{ route.params.slug }}
-    </h1>
-    <p>
-      Browse all articles tagged with <span class="text-primary">{{ route.params.slug }}</span> on my blog.
-    </p>
+  <motion.main
+    :initial="{ opacity: 0, y: 20 }"
+    :animate="{ opacity: 1, y: 0 }"
+    :transition="{ duration: 0.45, ease: 'easeOut' }"
+  >
+    <UContainer>
+      <motion.section
+        :initial="{ opacity: 0, y: 20 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :viewport="{ once: true, amount: 0.6 }"
+        :transition="{ duration: 0.45, ease: 'easeOut' }"
+      >
+        <h1 class="text-4xl font-bold mb-4">
+          Articles tagged <span class="text-primary">::</span> {{ route.params.slug }}
+        </h1>
+        <p>
+          Browse all articles tagged with <span class="text-primary">{{ route.params.slug }}</span> on my blog.
+        </p>
+      </motion.section>
 
-    <ArticleList v-if="data" :articles="data" orientation="vertical" class="mt-10" />
-  </UContainer>
+      <motion.section
+        :initial="{ opacity: 0, y: 24 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :viewport="{ once: true, amount: 0.2 }"
+        :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.06 }"
+      >
+        <ArticleList v-if="data" :articles="data" orientation="vertical" class="mt-10" />
+      </motion.section>
+    </UContainer>
+  </motion.main>
 </template>

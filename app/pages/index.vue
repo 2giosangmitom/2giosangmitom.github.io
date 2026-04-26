@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { AccordionItem } from '@nuxt/ui';
+import { motion } from 'motion-v';
 
 useSeoMeta({
   title: 'Software Engineer - Vo Quang Chien',
@@ -59,53 +60,86 @@ const { data } = await useAsyncData('latest-articles', () => {
 </script>
 
 <template>
-  <UContainer as="main" class="space-y-36">
-    <!-- Introduction -->
-    <section class="flex flex-col-reverse gap-y-14 lg:flex-row lg:gap-y-0 lg:gap-x-10 xl:gap-x-24">
-      <NuxtImg
-        src="/images/avt.png"
-        sizes="100vw sm:70vw md:400px"
-        alt="Vo Quang Chien"
-        class="max-w-full h-auto self-center rounded"
-      />
+  <motion.main
+    :initial="{ opacity: 0, y: 20 }"
+    :animate="{ opacity: 1, y: 0 }"
+    :transition="{ duration: 0.5, ease: 'easeOut' }"
+  >
+    <UContainer as="main" class="space-y-36">
+      <!-- Introduction -->
+      <motion.section
+        class="flex flex-col-reverse gap-y-14 lg:flex-row lg:gap-y-0 lg:gap-x-10 xl:gap-x-24"
+        :initial="{ opacity: 0, y: 28 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :viewport="{ once: true, amount: 0.35 }"
+        :transition="{ duration: 0.55, ease: 'easeOut' }"
+      >
+        <NuxtImg
+          src="/images/avt.png"
+          sizes="100vw sm:70vw md:400px"
+          alt="Vo Quang Chien"
+          class="max-w-full h-auto self-center rounded"
+        />
 
-      <div class="space-y-4">
-        <h1 class="text-6xl font-bold">Full-Stack <span class="text-primary">Web</span> Engineer.</h1>
-        <p class="leading-6">
-          I&apos;m Chien, a Software Engineer focused on building robust, scalable web applications. I specialize in
-          Vue.js, React, Node.js, and TypeScript, delivering high-quality solutions for complex business challenges.
-          I&apos;m passionate about clean code, performance optimization, and staying current with emerging technologies
-          including
-          <span class="text-primary">AI integration</span> and <span class="text-primary">Web3 development</span>.
-        </p>
-        <div class="space-x-4">
-          <UButton icon="lucide:at-sign" to="/contact">Contact Me</UButton>
-          <UButton icon="lucide:pen-tool" variant="outline" to="/articles">Read Articles</UButton>
+        <div class="space-y-4">
+          <h1 class="text-6xl font-bold">Full-Stack <span class="text-primary">Web</span> Engineer.</h1>
+          <p class="leading-6">
+            I&apos;m Chien, a Software Engineer focused on building robust, scalable web applications. I specialize in
+            Vue.js, React, Node.js, and TypeScript, delivering high-quality solutions for complex business challenges.
+            I&apos;m passionate about clean code, performance optimization, and staying current with emerging
+            technologies including
+            <span class="text-primary">AI integration</span> and <span class="text-primary">Web3 development</span>.
+          </p>
+          <div class="space-x-4">
+            <UButton icon="lucide:at-sign" to="/contact">Contact Me</UButton>
+            <UButton icon="lucide:pen-tool" variant="outline" to="/articles">Read Articles</UButton>
+          </div>
         </div>
-      </div>
-    </section>
+      </motion.section>
 
-    <!-- Tech Stacks -->
-    <section>
-      <ClientOnly>
-        <UMarquee>
-          <UIcon v-for="tech in techStacks" :key="tech" :name="tech" class="size-16 shrink-0 fill-current" mode="svg" />
-        </UMarquee>
-      </ClientOnly>
-    </section>
+      <!-- Tech Stacks -->
+      <motion.section
+        :initial="{ opacity: 0, y: 24 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :viewport="{ once: true, amount: 0.4 }"
+        :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.05 }"
+      >
+        <ClientOnly>
+          <UMarquee>
+            <UIcon
+              v-for="tech in techStacks"
+              :key="tech"
+              :name="tech"
+              class="size-16 shrink-0 fill-current"
+              mode="svg"
+            />
+          </UMarquee>
+        </ClientOnly>
+      </motion.section>
 
-    <!-- Latest Articles -->
-    <section>
-      <h2 class="text-2xl font-bold text-center">Latest Articles</h2>
+      <!-- Latest Articles -->
+      <motion.section
+        :initial="{ opacity: 0, y: 24 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :viewport="{ once: true, amount: 0.25 }"
+        :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.1 }"
+      >
+        <h2 class="text-2xl font-bold text-center">Latest Articles</h2>
 
-      <ArticleList v-if="data" :articles="data" orientation="horizontal" class="mt-12" />
-    </section>
+        <ArticleList v-if="data" :articles="data" orientation="horizontal" class="mt-12" />
+      </motion.section>
 
-    <!-- Never Asked Questions -->
-    <section>
-      <h2 class="text-2xl font-bold text-center mb-12">Never Asked Questions</h2>
+      <!-- Never Asked Questions -->
+      <motion.section
+        :initial="{ opacity: 0, y: 24 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :viewport="{ once: true, amount: 0.2 }"
+        :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.12 }"
+      >
+        <h2 class="text-2xl font-bold text-center mb-12">Never Asked Questions</h2>
 
-      <UAccordion :items="questions" />
-    </section>
-  </UContainer>
+        <UAccordion :items="questions" />
+      </motion.section>
+    </UContainer>
+  </motion.main>
 </template>

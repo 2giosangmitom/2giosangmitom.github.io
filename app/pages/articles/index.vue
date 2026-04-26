@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { motion } from 'motion-v';
+
 useSeoMeta({
   title: 'Articles - Vo Quang Chien',
   description:
@@ -22,10 +24,30 @@ const { data } = await useAsyncData('all-articles', () => {
 </script>
 
 <template>
-  <UContainer>
-    <h1 class="text-4xl font-bold mb-4">Technical Articles</h1>
-    <p>Insights and best practices on web development, software engineering, and emerging technologies.</p>
+  <motion.main
+    :initial="{ opacity: 0, y: 20 }"
+    :animate="{ opacity: 1, y: 0 }"
+    :transition="{ duration: 0.45, ease: 'easeOut' }"
+  >
+    <UContainer>
+      <motion.section
+        :initial="{ opacity: 0, y: 20 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :viewport="{ once: true, amount: 0.6 }"
+        :transition="{ duration: 0.45, ease: 'easeOut' }"
+      >
+        <h1 class="text-4xl font-bold mb-4">Technical Articles</h1>
+        <p>Insights and best practices on web development, software engineering, and emerging technologies.</p>
+      </motion.section>
 
-    <ArticleList v-if="data" :articles="data" orientation="vertical" class="mt-10" />
-  </UContainer>
+      <motion.section
+        :initial="{ opacity: 0, y: 24 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :viewport="{ once: true, amount: 0.2 }"
+        :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.06 }"
+      >
+        <ArticleList v-if="data" :articles="data" orientation="vertical" class="mt-10" />
+      </motion.section>
+    </UContainer>
+  </motion.main>
 </template>

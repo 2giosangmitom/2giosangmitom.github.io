@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    'motion-v/nuxt'
   ],
   content: {
     build: {

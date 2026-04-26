@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ArticlesCollectionItem } from '@nuxt/content';
+import { motion } from 'motion-v';
 
 const descriptionLimit = 120;
 
@@ -19,7 +20,14 @@ const truncateDescription = (description?: string | null) => {
 
 <template>
   <UBlogPosts :orientation="orientation" class="mt-10">
-    <div v-for="article in articles" :key="article.id">
+    <motion.div
+      v-for="(article, index) in articles"
+      :key="article.id"
+      :initial="{ opacity: 0, y: 24, scale: 0.98 }"
+      :while-in-view="{ opacity: 1, y: 0, scale: 1 }"
+      :viewport="{ once: true, amount: 0.3 }"
+      :transition="{ duration: 0.45, ease: 'easeOut', delay: index * 0.08 }"
+    >
       <UBlogPost
         :key="article.id"
         :title="article.title"
@@ -33,6 +41,6 @@ const truncateDescription = (description?: string | null) => {
           <UBadge v-for="tag in article.tags" :key="tag" variant="soft" size="md">{{ tag }}</UBadge>
         </template>
       </UBlogPost>
-    </div>
+    </motion.div>
   </UBlogPosts>
 </template>
