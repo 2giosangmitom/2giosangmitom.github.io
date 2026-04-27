@@ -11,7 +11,7 @@ defineProps<{
     <UNavigationMenu :items="links" />
 
     <template #right>
-      <UContentSearchButton />
+      <UContentSearchButton :collapsed="false" :kbds="['ctrl', '/']" />
       <UColorModeButton />
     </template>
 

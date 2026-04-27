@@ -13,7 +13,7 @@ const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSe
     <ClientOnly>
       <LazyUContentSearch
         v-model:search-term="searchTerm"
-        shortcut="meta_k"
+        shortcut="meta_/"
         :fuse="{ resultLimit: 42 }"
         :navigation="navigation"
         :files="files"
