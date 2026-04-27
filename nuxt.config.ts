@@ -47,7 +47,7 @@ export default defineNuxtConfig({
   },
   vite: {
     optimizeDeps: {
-      include: ['zod', '@vue/devtools-core', '@vue/devtools-kit']
+      include: ['zod', '@vue/devtools-core', '@vue/devtools-kit', 'overlayscrollbars']
     }
   },
   ui: {

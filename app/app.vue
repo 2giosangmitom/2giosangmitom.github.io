@@ -5,6 +5,15 @@ const { data: navigation } = await useAsyncData('navigation', () => queryCollect
 const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('articles'), {
   server: false
 });
+
+useHead({
+  htmlAttrs: {
+    'data-overlayscrollbars-initialize': ''
+  },
+  bodyAttrs: {
+    'data-overlayscrollbars-initialize': ''
+  }
+});
 </script>
 
 <template>
